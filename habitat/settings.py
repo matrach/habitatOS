@@ -129,6 +129,7 @@ DATETIME_INPUT_FORMATS = ['%Y-%m-%d %H:%M:%S.%f']
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '_static'
 
 admin.site.site_header = _('M.A.R.S. HabitatOS')
 admin.site.index_title = _('M.A.R.S.')
