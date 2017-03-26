@@ -27,6 +27,7 @@ Create database and run application:
 
     python manage.py migrate
     python manage.py createsuperuser
+    python manage.py loaddata fixtures/*
     python manage.py runserver
 
 Open browser and use:
