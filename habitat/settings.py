@@ -147,10 +147,30 @@ admin.site.index_title = _('M.A.R.S. Dashboard')
 admin.site.site_title = _('HabitatOS')
 
 GRAPPELLI_ADMIN_TITLE = _('M.A.R.S. HabitatOS')
-GRAPPELLI_INDEX_DASHBOARD = "habitat.dashboard.IndexDashboard"
+GRAPPELLI_INDEX_DASHBOARD = 'habitat.dashboard.IndexDashboard'
 
-
-TEST = {
-    'USER': 'testrunner',
-    'PASSWORD': 'NoPa$$123',
+LOGGING = {
+    'version': 1,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+    },
+    'loggers': {
+        'habitat': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    }
 }
