@@ -3,3 +3,10 @@ from . import disease
 from . import evaluations
 from . import excretion
 from . import food
+from . import intercourse
+from . import intoxication
+from . import pulse_oximetry
+from . import quality_of_life
+from . import sleep
+from . import temperature
+from . import weight

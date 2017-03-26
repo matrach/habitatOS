@@ -7,6 +7,10 @@ from django.utils.timezone import now
 
 
 class BloodPressure(models.Model):
+    astronaut = models.ForeignKey(
+        to='auth.User',
+        limit_choices_to={'groups__name': 'Astronauts'})
+
     datetime = models.DateTimeField(
         verbose_name=_('Datetime'),
         default=now)
@@ -30,3 +34,4 @@ class BloodPressure(models.Model):
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'systolic', 'diastolic']
+

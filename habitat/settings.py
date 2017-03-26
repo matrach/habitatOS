@@ -29,12 +29,17 @@ SECRET_KEY = '57aq0)wd*_kz&9r1#3rpw@+%n326zlrt+c3pr=&dgfa^^@d_ix'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['habitatos.herokuapp.com']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'habitatos.herokuapp.com'
+    'os.astrotech.io']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli.dashboard',
     'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,8 +47,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'habitat.dashboard',
+    'habitat.education',
     'habitat.environment',
+    'habitat.greenhouse',
+    'habitat.inventory',
     'habitat.medicine',
+    'habitat.notepad',
     'habitat.psychology',
 ]
 
@@ -125,6 +135,7 @@ en_formats.DATETIME_FORMAT = 'Y-m-d H:i:s.u'
 
 DATETIME_INPUT_FORMATS = ['%Y-%m-%d %H:%M:%S.%f']
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
@@ -132,7 +143,14 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '_static'
 
 admin.site.site_header = _('M.A.R.S. HabitatOS')
-admin.site.index_title = _('M.A.R.S.')
+admin.site.index_title = _('M.A.R.S. Dashboard')
 admin.site.site_title = _('HabitatOS')
 
 GRAPPELLI_ADMIN_TITLE = _('M.A.R.S. HabitatOS')
+GRAPPELLI_INDEX_DASHBOARD = "habitat.dashboard.IndexDashboard"
+
+
+TEST = {
+    'USER': 'testrunner',
+    'PASSWORD': 'NoPa$$123',
+}

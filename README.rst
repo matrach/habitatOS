@@ -1,6 +1,9 @@
 HabitatOS
 =========
 
+.. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
+    :target: https://travis-ci.org/AstroMatt/HabitatOS
+
 Install
 -------
 
