@@ -32,8 +32,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'habitatos.herokuapp.com'
-    'os.astrotech.io']
+    'habitatos.herokuapp.com',
+    'os.astrotech.io'
+]
 
 
 # Application definition
