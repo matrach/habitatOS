@@ -1,3 +1,9 @@
-from django.test import TestCase
+from habitat.tests import Test
 
-# Create your tests here.
+
+class PsychologyTest(Test):
+    assert_http_200 = [
+        '/psychology/',
+        '/psychology/questionnaire/',
+        '/psychology/questionnaire/add/',
+    ]

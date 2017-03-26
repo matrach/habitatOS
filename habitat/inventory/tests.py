@@ -1,3 +1,11 @@
-from django.test import TestCase
+from habitat.tests import Test
 
-# Create your tests here.
+
+class InventoryTest(Test):
+    assert_http_200 = [
+        '/inventory/',
+        '/inventory/food/',
+        '/inventory/food/add/',
+        '/inventory/item/',
+        '/inventory/item/add/',
+    ]

@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+from habitat.tests import Test
 
 
-class TimePerceptionConfig(AppConfig):
-    name = 'time_perception'
+class ExperimentTimePerceptionTest(Test):
+    assert_http_200 = []

@@ -1,3 +1,7 @@
-from django.test import TestCase
+from habitat.tests import Test
 
-# Create your tests here.
+
+class EducationTest(Test):
+    assert_http_200 = [
+        #'/education/',
+    ]
