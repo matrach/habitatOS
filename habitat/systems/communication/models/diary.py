@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Figure(models.Model):
-    diary_entry = models.ForeignKey(verbose_name=_('Entry'), to='notepad.DiaryEntry')
+    diary_entry = models.ForeignKey(verbose_name=_('Entry'), to='communication.DiaryEntry')
     image = models.ImageField(verbose_name=_('Image'))
     caption = models.CharField(verbose_name=_('Caption'), max_length=255)
 
@@ -36,7 +36,7 @@ class DiaryEntry(models.Model):
     tags = models.CharField(verbose_name=_('Tags'), help_text=_('Comma separated tags'), max_length=255, null=True, blank=True)
 
     def get_absolute_url(self):
-        return reverse('notepad:diary', args=[self.slug])
+        return reverse('communication:diary', args=[self.slug])
 
     def __str__(self):
         return f'[{self.publish_date:%Y-%m-%d}] ({self.status}) {self.author}: {self.title}'
@@ -58,4 +58,4 @@ class DiaryEntry(models.Model):
         class Media:
             js = [
                 '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
-                '/static/notepad/js/tinymce.js',]
+                '/static/communication/js/tinymce.js',]

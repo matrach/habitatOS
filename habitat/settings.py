@@ -49,13 +49,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'habitat.dashboard',
-    'habitat.education',
-    'habitat.environment',
-    'habitat.greenhouse',
-    'habitat.inventory',
-    'habitat.medicine',
-    'habitat.notepad',
-    'habitat.psychology',
+    'habitat.building.environment',
+    'habitat.building.greenhouse',
+    'habitat.science.education',
+    'habitat.science.medicine',
+    'habitat.science.psychology',
+    'habitat.systems.inventory',
+    'habitat.systems.communication',
 ]
 
 MIDDLEWARE = [

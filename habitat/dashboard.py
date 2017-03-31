@@ -8,46 +8,39 @@ class IndexDashboard(Dashboard):
     def init_with_context(self, context):
 
         self.children.append(modules.ModelList(
-            title=_('Education'),
+            title=_('Building'),
             column=1,
             collapsible=False,
-            models=['habitat.education.*']))
+            models=[
+                'habitat.building.environment.*',
+                'habitat.building.greenhouse.*',
+            ]))
 
         self.children.append(modules.ModelList(
-            title=_('Environment'),
+            title=_('Systems'),
             column=1,
             collapsible=False,
-            models=['habitat.environment.*']))
+            models=[
+                'habitat.systems.inventory.*',
+            ]))
 
         self.children.append(modules.ModelList(
-            title=_('Greenhouse'),
+            title=_('Communication'),
             column=1,
             collapsible=False,
-            models=['habitat.greenhouse.*']))
+            models=[
+                'habitat.systems.communication.*',
+            ]))
 
         self.children.append(modules.ModelList(
-            title=_('Inventory'),
+            title=_('Science'),
             column=1,
             collapsible=False,
-            models=['habitat.inventory.*']))
-
-        self.children.append(modules.ModelList(
-            title=_('Medicine'),
-            column=1,
-            collapsible=False,
-            models=['habitat.medicine.*']))
-
-        self.children.append(modules.ModelList(
-            title=_('Notepad'),
-            column=1,
-            collapsible=False,
-            models=['habitat.notepad.*']))
-
-        self.children.append(modules.ModelList(
-            title=_('Psychology'),
-            column=1,
-            collapsible=False,
-            models=['habitat.psychology.*']))
+            models=[
+                'habitat.science.education.*',
+                'habitat.science.medicine.*',
+                'habitat.science.psychology.*',
+            ]))
 
         self.children.append(modules.LinkList(
             title=_('Shortcuts'),

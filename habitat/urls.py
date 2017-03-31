@@ -8,6 +8,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^grappelli/', include('grappelli.urls'), name='grappelli'),
-    url(r'^notepad/', include('habitat.notepad.urls'), name='notepad'),
+    url(r'^communication/', include('habitat.systems.communication.urls'), name='communication'),
     url(r'^', admin.site.urls, name='admin'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,16 +1,16 @@
-from habitat.notepad.models import DiaryEntry
+from habitat.systems.communication.models import DiaryEntry
 from habitat.tests import Test
 
 
 class NotepadTest(Test):
     assert_http_200 = [
-        '/notepad/',
-        '/notepad/personalnote/',
-        '/notepad/personalnote/add/',
-        '/notepad/figure/',
-        '/notepad/figure/add/',
-        '/notepad/diaryentry/',
-        '/notepad/diaryentry/add/',
+        '/communication/',
+        '/communication/personalnote/',
+        '/communication/personalnote/add/',
+        '/communication/figure/',
+        '/communication/figure/add/',
+        '/communication/diaryentry/',
+        '/communication/diaryentry/add/',
     ]
 
     def test_diary(self):
