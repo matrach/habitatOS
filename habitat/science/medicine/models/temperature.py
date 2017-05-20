@@ -17,9 +17,9 @@ class Temperature(models.Model):
 
     temperature = models.DecimalField(
         verbose_name=_('Temperature'),
+        help_text=_('Celsius'),
         max_digits=3,
         decimal_places=1,
-        default=36.6,
         validators=[
             MaxValueValidator(42),
             MinValueValidator(30)])

@@ -29,7 +29,6 @@ class Weight(models.Model):
         verbose_name=_('Weight'),
         max_digits=4,
         decimal_places=1,
-        default=70.0,
         validators=[
             MaxValueValidator(130),
             MinValueValidator(30)])
@@ -38,7 +37,6 @@ class Weight(models.Model):
         verbose_name=_('BMI'),
         max_digits=3,
         decimal_places=1,
-        default=20.0,
         blank=False,
         null=False,
         validators=[
