@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='experiment',
             name='cultivation_method',
-            field=models.CharField(choices=[('soil', 'Soil'), ('underwater', 'Underwater'), ('artificial', 'Artificial'), ('hydroponics', 'Hydroponics'), ('aeroponics', 'Aeroponics'), ('mixed', 'Mixed'), ('other', 'Other')], default=django.utils.timezone.now, max_length=30, verbose_name='Cultivation method'),
+            field=models.CharField(choices=[('soil', 'Soil'), ('underwater', 'Underwater'), ('artificial', 'Artificial'), ('hydroponics', 'Hydroponics'), ('aeroponics', 'Aeroponics'), ('mixed', 'Mixed'), ('other', 'Other')], max_length=30, verbose_name='Cultivation method'),
             preserve_default=False,
         ),
         migrations.AddField(
