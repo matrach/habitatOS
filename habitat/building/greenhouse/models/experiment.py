@@ -11,7 +11,7 @@ class Observation(models.Model):
     image = models.ImageField(verbose_name=_('Image'), blank=True, null=True)
 
     def __str__(self):
-        return f'[{self.datetime}] {self.experiment} {self.notes:.30}'
+        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.experiment} {self.notes:.30}'
 
     class Meta:
         ordering = ['-datetime']
@@ -42,7 +42,7 @@ class Experiment(models.Model):
     image = models.ImageField(verbose_name=_('Image'), blank=True, null=True)
 
     def __str__(self):
-        return f'[{self.planted_date}] {self.plant} {self.cultivation_method}'
+        return f'[{self.planted_date:%Y-%m-%d}] {self.plant} {self.cultivation_method}'
 
     class Meta:
         ordering = ['-planted_date']

@@ -1,23 +1,7 @@
-from django.core.validators import MaxValueValidator
-from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
 from django.contrib import admin
-
-"""
-Sleep 1 (quality)
-Sleep 1 (start)
-Sleep 1 (end)
-Sleep 1 (duration)
-Sleep 1 (location)
-Sleep 2 (start)
-Sleep 2 (end)
-Sleep 2 (duration)
-Sleep 2 (quality)
-Sleep 2 (location)
-Sleep Total (duration)
-"""
 
 
 class Sleep(models.Model):
@@ -32,27 +16,49 @@ class Sleep(models.Model):
         to='auth.User',
         limit_choices_to={'groups__name': 'Astronauts'})
 
+    location = models.CharField(
+        verbose_name=_('Location'),
+        default=None,
+        max_length=255,
+        blank=True,
+        null=True)
+
+    quality = models.CharField(
+        verbose_name=_('Quality'),
+        default=None,
+        max_length=30,
+        choices=QUALITY,
+        blank=True,
+        null=True)
+
     datetime_start = models.DateTimeField(
         verbose_name=_('Start'),
         default=now)
 
     datetime_end = models.DateTimeField(
         verbose_name=_('End'),
-        default=now,
+        default=None,
         blank=True,
         null=True)
 
-    quality = models.CharField(
-        verbose_name=_('Quality'),
-        default='average',
-        max_length=30,
-        choices=QUALITY)
+    duration = models.DurationField(
+        verbose_name=_('Duration'),
+        default=None,
+        blank=True,
+        null=True)
+
+    def save(self, **kwargs):
+        if self.datetime_end:
+            self.duration = self.datetime_end - self.datetime_start
+            return super().save(**kwargs)
 
     def __str__(self):
-        return f'[{self.datetime_start}] {self.astronaut} {self.quality}'
+        return f'[{self.datetime_start:%Y-%m-%d %H:%M}-{self.datetime_end:%Y-%m-%d %H:%M}] {self.astronaut} Quality: {self.quality}, Location: {self.location}'
 
     class Meta:
         ordering = ['-datetime_start']
 
     class Admin(admin.ModelAdmin):
-        list_display = ['datetime_start', 'datetime_end', 'astronaut', 'quality']
+        list_display = ['astronaut', 'quality', 'location', 'duration', 'datetime_start', 'datetime_end']
+        list_filter = ['astronaut', 'quality']
+        readonly_fields = ['duration']

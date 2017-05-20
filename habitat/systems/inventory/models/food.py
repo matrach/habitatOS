@@ -58,7 +58,7 @@ class Food(models.Model):
         null=True)
 
     def __str__(self):
-        return f'[{self.code}] {self.name}'
+        return f'[{self.code}] {self.name} (best before: {self.best_before:%Y-%m-%d}'
 
     class Admin(admin.ModelAdmin):
         list_display = ['code', 'name', 'best_before', 'calories']

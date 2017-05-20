@@ -1,6 +1,32 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.contrib import admin
 
 
 class Plant(models.Model):
-    spicies = models.CharField(verbose_name=_('Species'), help_text=_('Latin'), max_length=255)
+    latin_name = models.CharField(
+        verbose_name=_('Latin Name'),
+        help_text=_('Latin'),
+        max_length=255,
+        default=None)
+
+    spicies = models.CharField(
+        verbose_name=_('Species'),
+        help_text=_('Species'),
+        max_length=255,
+        default=None)
+
+    image = models.ImageField(
+        verbose_name=_('Image'),
+        blank=True,
+        null=True)
+
+    def __str__(self):
+        return f'{self.spicies}'
+
+    class Meta:
+        ordering = ['-latin_name']
+
+    class Admin(admin.ModelAdmin):
+        list_display = ['latin_name', 'spicies']
+        search_fields = ['latin_name', 'spicies']

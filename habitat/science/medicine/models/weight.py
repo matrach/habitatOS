@@ -44,7 +44,7 @@ class Weight(models.Model):
             MinValueValidator(10)])
 
     def __str__(self):
-        return f'[{self.datetime}] {self.astronaut} Weight: {self.weight}, BMI: {self.BMI}'
+        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.astronaut} Weight: {self.weight}, BMI: {self.BMI}'
 
     class Meta:
         ordering = ['-datetime']

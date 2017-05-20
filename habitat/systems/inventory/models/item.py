@@ -9,7 +9,7 @@ class Item(models.Model):
     quantity = models.PositiveSmallIntegerField(verbose_name=_('Quantity'))
 
     def __str__(self):
-        return f'{self.name} [{self.code}]'
+        return f'[{self.code}] {self.name} Quantity: {self.quantity}'
 
     class Admin(admin.ModelAdmin):
         list_display = ['code', 'name', 'quantity']

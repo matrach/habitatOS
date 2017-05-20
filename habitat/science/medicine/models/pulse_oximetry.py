@@ -38,10 +38,11 @@ class PulsOxymetry(models.Model):
             MinValueValidator(0)])
 
     def __str__(self):
-        return f'[{self.datetime}] {self.astronaut} SpO2: {self.spo2}, HR: {self.heart_rate}, PI: {self.perfusion_index}'
+        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.astronaut} SpO2: {self.spo2}, HR: {self.heart_rate}, PI: {self.perfusion_index}'
 
     class Meta:
         ordering = ['-datetime']
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'spo2', 'perfusion_index', 'heart_rate']
+        list_filter = ['astronaut', 'spo2']

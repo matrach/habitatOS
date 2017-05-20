@@ -25,7 +25,7 @@ class Temperature(models.Model):
             MinValueValidator(30)])
 
     def __str__(self):
-        return f'[{self.datetime}] {self.astronaut} Temp: {self.temperature}'
+        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.astronaut} Temp: {self.temperature}'
 
     class Meta:
         ordering = ['-datetime']

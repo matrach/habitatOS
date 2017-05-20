@@ -27,10 +27,12 @@ class Disease(models.Model):
         null=False)
 
     def __str__(self):
-        return f'[{self.datetime_start}] {self.astronaut} ICD-10: {self.icd10}'
+        return f'[{self.datetime_start:%Y-%m-%d}] {self.astronaut} ICD-10: {self.icd10}, Sympthoms: {self.sympthoms:.30}'
 
     class Meta:
         ordering = ['-datetime_start']
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime_start', 'datetime_end', 'astronaut', 'icd10']
+        list_filter = ['astronaut', 'icd10']
+        search_fields = ['sympthoms']
