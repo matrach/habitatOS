@@ -8,6 +8,7 @@ from django.utils.timezone import now
 
 class BloodPressure(models.Model):
     astronaut = models.ForeignKey(
+        verbose_name=_('Astronaut'),
         to='auth.User',
         limit_choices_to={'groups__name': 'Astronauts'})
 

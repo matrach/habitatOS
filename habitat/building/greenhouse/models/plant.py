@@ -18,15 +18,22 @@ class Plant(models.Model):
 
     image = models.ImageField(
         verbose_name=_('Image'),
+        default=None,
+        blank=True,
+        null=True)
+
+    wikipedia_url = models.URLField(
+        verbose_name=_('Wikipedia URL'),
+        default=None,
         blank=True,
         null=True)
 
     def __str__(self):
-        return f'{self.spicies}'
+        return f'{self.spicies} ({self.latin_name})'
 
     class Meta:
         ordering = ['-latin_name']
 
     class Admin(admin.ModelAdmin):
-        list_display = ['latin_name', 'spicies']
+        list_display = ['latin_name', 'spicies', 'wikipedia_url']
         search_fields = ['latin_name', 'spicies']

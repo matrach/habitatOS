@@ -8,6 +8,7 @@ from django.contrib import admin
 
 class PulsOxymetry(models.Model):
     astronaut = models.ForeignKey(
+        verbose_name=_('Astronaut'),
         to='auth.User',
         limit_choices_to={'groups__name': 'Astronauts'})
 
@@ -18,6 +19,7 @@ class PulsOxymetry(models.Model):
     spo2 = models.PositiveSmallIntegerField(
         verbose_name=_('SpO2'),
         help_text=_('%'),
+        default=None,
         validators=[
             MaxValueValidator(100),
             MinValueValidator(0)])
@@ -26,6 +28,7 @@ class PulsOxymetry(models.Model):
         verbose_name=_('Blood Perfusion Index'),
         decimal_places=1,
         max_digits=3,
+        default=None,
         validators=[
             MaxValueValidator(22),
             MinValueValidator(0)])
@@ -33,6 +36,7 @@ class PulsOxymetry(models.Model):
     heart_rate = models.PositiveSmallIntegerField(
         verbose_name=_('Heart Rate'),
         help_text=_('bpm'),
+        default=None,
         validators=[
             MaxValueValidator(250),
             MinValueValidator(0)])

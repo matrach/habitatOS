@@ -13,21 +13,22 @@ class Sleep(models.Model):
         ('very good', _('Very Good'))]
 
     astronaut = models.ForeignKey(
+        verbose_name=_('Astronaut'),
         to='auth.User',
         limit_choices_to={'groups__name': 'Astronauts'})
 
     location = models.CharField(
         verbose_name=_('Location'),
-        default=None,
         max_length=255,
+        default=None,
         blank=True,
         null=True)
 
     quality = models.CharField(
         verbose_name=_('Quality'),
-        default=None,
         max_length=30,
         choices=QUALITY,
+        default=None,
         blank=True,
         null=True)
 

@@ -1,14 +1,29 @@
 from django.contrib import admin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django.utils import timezone
+from django.utils.timezone import now
 
 
 class Observation(models.Model):
-    experiment = models.ForeignKey(verbose_name=_('Experiment'), to='greenhouse.experiment')
-    datetime = models.DateTimeField(verbose_name=_('Observation date'), default=timezone.now)
-    notes = models.TextField(verbose_name=_('Notes'), blank=True, null=True)
-    image = models.ImageField(verbose_name=_('Image'), blank=True, null=True)
+    experiment = models.ForeignKey(
+        verbose_name=_('Experiment'),
+        to='greenhouse.experiment')
+
+    datetime = models.DateTimeField(
+        verbose_name=_('Observation date'),
+        default=now)
+
+    notes = models.TextField(
+        verbose_name=_('Notes'),
+        default=None,
+        blank=True,
+        null=True)
+
+    image = models.ImageField(
+        verbose_name=_('Image'),
+        default=None,
+        blank=True,
+        null=True)
 
     def __str__(self):
         return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.experiment} {self.notes:.30}'
@@ -36,10 +51,25 @@ class Experiment(models.Model):
         ('mixed', _('Mixed')),
         ('other', _('Other'))]
 
-    plant = models.ForeignKey(verbose_name=_('Plant'), to='greenhouse.Plant')
-    cultivation_method = models.CharField(verbose_name=_('Cultivation method'), choices=CULTIVATION_METHODS, max_length=30)
-    planted_date = models.DateTimeField(verbose_name=_('Date Planted'), default=timezone.now)
-    image = models.ImageField(verbose_name=_('Image'), blank=True, null=True)
+    plant = models.ForeignKey(
+        verbose_name=_('Plant'),
+        to='greenhouse.Plant')
+
+    cultivation_method = models.CharField(
+        verbose_name=_('Cultivation method'),
+        choices=CULTIVATION_METHODS,
+        default=None,
+        max_length=30)
+
+    planted_date = models.DateTimeField(
+        verbose_name=_('Date Planted'),
+        default=now)
+
+    image = models.ImageField(
+        verbose_name=_('Image'),
+        default=None,
+        blank=True,
+        null=True)
 
     def __str__(self):
         return f'[{self.planted_date:%Y-%m-%d}] {self.plant} {self.cultivation_method}'

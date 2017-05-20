@@ -6,6 +6,7 @@ from django.contrib import admin
 
 class Disease(models.Model):
     astronaut = models.ForeignKey(
+        verbose_name=_('Astronaut'),
         to='auth.User',
         limit_choices_to={'groups__name': 'Astronauts'})
 
@@ -15,14 +16,18 @@ class Disease(models.Model):
 
     datetime_end = models.DateTimeField(
         verbose_name=_('End Datetime'),
+        default=None,
         blank=False,
         null=False)
 
     icd10 = models.CharField(
         verbose_name=_('ICD-10'),
-        max_length=50)
+        max_length=50,
+        default=None)
 
     sympthoms = models.TextField(
+        verbose_name=_('Sympthoms'),
+        default=None,
         blank=False,
         null=False)
 

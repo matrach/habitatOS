@@ -8,6 +8,7 @@ from django.contrib import admin
 
 class Temperature(models.Model):
     astronaut = models.ForeignKey(
+        verbose_name=_('Astronaut'),
         to='auth.User',
         limit_choices_to={'groups__name': 'Astronauts'})
 
@@ -20,6 +21,7 @@ class Temperature(models.Model):
         help_text=_('Celsius'),
         max_digits=3,
         decimal_places=1,
+        default=None,
         validators=[
             MaxValueValidator(42),
             MinValueValidator(30)])
