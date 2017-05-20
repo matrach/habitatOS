@@ -11,8 +11,8 @@ class NotepadTest(Test):
         '/communication/figure/add/',
         '/communication/diaryentry/',
         '/communication/diaryentry/add/',
-#        '/static/communication/js/tinymce.js',
-#        '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
+        # '/static/communication/js/tinymce.js',
+        # '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
     ]
 
     def test_diary(self):

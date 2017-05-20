@@ -25,4 +25,3 @@ class Test(TestCase):
                 raise AssertionError(f'HTTP {response.status_code} for "{url}"')
             else:
                 self.logger.info(f'{response.status_code} {url}')
-

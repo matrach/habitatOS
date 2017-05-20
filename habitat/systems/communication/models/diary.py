@@ -58,4 +58,4 @@ class DiaryEntry(models.Model):
         class Media:
             js = [
                 '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
-                '/static/communication/js/tinymce.js',]
+                '/static/communication/js/tinymce.js']

@@ -66,4 +66,3 @@ class IndexDashboard(Dashboard):
             collapsible=True,
             column=3,
             css_classes=['grp-closed']))
-

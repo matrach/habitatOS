@@ -34,4 +34,3 @@ class BloodPressure(models.Model):
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'systolic', 'diastolic']
-
