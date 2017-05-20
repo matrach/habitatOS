@@ -1,3 +1,4 @@
+from django.contrib import admin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -14,8 +15,7 @@ class Food(models.Model):
         decimal_places=2,
         max_digits=5,
         blank=True,
-        null=True
-    )
+        null=True)
 
     weight = models.DecimalField(
         verbose_name=_('Net Weight'),
@@ -23,8 +23,7 @@ class Food(models.Model):
         decimal_places=2,
         max_digits=5,
         blank=True,
-        null=True
-    )
+        null=True)
 
     proteins = models.DecimalField(
         verbose_name=_('Proteins'),
@@ -32,8 +31,7 @@ class Food(models.Model):
         decimal_places=2,
         max_digits=5,
         blank=True,
-        null=True
-    )
+        null=True)
 
     carbohydrates = models.DecimalField(
         verbose_name=_('Carbohydrates'),
@@ -41,8 +39,7 @@ class Food(models.Model):
         decimal_places=2,
         max_digits=5,
         blank=True,
-        null=True
-    )
+        null=True)
 
     fats = models.DecimalField(
         verbose_name=_('Fats'),
@@ -50,8 +47,7 @@ class Food(models.Model):
         decimal_places=2,
         max_digits=5,
         blank=True,
-        null=True
-    )
+        null=True)
 
     salt = models.DecimalField(
         verbose_name=_('Salts'),
@@ -59,8 +55,12 @@ class Food(models.Model):
         decimal_places=2,
         max_digits=5,
         blank=True,
-        null=True
-    )
+        null=True)
 
     def __str__(self):
-        return f'{self.name} [{self.code}]'
+        return f'[{self.code}] {self.name}'
+
+    class Admin(admin.ModelAdmin):
+        list_display = ['code', 'name', 'best_before', 'calories']
+        ordering = ['-best_before']
+        search_fields = ['^code', 'name']

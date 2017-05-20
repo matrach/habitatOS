@@ -20,8 +20,7 @@ class PulsOxymetry(models.Model):
         help_text=_('%'),
         validators=[
             MaxValueValidator(100),
-            MinValueValidator(0)
-        ])
+            MinValueValidator(0)])
 
     perfusion_index = models.DecimalField(
         verbose_name=_('Blood Perfusion Index'),
@@ -29,8 +28,7 @@ class PulsOxymetry(models.Model):
         max_digits=3,
         validators=[
             MaxValueValidator(22),
-            MinValueValidator(0)
-        ])
+            MinValueValidator(0)])
 
     heart_rate = models.PositiveSmallIntegerField(
         verbose_name=_('Heart Rate'),
@@ -38,7 +36,6 @@ class PulsOxymetry(models.Model):
         validators=[
             MaxValueValidator(250),
             MinValueValidator(0)])
-
 
     def __str__(self):
         return f'[{self.datetime}] {self.astronaut} SpO2: {self.spo2}, HR: {self.heart_rate}, PI: {self.perfusion_index}'

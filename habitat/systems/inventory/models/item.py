@@ -1,3 +1,4 @@
+from django.contrib import admin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -9,3 +10,8 @@ class Item(models.Model):
 
     def __str__(self):
         return f'{self.name} [{self.code}]'
+
+    class Admin(admin.ModelAdmin):
+        list_display = ['code', 'name', 'quantity']
+        ordering = ['code']
+        search_fields = ['^code', 'name']

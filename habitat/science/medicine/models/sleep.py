@@ -26,8 +26,7 @@ class Sleep(models.Model):
         ('bad', _('Bad')),
         ('average', _('Average')),
         ('good', _('Good')),
-        ('very good', _('Very Good')),
-    ]
+        ('very good', _('Very Good'))]
 
     astronaut = models.ForeignKey(
         to='auth.User',

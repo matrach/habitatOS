@@ -12,7 +12,11 @@ class Figure(models.Model):
     caption = models.CharField(verbose_name=_('Caption'), max_length=255)
 
     def __str__(self):
-        return f'{self.caption}'
+        return f'{self.caption} {self.image}'
+
+    class Admin(admin.ModelAdmin):
+        list_display = ['diary_entry', 'image', 'caption']
+        search_fields = ['=diary_entry', 'caption']
 
 
 class FigureInline(admin.TabularInline):

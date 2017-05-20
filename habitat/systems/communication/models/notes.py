@@ -11,9 +11,18 @@ class PersonalNote(models.Model):
     author = models.ForeignKey(verbose_name=_('Author'), to='auth.User')
     content = models.TextField(verbose_name=_('Content'))
 
+    def __str__(self):
+        return f'[{self.created_date}] {self.author} {self.content:.30}'
+
+    class Meta:
+        ordering = ['-modified_date']
+
     class Admin(admin.ModelAdmin):
+        list_display = ['modified_date', 'publish_date', 'author']
+        search_fields = ['content']
+        list_filter = ['author']
+
         class Media:
             js = [
                 '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
-                '/static/communication/js/tinymce.js',
-            ]
+                '/static/communication/js/tinymce.js']
