@@ -29,8 +29,11 @@ class BloodPressure(models.Model):
             MaxValueValidator(250),
             MinValueValidator(0)])
 
+    def __str__(self):
+        return f'[{self.datetime}] {self.astronaut} BP: {self.systolic}/{self.diastolic}'
+
     class Meta:
         ordering = ['-datetime']
 
     class Admin(admin.ModelAdmin):
-        list_display = ['datetime', 'systolic', 'diastolic']
+        list_display = ['datetime', 'astronaut', 'systolic', 'diastolic']
