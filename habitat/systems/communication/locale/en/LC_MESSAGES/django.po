@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 14:03+0200\n"
+"POT-Creation-Date: 2017-05-21 13:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,62 +17,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: models/diary.py:10
+#: habitat/systems/communication/models/diary.py:10
 msgid "Entry"
 msgstr ""
 
-#: models/diary.py:11
+#: habitat/systems/communication/models/diary.py:11
 msgid "Image"
 msgstr ""
 
-#: models/diary.py:12
+#: habitat/systems/communication/models/diary.py:12
 msgid "Caption"
 msgstr ""
 
-#: models/diary.py:28
+#: habitat/systems/communication/models/diary.py:19
+msgid "Figure"
+msgstr ""
+
+#: habitat/systems/communication/models/diary.py:20
+msgid "Figures"
+msgstr ""
+
+#: habitat/systems/communication/models/diary.py:33
 msgid "Draft"
 msgstr ""
 
-#: models/diary.py:29
+#: habitat/systems/communication/models/diary.py:34
 msgid "Published"
 msgstr ""
 
-#: models/diary.py:32
+#: habitat/systems/communication/models/diary.py:37
 msgid "Status"
 msgstr ""
 
-#: models/diary.py:33 models/notes.py:8
+#: habitat/systems/communication/models/diary.py:38
+#: habitat/systems/communication/models/notes.py:8
 msgid "Created date"
 msgstr ""
 
-#: models/diary.py:34 models/notes.py:9
+#: habitat/systems/communication/models/diary.py:39
+#: habitat/systems/communication/models/notes.py:9
 msgid "Modified date"
 msgstr ""
 
-#: models/diary.py:35 models/notes.py:10
+#: habitat/systems/communication/models/diary.py:40
+#: habitat/systems/communication/models/notes.py:10
 msgid "Publish Date"
 msgstr ""
 
-#: models/diary.py:36 models/notes.py:11
+#: habitat/systems/communication/models/diary.py:41
+#: habitat/systems/communication/models/notes.py:11
 msgid "Author"
 msgstr ""
 
-#: models/diary.py:37
+#: habitat/systems/communication/models/diary.py:42
 msgid "Title"
 msgstr ""
 
-#: models/diary.py:38
+#: habitat/systems/communication/models/diary.py:43
 msgid "Slug"
 msgstr ""
 
-#: models/diary.py:39 models/notes.py:12
+#: habitat/systems/communication/models/diary.py:44
+#: habitat/systems/communication/models/notes.py:12
 msgid "Content"
 msgstr ""
 
-#: models/diary.py:40
+#: habitat/systems/communication/models/diary.py:45
 msgid "Tags"
 msgstr ""
 
-#: models/diary.py:40
+#: habitat/systems/communication/models/diary.py:45
 msgid "Comma separated tags"
+msgstr ""
+
+#: habitat/systems/communication/models/diary.py:59
+msgid "Diary Entry"
+msgstr ""
+
+#: habitat/systems/communication/models/diary.py:60
+msgid "Diary Entries"
+msgstr ""
+
+#: habitat/systems/communication/models/notes.py:19
+msgid "Personal Note"
+msgstr ""
+
+#: habitat/systems/communication/models/notes.py:20
+msgid "Personal Notes"
 msgstr ""

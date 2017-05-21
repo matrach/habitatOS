@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 10:42+0200\n"
+"POT-Creation-Date: 2017-05-21 13:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,58 +17,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: dashboard.py:11
-msgid "Building"
-msgstr ""
-
-#: dashboard.py:20
+#: habitat/dashboard.py:11
 msgid "Systems"
 msgstr ""
 
-#: dashboard.py:28
+#: habitat/dashboard.py:19
 msgid "Communication"
 msgstr ""
 
-#: dashboard.py:36
+#: habitat/dashboard.py:27
 msgid "Science"
 msgstr ""
 
-#: dashboard.py:46
+#: habitat/dashboard.py:37
 msgid "Shortcuts"
 msgstr ""
 
-#: dashboard.py:50
+#: habitat/dashboard.py:41
 msgid "Calendar"
 msgstr ""
 
-#: dashboard.py:51
+#: habitat/dashboard.py:42
 msgid "Chat"
 msgstr ""
 
-#: dashboard.py:52
+#: habitat/dashboard.py:43
 msgid "Documentation"
 msgstr ""
 
-#: dashboard.py:53
+#: habitat/dashboard.py:44
 msgid "Issue Tracker"
 msgstr ""
 
-#: dashboard.py:57
+#: habitat/dashboard.py:48
 msgid "Administration"
 msgstr ""
 
-#: dashboard.py:64
+#: habitat/dashboard.py:55
 msgid "Recent Actions"
 msgstr ""
 
-#: settings.py:150 settings.py:154
+#: habitat/dashboard.py:62
+msgid "Building"
+msgstr ""
+
+#: habitat/settings.py:150 habitat/settings.py:154
 msgid "M.A.R.S. HabitatOS"
 msgstr ""
 
-#: settings.py:151
+#: habitat/settings.py:151
 msgid "M.A.R.S. Dashboard"
 msgstr ""
 
-#: settings.py:152
+#: habitat/settings.py:152
 msgid "HabitatOS"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 11:01+0200\n"
+"POT-Creation-Date: 2017-05-21 13:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
@@ -18,6 +18,6 @@ msgstr ""
 "Language: pl\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: models.py:5
+#: habitat/science/education/models.py:5
 msgid "Education"
 msgstr "Edukacja"

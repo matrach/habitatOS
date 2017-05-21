@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 10:42+0200\n"
+"POT-Creation-Date: 2017-05-21 13:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
@@ -18,202 +18,270 @@ msgstr ""
 "Language: pl\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: science/medicine/models/blood_pressure.py:11
-#: science/medicine/models/disease.py:9 science/medicine/models/food.py:10
-#: science/medicine/models/pulse_oximetry.py:11
-#: science/medicine/models/quality_of_life.py:16
-#: science/medicine/models/sleep.py:16
-#: science/medicine/models/temperature.py:11
-#: science/medicine/models/weight.py:11
+#: habitat/science/medicine/models/blood_pressure.py:11
+#: habitat/science/medicine/models/disease.py:9
+#: habitat/science/medicine/models/food.py:10
+#: habitat/science/medicine/models/pulse_oximetry.py:11
+#: habitat/science/medicine/models/quality_of_life.py:16
+#: habitat/science/medicine/models/sleep.py:16
+#: habitat/science/medicine/models/temperature.py:11
+#: habitat/science/medicine/models/weight.py:11
 msgid "Astronaut"
 msgstr "Astronauta"
 
-#: science/medicine/models/blood_pressure.py:16
-#: science/medicine/models/food.py:15
-#: science/medicine/models/pulse_oximetry.py:16
-#: science/medicine/models/quality_of_life.py:21
-#: science/medicine/models/temperature.py:16
-#: science/medicine/models/weight.py:16
+#: habitat/science/medicine/models/blood_pressure.py:16
+#: habitat/science/medicine/models/food.py:15
+#: habitat/science/medicine/models/pulse_oximetry.py:16
+#: habitat/science/medicine/models/quality_of_life.py:21
+#: habitat/science/medicine/models/temperature.py:16
+#: habitat/science/medicine/models/weight.py:16
 msgid "Datetime"
 msgstr "Data i czas"
 
-#: science/medicine/models/blood_pressure.py:20
+#: habitat/science/medicine/models/blood_pressure.py:20
 msgid "Blood Pressure Systolic"
 msgstr "Ciśnienie skurczowe"
 
-#: science/medicine/models/blood_pressure.py:21
-#: science/medicine/models/blood_pressure.py:28
+#: habitat/science/medicine/models/blood_pressure.py:21
+#: habitat/science/medicine/models/blood_pressure.py:28
 msgid "mmHg"
 msgstr "mmHg"
 
-#: science/medicine/models/blood_pressure.py:27
+#: habitat/science/medicine/models/blood_pressure.py:27
 msgid "Blood Pressure Diastolic"
 msgstr "Ciśnienie rozkurczowe"
 
-#: science/medicine/models/disease.py:14
+#: habitat/science/medicine/models/blood_pressure.py:38
+msgid "Blood Pressure Measurement"
+msgstr "Pomiar ciśnienia krwi"
+
+#: habitat/science/medicine/models/blood_pressure.py:39
+msgid "Blood Pressure Database"
+msgstr "Baza pomiarów ciśnienia"
+
+#: habitat/science/medicine/models/disease.py:14
 msgid "Start Datetime"
 msgstr "Data i czas rozpoczęcia"
 
-#: science/medicine/models/disease.py:18
+#: habitat/science/medicine/models/disease.py:18
 msgid "End Datetime"
 msgstr "Data i czas zakończenia"
 
-#: science/medicine/models/disease.py:24
+#: habitat/science/medicine/models/disease.py:24
 msgid "ICD-10"
 msgstr "ICD-10"
 
-#: science/medicine/models/disease.py:29
+#: habitat/science/medicine/models/disease.py:29
 msgid "Sympthoms"
 msgstr "Objawy"
 
-#: science/medicine/models/food.py:19
+#: habitat/science/medicine/models/disease.py:39
+msgid "Disease Log"
+msgstr "Raport chorobowy"
+
+#: habitat/science/medicine/models/disease.py:40
+msgid "Disease Logbook"
+msgstr "Baza raportów chorób"
+
+#: habitat/science/medicine/models/food.py:19
 msgid "Food"
 msgstr "Jedzenie"
 
-#: science/medicine/models/pulse_oximetry.py:20
+#: habitat/science/medicine/models/food.py:29
+msgid "Food Intake"
+msgstr "Posiłek"
+
+#: habitat/science/medicine/models/food.py:30
+msgid "Food Logbook"
+msgstr "Baza danych posiłków"
+
+#: habitat/science/medicine/models/pulse_oximetry.py:20
 msgid "SpO2"
 msgstr "SpO2"
 
-#: science/medicine/models/pulse_oximetry.py:21
-#: science/medicine/models/weight.py:42 science/medicine/models/weight.py:54
+#: habitat/science/medicine/models/pulse_oximetry.py:21
+#: habitat/science/medicine/models/weight.py:42
+#: habitat/science/medicine/models/weight.py:54
 msgid "%"
 msgstr "%"
 
-#: science/medicine/models/pulse_oximetry.py:28
+#: habitat/science/medicine/models/pulse_oximetry.py:28
 msgid "Blood Perfusion Index"
 msgstr "Indeks Perfuzji"
 
-#: science/medicine/models/pulse_oximetry.py:37
+#: habitat/science/medicine/models/pulse_oximetry.py:37
 msgid "Heart Rate"
 msgstr "Puls"
 
-#: science/medicine/models/pulse_oximetry.py:38
+#: habitat/science/medicine/models/pulse_oximetry.py:38
 msgid "bpm"
 msgstr "uderzeń na minutę"
 
-#: science/medicine/models/quality_of_life.py:9
-#: science/medicine/models/sleep.py:9
+#: habitat/science/medicine/models/pulse_oximetry.py:49
+msgid "Pulse Oxymetry Measurement"
+msgstr "Pomiar saturacji SpO2"
+
+#: habitat/science/medicine/models/pulse_oximetry.py:50
+msgid "Pulse Oxymetry Database"
+msgstr "Pomiary saturacji SpO2"
+
+#: habitat/science/medicine/models/quality_of_life.py:9
+#: habitat/science/medicine/models/sleep.py:9
 msgid "Very Bad"
 msgstr "Bardzo źle"
 
-#: science/medicine/models/quality_of_life.py:10
-#: science/medicine/models/sleep.py:10
+#: habitat/science/medicine/models/quality_of_life.py:10
+#: habitat/science/medicine/models/sleep.py:10
 msgid "Bad"
 msgstr "Źle"
 
-#: science/medicine/models/quality_of_life.py:11
-#: science/medicine/models/sleep.py:11
+#: habitat/science/medicine/models/quality_of_life.py:11
+#: habitat/science/medicine/models/sleep.py:11
 msgid "Average"
 msgstr "Przeciętnie"
 
-#: science/medicine/models/quality_of_life.py:12
-#: science/medicine/models/sleep.py:12
+#: habitat/science/medicine/models/quality_of_life.py:12
+#: habitat/science/medicine/models/sleep.py:12
 msgid "Good"
 msgstr "Dobrze"
 
-#: science/medicine/models/quality_of_life.py:13
-#: science/medicine/models/sleep.py:13
+#: habitat/science/medicine/models/quality_of_life.py:13
+#: habitat/science/medicine/models/sleep.py:13
 msgid "Very Good"
 msgstr "Bardzo dobrze"
 
-#: science/medicine/models/quality_of_life.py:25
+#: habitat/science/medicine/models/quality_of_life.py:25
 msgid "Morning Stress"
 msgstr "Poranny stres"
 
-#: science/medicine/models/quality_of_life.py:33
+#: habitat/science/medicine/models/quality_of_life.py:33
 msgid "Morning Mood"
 msgstr "Poranny nastrój"
 
-#: science/medicine/models/quality_of_life.py:41
-#: science/medicine/models/quality_of_life.py:49
+#: habitat/science/medicine/models/quality_of_life.py:41
+#: habitat/science/medicine/models/quality_of_life.py:49
 msgid "Space Work"
 msgstr "Praca związana z tematami kosmicznymi"
 
-#: science/medicine/models/quality_of_life.py:57
+#: habitat/science/medicine/models/quality_of_life.py:57
 msgid "Productivity"
 msgstr "Produktywność"
 
-#: science/medicine/models/quality_of_life.py:65
+#: habitat/science/medicine/models/quality_of_life.py:65
 msgid "Evening Stress"
 msgstr "Wieczorny stres"
 
-#: science/medicine/models/quality_of_life.py:73
+#: habitat/science/medicine/models/quality_of_life.py:73
 msgid "Evening Mood"
 msgstr "Wieczorny nastrój"
 
-#: science/medicine/models/quality_of_life.py:81
+#: habitat/science/medicine/models/quality_of_life.py:81
 msgid "Day Summary"
 msgstr "Podsumowanie dnia"
 
-#: science/medicine/models/sleep.py:21
+#: habitat/science/medicine/models/quality_of_life.py:91
+msgid "Quality of Life Entry"
+msgstr "Ankieta jakości życia"
+
+#: habitat/science/medicine/models/quality_of_life.py:92
+msgid "Quality of Life Entries"
+msgstr "Baza ankiet jakości życia"
+
+#: habitat/science/medicine/models/sleep.py:21
 msgid "Location"
 msgstr "Miejsce"
 
-#: science/medicine/models/sleep.py:28
+#: habitat/science/medicine/models/sleep.py:28
 msgid "Quality"
 msgstr "Jakość"
 
-#: science/medicine/models/sleep.py:36
+#: habitat/science/medicine/models/sleep.py:36
 msgid "Start"
 msgstr "Rozpoczęcie"
 
-#: science/medicine/models/sleep.py:40
+#: habitat/science/medicine/models/sleep.py:40
 msgid "End"
 msgstr "Zakończenie"
 
-#: science/medicine/models/sleep.py:46
+#: habitat/science/medicine/models/sleep.py:46
 msgid "Duration"
 msgstr "Czas trwania"
 
-#: science/medicine/models/temperature.py:20
+#: habitat/science/medicine/models/sleep.py:61
+msgid "Sleep Log"
+msgstr "Sen"
+
+#: habitat/science/medicine/models/sleep.py:62
+msgid "Sleep Logbook"
+msgstr "Dziennik snów"
+
+#: habitat/science/medicine/models/temperature.py:20
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: science/medicine/models/temperature.py:21
+#: habitat/science/medicine/models/temperature.py:21
 msgid "Celsius"
 msgstr "Celsiusz"
 
-#: science/medicine/models/weight.py:20
+#: habitat/science/medicine/models/temperature.py:34
+msgid "Temperature Measurement"
+msgstr "Pomiar temperatury ciała"
+
+#: habitat/science/medicine/models/temperature.py:35
+msgid "Temperature Database"
+msgstr "Lista pomiarów temperatury ciała"
+
+#: habitat/science/medicine/models/weight.py:20
 msgid "Weight"
 msgstr "Waga"
 
-#: science/medicine/models/weight.py:21 science/medicine/models/weight.py:66
-#: science/medicine/models/weight.py:78 science/medicine/models/weight.py:100
+#: habitat/science/medicine/models/weight.py:21
+#: habitat/science/medicine/models/weight.py:66
+#: habitat/science/medicine/models/weight.py:78
+#: habitat/science/medicine/models/weight.py:100
 msgid "kg"
 msgstr "kg"
 
-#: science/medicine/models/weight.py:30
+#: habitat/science/medicine/models/weight.py:30
 msgid "BMI"
 msgstr "BMI"
 
-#: science/medicine/models/weight.py:41
+#: habitat/science/medicine/models/weight.py:41
 msgid "Body Fat"
 msgstr "Tkanka tłuszczowa"
 
-#: science/medicine/models/weight.py:53
+#: habitat/science/medicine/models/weight.py:53
 msgid "Lean Body Mass"
 msgstr "Masa ciała"
 
-#: science/medicine/models/weight.py:65
+#: habitat/science/medicine/models/weight.py:65
 msgid "Body Water"
 msgstr "Masa wody"
 
-#: science/medicine/models/weight.py:77
+#: habitat/science/medicine/models/weight.py:77
 msgid "Muscle Mass"
 msgstr "Masa mięśniowa"
 
-#: science/medicine/models/weight.py:89
+#: habitat/science/medicine/models/weight.py:89
 msgid "Daily Caloric Intake"
 msgstr "Dzienna ilość kalorii"
 
-#: science/medicine/models/weight.py:90
+#: habitat/science/medicine/models/weight.py:90
 msgid "kcal"
 msgstr "kcal"
 
-#: science/medicine/models/weight.py:99
+#: habitat/science/medicine/models/weight.py:99
 msgid "Bone Mass"
 msgstr "Masa kośćca"
 
-#: science/medicine/models/weight.py:111
+#: habitat/science/medicine/models/weight.py:111
 msgid "Visceral Fat"
 msgstr "Tłuszcz trzewny"
+
+#: habitat/science/medicine/models/weight.py:128
+msgid "Weight Measurement"
+msgstr "Pomiar masy ciała"
+
+#: habitat/science/medicine/models/weight.py:129
+msgid "Weight Database"
+msgstr "Lista pomiarów masy ciała"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 10:42+0200\n"
+"POT-Creation-Date: 2017-05-21 13:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,238 +17,254 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: science/psychology/models/questionnaire.py:9
+#: habitat/science/psychology/models/questionnaire.py:9
+msgid "Astronaut"
+msgstr ""
+
+#: habitat/science/psychology/models/questionnaire.py:14
+msgid "Datetime"
+msgstr ""
+
+#: habitat/science/psychology/models/questionnaire.py:18
 msgid "How frequently do you communicate with following people?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:11
-#: science/psychology/models/questionnaire.py:22
+#: habitat/science/psychology/models/questionnaire.py:20
+#: habitat/science/psychology/models/questionnaire.py:31
 msgid "almost never"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:12
-#: science/psychology/models/questionnaire.py:23
+#: habitat/science/psychology/models/questionnaire.py:21
+#: habitat/science/psychology/models/questionnaire.py:32
 msgid "rarely"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:13
-#: science/psychology/models/questionnaire.py:24
+#: habitat/science/psychology/models/questionnaire.py:22
+#: habitat/science/psychology/models/questionnaire.py:33
 msgid "sometimes"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:14
-#: science/psychology/models/questionnaire.py:25
-#: science/psychology/models/questionnaire.py:68
-#: science/psychology/models/questionnaire.py:79
+#: habitat/science/psychology/models/questionnaire.py:23
+#: habitat/science/psychology/models/questionnaire.py:34
+#: habitat/science/psychology/models/questionnaire.py:77
+#: habitat/science/psychology/models/questionnaire.py:88
 msgid "moderately"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:15
-#: science/psychology/models/questionnaire.py:26
+#: habitat/science/psychology/models/questionnaire.py:24
+#: habitat/science/psychology/models/questionnaire.py:35
 msgid "rather often"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:16
-#: science/psychology/models/questionnaire.py:27
+#: habitat/science/psychology/models/questionnaire.py:25
+#: habitat/science/psychology/models/questionnaire.py:36
 msgid "very often"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:17
-#: science/psychology/models/questionnaire.py:28
+#: habitat/science/psychology/models/questionnaire.py:26
+#: habitat/science/psychology/models/questionnaire.py:37
 msgid "almost all the time"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:20
+#: habitat/science/psychology/models/questionnaire.py:29
 msgid "How often do you want to communicate with following people?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:31
+#: habitat/science/psychology/models/questionnaire.py:40
 msgid ""
 "Personal preferences: Please, evaluate the following people according to "
 "your preference to interact with them in your free time."
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:33
-#: science/psychology/models/questionnaire.py:44
+#: habitat/science/psychology/models/questionnaire.py:42
+#: habitat/science/psychology/models/questionnaire.py:53
 msgid "I would rather avoid him/her"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:39
-#: science/psychology/models/questionnaire.py:50
+#: habitat/science/psychology/models/questionnaire.py:48
+#: habitat/science/psychology/models/questionnaire.py:59
 msgid "I would love to with with him/her all the time"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:42
+#: habitat/science/psychology/models/questionnaire.py:51
 msgid ""
 "Work preferences: Please, evaluate the following people according to your "
 "preference to work with them."
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:53
+#: habitat/science/psychology/models/questionnaire.py:62
 msgid ""
 "Evaluate the quality of communication with following people (taking into "
 "account its relevance, content, timeliness, etc.)."
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:55
+#: habitat/science/psychology/models/questionnaire.py:64
 msgid "should always be better"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:56
+#: habitat/science/psychology/models/questionnaire.py:65
 msgid "should often be better"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:57
+#: habitat/science/psychology/models/questionnaire.py:66
 msgid "should sometimes be better"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:58
-#: science/psychology/models/questionnaire.py:91
+#: habitat/science/psychology/models/questionnaire.py:67
+#: habitat/science/psychology/models/questionnaire.py:100
 msgid "sufficient"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:59
+#: habitat/science/psychology/models/questionnaire.py:68
 msgid "sometimes above average"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:60
+#: habitat/science/psychology/models/questionnaire.py:69
 msgid "often above average"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:61
+#: habitat/science/psychology/models/questionnaire.py:70
 msgid "always above average"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:64
+#: habitat/science/psychology/models/questionnaire.py:73
 msgid "How well do you know the following people?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:66
-#: science/psychology/models/questionnaire.py:77
+#: habitat/science/psychology/models/questionnaire.py:75
+#: habitat/science/psychology/models/questionnaire.py:86
 msgid "not at all"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:67
-#: science/psychology/models/questionnaire.py:78
+#: habitat/science/psychology/models/questionnaire.py:76
+#: habitat/science/psychology/models/questionnaire.py:87
 msgid "not much"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:69
-#: science/psychology/models/questionnaire.py:80
+#: habitat/science/psychology/models/questionnaire.py:78
+#: habitat/science/psychology/models/questionnaire.py:89
 msgid "quite well"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:70
-#: science/psychology/models/questionnaire.py:81
+#: habitat/science/psychology/models/questionnaire.py:79
+#: habitat/science/psychology/models/questionnaire.py:90
 msgid "well"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:71
-#: science/psychology/models/questionnaire.py:82
+#: habitat/science/psychology/models/questionnaire.py:80
+#: habitat/science/psychology/models/questionnaire.py:91
 msgid "very well"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:72
-#: science/psychology/models/questionnaire.py:83
+#: habitat/science/psychology/models/questionnaire.py:81
+#: habitat/science/psychology/models/questionnaire.py:92
 msgid "perfectly well"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:75
+#: habitat/science/psychology/models/questionnaire.py:84
 msgid "How well do you want to know the following people?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:86
+#: habitat/science/psychology/models/questionnaire.py:95
 msgid "Evaluate the quality of cooperation with the following people?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:88
+#: habitat/science/psychology/models/questionnaire.py:97
 msgid "totally insufficient"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:89
+#: habitat/science/psychology/models/questionnaire.py:98
 msgid "often insufficient"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:90
+#: habitat/science/psychology/models/questionnaire.py:99
 msgid "sometimes insufficient"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:92
+#: habitat/science/psychology/models/questionnaire.py:101
 msgid "rather high"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:93
+#: habitat/science/psychology/models/questionnaire.py:102
 msgid "high"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:94
+#: habitat/science/psychology/models/questionnaire.py:103
 msgid "excellent"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:97
+#: habitat/science/psychology/models/questionnaire.py:106
 msgid "How much do you trust the following people?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:99
+#: habitat/science/psychology/models/questionnaire.py:108
 msgid "Totally"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:100
+#: habitat/science/psychology/models/questionnaire.py:109
 msgid "Very much"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:101
+#: habitat/science/psychology/models/questionnaire.py:110
 msgid "A lot"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:102
+#: habitat/science/psychology/models/questionnaire.py:111
 msgid "Partly"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:103
+#: habitat/science/psychology/models/questionnaire.py:112
 msgid "A little"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:104
+#: habitat/science/psychology/models/questionnaire.py:113
 msgid "Not much"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:105
+#: habitat/science/psychology/models/questionnaire.py:114
 msgid "Not at all"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:108
+#: habitat/science/psychology/models/questionnaire.py:117
 msgid "How is the atmosphere within the team?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:110
+#: habitat/science/psychology/models/questionnaire.py:119
 msgid "Terrible"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:116
+#: habitat/science/psychology/models/questionnaire.py:125
 msgid "Amazing"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:119
+#: habitat/science/psychology/models/questionnaire.py:128
 msgid "Have there been any misunderstandings in the team?"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:121
+#: habitat/science/psychology/models/questionnaire.py:130
 msgid "Never"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:127
+#: habitat/science/psychology/models/questionnaire.py:136
 msgid "Constantly"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:130
+#: habitat/science/psychology/models/questionnaire.py:139
 msgid ""
 "If applicable, name the source(s) for the discomfort you are experience (e."
 "g. noise, smell, food, sleeping problems, interpersonal conflict, etc.)"
 msgstr ""
 
-#: science/psychology/models/questionnaire.py:133
+#: habitat/science/psychology/models/questionnaire.py:142
 msgid ""
 "You can add any comment or note (e.g. if something important happened, how "
 "do you feel etc.)"
+msgstr ""
+
+#: habitat/science/psychology/models/questionnaire.py:149
+msgid "Questionnaire"
+msgstr ""
+
+#: habitat/science/psychology/models/questionnaire.py:150
+msgid "Questionnaires"
 msgstr ""
