@@ -147,7 +147,7 @@ class Questionnaire(models.Model):
     class Meta:
         ordering = ['-datetime']
         verbose_name = _('Questionnaire')
-        verbose_name = _('Questionnaires')
+        verbose_name_plural = _('Questionnaires')
 
     class Admin(admin.ModelAdmin):
         radio_fields = {

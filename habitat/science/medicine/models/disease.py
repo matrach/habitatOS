@@ -37,7 +37,7 @@ class Disease(models.Model):
     class Meta:
         ordering = ['-datetime_start']
         verbose_name = _('Disease Log')
-        verbose_name = _('Disease Logbook')
+        verbose_name_plural = _('Disease Logbook')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime_start', 'datetime_end', 'astronaut', 'icd10']

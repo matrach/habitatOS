@@ -36,7 +36,7 @@ class BloodPressure(models.Model):
     class Meta:
         ordering = ['-datetime']
         verbose_name = _('Blood Pressure Measurement')
-        verbose_name = _('Blood Pressure Database')
+        verbose_name_plural = _('Blood Pressure Database')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'systolic', 'diastolic']
