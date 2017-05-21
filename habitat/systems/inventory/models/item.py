@@ -11,6 +11,11 @@ class Item(models.Model):
     def __str__(self):
         return f'[{self.code}] {self.name} Quantity: {self.quantity}'
 
+    class Meta:
+        ordering = ['code']
+        verbose_name = _('Item')
+        verbose_name_plural = _('Item Database')
+
     class Admin(admin.ModelAdmin):
         list_display = ['code', 'name', 'quantity']
         ordering = ['code']

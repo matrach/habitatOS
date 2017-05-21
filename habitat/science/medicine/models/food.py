@@ -26,6 +26,8 @@ class Meal(models.Model):
 
     class Meta:
         ordering = ['-datetime']
+        verbose_name = _('Food Intake')
+        verbose_name = _('Food Logbook')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'food']

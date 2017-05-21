@@ -30,6 +30,8 @@ class Observation(models.Model):
 
     class Meta:
         ordering = ['-datetime']
+        verbose_name = _('Observation')
+        verbose_name_plural = _('Observations')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'experiment', 'image']
@@ -76,6 +78,8 @@ class Experiment(models.Model):
 
     class Meta:
         ordering = ['-planted_date']
+        verbose_name = _('Experiment')
+        verbose_name_plural = _('Experiments')
 
     class Admin(admin.ModelAdmin):
         inlines = [ObservationInline]

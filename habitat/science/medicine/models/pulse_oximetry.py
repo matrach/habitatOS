@@ -46,6 +46,8 @@ class PulsOxymetry(models.Model):
 
     class Meta:
         ordering = ['-datetime']
+        verbose_name = _('Pulse Oxymetry Measurement')
+        verbose_name = _('Pulse Oxymetry Database')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'spo2', 'perfusion_index', 'heart_rate']

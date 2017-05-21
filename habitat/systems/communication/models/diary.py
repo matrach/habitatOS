@@ -14,6 +14,11 @@ class Figure(models.Model):
     def __str__(self):
         return f'{self.caption} {self.image}'
 
+    class Meta:
+        ordering = ['-diary_entry']
+        verbose_name = _('Figure')
+        verbose_name_plural = _('Figures')
+
     class Admin(admin.ModelAdmin):
         list_display = ['diary_entry', 'image', 'caption']
         search_fields = ['=diary_entry', 'caption']
@@ -49,10 +54,16 @@ class DiaryEntry(models.Model):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
+    class Meta:
+        ordering = ['-modified_date']
+        verbose_name = _('Diary Entry')
+        verbose_name_plural = _('Diary Entries')
+
     class Admin(admin.ModelAdmin):
         inlines = [FigureInline]
         list_display = ['publish_date', 'author', 'title']
         search_fields = ['title']
+        ordering = ['-modified_date']
         list_filter = ['author']
 
         def save_model(self, request, obj, form, change):

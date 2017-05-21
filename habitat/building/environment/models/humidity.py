@@ -24,6 +24,8 @@ class Humidity(models.Model):
 
     class Meta:
         ordering = ['-value']
+        verbose_name = _('Humitdity Measurement')
+        verbose_name_plural = _('Humidity Measurements')
 
     class Admin(admin.ModelAdmin):
         list_display = ['value']

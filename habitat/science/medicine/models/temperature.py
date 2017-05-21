@@ -31,6 +31,8 @@ class Temperature(models.Model):
 
     class Meta:
         ordering = ['-datetime']
+        verbose_name = _('Temperature Measurement')
+        verbose_name = _('Temperature Database')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'temperature']

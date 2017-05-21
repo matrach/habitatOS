@@ -88,6 +88,8 @@ class QualityOfLife(models.Model):
 
     class Meta:
         ordering = ['-datetime']
+        verbose_name = _('Quality of Life Entry')
+        verbose_name = _('Quality of Life Entries')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut']

@@ -60,6 +60,11 @@ class Food(models.Model):
     def __str__(self):
         return f'[{self.code}] {self.name} (best before: {self.best_before:%Y-%m-%d}'
 
+    class Meta:
+        ordering = ['-best_before']
+        verbose_name = _('Food')
+        verbose_name_plural = _('Food Database')
+
     class Admin(admin.ModelAdmin):
         list_display = ['code', 'name', 'best_before', 'calories']
         ordering = ['-best_before']

@@ -20,6 +20,8 @@ class Luminance(models.Model):
 
     class Meta:
         ordering = ['-value']
+        verbose_name = _('Luminance Measurement')
+        verbose_name_plural = _('Luminance Measurements')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'value']

@@ -31,6 +31,8 @@ class Plant(models.Model):
 
     class Meta:
         ordering = ['-latin_name']
+        verbose_name = _('Plant')
+        verbose_name_plural = _('Plants')
 
     class Admin(admin.ModelAdmin):
         list_display = ['latin_name', 'spicies', 'wikipedia_url']

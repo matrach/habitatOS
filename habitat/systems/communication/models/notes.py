@@ -16,6 +16,8 @@ class PersonalNote(models.Model):
 
     class Meta:
         ordering = ['-modified_date']
+        verbose_name = _('Personal Note')
+        verbose_name_plural = _('Personal Notes')
 
     class Admin(admin.ModelAdmin):
         list_display = ['modified_date', 'publish_date', 'author']

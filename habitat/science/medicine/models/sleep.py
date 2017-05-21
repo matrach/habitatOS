@@ -58,6 +58,8 @@ class Sleep(models.Model):
 
     class Meta:
         ordering = ['-datetime_start']
+        verbose_name = _('Sleep Log')
+        verbose_name = _('Sleep Logbook')
 
     class Admin(admin.ModelAdmin):
         list_display = ['astronaut', 'quality', 'location', 'duration', 'datetime_start', 'datetime_end']
