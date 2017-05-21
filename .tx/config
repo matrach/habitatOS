@@ -1,0 +1,57 @@
+[main]
+host = https://www.transifex.com
+
+[habitatos.main]
+file_filter = habitat/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.environment]
+file_filter = habitat/building/environment/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/building/environment/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.greenhouse]
+file_filter = habitat/building/greenhouse/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/building/greenhouse/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.time_perception]
+file_filter = habitat/experiments/time_perception/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/experiments/time_perception/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.education]
+file_filter = habitat/science/education/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/science/education/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.medicine]
+file_filter = habitat/science/medicine/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/science/medicine/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.psychology]
+file_filter = habitat/science/psychology/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/science/psychology/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.communication]
+file_filter = habitat/systems/communication/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/systems/communication/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.inventory]
+file_filter = habitat/systems/inventory/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/systems/inventory/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+

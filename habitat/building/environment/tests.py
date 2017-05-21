@@ -8,6 +8,6 @@ class EnvironmentTest(Test):
         '/environment/temperature/add/',
         '/environment/humidity/',
         '/environment/humidity/add/',
-        '/environment/luminosity/',
-        '/environment/luminosity/add/',
+        '/environment/luminance/',
+        '/environment/luminance/add/',
     ]

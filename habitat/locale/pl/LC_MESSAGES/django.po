@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-21 10:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
+"Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: dashboard.py:11
+msgid "Building"
+msgstr "Budynek"
+
+#: dashboard.py:20
+msgid "Systems"
+msgstr "Systemy"
+
+#: dashboard.py:28
+msgid "Communication"
+msgstr "Komunikacja"
+
+#: dashboard.py:36
+msgid "Science"
+msgstr "Nauka"
+
+#: dashboard.py:46
+msgid "Shortcuts"
+msgstr "Skróty"
+
+#: dashboard.py:50
+msgid "Calendar"
+msgstr "Kalendarz"
+
+#: dashboard.py:51
+msgid "Chat"
+msgstr "Chat"
+
+#: dashboard.py:52
+msgid "Documentation"
+msgstr "Dokumentacja"
+
+#: dashboard.py:53
+msgid "Issue Tracker"
+msgstr "Lista zadań"
+
+#: dashboard.py:57
+msgid "Administration"
+msgstr "Administracja"
+
+#: dashboard.py:64
+msgid "Recent Actions"
+msgstr "Ostatnie akcje"
+
+#: settings.py:150 settings.py:154
+msgid "M.A.R.S. HabitatOS"
+msgstr "M.A.R.S. HabitatOS"
+
+#: settings.py:151
+msgid "M.A.R.S. Dashboard"
+msgstr "M.A.R.S. Panel Kontrolny"
+
+#: settings.py:152
+msgid "HabitatOS"
+msgstr "HabitatOS"

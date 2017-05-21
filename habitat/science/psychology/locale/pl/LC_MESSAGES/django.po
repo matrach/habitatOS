@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-21 10:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
+"Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: science/psychology/models/questionnaire.py:9
+msgid "How frequently do you communicate with following people?"
+msgstr "Jak często komunikujesz się z innymi ludźmi?"
+
+#: science/psychology/models/questionnaire.py:11
+#: science/psychology/models/questionnaire.py:22
+msgid "almost never"
+msgstr "prawie nigdy"
+
+#: science/psychology/models/questionnaire.py:12
+#: science/psychology/models/questionnaire.py:23
+msgid "rarely"
+msgstr "rzadko"
+
+#: science/psychology/models/questionnaire.py:13
+#: science/psychology/models/questionnaire.py:24
+msgid "sometimes"
+msgstr "czasami"
+
+#: science/psychology/models/questionnaire.py:14
+#: science/psychology/models/questionnaire.py:25
+#: science/psychology/models/questionnaire.py:68
+#: science/psychology/models/questionnaire.py:79
+msgid "moderately"
+msgstr "umiarkowanie"
+
+#: science/psychology/models/questionnaire.py:15
+#: science/psychology/models/questionnaire.py:26
+msgid "rather often"
+msgstr "raczej często"
+
+#: science/psychology/models/questionnaire.py:16
+#: science/psychology/models/questionnaire.py:27
+msgid "very often"
+msgstr "bardzo często"
+
+#: science/psychology/models/questionnaire.py:17
+#: science/psychology/models/questionnaire.py:28
+msgid "almost all the time"
+msgstr "prawie zawsze"
+
+#: science/psychology/models/questionnaire.py:20
+msgid "How often do you want to communicate with following people?"
+msgstr "Jak często chcesz komunikować się z innymi ludźmi?"
+
+#: science/psychology/models/questionnaire.py:31
+msgid ""
+"Personal preferences: Please, evaluate the following people according to "
+"your preference to interact with them in your free time."
+msgstr ""
+"Proszę oceń następujące osoby pod względem preferencji kontaktu z nimi w "
+"wolnym czasie."
+
+#: science/psychology/models/questionnaire.py:33
+#: science/psychology/models/questionnaire.py:44
+msgid "I would rather avoid him/her"
+msgstr "Wolę unikać"
+
+#: science/psychology/models/questionnaire.py:39
+#: science/psychology/models/questionnaire.py:50
+msgid "I would love to with with him/her all the time"
+msgstr "Chcę spędzać więcej czasu"
+
+#: science/psychology/models/questionnaire.py:42
+msgid ""
+"Work preferences: Please, evaluate the following people according to your "
+"preference to work with them."
+msgstr "Proszę oceń następujące osoby pod względem preferencji pracy z nimi."
+
+#: science/psychology/models/questionnaire.py:53
+msgid ""
+"Evaluate the quality of communication with following people (taking into "
+"account its relevance, content, timeliness, etc.)."
+msgstr ""
+"Oceń jakość komunikacji z następującymi osobami (biorąc pod uwagę częstość, "
+"treść i długotrwałość)."
+
+#: science/psychology/models/questionnaire.py:55
+msgid "should always be better"
+msgstr "zawsze może być lepiej"
+
+#: science/psychology/models/questionnaire.py:56
+msgid "should often be better"
+msgstr "często może być lepiej"
+
+#: science/psychology/models/questionnaire.py:57
+msgid "should sometimes be better"
+msgstr "może być lepiej"
+
+#: science/psychology/models/questionnaire.py:58
+#: science/psychology/models/questionnaire.py:91
+msgid "sufficient"
+msgstr "wystarczająco"
+
+#: science/psychology/models/questionnaire.py:59
+msgid "sometimes above average"
+msgstr "powyżej średniej"
+
+#: science/psychology/models/questionnaire.py:60
+msgid "often above average"
+msgstr "często powyżej średniej"
+
+#: science/psychology/models/questionnaire.py:61
+msgid "always above average"
+msgstr "zawsze powyżej średniej"
+
+#: science/psychology/models/questionnaire.py:64
+msgid "How well do you know the following people?"
+msgstr "Jak dobrze znasz następujące osoby?"
+
+#: science/psychology/models/questionnaire.py:66
+#: science/psychology/models/questionnaire.py:77
+msgid "not at all"
+msgstr "wcale"
+
+#: science/psychology/models/questionnaire.py:67
+#: science/psychology/models/questionnaire.py:78
+msgid "not much"
+msgstr "nie bardzo"
+
+#: science/psychology/models/questionnaire.py:69
+#: science/psychology/models/questionnaire.py:80
+msgid "quite well"
+msgstr "całkiem nieźle"
+
+#: science/psychology/models/questionnaire.py:70
+#: science/psychology/models/questionnaire.py:81
+msgid "well"
+msgstr "dobrze"
+
+#: science/psychology/models/questionnaire.py:71
+#: science/psychology/models/questionnaire.py:82
+msgid "very well"
+msgstr "bardzo dobrze"
+
+#: science/psychology/models/questionnaire.py:72
+#: science/psychology/models/questionnaire.py:83
+msgid "perfectly well"
+msgstr "wyśmienicie"
+
+#: science/psychology/models/questionnaire.py:75
+msgid "How well do you want to know the following people?"
+msgstr "Jak dobrze chcesz znać następujące osoby?"
+
+#: science/psychology/models/questionnaire.py:86
+msgid "Evaluate the quality of cooperation with the following people?"
+msgstr "Oceń jakość współpracy z następującymi osobami?"
+
+#: science/psychology/models/questionnaire.py:88
+msgid "totally insufficient"
+msgstr "całkowicie niewystarczająca"
+
+#: science/psychology/models/questionnaire.py:89
+msgid "often insufficient"
+msgstr "zwykle niewystarczająca"
+
+#: science/psychology/models/questionnaire.py:90
+msgid "sometimes insufficient"
+msgstr "czasami niewystarczająca"
+
+#: science/psychology/models/questionnaire.py:92
+msgid "rather high"
+msgstr "raczej wysoka"
+
+#: science/psychology/models/questionnaire.py:93
+msgid "high"
+msgstr "wysoka"
+
+#: science/psychology/models/questionnaire.py:94
+msgid "excellent"
+msgstr "wyśmienicie"
+
+#: science/psychology/models/questionnaire.py:97
+msgid "How much do you trust the following people?"
+msgstr "Jak bardzo ufasz następującym osobom?"
+
+#: science/psychology/models/questionnaire.py:99
+msgid "Totally"
+msgstr "Całkowicie"
+
+#: science/psychology/models/questionnaire.py:100
+msgid "Very much"
+msgstr "Bardzo mocno"
+
+#: science/psychology/models/questionnaire.py:101
+msgid "A lot"
+msgstr "Znacznie"
+
+#: science/psychology/models/questionnaire.py:102
+msgid "Partly"
+msgstr "Częściowo"
+
+#: science/psychology/models/questionnaire.py:103
+msgid "A little"
+msgstr "Trochę"
+
+#: science/psychology/models/questionnaire.py:104
+msgid "Not much"
+msgstr "Nie bardzo"
+
+#: science/psychology/models/questionnaire.py:105
+msgid "Not at all"
+msgstr "Wcale"
+
+#: science/psychology/models/questionnaire.py:108
+msgid "How is the atmosphere within the team?"
+msgstr "Jaka jest atmosfera wewnątrz zespołu?"
+
+#: science/psychology/models/questionnaire.py:110
+msgid "Terrible"
+msgstr "Tragicznie"
+
+#: science/psychology/models/questionnaire.py:116
+msgid "Amazing"
+msgstr "Wspaniale"
+
+#: science/psychology/models/questionnaire.py:119
+msgid "Have there been any misunderstandings in the team?"
+msgstr "Czy były jakieś nieporozumienia wewnątrz zespołu?"
+
+#: science/psychology/models/questionnaire.py:121
+msgid "Never"
+msgstr "Nigdy"
+
+#: science/psychology/models/questionnaire.py:127
+msgid "Constantly"
+msgstr "Zawsze"
+
+#: science/psychology/models/questionnaire.py:130
+msgid ""
+"If applicable, name the source(s) for the discomfort you are experience "
+"(e.g. noise, smell, food, sleeping problems, interpersonal conflict, etc.)"
+msgstr ""
+"Jeżeli dotyczy, nazwij źródło niepokoju np. hałas, smród, jedzenie, problem "
+"ze snem, konflikt"
+
+#: science/psychology/models/questionnaire.py:133
+msgid ""
+"You can add any comment or note (e.g. if something important happened, how "
+"do you feel etc.)"
+msgstr ""
+"Możesz dodać komentarz np. jeśli coś ważnego się wydarzyło, lub jak się "
+"czujesz"

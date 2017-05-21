@@ -6,13 +6,11 @@ from django.contrib import admin
 class Plant(models.Model):
     latin_name = models.CharField(
         verbose_name=_('Latin Name'),
-        help_text=_('Latin'),
         max_length=255,
         default=None)
 
     spicies = models.CharField(
         verbose_name=_('Species'),
-        help_text=_('Species'),
         max_length=255,
         default=None)
 

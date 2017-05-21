@@ -2,5 +2,6 @@ gunicorn
 psycopg2
 django==1.11.1
 django-grappelli==2.9.1
+transifex-client
 Pillow
 dj-database-url

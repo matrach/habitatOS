@@ -31,22 +31,22 @@ class Questionnaire(models.Model):
         verbose_name=_('Personal preferences: Please, evaluate the following people according to your preference to interact with them in your free time.'),
         choices=[
             (1, _('I would rather avoid him/her')),
-            (2, _('')),
-            (3, _('')),
-            (4, _('')),
-            (5, _('')),
-            (6, _('')),
+            (2, ''),
+            (3, ''),
+            (4, ''),
+            (5, ''),
+            (6, ''),
             (7, _('I would love to with with him/her all the time'))])
 
     work_preferences = models.PositiveSmallIntegerField(
         verbose_name=_('Work preferences: Please, evaluate the following people according to your preference to work with them.'),
         choices=[
             (1, _('I would rather avoid him/her')),
-            (2, _('')),
-            (3, _('')),
-            (4, _('')),
-            (5, _('')),
-            (6, _('')),
+            (2, ''),
+            (3, ''),
+            (4, ''),
+            (5, ''),
+            (6, ''),
             (7, _('I would love to with with him/her all the time'))])
 
     communication_quality = models.PositiveSmallIntegerField(
@@ -108,29 +108,29 @@ class Questionnaire(models.Model):
         verbose_name=_('How is the atmosphere within the team?'),
         choices=[
             (1, _('Terrible')),
-            (2, _('')),
-            (3, _('')),
-            (4, _('')),
-            (5, _('')),
-            (6, _('')),
+            (2, ''),
+            (3, ''),
+            (4, ''),
+            (5, ''),
+            (6, ''),
             (7, _('Amazing'))])
 
     team_misunderstandings = models.PositiveSmallIntegerField(
         verbose_name=_('Have there been any misunderstandings in the team?'),
         choices=[
             (1, _('Never')),
-            (2, _('')),
-            (3, _('')),
-            (4, _('')),
-            (5, _('')),
-            (6, _('')),
+            (2, ''),
+            (3, ''),
+            (4, ''),
+            (5, ''),
+            (6, ''),
             (7, _('Constantly'))])
 
     discomfort = models.TextField(
         verbose_name=_('If applicable, name the source(s) for the discomfort you are experience (e.g. noise, smell, food, sleeping problems, interpersonal conflict, etc.)'))
 
     remarks = models.TextField(
-        verbose_name=_('You can add any comment or note (e.g. if something important happened, how do you feel etc.) '))
+        verbose_name=_('You can add any comment or note (e.g. if something important happened, how do you feel etc.)'))
 
     class Admin(admin.ModelAdmin):
         radio_fields = {

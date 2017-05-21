@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-21 10:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: building/greenhouse/models/experiment.py:9
+msgid "Experiment"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:13
+msgid "Observation date"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:17
+msgid "Notes"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:23
+#: building/greenhouse/models/experiment.py:69
+#: building/greenhouse/models/plant.py:20
+msgid "Image"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:46
+msgid "Soil"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:47
+msgid "Underwater"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:48
+msgid "Artificial"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:49
+msgid "Hydroponics"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:50
+msgid "Aeroponics"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:51
+msgid "Mixed"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:52
+msgid "Other"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:55
+msgid "Plant"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:59
+msgid "Cultivation method"
+msgstr ""
+
+#: building/greenhouse/models/experiment.py:65
+msgid "Date Planted"
+msgstr ""
+
+#: building/greenhouse/models/plant.py:8
+msgid "Latin Name"
+msgstr ""
+
+#: building/greenhouse/models/plant.py:9
+msgid "Latin"
+msgstr ""
+
+#: building/greenhouse/models/plant.py:14
+#: building/greenhouse/models/plant.py:15
+msgid "Species"
+msgstr ""
+
+#: building/greenhouse/models/plant.py:26
+msgid "Wikipedia URL"
+msgstr ""

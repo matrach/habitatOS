@@ -31,8 +31,8 @@ class Weight(models.Model):
         max_digits=3,
         decimal_places=1,
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(40),
             MinValueValidator(10)])
@@ -43,8 +43,8 @@ class Weight(models.Model):
         max_digits=3,
         decimal_places=1,
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(100),
             MinValueValidator(0)])
@@ -55,8 +55,8 @@ class Weight(models.Model):
         max_digits=4,
         decimal_places=1,
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(200),
             MinValueValidator(0)])
@@ -67,8 +67,8 @@ class Weight(models.Model):
         max_digits=4,
         decimal_places=1,
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(200),
             MinValueValidator(0)])
@@ -79,8 +79,8 @@ class Weight(models.Model):
         max_digits=4,
         decimal_places=1,
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(200),
             MinValueValidator(0)])
@@ -89,8 +89,8 @@ class Weight(models.Model):
         verbose_name=_('Daily Caloric Intake'),
         help_text=_('kcal'),
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(4000),
             MinValueValidator(0)])
@@ -101,8 +101,8 @@ class Weight(models.Model):
         max_digits=4,
         decimal_places=1,
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(200),
             MinValueValidator(0)])
@@ -110,11 +110,15 @@ class Weight(models.Model):
     visceral_fat = models.PositiveSmallIntegerField(
         verbose_name=_('Visceral Fat'),
         default=None,
-        blank=False,
-        null=False,
+        blank=True,
+        null=True,
         validators=[
             MaxValueValidator(10),
             MinValueValidator(0)])
+
+    def save(self, **kwargs):
+        #self.BMI = self.weight / (height ** 2)
+        return super().save(**kwargs)
 
     def __str__(self):
         return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.astronaut} Weight: {self.weight}kg, BMI: {self.BMI}'

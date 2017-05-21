@@ -4,14 +4,14 @@ from django.contrib import admin
 from django.utils.timezone import now
 
 
-class Luminosity(models.Model):
+class Luminance(models.Model):
 
     datetime = models.DateTimeField(
         verbose_name=_('Datetime'),
         default=now)
 
     value = models.PositiveSmallIntegerField(
-        verbose_name=_('Luminosity'),
+        verbose_name=_('Luminance'),
         help_text=_('lumen'),
         default=None)
 
