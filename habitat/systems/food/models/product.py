@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 from django.db import models
+from django.forms import CheckboxSelectMultiple
 from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 
@@ -34,6 +35,7 @@ class Product(models.Model):
     image = models.ImageField(verbose_name=_('Image'), upload_to=upload_path, null=True, blank=True, default=None)
     kind = models.CharField(verbose_name=_('Kind'), choices=KINDS, max_length=30, db_index=True, default=None)
     category = models.CharField(verbose_name=_('Category'), choices=CATEGORIES, max_length=30, db_index=True, default=None)
+    tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', blank=True, default=None)
 
     measurements_physical_form = models.CharField(verbose_name=_('Phisical Form'), choices=PHYSICAL_FORMS, max_length=20, db_index=True, blank=True, null=True, default=None)
     measurements_usage_unit = models.ForeignKey(verbose_name=_('Usage Unit'), to='food.Unit', related_name='usage_unit', blank=True, null=True, default=None)
@@ -85,7 +87,7 @@ class Product(models.Model):
     minerals_iron = models.DecimalField(verbose_name=_('Iron'), help_text=_('mg/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
 
     def __str__(self):
-        return f'[{self.code}] {self.name} (best before: {self.best_before:%Y-%m-%d}'
+        return f'{self.name}'
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -97,11 +99,14 @@ class Product(models.Model):
         verbose_name_plural = _('Products')
 
     class Admin(admin.ModelAdmin):
-        list_display = ['name', 'kind', 'category']
+        change_list_template = 'admin/change_list_filter_sidebar.html'
+        formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
+        list_display = ['name', 'kind', 'category', 'display_tags']
         ordering = ['-name']
         search_fields = ['name']
+        list_filter = ['kind', 'category', 'tags']
         fieldsets = [
-            (_('General'), {'fields': ['name', 'kind', 'category', 'image']}),
+            (_('General'), {'fields': ['name', 'kind', 'category', 'image', 'tags']}),
             (_('Measurements'), {'fields': ['measurements_physical_form', 'measurements_usage_unit', 'measurements_shopping_unit', 'measurements_volume', 'measurements_weight']}),
             (_('Cooking'), {'fields': ['cooking_waste', 'cooking_factor', 'cooking_product']}),
             (_('Nutrition'), {'fields': ['calories', 'roughage']}),
@@ -111,3 +116,8 @@ class Product(models.Model):
             (_('Vitamins'), {'fields': ['vitamins_folic_acid', 'vitamins_a', 'vitamins_b1', 'vitamins_b2', 'vitamins_b6', 'vitamins_b12', 'vitamins_c', 'vitamins_d', 'vitamins_e', 'vitamins_pp']}),
             (_('Minerals'), {'fields': ['minerals_zinc', 'minerals_phosphorus', 'minerals_iodine', 'minerals_magnesium', 'minerals_copper', 'minerals_potasium', 'minerals_selenium', 'minerals_calcium', 'minerals_iron']}),
         ]
+
+        def display_tags(self, obj):
+            return ", ".join([tag.name for tag in obj.tags.all()])
+
+        display_tags.short_description = _('Tags')
