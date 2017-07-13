@@ -8,68 +8,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 13:27+0000\n"
+"POT-Creation-Date: 2017-07-13 19:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: habitat/dashboard.py:11
-msgid "Systems"
-msgstr "Systemy"
-
-#: habitat/dashboard.py:19
-msgid "Communication"
-msgstr "Komunikacja"
-
-#: habitat/dashboard.py:27
-msgid "Science"
-msgstr "Nauka"
-
-#: habitat/dashboard.py:37
-msgid "Shortcuts"
-msgstr "Skróty"
-
-#: habitat/dashboard.py:41
-msgid "Calendar"
-msgstr "Kalendarz"
-
-#: habitat/dashboard.py:42
-msgid "Chat"
-msgstr "Chat"
-
-#: habitat/dashboard.py:43
-msgid "Documentation"
-msgstr "Dokumentacja"
-
-#: habitat/dashboard.py:44
-msgid "Issue Tracker"
-msgstr "Lista zadań"
-
-#: habitat/dashboard.py:48
-msgid "Administration"
-msgstr "Administracja"
-
-#: habitat/dashboard.py:55
-msgid "Recent Actions"
-msgstr "Ostatnie akcje"
-
-#: habitat/dashboard.py:62
 msgid "Building"
 msgstr "Budynek"
 
-#: habitat/settings.py:150 habitat/settings.py:154
+#: habitat/dashboard.py:19
+msgid "Experiments"
+msgstr ""
+
+#: habitat/dashboard.py:27
+msgid "Food"
+msgstr ""
+
+#: habitat/dashboard.py:35
+msgid "Systems"
+msgstr "Systemy"
+
+#: habitat/dashboard.py:43
+msgid "Communication"
+msgstr "Komunikacja"
+
+#: habitat/dashboard.py:51
+msgid "Science"
+msgstr "Nauka"
+
+#: habitat/dashboard.py:60
+msgid "Medical"
+msgstr ""
+
+#: habitat/dashboard.py:68
+msgid "Shortcuts"
+msgstr "Skróty"
+
+#: habitat/dashboard.py:72
+msgid "Calendar"
+msgstr "Kalendarz"
+
+#: habitat/dashboard.py:73
+msgid "Chat"
+msgstr "Chat"
+
+#: habitat/dashboard.py:74
+msgid "Documentation"
+msgstr "Dokumentacja"
+
+#: habitat/dashboard.py:75
+msgid "Issue Tracker"
+msgstr "Lista zadań"
+
+#: habitat/dashboard.py:79
+msgid "Administration"
+msgstr "Administracja"
+
+#: habitat/dashboard.py:86
+msgid "Recent Actions"
+msgstr "Ostatnie akcje"
+
+#: habitat/settings.py:114 habitat/settings.py:116 habitat/settings.py:118
 msgid "HabitatOS"
 msgstr "HabitatOS"
 
-#: habitat/settings.py:151
+#: habitat/settings.py:115
 msgid "Dashboard"
 msgstr "Panel Kontrolny"
-
-#: habitat/settings.py:152
-msgid "HabitatOS"
-msgstr "HabitatOS"

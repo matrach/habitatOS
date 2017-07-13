@@ -25,7 +25,7 @@ class Meal(models.Model):
 
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, db_index=True, default=None)
-    preparation_time = models.CharField(verbose_name=_('Preparation Time'), help_text=_('Example: 2h + 12h pickiling'), max_length=255, null=True, blank=True, default=None)
+    preparation_time = models.CharField(verbose_name=_('Preparation Time'), help_text=_('Example: 12h pickiling + 2h preparation + 2h cooking'), max_length=255, null=True, blank=True, default=None)
     difficulty = models.CharField(verbose_name=_('Difficulty'), choices=DIFFICULTIES, max_length=30, db_index=True, null=True, blank=True, default=None)
     type = models.CharField(verbose_name=_('Type'), choices=TYPES, max_length=30, db_index=True, null=True, blank=True, default=None)
     diet = models.ManyToManyField(verbose_name=_('Diet'), to='food.Diet', blank=True, default=None)

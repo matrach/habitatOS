@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 13:27+0000\n"
+"POT-Creation-Date: 2017-07-13 19:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,19 +42,29 @@ msgid "Blood Pressure Systolic"
 msgstr ""
 
 #: habitat/science/medicine/models/blood_pressure.py:21
-#: habitat/science/medicine/models/blood_pressure.py:28
+#: habitat/science/medicine/models/blood_pressure.py:29
 msgid "mmHg"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:27
+#: habitat/science/medicine/models/blood_pressure.py:28
 msgid "Blood Pressure Diastolic"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:38
+#: habitat/science/medicine/models/blood_pressure.py:36
+#: habitat/science/medicine/models/pulse_oximetry.py:37
+msgid "Heart Rate"
+msgstr ""
+
+#: habitat/science/medicine/models/blood_pressure.py:37
+#: habitat/science/medicine/models/pulse_oximetry.py:38
+msgid "bpm"
+msgstr ""
+
+#: habitat/science/medicine/models/blood_pressure.py:48
 msgid "Blood Pressure Measurement"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:39
+#: habitat/science/medicine/models/blood_pressure.py:49
 msgid "Blood Pressure Database"
 msgstr ""
 
@@ -106,14 +116,6 @@ msgstr ""
 
 #: habitat/science/medicine/models/pulse_oximetry.py:28
 msgid "Blood Perfusion Index"
-msgstr ""
-
-#: habitat/science/medicine/models/pulse_oximetry.py:37
-msgid "Heart Rate"
-msgstr ""
-
-#: habitat/science/medicine/models/pulse_oximetry.py:38
-msgid "bpm"
 msgstr ""
 
 #: habitat/science/medicine/models/pulse_oximetry.py:49

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 13:27+0000\n"
+"POT-Creation-Date: 2017-07-13 19:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,80 +17,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: habitat/systems/inventory/models/food.py:7
-#: habitat/systems/inventory/models/item.py:7
-msgid "Name"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:8
-#: habitat/systems/inventory/models/item.py:8
+#: habitat/systems/inventory/models/edible.py:7
+#: habitat/systems/inventory/models/item.py:13
 msgid "Code"
 msgstr ""
 
-#: habitat/systems/inventory/models/food.py:9
-msgid "Best before"
+#: habitat/systems/inventory/models/edible.py:8
+msgid "Product"
 msgstr ""
 
-#: habitat/systems/inventory/models/food.py:10
-msgid "Calories"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:10
-msgid "kcal"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:13
-msgid "Volume"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:14
-msgid "ml"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:21
-msgid "Net Weight"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:22
-#: habitat/systems/inventory/models/food.py:30
-#: habitat/systems/inventory/models/food.py:38
-#: habitat/systems/inventory/models/food.py:46
-#: habitat/systems/inventory/models/food.py:54
-msgid "g"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:29
-msgid "Proteins"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:37
-msgid "Carbohydrates"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:45
-msgid "Fats"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:53
-msgid "Salts"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:65
-msgid "Food"
-msgstr ""
-
-#: habitat/systems/inventory/models/food.py:66
-msgid "Food Database"
-msgstr ""
-
-#: habitat/systems/inventory/models/item.py:9
+#: habitat/systems/inventory/models/edible.py:9
+#: habitat/systems/inventory/models/item.py:18
 msgid "Quantity"
 msgstr ""
 
-#: habitat/systems/inventory/models/item.py:16
+#: habitat/systems/inventory/models/edible.py:10
+msgid "Best before"
+msgstr ""
+
+#: habitat/systems/inventory/models/edible.py:17
+msgid "Edible"
+msgstr ""
+
+#: habitat/systems/inventory/models/edible.py:18
+msgid "Edibles Database"
+msgstr ""
+
+#: habitat/systems/inventory/models/item.py:8
+msgid "Name"
+msgstr ""
+
+#: habitat/systems/inventory/models/item.py:26
 msgid "Item"
 msgstr ""
 
-#: habitat/systems/inventory/models/item.py:17
+#: habitat/systems/inventory/models/item.py:27
 msgid "Item Database"
 msgstr ""

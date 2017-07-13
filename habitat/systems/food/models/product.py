@@ -47,7 +47,7 @@ class Product(models.Model):
     roughage = models.DecimalField(verbose_name=_('Roughage'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
 
     cooking_waste = models.PositiveSmallIntegerField(verbose_name=_('Cooking Waste'), validators=[MaxValueValidator(100), MinValueValidator(0)], blank=True, null=True, default=None)
-    cooking_factor = models.DecimalField(verbose_name=_('Coocking Factor'), decimal_places=2, max_digits=3, blank=True, null=True, validators=[MaxValueValidator(1.0), MinValueValidator(0.0)], default=None)
+    cooking_factor = models.DecimalField(verbose_name=_('Coocking Factor'), decimal_places=2, max_digits=3, validators=[MaxValueValidator(1.0), MinValueValidator(0.0)], blank=True, null=True, default=None)
     cooking_product = models.ForeignKey(verbose_name=_('From Product'), to='food.Product', blank=True, null=True, default=None)
 
     proteins = models.DecimalField(verbose_name=_('Proteins'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)

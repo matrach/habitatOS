@@ -3,3 +3,4 @@ from . import tag
 from . import unit
 from . import diet
 from . import meal
+from . import plan
