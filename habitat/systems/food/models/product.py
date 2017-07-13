@@ -47,8 +47,8 @@ class Product(models.Model):
     roughage = models.DecimalField(verbose_name=_('Roughage'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
 
     cooking_waste = models.PositiveSmallIntegerField(verbose_name=_('Cooking Waste'), validators=[MaxValueValidator(100), MinValueValidator(0)], blank=True, null=True, default=None)
-    cooking_factor = models.DecimalField(verbose_name=_('Coocking Factor'), decimal_places=2, max_digits=3, validators=[MaxValueValidator(1.0), MinValueValidator(0.0)], blank=True, null=True, default=None)
-    cooking_product = models.ForeignKey(verbose_name=_('From Product'), to='food.Product', blank=True, null=True, default=None)
+    cooking_factor = models.DecimalField(verbose_name=_('Cooking Factor'), decimal_places=2, max_digits=3, validators=[MaxValueValidator(1.0), MinValueValidator(0.0)], blank=True, null=True, default=None)
+    cooking_product = models.ForeignKey(verbose_name=_('From Product'), to='food.Product', help_text=_('Dry Product Mass = Cooked Product Mass / Cooking Factor [0.0 - 1.0]'), blank=True, null=True, default=None)
 
     proteins = models.DecimalField(verbose_name=_('Proteins'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
     proteins_animal = models.DecimalField(verbose_name=_('Animal Proteins'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
@@ -72,7 +72,7 @@ class Product(models.Model):
     vitamins_c = models.DecimalField(verbose_name=_('Vitamin C'), help_text=_('mg/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
     vitamins_d = models.DecimalField(verbose_name=_('Vitamin D'), help_text=_('µg/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
     vitamins_e = models.DecimalField(verbose_name=_('Vitamin E'), help_text=_('mg/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
-    vitamins_pp = models.DecimalField(verbose_name=_('Vitamin pp'), help_text=_('mg/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
+    vitamins_pp = models.DecimalField(verbose_name=_('Vitamin PP'), help_text=_('mg/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
 
     minerals_zinc = models.DecimalField(verbose_name=_('Zinc'), help_text=_('mg/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
     minerals_phosphorus = models.DecimalField(verbose_name=_('Phosphorus'), help_text=_('mg/100g'),  decimal_places=2, max_digits=5, blank=True, null=True, default=None)

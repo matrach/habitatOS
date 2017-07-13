@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,27 +10,25 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-13 19:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
+"Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
-"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
-"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: habitat/systems/food/models/diet.py:9
 msgid "Basic"
-msgstr ""
+msgstr "Podstawowy"
 
 #: habitat/systems/food/models/diet.py:10
 msgid "Healthy"
-msgstr ""
+msgstr "Zdrowy"
 
 #: habitat/systems/food/models/diet.py:11
 msgid "Sport"
-msgstr ""
+msgstr "Sportowy"
 
 #: habitat/systems/food/models/diet.py:13
 #: habitat/systems/food/models/meal.py:26
@@ -38,13 +36,13 @@ msgstr ""
 #: habitat/systems/food/models/product.py:32
 #: habitat/systems/food/models/tag.py:8 habitat/systems/food/models/unit.py:8
 msgid "Name"
-msgstr ""
+msgstr "Nazwa"
 
 #: habitat/systems/food/models/diet.py:14
 #: habitat/systems/food/models/meal.py:30
 #: habitat/systems/food/models/product.py:35
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: habitat/systems/food/models/diet.py:15
 #: habitat/systems/food/models/meal.py:27
@@ -52,7 +50,7 @@ msgstr ""
 #: habitat/systems/food/models/product.py:33
 #: habitat/systems/food/models/tag.py:9 habitat/systems/food/models/unit.py:9
 msgid "Slug"
-msgstr ""
+msgstr "Slug"
 
 #: habitat/systems/food/models/diet.py:26
 #: habitat/systems/food/models/meal.py:31
@@ -60,60 +58,60 @@ msgstr ""
 #: habitat/systems/food/models/plan.py:13
 #: habitat/systems/food/models/plan.py:43
 msgid "Diet"
-msgstr ""
+msgstr "Dieta"
 
 #: habitat/systems/food/models/diet.py:27
 msgid "Diets"
-msgstr ""
+msgstr "Diety"
 
 #: habitat/systems/food/models/meal.py:15
 #: habitat/systems/food/models/plan.py:16
 msgid "Breakfast"
-msgstr ""
+msgstr "Śniadanie"
 
 #: habitat/systems/food/models/meal.py:16
 #: habitat/systems/food/models/plan.py:17
 msgid "Brunch"
-msgstr ""
+msgstr "Drugie śniadanie"
 
 #: habitat/systems/food/models/meal.py:17
 #: habitat/systems/food/models/plan.py:18
 msgid "Lunch"
-msgstr ""
+msgstr "Obiad"
 
 #: habitat/systems/food/models/meal.py:18
 #: habitat/systems/food/models/plan.py:19
 msgid "Tea"
-msgstr ""
+msgstr "Podwieczorek"
 
 #: habitat/systems/food/models/meal.py:19
 #: habitat/systems/food/models/plan.py:20
 msgid "Supper"
-msgstr ""
+msgstr "Kolacja"
 
 #: habitat/systems/food/models/meal.py:22
 msgid "Easy"
-msgstr ""
+msgstr "Łatwy"
 
 #: habitat/systems/food/models/meal.py:23
 msgid "Medium"
-msgstr ""
+msgstr "Średni"
 
 #: habitat/systems/food/models/meal.py:24
 msgid "Hard"
-msgstr ""
+msgstr "Trudny"
 
 #: habitat/systems/food/models/meal.py:28
 msgid "Preparation Time"
-msgstr ""
+msgstr "Czas przygotowania"
 
 #: habitat/systems/food/models/meal.py:28
 msgid "Example: 12h pickiling + 2h preparation + 2h cooking"
-msgstr ""
+msgstr "np. 12 godz. peklowanie + 2 godz. przygotowanie + 2 godz. smażenie"
 
 #: habitat/systems/food/models/meal.py:29
 msgid "Difficulty"
-msgstr ""
+msgstr "Poziom trudności"
 
 #: habitat/systems/food/models/meal.py:32
 #: habitat/systems/food/models/meal.py:58
@@ -121,113 +119,113 @@ msgstr ""
 #: habitat/systems/food/models/product.py:122
 #: habitat/systems/food/models/tag.py:21
 msgid "Tags"
-msgstr ""
+msgstr "Tagi"
 
 #: habitat/systems/food/models/meal.py:33
 #: habitat/systems/food/models/product.py:34
 msgid "Image"
-msgstr ""
+msgstr "Obrazek"
 
 #: habitat/systems/food/models/meal.py:44
 msgid "Meal"
-msgstr ""
+msgstr "Posiłek"
 
 #: habitat/systems/food/models/meal.py:45
 msgid "Meals"
-msgstr ""
+msgstr "Baza posiłków"
 
 #: habitat/systems/food/models/plan.py:14
 #: habitat/systems/food/models/product.py:45
 msgid "Calories"
-msgstr ""
+msgstr "Wartość energetyczna"
 
 #: habitat/systems/food/models/plan.py:31
 msgid "Day Plan"
-msgstr ""
+msgstr "Plan żywieniowy"
 
 #: habitat/systems/food/models/plan.py:32
 msgid "Day Plans"
-msgstr ""
+msgstr "Plany żywieniowe"
 
 #: habitat/systems/food/models/product.py:17
 msgid "Custom Made"
-msgstr ""
+msgstr "Wyrób własny"
 
 #: habitat/systems/food/models/product.py:18
 msgid "Brand Product"
-msgstr ""
+msgstr "Produkty markowe"
 
 #: habitat/systems/food/models/product.py:19
 msgid "Gourmet Food"
-msgstr ""
+msgstr "Garmażerka sklepowa"
 
 #: habitat/systems/food/models/product.py:20
 msgid "Restaurant"
-msgstr ""
+msgstr "Restauracyjne"
 
 #: habitat/systems/food/models/product.py:23
 msgid "Other"
-msgstr ""
+msgstr "Inne"
 
 #: habitat/systems/food/models/product.py:24
 msgid "Fruits"
-msgstr ""
+msgstr "Owoce"
 
 #: habitat/systems/food/models/product.py:25
 msgid "Vegetables"
-msgstr ""
+msgstr "Warzywa"
 
 #: habitat/systems/food/models/product.py:26
 msgid "Meat"
-msgstr ""
+msgstr "Mięso"
 
 #: habitat/systems/food/models/product.py:29
 msgid "Solid"
-msgstr ""
+msgstr "Stały"
 
 #: habitat/systems/food/models/product.py:30
 msgid "Liquid"
-msgstr ""
+msgstr "Płynny"
 
 #: habitat/systems/food/models/product.py:36
 msgid "Category"
-msgstr ""
+msgstr "Kategoria"
 
 #: habitat/systems/food/models/product.py:39
 msgid "Phisical Form"
-msgstr ""
+msgstr "Stan skupienia"
 
 #: habitat/systems/food/models/product.py:40
 msgid "Usage Unit"
-msgstr ""
+msgstr "Jednostka użycia"
 
 #: habitat/systems/food/models/product.py:41
 msgid "Shopping Unit"
-msgstr ""
+msgstr "Jednostka do zakupów"
 
 #: habitat/systems/food/models/product.py:42
 msgid "Volume"
-msgstr ""
+msgstr "Objętość"
 
 #: habitat/systems/food/models/product.py:42
 msgid "ml"
-msgstr ""
+msgstr "ml"
 
 #: habitat/systems/food/models/product.py:43
 msgid "Net Weight"
-msgstr ""
+msgstr "Waga netto"
 
 #: habitat/systems/food/models/product.py:43
 msgid "g"
-msgstr ""
+msgstr "g"
 
 #: habitat/systems/food/models/product.py:45
 msgid "kcal"
-msgstr ""
+msgstr "kcal"
 
 #: habitat/systems/food/models/product.py:47
 msgid "Roughage"
-msgstr ""
+msgstr "Błonnik"
 
 #: habitat/systems/food/models/product.py:47
 #: habitat/systems/food/models/product.py:53
@@ -241,66 +239,66 @@ msgstr ""
 #: habitat/systems/food/models/product.py:63
 #: habitat/systems/food/models/product.py:64
 msgid "g/100g"
-msgstr ""
+msgstr "g/100g"
 
 #: habitat/systems/food/models/product.py:49
 msgid "Cooking Waste"
-msgstr ""
+msgstr "Odpadki"
 
 #: habitat/systems/food/models/product.py:50
 msgid "Coocking Factor"
-msgstr ""
+msgstr "Współczynnik ugotowania"
 
 #: habitat/systems/food/models/product.py:51
 msgid "From Product"
-msgstr ""
+msgstr "Produkt przed ugotowaniem"
 
 #: habitat/systems/food/models/product.py:53
 #: habitat/systems/food/models/product.py:112
 msgid "Proteins"
-msgstr ""
+msgstr "Białka"
 
 #: habitat/systems/food/models/product.py:54
 msgid "Animal Proteins"
-msgstr ""
+msgstr "Zwierzęce"
 
 #: habitat/systems/food/models/product.py:55
 msgid "Plant Proteins"
-msgstr ""
+msgstr "Roślinne"
 
 #: habitat/systems/food/models/product.py:57
 #: habitat/systems/food/models/product.py:113
 msgid "Fats"
-msgstr ""
+msgstr "Tłuszcze"
 
 #: habitat/systems/food/models/product.py:58
 msgid "Saturated Fats"
-msgstr ""
+msgstr "Nasycone"
 
 #: habitat/systems/food/models/product.py:59
 msgid "Monounsaturated Fats"
-msgstr ""
+msgstr "Jednonienasycone"
 
 #: habitat/systems/food/models/product.py:60
 msgid "Polyunsaturated Fats"
-msgstr ""
+msgstr "Wielonienasycone"
 
 #: habitat/systems/food/models/product.py:61
 msgid "Cholesterol"
-msgstr ""
+msgstr "Cholesterol"
 
 #: habitat/systems/food/models/product.py:63
 #: habitat/systems/food/models/product.py:114
 msgid "Carbohydrates"
-msgstr ""
+msgstr "Węglowodany"
 
 #: habitat/systems/food/models/product.py:64
 msgid "Sugars"
-msgstr ""
+msgstr "Cukry"
 
 #: habitat/systems/food/models/product.py:66
 msgid "Folic Acid"
-msgstr ""
+msgstr "Kwas foliowy"
 
 #: habitat/systems/food/models/product.py:66
 #: habitat/systems/food/models/product.py:67
@@ -309,15 +307,15 @@ msgstr ""
 #: habitat/systems/food/models/product.py:79
 #: habitat/systems/food/models/product.py:83
 msgid "µg/100g"
-msgstr ""
+msgstr "µg/100g"
 
 #: habitat/systems/food/models/product.py:67
 msgid "Vitamin A"
-msgstr ""
+msgstr "Witamina A"
 
 #: habitat/systems/food/models/product.py:68
 msgid "Vitamin B1"
-msgstr ""
+msgstr "Witamina B1"
 
 #: habitat/systems/food/models/product.py:68
 #: habitat/systems/food/models/product.py:69
@@ -334,116 +332,116 @@ msgstr ""
 #: habitat/systems/food/models/product.py:85
 #: habitat/systems/food/models/product.py:86
 msgid "mg/100g"
-msgstr ""
+msgstr "mg/100g"
 
 #: habitat/systems/food/models/product.py:69
 msgid "Vitamin B2"
-msgstr ""
+msgstr "Witamina B2"
 
 #: habitat/systems/food/models/product.py:70
 msgid "Vitamin B6"
-msgstr ""
+msgstr "Witamina B6"
 
 #: habitat/systems/food/models/product.py:71
 msgid "Vitamin B12"
-msgstr ""
+msgstr "Witamina B12"
 
 #: habitat/systems/food/models/product.py:72
 msgid "Vitamin C"
-msgstr ""
+msgstr "Witamina C"
 
 #: habitat/systems/food/models/product.py:73
 msgid "Vitamin D"
-msgstr ""
+msgstr "Witamina D"
 
 #: habitat/systems/food/models/product.py:74
 msgid "Vitamin E"
-msgstr ""
+msgstr "Witamina E"
 
 #: habitat/systems/food/models/product.py:75
 msgid "Vitamin pp"
-msgstr ""
+msgstr "Witamina PP"
 
 #: habitat/systems/food/models/product.py:77
 msgid "Zinc"
-msgstr ""
+msgstr "Cynk"
 
 #: habitat/systems/food/models/product.py:78
 msgid "Phosphorus"
-msgstr ""
+msgstr "Fosfor"
 
 #: habitat/systems/food/models/product.py:79
 msgid "Iodine"
-msgstr ""
+msgstr "Jod"
 
 #: habitat/systems/food/models/product.py:80
 msgid "Magnesium"
-msgstr ""
+msgstr "Magnez"
 
 #: habitat/systems/food/models/product.py:81
 msgid "Copper"
-msgstr ""
+msgstr "Miedź"
 
 #: habitat/systems/food/models/product.py:82
 msgid "Potasium"
-msgstr ""
+msgstr "Potas"
 
 #: habitat/systems/food/models/product.py:83
 msgid "Selenium"
-msgstr ""
+msgstr "Selen"
 
 #: habitat/systems/food/models/product.py:84
 msgid "Sodium"
-msgstr ""
+msgstr "Sód"
 
 #: habitat/systems/food/models/product.py:85
 msgid "Calcium"
-msgstr ""
+msgstr "Wapń"
 
 #: habitat/systems/food/models/product.py:86
 msgid "Iron"
-msgstr ""
+msgstr "Żelazo"
 
 #: habitat/systems/food/models/product.py:97
 msgid "Product"
-msgstr ""
+msgstr "Produkt"
 
 #: habitat/systems/food/models/product.py:98
 msgid "Products"
-msgstr ""
+msgstr "Baza produktów"
 
 #: habitat/systems/food/models/product.py:108
 msgid "General"
-msgstr ""
+msgstr "Ogólne"
 
 #: habitat/systems/food/models/product.py:109
 msgid "Measurements"
-msgstr ""
+msgstr "Pomiary"
 
 #: habitat/systems/food/models/product.py:110
 msgid "Cooking"
-msgstr ""
+msgstr "Gotowanie"
 
 #: habitat/systems/food/models/product.py:111
 msgid "Nutrition"
-msgstr ""
+msgstr "Wartości odżywcze"
 
 #: habitat/systems/food/models/product.py:115
 msgid "Vitamins"
-msgstr ""
+msgstr "Witaminy"
 
 #: habitat/systems/food/models/product.py:116
 msgid "Minerals"
-msgstr ""
+msgstr "Minerały"
 
 #: habitat/systems/food/models/tag.py:20
 msgid "Tag"
-msgstr ""
+msgstr "Tag"
 
 #: habitat/systems/food/models/unit.py:20
 msgid "Unit"
-msgstr ""
+msgstr "Jednostka"
 
 #: habitat/systems/food/models/unit.py:21
 msgid "Units"
-msgstr ""
+msgstr "Jednostki"
