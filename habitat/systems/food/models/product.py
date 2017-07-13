@@ -13,7 +13,7 @@ def upload_path(instance, filename):
 
 
 class Product(models.Model):
-    KINDS = [
+    TYPES = [
         ('custom', _('Custom Made')),
         ('brand', _('Brand Product')),
         ('gourmet', _('Gourmet Food')),
@@ -27,13 +27,12 @@ class Product(models.Model):
 
     PHYSICAL_FORMS = [
         ('solid', _('Solid')),
-        ('liquid', _('Liquid')),
-    ]
+        ('liquid', _('Liquid'))]
 
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, db_index=True, default=None)
     image = models.ImageField(verbose_name=_('Image'), upload_to=upload_path, null=True, blank=True, default=None)
-    kind = models.CharField(verbose_name=_('Kind'), choices=KINDS, max_length=30, db_index=True, default=None)
+    type = models.CharField(verbose_name=_('Type'), choices=TYPES, max_length=30, db_index=True, default=None)
     category = models.CharField(verbose_name=_('Category'), choices=CATEGORIES, max_length=30, db_index=True, default=None)
     tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', blank=True, default=None)
 
@@ -101,12 +100,12 @@ class Product(models.Model):
     class Admin(admin.ModelAdmin):
         change_list_template = 'admin/change_list_filter_sidebar.html'
         formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
-        list_display = ['name', 'kind', 'category', 'display_tags']
+        list_display = ['name', 'type', 'category', 'display_tags']
         ordering = ['-name']
         search_fields = ['name']
-        list_filter = ['kind', 'category', 'tags']
+        list_filter = ['type', 'category', 'tags']
         fieldsets = [
-            (_('General'), {'fields': ['name', 'kind', 'category', 'image', 'tags']}),
+            (_('General'), {'fields': ['name', 'type', 'category', 'tags', 'image']}),
             (_('Measurements'), {'fields': ['measurements_physical_form', 'measurements_usage_unit', 'measurements_shopping_unit', 'measurements_volume', 'measurements_weight']}),
             (_('Cooking'), {'fields': ['cooking_waste', 'cooking_factor', 'cooking_product']}),
             (_('Nutrition'), {'fields': ['calories', 'roughage']}),

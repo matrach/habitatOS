@@ -10,4 +10,8 @@ class FoodTest(Test):
         '/food/tag/add/',
         '/food/unit/',
         '/food/unit/add/',
+        '/food/diet/',
+        '/food/diet/add/',
+        '/food/meal/',
+        '/food/meal/add/',
     ]

@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class Unit(models.Model):
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
-    slug = models.SlugField(verbose_name=_('Slug'), editable=False, db_index=True, default=None)
+    slug = models.SlugField(verbose_name=_('Slug'), editable=False, default=None)
 
     def __str__(self):
         return f'{self.name}'

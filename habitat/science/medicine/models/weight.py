@@ -117,7 +117,7 @@ class Weight(models.Model):
             MinValueValidator(0)])
 
     def save(self, **kwargs):
-        #self.BMI = self.weight / (height ** 2)
+        # self.BMI = self.weight / (height ** 2)
         return super().save(**kwargs)
 
     def __str__(self):
