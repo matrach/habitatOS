@@ -19,6 +19,7 @@ class BloodPressure(models.Model):
     systolic = models.PositiveSmallIntegerField(
         verbose_name=_('Blood Pressure Systolic'),
         help_text=_('mmHg'),
+        default=None,
         validators=[
             MaxValueValidator(250),
             MinValueValidator(0)])
@@ -26,6 +27,15 @@ class BloodPressure(models.Model):
     diastolic = models.PositiveSmallIntegerField(
         verbose_name=_('Blood Pressure Diastolic'),
         help_text=_('mmHg'),
+        default=None,
+        validators=[
+            MaxValueValidator(250),
+            MinValueValidator(0)])
+
+    heart_rate = models.PositiveSmallIntegerField(
+        verbose_name=_('Heart Rate'),
+        help_text=_('bpm'),
+        default=None,
         validators=[
             MaxValueValidator(250),
             MinValueValidator(0)])
@@ -39,5 +49,5 @@ class BloodPressure(models.Model):
         verbose_name_plural = _('Blood Pressure Database')
 
     class Admin(admin.ModelAdmin):
-        list_display = ['datetime', 'astronaut', 'systolic', 'diastolic']
+        list_display = ['datetime', 'astronaut', 'systolic', 'diastolic', 'heart_rate']
         list_filter = ['astronaut']

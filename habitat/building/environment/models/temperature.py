@@ -30,7 +30,7 @@ class Temperature(models.Model):
     class Meta:
         ordering = ['-value']
         verbose_name = _('Temperature Measurement')
-        verbose_name_plural = _('Temperature Measurements')
+        verbose_name_plural = _('Temperature')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'value', 'unit']

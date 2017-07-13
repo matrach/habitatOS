@@ -28,7 +28,7 @@ Engineering (Electronics)
 Engineering (Software)
 Aviation
 Human Space Flight
-M.A.R.S. Habitat
+Habitat
 Aerospace
 
 Progress Training

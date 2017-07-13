@@ -62,11 +62,11 @@ msgid "Building"
 msgstr ""
 
 #: habitat/settings.py:150 habitat/settings.py:154
-msgid "M.A.R.S. HabitatOS"
+msgid "HabitatOS"
 msgstr ""
 
 #: habitat/settings.py:151
-msgid "M.A.R.S. Dashboard"
+msgid "Dashboard"
 msgstr ""
 
 #: habitat/settings.py:152

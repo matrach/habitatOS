@@ -3,7 +3,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 
-class Food(models.Model):
+class Product(models.Model):
     name = models.CharField(verbose_name=_('Name'), max_length=255)
     code = models.CharField(verbose_name=_('Code'), max_length=7)
     best_before = models.DateField(verbose_name=_('Best before'))
@@ -62,8 +62,8 @@ class Food(models.Model):
 
     class Meta:
         ordering = ['-best_before']
-        verbose_name = _('Food')
-        verbose_name_plural = _('Food Database')
+        verbose_name = _('Product')
+        verbose_name_plural = _('Products Database')
 
     class Admin(admin.ModelAdmin):
         list_display = ['code', 'name', 'best_before', 'calories']

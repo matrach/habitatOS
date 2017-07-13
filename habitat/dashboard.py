@@ -8,6 +8,30 @@ class IndexDashboard(Dashboard):
     def init_with_context(self, context):
 
         self.children.append(modules.ModelList(
+            title=_('Building'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.building.environment.*',
+            ]))
+
+        self.children.append(modules.ModelList(
+            title=_('Experiments'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.experiments.greenhouse.*',
+            ]))
+
+        self.children.append(modules.ModelList(
+            title=_('Food'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.systems.food.*',
+            ]))
+
+        self.children.append(modules.ModelList(
             title=_('Systems'),
             column=1,
             collapsible=False,
@@ -29,8 +53,15 @@ class IndexDashboard(Dashboard):
             collapsible=False,
             models=[
                 'habitat.science.education.*',
-                'habitat.science.medicine.*',
                 'habitat.science.psychology.*',
+            ]))
+
+        self.children.append(modules.ModelList(
+            title=_('Medical'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.science.medicine.*',
             ]))
 
         self.children.append(modules.LinkList(
@@ -57,12 +88,3 @@ class IndexDashboard(Dashboard):
             collapsible=True,
             column=3,
             css_classes=['grp-closed']))
-
-        self.children.append(modules.ModelList(
-            title=_('Building'),
-            column=3,
-            collapsible=False,
-            models=[
-                'habitat.building.environment.*',
-                'habitat.building.greenhouse.*',
-            ]))
