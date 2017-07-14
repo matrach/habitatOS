@@ -55,6 +55,7 @@ local_settings.py
 *.sqlite
 *.sqlite3
 _static
+_media
 
 # Flask stuff:
 instance/

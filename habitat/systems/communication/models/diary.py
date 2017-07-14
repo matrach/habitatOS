@@ -32,7 +32,7 @@ class DiaryEntry(models.Model):
     STATUSES = [
         ('draft', _('Draft')),
         ('published', _('Published')),
-    ]
+        ('scheduled', _('Scheduled'))]
 
     status = models.CharField(verbose_name=_('Status'), max_length=30, choices=STATUSES, default='draft')
     created_date = models.DateTimeField(verbose_name=_('Created date'), auto_now_add=True)

@@ -16,11 +16,11 @@ class Tag(models.Model):
         super().save(*args, **kwargs)
 
     class Meta:
-        ordering = ['-name']
+        ordering = ['name']
         verbose_name = _('Tag')
         verbose_name_plural = _('Tags')
 
     class Admin(admin.ModelAdmin):
         list_display = ['name', 'slug']
-        ordering = ['-name']
+        ordering = ['name']
         search_fields = ['^name']

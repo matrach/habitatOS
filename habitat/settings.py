@@ -36,12 +36,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'habitat._config',
     'habitat.dashboard',
-    'habitat.building.environment',
-    'habitat.building.greenhouse',
+    'habitat.building.sensors',
+    'habitat.building.biolab',
     'habitat.science.education',
     'habitat.science.medicine',
     'habitat.science.psychology',
     'habitat.systems.inventory',
+    'habitat.systems.reporting',
     'habitat.systems.food',
     'habitat.systems.communication',
 ]
@@ -110,6 +111,9 @@ DATETIME_INPUT_FORMATS = ['%Y-%m-%d %H:%M:%S.%f']
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '_static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 
 
 admin.site.site_header = _('HabitatOS')

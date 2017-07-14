@@ -8,11 +8,11 @@ class IndexDashboard(Dashboard):
     def init_with_context(self, context):
 
         self.children.append(modules.ModelList(
-            title=_('Building'),
+            title=_('Sensors'),
             column=1,
             collapsible=False,
             models=[
-                'habitat.building.environment.*',
+                'habitat.building.sensors.*',
             ]))
 
         self.children.append(modules.ModelList(
@@ -20,7 +20,7 @@ class IndexDashboard(Dashboard):
             column=1,
             collapsible=False,
             models=[
-                'habitat.experiments.greenhouse.*',
+                'habitat.experiments.biolab.*',
             ]))
 
         self.children.append(modules.ModelList(
@@ -45,6 +45,7 @@ class IndexDashboard(Dashboard):
             collapsible=False,
             models=[
                 'habitat.systems.communication.*',
+                'habitat.systems.reporting.*',
             ]))
 
         self.children.append(modules.ModelList(

@@ -1,0 +1,9 @@
+{% load staticfiles %}
+
+
+<form id="add-photos" action="{% url 'ajax_photo_upload_view' 1 %}" class="dropzone">
+    {% csrf_token %}
+</form>
+
+<script src="{% static 'reporting/js/dropzone.js' %}"></script>
+<link rel="stylesheet" href="{% static 'reporting/css/dropzone.css' %}">
