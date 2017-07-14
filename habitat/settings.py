@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'habitat.admin_autoregister',
+    'habitat._config',
     'habitat.dashboard',
     'habitat.building.environment',
     'habitat.building.greenhouse',
