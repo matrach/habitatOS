@@ -10,14 +10,7 @@ class IndexDashboard(Dashboard):
 
         # Column 1
         self.children.append(modules.ModelList(
-            title=_('Reporting'),
-            column=1,
-            collapsible=False,
-            models=[
-                'habitat.systems.reporting.*']))
-
-        self.children.append(modules.ModelList(
-            title=_('Lab'),
+            title=_('Laboratory'),
             column=1,
             collapsible=False,
             models=[
@@ -41,6 +34,21 @@ class IndexDashboard(Dashboard):
 
         # Column 2
         self.children.append(modules.ModelList(
+            title=_('Reporting'),
+            column=2,
+            collapsible=False,
+            models=[
+                'habitat.systems.reporting.*']))
+
+        self.children.append(modules.ModelList(
+            title=_('Communication'),
+            column=2,
+            collapsible=False,
+            models=[
+                'habitat.systems.communication.*',
+                'habitat.systems.drag-and-drop.*']))
+
+        self.children.append(modules.ModelList(
             title=_('Food'),
             column=2,
             collapsible=False,
@@ -53,14 +61,6 @@ class IndexDashboard(Dashboard):
             collapsible=False,
             models=[
                 'habitat.systems.inventory.*']))
-
-        self.children.append(modules.ModelList(
-            title=_('Communication'),
-            column=2,
-            collapsible=False,
-            models=[
-                'habitat.systems.communication.*',
-                'habitat.systems.drag-and-drop.*']))
 
         # Column 3
         """
