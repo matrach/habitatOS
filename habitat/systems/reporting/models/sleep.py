@@ -40,7 +40,7 @@ class Sleep(models.Model):
     created = models.DateTimeField(verbose_name=_('Created'), auto_now_add=True)
     updated = models.DateTimeField(verbose_name=_('Updated'), auto_now=True)
     type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES, default=None)
-    location = models.ForeignKey(verbose_name=_('Location'), to='modules.Module', limit_choices_to={'status': 'nominal'}, default={'name': 'Dormitory'})
+    location = models.ForeignKey(verbose_name=_('Location'), to='modules.Module', limit_choices_to={'status': 'nominal'}, default=1)
     duration = models.DurationField(verbose_name=_('Duration'), null=True, blank=True, default=None)
 
     # Before sleep

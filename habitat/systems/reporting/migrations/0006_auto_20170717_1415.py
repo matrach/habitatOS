@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='sleep',
             name='location',
-            field=models.ForeignKey(default={'name': 'Dormitory'}, on_delete=django.db.models.deletion.CASCADE, to='modules.Module', verbose_name='Location'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='modules.Module', verbose_name='Location'),
         ),
         migrations.AlterField(
             model_name='sleep',
