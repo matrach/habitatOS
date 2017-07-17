@@ -21,6 +21,7 @@ class Unit(models.Model):
         verbose_name_plural = _('Units')
 
     class Admin(admin.ModelAdmin):
+        hidden = True
         list_display = ['name', 'slug']
         ordering = ['-name']
         search_fields = ['^name']

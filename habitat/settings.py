@@ -28,15 +28,18 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     'grappelli.dashboard',
     'grappelli',
+    'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'habitat._config',
+    'habitat._common',
     'habitat.dashboard',
+    'habitat.drag_and_drop',
     'habitat.building.sensors',
+    'habitat.building.modules',
     'habitat.building.biolab',
     'habitat.science.education',
     'habitat.science.medicine',
@@ -123,29 +126,8 @@ admin.site.site_title = _('HabitatOS')
 GRAPPELLI_ADMIN_TITLE = _('HabitatOS')
 GRAPPELLI_INDEX_DASHBOARD = 'habitat.dashboard.IndexDashboard'
 
-
-LOGGING = {
-    'version': 1,
-    'formatters': {
-        'verbose': {
-            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple'
-        },
-    },
-    'loggers': {
-        'habitat': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
+GRAPPELLI_AUTOCOMPLETE_SEARCH_FIELDS = {
+    'auth': {
+        'user': ['username__icontains']
     }
 }

@@ -3,13 +3,13 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import habitat.systems.reporting.models
+import habitat.drag_and_drop.models
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('reporting', '0002_auto_20170714_1509'),
+        ('drag_and_drop', '0002_auto_20170714_1509'),
     ]
 
     operations = [
@@ -28,6 +28,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='photo',
             name='file',
-            field=models.ImageField(upload_to=habitat.systems.reporting.models.upload_path),
+            field=models.ImageField(upload_to=habitat.drag_and_drop.models.upload_path),
         ),
     ]

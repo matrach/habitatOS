@@ -6,14 +6,14 @@ from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 
 
-class Humidity(models.Model):
+class CarbonMonoxide(models.Model):
 
     datetime = models.DateTimeField(
         verbose_name=_('Datetime'),
         default=now)
 
     value = models.PositiveSmallIntegerField(
-        verbose_name=_('Humidity'),
+        verbose_name=_('Concentration'),
         help_text=_('%'),
         validators=[
             MaxValueValidator(100),
@@ -24,8 +24,8 @@ class Humidity(models.Model):
 
     class Meta:
         ordering = ['-datetime']
-        verbose_name = _('Humitdity Measurement')
-        verbose_name_plural = _('Humidity')
+        verbose_name = _('Carbon Monoxide Concentration Measurement')
+        verbose_name_plural = _('Carbon Monoxide')
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'value']

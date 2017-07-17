@@ -30,5 +30,5 @@ class AjaxPhotoUploadView(LoginRequiredMixin, SuperuserRequiredMixin, JSONRespon
 
 class AlbumCreateView(CreateView):
     model = Album
-    template_name = 'reporting/photo_list.html'
+    template_name = 'drag-and-drop/photo_list.html'
     fields = '__all__'

@@ -7,4 +7,3 @@ class Excretion(models.Model):
     urination
     defecation
     """
-    pass

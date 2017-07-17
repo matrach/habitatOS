@@ -1,7 +1,7 @@
 from habitat.tests import Test
 
 
-class EnvironmentTest(Test):
+class SensorsTest(Test):
     assert_http_200 = [
         '/sensors/',
         '/sensors/temperature/',

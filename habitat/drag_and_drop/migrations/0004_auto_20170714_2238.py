@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('reporting', '0003_auto_20170714_2237'),
+        ('drag_and_drop', '0003_auto_20170714_2237'),
     ]
 
     operations = [

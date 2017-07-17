@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from .views import AjaxPhotoUploadView
-from .views import AlbumCreateView
+from habitat.drag_and_drop.views import AjaxPhotoUploadView
+from habitat.drag_and_drop.views import AlbumCreateView
 
 
 urlpatterns = [

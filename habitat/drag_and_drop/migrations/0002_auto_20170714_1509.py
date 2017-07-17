@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('reporting', '0001_initial'),
+        ('drag_and_drop', '0001_initial'),
     ]
 
     operations = [

@@ -5,4 +5,4 @@ django-grappelli==2.10.1
 transifex-client
 Pillow
 dj-database-url
-braces
+django-braces
