@@ -6,3 +6,4 @@ transifex-client
 Pillow
 dj-database-url
 django-braces
+django-filebrowser
