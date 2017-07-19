@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-13 19:26+0000\n"
+"POT-Creation-Date: 2017-07-17 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,6 @@ msgstr ""
 #: habitat/science/medicine/models/disease.py:9
 #: habitat/science/medicine/models/food.py:10
 #: habitat/science/medicine/models/pulse_oximetry.py:11
-#: habitat/science/medicine/models/quality_of_life.py:16
-#: habitat/science/medicine/models/sleep.py:16
 #: habitat/science/medicine/models/temperature.py:11
 #: habitat/science/medicine/models/weight.py:11
 msgid "Astronaut"
@@ -31,7 +29,6 @@ msgstr ""
 #: habitat/science/medicine/models/blood_pressure.py:16
 #: habitat/science/medicine/models/food.py:15
 #: habitat/science/medicine/models/pulse_oximetry.py:16
-#: habitat/science/medicine/models/quality_of_life.py:21
 #: habitat/science/medicine/models/temperature.py:16
 #: habitat/science/medicine/models/weight.py:16
 msgid "Datetime"
@@ -124,96 +121,6 @@ msgstr ""
 
 #: habitat/science/medicine/models/pulse_oximetry.py:50
 msgid "Pulse Oxymetry Database"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:9
-#: habitat/science/medicine/models/sleep.py:9
-msgid "Very Bad"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:10
-#: habitat/science/medicine/models/sleep.py:10
-msgid "Bad"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:11
-#: habitat/science/medicine/models/sleep.py:11
-msgid "Average"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:12
-#: habitat/science/medicine/models/sleep.py:12
-msgid "Good"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:13
-#: habitat/science/medicine/models/sleep.py:13
-msgid "Very Good"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:25
-msgid "Morning Stress"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:33
-msgid "Morning Mood"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:41
-#: habitat/science/medicine/models/quality_of_life.py:49
-msgid "Space Work"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:57
-msgid "Productivity"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:65
-msgid "Evening Stress"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:73
-msgid "Evening Mood"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:81
-msgid "Day Summary"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:91
-msgid "Quality of Life Entry"
-msgstr ""
-
-#: habitat/science/medicine/models/quality_of_life.py:92
-msgid "Quality of Life Entries"
-msgstr ""
-
-#: habitat/science/medicine/models/sleep.py:21
-msgid "Location"
-msgstr ""
-
-#: habitat/science/medicine/models/sleep.py:28
-msgid "Quality"
-msgstr ""
-
-#: habitat/science/medicine/models/sleep.py:36
-msgid "Start"
-msgstr ""
-
-#: habitat/science/medicine/models/sleep.py:40
-msgid "End"
-msgstr ""
-
-#: habitat/science/medicine/models/sleep.py:46
-msgid "Duration"
-msgstr ""
-
-#: habitat/science/medicine/models/sleep.py:61
-msgid "Sleep Log"
-msgstr ""
-
-#: habitat/science/medicine/models/sleep.py:62
-msgid "Sleep Logbook"
 msgstr ""
 
 #: habitat/science/medicine/models/temperature.py:20

@@ -12,6 +12,13 @@ class Oxygen(models.Model):
         verbose_name=_('Datetime'),
         default=now)
 
+    location = models.ForeignKey(
+        verbose_name=_('Sensor Location'),
+        to='modules.Module',
+        null=True,
+        blank=True,
+        default=None)
+
     value = models.PositiveSmallIntegerField(
         verbose_name=_('Concentration'),
         help_text=_('%'),
@@ -20,13 +27,15 @@ class Oxygen(models.Model):
             MinValueValidator(0)])
 
     def __str__(self):
-        return f'[{self.datetime}] {self.value}%'
+        return f'[{self.datetime}] (location: {self.location}) {self.value}%'
 
     class Meta:
-        ordering = ['-datetime']
+        ordering = ['-datetime', 'location']
         verbose_name = _('Oxygen Concentration Measurement')
         verbose_name_plural = _('Oxygen')
 
     class Admin(admin.ModelAdmin):
-        list_display = ['datetime', 'value']
-        search_fields = ['value']
+        change_list_template = 'admin/change_list_filter_sidebar.html'
+        list_display = ['datetime', 'location', 'value']
+        list_filter = ['location']
+        search_fields = ['^datetime', 'value']

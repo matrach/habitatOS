@@ -91,6 +91,7 @@ class Sleep(models.Model):
         change_list_template = 'admin/change_list_filter_sidebar.html'
         list_display = ['astronaut', 'type', 'duration', 'location', 'quality', 'asleep_time', 'wakeup_time']
         list_filter = ['astronaut', 'quality', 'sleep_amount', 'sleepy', 'type', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills']
+        search_fields = ['dream']
         readonly_fields = ['duration']
         exclude = ['astronaut', 'created', 'updated']
         # raw_id_fields = ['astronaut']

@@ -2,28 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-13 19:26+0000\n"
+"POT-Creation-Date: 2017-07-17 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: habitat/science/medicine/models/blood_pressure.py:11
 #: habitat/science/medicine/models/disease.py:9
 #: habitat/science/medicine/models/food.py:10
 #: habitat/science/medicine/models/pulse_oximetry.py:11
-#: habitat/science/medicine/models/quality_of_life.py:16
-#: habitat/science/medicine/models/sleep.py:16
 #: habitat/science/medicine/models/temperature.py:11
 #: habitat/science/medicine/models/weight.py:11
 msgid "Astronaut"
@@ -32,7 +32,6 @@ msgstr "Astronauta"
 #: habitat/science/medicine/models/blood_pressure.py:16
 #: habitat/science/medicine/models/food.py:15
 #: habitat/science/medicine/models/pulse_oximetry.py:16
-#: habitat/science/medicine/models/quality_of_life.py:21
 #: habitat/science/medicine/models/temperature.py:16
 #: habitat/science/medicine/models/weight.py:16
 msgid "Datetime"
@@ -127,96 +126,6 @@ msgstr "Pomiar saturacji SpO2"
 msgid "Pulse Oxymetry Database"
 msgstr "Pomiary saturacji SpO2"
 
-#: habitat/science/medicine/models/quality_of_life.py:9
-#: habitat/science/medicine/models/sleep.py:9
-msgid "Very Bad"
-msgstr "Bardzo źle"
-
-#: habitat/science/medicine/models/quality_of_life.py:10
-#: habitat/science/medicine/models/sleep.py:10
-msgid "Bad"
-msgstr "Źle"
-
-#: habitat/science/medicine/models/quality_of_life.py:11
-#: habitat/science/medicine/models/sleep.py:11
-msgid "Average"
-msgstr "Przeciętnie"
-
-#: habitat/science/medicine/models/quality_of_life.py:12
-#: habitat/science/medicine/models/sleep.py:12
-msgid "Good"
-msgstr "Dobrze"
-
-#: habitat/science/medicine/models/quality_of_life.py:13
-#: habitat/science/medicine/models/sleep.py:13
-msgid "Very Good"
-msgstr "Bardzo dobrze"
-
-#: habitat/science/medicine/models/quality_of_life.py:25
-msgid "Morning Stress"
-msgstr "Poranny stres"
-
-#: habitat/science/medicine/models/quality_of_life.py:33
-msgid "Morning Mood"
-msgstr "Poranny nastrój"
-
-#: habitat/science/medicine/models/quality_of_life.py:41
-#: habitat/science/medicine/models/quality_of_life.py:49
-msgid "Space Work"
-msgstr "Praca związana z tematami kosmicznymi"
-
-#: habitat/science/medicine/models/quality_of_life.py:57
-msgid "Productivity"
-msgstr "Produktywność"
-
-#: habitat/science/medicine/models/quality_of_life.py:65
-msgid "Evening Stress"
-msgstr "Wieczorny stres"
-
-#: habitat/science/medicine/models/quality_of_life.py:73
-msgid "Evening Mood"
-msgstr "Wieczorny nastrój"
-
-#: habitat/science/medicine/models/quality_of_life.py:81
-msgid "Day Summary"
-msgstr "Podsumowanie dnia"
-
-#: habitat/science/medicine/models/quality_of_life.py:91
-msgid "Quality of Life Entry"
-msgstr "Ankieta jakości życia"
-
-#: habitat/science/medicine/models/quality_of_life.py:92
-msgid "Quality of Life Entries"
-msgstr "Baza ankiet jakości życia"
-
-#: habitat/science/medicine/models/sleep.py:21
-msgid "Location"
-msgstr "Miejsce"
-
-#: habitat/science/medicine/models/sleep.py:28
-msgid "Quality"
-msgstr "Jakość"
-
-#: habitat/science/medicine/models/sleep.py:36
-msgid "Start"
-msgstr "Rozpoczęcie"
-
-#: habitat/science/medicine/models/sleep.py:40
-msgid "End"
-msgstr "Zakończenie"
-
-#: habitat/science/medicine/models/sleep.py:46
-msgid "Duration"
-msgstr "Czas trwania"
-
-#: habitat/science/medicine/models/sleep.py:61
-msgid "Sleep Log"
-msgstr "Sen"
-
-#: habitat/science/medicine/models/sleep.py:62
-msgid "Sleep Logbook"
-msgstr "Dziennik snów"
-
 #: habitat/science/medicine/models/temperature.py:20
 msgid "Temperature"
 msgstr "Temperatura"
@@ -287,3 +196,66 @@ msgstr "Pomiar masy ciała"
 #: habitat/science/medicine/models/weight.py:129
 msgid "Weight Database"
 msgstr "Lista pomiarów masy ciała"
+
+#~ msgid "Very Bad"
+#~ msgstr "Bardzo źle"
+
+#~ msgid "Bad"
+#~ msgstr "Źle"
+
+#~ msgid "Average"
+#~ msgstr "Przeciętnie"
+
+#~ msgid "Good"
+#~ msgstr "Dobrze"
+
+#~ msgid "Very Good"
+#~ msgstr "Bardzo dobrze"
+
+#~ msgid "Morning Stress"
+#~ msgstr "Poranny stres"
+
+#~ msgid "Morning Mood"
+#~ msgstr "Poranny nastrój"
+
+#~ msgid "Space Work"
+#~ msgstr "Praca związana z tematami kosmicznymi"
+
+#~ msgid "Productivity"
+#~ msgstr "Produktywność"
+
+#~ msgid "Evening Stress"
+#~ msgstr "Wieczorny stres"
+
+#~ msgid "Evening Mood"
+#~ msgstr "Wieczorny nastrój"
+
+#~ msgid "Day Summary"
+#~ msgstr "Podsumowanie dnia"
+
+#~ msgid "Quality of Life Entry"
+#~ msgstr "Ankieta jakości życia"
+
+#~ msgid "Quality of Life Entries"
+#~ msgstr "Baza ankiet jakości życia"
+
+#~ msgid "Location"
+#~ msgstr "Miejsce"
+
+#~ msgid "Quality"
+#~ msgstr "Jakość"
+
+#~ msgid "Start"
+#~ msgstr "Rozpoczęcie"
+
+#~ msgid "End"
+#~ msgstr "Zakończenie"
+
+#~ msgid "Duration"
+#~ msgstr "Czas trwania"
+
+#~ msgid "Sleep Log"
+#~ msgstr "Sen"
+
+#~ msgid "Sleep Logbook"
+#~ msgstr "Dziennik snów"

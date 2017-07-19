@@ -7,7 +7,7 @@ source_file = habitat/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.environment]
+[habitatos.building]
 file_filter = habitat/building/environment/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/building/environment/locale/en/LC_MESSAGES/django.po
 source_lang = en

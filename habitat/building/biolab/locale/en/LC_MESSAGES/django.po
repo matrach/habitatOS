@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-13 19:26+0000\n"
+"POT-Creation-Date: 2017-07-17 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,90 +17,90 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: habitat/building/greenhouse/models/experiment.py:9
-#: habitat/building/greenhouse/models/experiment.py:81
+#: habitat/building/biolab/models/experiment.py:9
+#: habitat/building/biolab/models/experiment.py:81
 msgid "Experiment"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:13
+#: habitat/building/biolab/models/experiment.py:13
 msgid "Observation date"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:17
+#: habitat/building/biolab/models/experiment.py:17
 msgid "Notes"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:23
-#: habitat/building/greenhouse/models/experiment.py:71
-#: habitat/building/greenhouse/models/plant.py:18
+#: habitat/building/biolab/models/experiment.py:23
+#: habitat/building/biolab/models/experiment.py:71
+#: habitat/building/biolab/models/plant.py:18
 msgid "Image"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:33
+#: habitat/building/biolab/models/experiment.py:33
 msgid "Observation"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:34
+#: habitat/building/biolab/models/experiment.py:34
 msgid "Observations"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:48
+#: habitat/building/biolab/models/experiment.py:48
 msgid "Soil"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:49
+#: habitat/building/biolab/models/experiment.py:49
 msgid "Underwater"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:50
+#: habitat/building/biolab/models/experiment.py:50
 msgid "Artificial"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:51
+#: habitat/building/biolab/models/experiment.py:51
 msgid "Hydroponics"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:52
+#: habitat/building/biolab/models/experiment.py:52
 msgid "Aeroponics"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:53
+#: habitat/building/biolab/models/experiment.py:53
 msgid "Mixed"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:54
+#: habitat/building/biolab/models/experiment.py:54
 msgid "Other"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:57
-#: habitat/building/greenhouse/models/plant.py:34
+#: habitat/building/biolab/models/experiment.py:57
+#: habitat/building/biolab/models/plant.py:34
 msgid "Plant"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:61
+#: habitat/building/biolab/models/experiment.py:61
 msgid "Cultivation method"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:67
+#: habitat/building/biolab/models/experiment.py:67
 msgid "Date Planted"
 msgstr ""
 
-#: habitat/building/greenhouse/models/experiment.py:82
+#: habitat/building/biolab/models/experiment.py:82
 msgid "Experiments"
 msgstr ""
 
-#: habitat/building/greenhouse/models/plant.py:8
+#: habitat/building/biolab/models/plant.py:8
 msgid "Latin Name"
 msgstr ""
 
-#: habitat/building/greenhouse/models/plant.py:13
+#: habitat/building/biolab/models/plant.py:13
 msgid "Species"
 msgstr ""
 
-#: habitat/building/greenhouse/models/plant.py:24
+#: habitat/building/biolab/models/plant.py:24
 msgid "Wikipedia URL"
 msgstr ""
 
-#: habitat/building/greenhouse/models/plant.py:35
+#: habitat/building/biolab/models/plant.py:35
 msgid "Plants"
 msgstr ""

@@ -2,75 +2,185 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-13 19:26+0000\n"
+"POT-Creation-Date: 2017-07-17 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: habitat/building/environment/models/humidity.py:12
-#: habitat/building/environment/models/luminance.py:10
-#: habitat/building/environment/models/temperature.py:14
+#: habitat/building/sensors/models/carbon_dioxide.py:12
+#: habitat/building/sensors/models/carbon_monoxide.py:12
+#: habitat/building/sensors/models/humidity.py:12
+#: habitat/building/sensors/models/internet.py:10
+#: habitat/building/sensors/models/luminance.py:10
+#: habitat/building/sensors/models/oxygen.py:12
+#: habitat/building/sensors/models/pressure.py:10
+#: habitat/building/sensors/models/radiation.py:10
+#: habitat/building/sensors/models/temperature.py:14
+#: habitat/building/sensors/models/voltage.py:10
 msgid "Datetime"
 msgstr "Data i czas"
 
-#: habitat/building/environment/models/humidity.py:16
-#: habitat/building/environment/models/humidity.py:28
-msgid "Humidity"
-msgstr "Wilgotność"
+#: habitat/building/sensors/models/carbon_dioxide.py:16
+#: habitat/building/sensors/models/carbon_monoxide.py:16
+#: habitat/building/sensors/models/humidity.py:16
+#: habitat/building/sensors/models/internet.py:14
+#: habitat/building/sensors/models/luminance.py:14
+#: habitat/building/sensors/models/oxygen.py:16
+#: habitat/building/sensors/models/pressure.py:14
+#: habitat/building/sensors/models/radiation.py:14
+#: habitat/building/sensors/models/temperature.py:18
+#: habitat/building/sensors/models/voltage.py:14
+msgid "Sensor Location"
+msgstr ""
 
-#: habitat/building/environment/models/humidity.py:17
+#: habitat/building/sensors/models/carbon_dioxide.py:23
+#: habitat/building/sensors/models/carbon_monoxide.py:23
+#: habitat/building/sensors/models/oxygen.py:23
+msgid "Concentration"
+msgstr ""
+
+#: habitat/building/sensors/models/carbon_dioxide.py:24
+#: habitat/building/sensors/models/carbon_monoxide.py:24
+#: habitat/building/sensors/models/humidity.py:24
+#: habitat/building/sensors/models/oxygen.py:24
 msgid "%"
 msgstr "%"
 
-#: habitat/building/environment/models/humidity.py:27
+#: habitat/building/sensors/models/carbon_dioxide.py:34
+msgid "Carbon Dioxide Concentration Measurement"
+msgstr ""
+
+#: habitat/building/sensors/models/carbon_dioxide.py:35
+msgid "Carbon Dioxide"
+msgstr ""
+
+#: habitat/building/sensors/models/carbon_monoxide.py:34
+msgid "Carbon Monoxide Concentration Measurement"
+msgstr ""
+
+#: habitat/building/sensors/models/carbon_monoxide.py:35
+msgid "Carbon Monoxide"
+msgstr ""
+
+#: habitat/building/sensors/models/humidity.py:23
+#: habitat/building/sensors/models/humidity.py:35
+msgid "Humidity"
+msgstr "Wilgotność"
+
+#: habitat/building/sensors/models/humidity.py:34
 msgid "Humitdity Measurement"
 msgstr "Pomiar wilgotności powietrza"
 
-#: habitat/building/environment/models/luminance.py:14
-#: habitat/building/environment/models/luminance.py:24
+#: habitat/building/sensors/models/internet.py:21
+#: habitat/building/sensors/models/voltage.py:21
+msgid "Value"
+msgstr ""
+
+#: habitat/building/sensors/models/internet.py:22
+msgid "Mbps"
+msgstr ""
+
+#: habitat/building/sensors/models/internet.py:30
+#: habitat/building/sensors/models/radiation.py:30
+#, fuzzy
+#| msgid "Temperature Measurement"
+msgid "Internet Speed Measurement"
+msgstr "Pomiar temperatury"
+
+#: habitat/building/sensors/models/internet.py:31
+#: habitat/building/sensors/models/radiation.py:31
+msgid "Internet Speed"
+msgstr ""
+
+#: habitat/building/sensors/models/luminance.py:21
+#: habitat/building/sensors/models/luminance.py:31
 msgid "Luminance"
 msgstr "Natężenie światła"
 
-#: habitat/building/environment/models/luminance.py:15
+#: habitat/building/sensors/models/luminance.py:22
 msgid "lumen"
 msgstr "lumenów"
 
-#: habitat/building/environment/models/luminance.py:23
+#: habitat/building/sensors/models/luminance.py:30
 msgid "Luminance Measurement"
 msgstr "Pomiar natężenia światła"
 
-#: habitat/building/environment/models/temperature.py:9
-msgid "Celsius"
-msgstr "Celsiusz"
+#: habitat/building/sensors/models/oxygen.py:34
+#, fuzzy
+#| msgid "Temperature Measurement"
+msgid "Oxygen Concentration Measurement"
+msgstr "Pomiar temperatury"
 
-#: habitat/building/environment/models/temperature.py:10
-msgid "Kelvin"
-msgstr "Kelvin"
+#: habitat/building/sensors/models/oxygen.py:35
+msgid "Oxygen"
+msgstr ""
 
-#: habitat/building/environment/models/temperature.py:11
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
+#: habitat/building/sensors/models/pressure.py:21
+msgid "Pressure"
+msgstr ""
 
-#: habitat/building/environment/models/temperature.py:18
-#: habitat/building/environment/models/temperature.py:33
+#: habitat/building/sensors/models/pressure.py:22
+msgid "mmHg"
+msgstr ""
+
+#: habitat/building/sensors/models/pressure.py:30
+#: habitat/building/sensors/models/temperature.py:39
+msgid "Temperature Measurement"
+msgstr "Pomiar temperatury"
+
+#: habitat/building/sensors/models/pressure.py:31
+#: habitat/building/sensors/models/temperature.py:25
+#: habitat/building/sensors/models/temperature.py:40
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: habitat/building/environment/models/temperature.py:22
+#: habitat/building/sensors/models/radiation.py:21
+msgid "Radiation"
+msgstr ""
+
+#: habitat/building/sensors/models/radiation.py:22
+msgid "Sv - Sievert"
+msgstr ""
+
+#: habitat/building/sensors/models/temperature.py:9
+msgid "Celsius"
+msgstr "Celsiusz"
+
+#: habitat/building/sensors/models/temperature.py:10
+msgid "Kelvin"
+msgstr "Kelvin"
+
+#: habitat/building/sensors/models/temperature.py:11
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: habitat/building/sensors/models/temperature.py:29
 msgid "Unit"
 msgstr "Jednostka"
 
-#: habitat/building/environment/models/temperature.py:32
-msgid "Temperature Measurement"
-msgstr "Pomiar temperatury"
+#: habitat/building/sensors/models/voltage.py:22
+msgid "V"
+msgstr ""
+
+#: habitat/building/sensors/models/voltage.py:30
+#, fuzzy
+#| msgid "Luminance Measurement"
+msgid "Voltage Measurement"
+msgstr "Pomiar natężenia światła"
+
+#: habitat/building/sensors/models/voltage.py:31
+msgid "Voltage"
+msgstr ""

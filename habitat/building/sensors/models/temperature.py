@@ -5,7 +5,7 @@ from django.utils.timezone import now
 
 
 class Temperature(models.Model):
-    UNITS = [
+    UNIT_CHOICES = [
         ('celsius', _('Celsius')),
         ('kelvin', _('Kelvin')),
         ('fahrenheit', _('Fahrenheit'))]
@@ -14,6 +14,13 @@ class Temperature(models.Model):
         verbose_name=_('Datetime'),
         default=now)
 
+    location = models.ForeignKey(
+        verbose_name=_('Sensor Location'),
+        to='modules.Module',
+        null=True,
+        blank=True,
+        default=None)
+
     value = models.PositiveSmallIntegerField(
         verbose_name=_('Temperature'),
         default=None)
@@ -21,17 +28,19 @@ class Temperature(models.Model):
     unit = models.CharField(
         verbose_name=_('Unit'),
         max_length=10,
-        choices=UNITS,
+        choices=UNIT_CHOICES,
         default='celsius')
 
     def __str__(self):
-        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.value} {self.unit.upper():.1}'
+        return f'[{self.datetime:%Y-%m-%d %H:%M}] (location: {self.location}) {self.value} {self.unit.upper():.1}'
 
     class Meta:
-        ordering = ['-value']
+        ordering = ['-datetime', 'location']
         verbose_name = _('Temperature Measurement')
         verbose_name_plural = _('Temperature')
 
     class Admin(admin.ModelAdmin):
-        list_display = ['datetime', 'value', 'unit']
-        search_fields = ['value']
+        change_list_template = 'admin/change_list_filter_sidebar.html'
+        list_display = ['datetime', 'location', 'value']
+        list_filter = ['location']
+        search_fields = ['^datetime', 'value']
