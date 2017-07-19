@@ -13,11 +13,11 @@ class DayPlan(models.Model):
     diet = models.ManyToManyField(verbose_name=_('Diet'), to='food.Diet', blank=True, default=None)
     calories = models.PositiveIntegerField(verbose_name=_('Calories'), validators=[MaxValueValidator(5000), MinValueValidator(0)], null=True, blank=True, default=None)
 
-    breakfast = models.ForeignKey(verbose_name=_('Breakfast'), to='food.Meal', related_name='breakfast', blank=True, default=None)
-    brunch = models.ForeignKey(verbose_name=_('Brunch'), to='food.Meal', related_name='brunch', blank=True, default=None)
-    lunch = models.ForeignKey(verbose_name=_('Lunch'), to='food.Meal', related_name='lunch', blank=True, default=None)
-    tea = models.ForeignKey(verbose_name=_('Tea'), to='food.Meal', related_name='tea', blank=True, default=None)
-    supper = models.ForeignKey(verbose_name=_('Supper'), to='food.Meal', related_name='supper', blank=True, default=None)
+    breakfast = models.ForeignKey(verbose_name=_('Breakfast'), to='food.Meal', related_name='breakfast', null=True, blank=True, default=None)
+    brunch = models.ForeignKey(verbose_name=_('Brunch'), to='food.Meal', related_name='brunch', null=True, blank=True, default=None)
+    lunch = models.ForeignKey(verbose_name=_('Lunch'), to='food.Meal', related_name='lunch', null=True, blank=True, default=None)
+    tea = models.ForeignKey(verbose_name=_('Tea'), to='food.Meal', related_name='tea', null=True, blank=True, default=None)
+    supper = models.ForeignKey(verbose_name=_('Supper'), to='food.Meal', related_name='supper', null=True, blank=True, default=None)
 
     def __str__(self):
         return f'{self.name}'
