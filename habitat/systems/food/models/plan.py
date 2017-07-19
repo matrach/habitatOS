@@ -11,7 +11,7 @@ class DayPlan(models.Model):
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, default=None)
     diet = models.ManyToManyField(verbose_name=_('Diet'), to='food.Diet', blank=True, default=None)
-    calories = models.PositiveIntegerField(verbose_name=_('Calories'), validators=[MaxValueValidator(0), MinValueValidator(5000)], blank=True, default=None)
+    calories = models.PositiveIntegerField(verbose_name=_('Calories'), validators=[MaxValueValidator(5000), MinValueValidator(0)], blank=True, default=None)
 
     breakfast = models.ForeignKey(verbose_name=_('Breakfast'), to='food.Meal', related_name='breakfast', blank=True, default=None)
     brunch = models.ForeignKey(verbose_name=_('Brunch'), to='food.Meal', related_name='brunch', blank=True, default=None)
