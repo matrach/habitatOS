@@ -22,6 +22,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     'habitatos.herokuapp.com',
+    'habitatos.space',
+    'www.habitatos.space',
     'os.astrotech.io',
 ]
 
