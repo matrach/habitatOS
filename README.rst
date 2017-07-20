@@ -39,7 +39,7 @@ Open browser and use:
     $ open http://127.0.0.1:8000/
 
 Cache
-=====
+-----
 In order to Memcache as a cache:
 
 .. code-block::
@@ -50,8 +50,26 @@ In order to Memcache as a cache:
     $ memcached -d -s /tmp/memcached.sock
 
 Database
-========
+--------
 
 .. code-block:: console
 
     $ brew install postgresql
+
+Contributing
+============
+
+Pre-Commit Hook
+---------------
+
+.. code-block:: bash
+
+    #!/bin/sh
+    set -e
+
+    pep8 habitat
+    python manage.py check
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py test --verbosity 2
+
