@@ -7,21 +7,39 @@ source_file = habitat/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.building]
-file_filter = habitat/building/environment/locale/<lang>/LC_MESSAGES/django.po
-source_file = habitat/building/environment/locale/en/LC_MESSAGES/django.po
+[habitatos._common]
+file_filter = habitat/_common/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/_common/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.greenhouse]
-file_filter = habitat/building/greenhouse/locale/<lang>/LC_MESSAGES/django.po
-source_file = habitat/building/greenhouse/locale/en/LC_MESSAGES/django.po
+[habitatos.dashboard]
+file_filter = habitat/dashboard/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/dashboard/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.time_perception]
-file_filter = habitat/experiments/time_perception/locale/<lang>/LC_MESSAGES/django.po
-source_file = habitat/experiments/time_perception/locale/en/LC_MESSAGES/django.po
+[habitatos.drag_and_drop]
+file_filter = habitat/drag_and_drop/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/drag_and_drop/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.sensors]
+file_filter = habitat/building/sensors/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/building/sensors/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.modules]
+file_filter = habitat/building/modules/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/building/modules/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.biolab]
+file_filter = habitat/building/biolab/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/building/biolab/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
@@ -43,15 +61,15 @@ source_file = habitat/science/psychology/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.communication]
-file_filter = habitat/systems/communication/locale/<lang>/LC_MESSAGES/django.po
-source_file = habitat/systems/communication/locale/en/LC_MESSAGES/django.po
-source_lang = en
-type = PO
-
 [habitatos.inventory]
 file_filter = habitat/systems/inventory/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/systems/inventory/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.reporting]
+file_filter = habitat/systems/reporting/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/systems/reporting/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
@@ -61,3 +79,8 @@ source_file = habitat/systems/food/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
+[habitatos.communication]
+file_filter = habitat/systems/communication/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/systems/communication/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
