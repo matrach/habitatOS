@@ -29,7 +29,7 @@ class Module(models.Model):
 
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
     status = models.CharField(verbose_name=_('Status'), choices=STATUSES_CHOICES, max_length=30, db_index=True, default='nominal')
-    hazzard = models.CharField(verbose_name=_('Hazzard'), choices=HAZARD_CHOICES, max_length=30, db_index=True, default=None)
+    hazard = models.CharField(verbose_name=_('Hazard'), choices=HAZARD_CHOICES, max_length=30, db_index=True, default=None)
     blueprint = models.ImageField(verbose_name=_('Blueprint'), upload_to='modules/', null=True, blank=True, default=None)
 
     width = models.DecimalField(verbose_name=_('Width'), help_text=_('m'), max_digits=4, decimal_places=2, validators=[MaxValueValidator(99), MinValueValidator(0)], null=True, blank=True, default=None)
@@ -48,6 +48,6 @@ class Module(models.Model):
 
     class Admin(admin.ModelAdmin):
         change_list_template = 'admin/change_list_filter_sidebar.html'
-        list_display = ['name', 'status', 'hazzard', 'width', 'height', 'length', 'plan', 'capacity']
-        list_filter = ['status', 'hazzard']
+        list_display = ['name', 'status', 'hazard', 'width', 'height', 'length', 'plan', 'capacity']
+        list_filter = ['status', 'hazard']
         search_fields = ['name']
