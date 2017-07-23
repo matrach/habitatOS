@@ -8,3 +8,4 @@ Pillow
 dj-database-url
 django-braces
 django-filebrowser
+pylibmc

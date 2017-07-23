@@ -7,21 +7,15 @@ source_file = habitat/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos._common]
-file_filter = habitat/_common/locale/<lang>/LC_MESSAGES/django.po
-source_file = habitat/_common/locale/en/LC_MESSAGES/django.po
-source_lang = en
-type = PO
-
-[habitatos.dashboard]
-file_filter = habitat/dashboard/locale/<lang>/LC_MESSAGES/django.po
-source_file = habitat/dashboard/locale/en/LC_MESSAGES/django.po
-source_lang = en
-type = PO
-
 [habitatos.drag_and_drop]
 file_filter = habitat/drag_and_drop/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/drag_and_drop/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[habitatos.light]
+file_filter = habitat/building/light/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/building/light/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 

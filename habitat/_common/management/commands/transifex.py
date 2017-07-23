@@ -1,6 +1,6 @@
-from django.apps import apps
 from django.conf import settings
 from django.core.management.base import BaseCommand
+
 
 HEADER = """[main]
 host = https://www.transifex.com
@@ -20,6 +20,11 @@ source_lang = en
 type = PO
 """
 
+SKIP = [
+    'habitat._common',
+    'habitat.dashboard',
+]
+
 
 class Command(BaseCommand):
     help = 'Generates transifex config'
@@ -28,7 +33,7 @@ class Command(BaseCommand):
         self.stdout.write(HEADER)
 
         for app in settings.INSTALLED_APPS:
-            if app.startswith('habitat'):
+            if app.startswith('habitat') and app not in SKIP:
                 path = app.replace('.', '/')
                 name = app.split('.')[-1]
                 self.stdout.write(TEMPATE.format(**locals()))

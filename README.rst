@@ -5,10 +5,27 @@ HabitatOS
 .. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
     :target: https://travis-ci.org/AstroMatt/HabitatOS
 
+Requirements
+============
+
+Minimal
+-------
+* Python >= 3.6
+* Installed requirements from ``requirements.txt`` file
+
+Recommended
+-----------
+* Python >= 3.6
+* PostgreSQL >= 9.6
+* Memcache
+* Nginx
+
+
 Install
 =======
 
-Download the project:
+Download the project
+--------------------
 
 .. code-block:: console
 
@@ -22,15 +39,27 @@ Setup environment and install dependencies:
     $ source .virtualenv/bin/activate
     $ pip install -r requirements.txt
 
-Create database and run application:
+Create database and load data
+-----------------------------
 
 .. code-block:: console
 
     $ python manage.py migrate
     $ python manage.py createsuperuser
     $ python manage.py loaddata fixtures/*
-    $ python manage.py test --verbosity 0
-    $ python manage.py runserver
+
+Verify
+------
+
+.. code-block:: console
+
+    $ python manage.py test --verbosity 2
+
+Run
+---
+.. code-block:: console
+
+    $ gunicorn habitat.wsgi
 
 Open browser and use:
 

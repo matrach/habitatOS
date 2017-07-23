@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'habitat._common',
     'habitat.dashboard',
     'habitat.drag_and_drop',
+    'habitat.building.light',
     'habitat.building.sensors',
     'habitat.building.modules',
     'habitat.building.biolab',
@@ -124,6 +125,35 @@ STATIC_ROOT = os.path.join(BASE_DIR, '_static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 
+FILEBROWSER_VERSIONS_BASEDIR = '_thumbnails'
+FILEBROWSER_DIRECTORY = '_uploads/'
+FILEBROWSER_STORAGE_LOCATION = '_media'
+FILEBROWSER_MAX_UPLOAD_SIZE = 10_737_418_240 # 10 GB
+FILEBROWSER_NORMALIZE_FILENAME = True
+FILEBROWSER_CONVERT_FILENAME = True
+
+FILEBROWSER_EXTENSIONS = {
+    'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
+    'Document': ['.pdf','.doc','.rtf','.txt','.xls','.csv', '.docx', '.xslx', '.pptx', '.odt', '.odx'],
+    'Video': ['.mov','.wmv','.mpeg','.mpg','.avi', 'mp4'],
+    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p']
+}
+
+FILEBROWSER_SELECT_FORMATS = {
+    'file': ['Image','Document','Video','Audio'],
+    'image': ['Image'],
+    'document': ['Document'],
+    'media': ['Video','Audio'],
+}
+
+FILEBROWSER_VERSIONS = {
+    'admin_thumbnail': {'verbose_name': 'Admin Thumbnail', 'width': 60, 'height': 60, 'opts': 'crop'},
+    'thumbnail': {'verbose_name': 'Thumbnail (1 col)', 'width': 60, 'height': 60, 'opts': 'crop'},
+    'small': {'verbose_name': 'Small (2 col)', 'width': 140, 'height': '', 'opts': ''},
+    'medium': {'verbose_name': 'Medium (4col )', 'width': 300, 'height': '', 'opts': ''},
+    'big': {'verbose_name': 'Big (6 col)', 'width': 460, 'height': '', 'opts': ''},
+    'large': {'verbose_name': 'Large (8 col)', 'width': 680, 'height': '', 'opts': ''},
+}
 
 admin.site.site_header = _('HabitatOS')
 admin.site.index_title = _('Dashboard')

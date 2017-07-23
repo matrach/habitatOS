@@ -63,17 +63,17 @@ class IndexDashboard(Dashboard):
                 'habitat.systems.inventory.*']))
 
         # Column 3
-        """
         self.children.append(modules.LinkList(
             title=_('Shortcuts'),
             collapsible=False,
             column=3,
             children=[
-                {'title': _('Calendar'), 'url': 'javascript:alert("not yet connected")'},
-                {'title': _('Chat'), 'url': 'javascript:alert("not yet connected")'},
-                {'title': _('Documentation'), 'url': 'javascript:alert("not yet connected")'},
-                {'title': _('Issue Tracker'), 'url': 'javascript:alert("not yet connected")'}]))
-        """
+                {'title': _('Filebrowser'), 'url': '/filebrowser/browse/'},
+                # {'title': _('Calendar'), 'url': 'javascript:alert("not yet connected")'},
+                # {'title': _('Chat'), 'url': 'javascript:alert("not yet connected")'},
+                # {'title': _('Documentation'), 'url': 'javascript:alert("not yet connected")'},
+                # {'title': _('Issue Tracker'), 'url': 'javascript:alert("not yet connected")'},
+            ]))
 
         self.children.append(modules.ModelList(
             title=_('Sensors'),

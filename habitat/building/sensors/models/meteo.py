@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
 
 
-class Internet(models.Model):
+class Meteo(models.Model):
 
     datetime = models.DateTimeField(
         verbose_name=_('Datetime'),
@@ -19,16 +19,15 @@ class Internet(models.Model):
 
     value = models.PositiveSmallIntegerField(
         verbose_name=_('Value'),
-        help_text=_('Mbps'),
         default=None)
 
     def __str__(self):
-        return f'[{self.datetime:%Y-%m-%d %H:%M}] (location: {self.location}) {self.value} Mbps'
+        return f'[{self.datetime:%Y-%m-%d %H:%M}] (location: {self.location}) {self.value}'
 
     class Meta:
         ordering = ['-datetime', 'location']
-        verbose_name = _('Internet Speed Measurement')
-        verbose_name_plural = _('Internet Speed')
+        verbose_name = _('Meteo')
+        verbose_name_plural = _('Meteo Measurements')
 
     class Admin(admin.ModelAdmin):
         change_list_template = 'admin/change_list_filter_sidebar.html'
