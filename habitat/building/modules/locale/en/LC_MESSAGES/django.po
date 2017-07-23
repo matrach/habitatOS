@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-23 18:53+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:9
+msgid "Working Nominal"
+msgstr ""
+
+#: models.py:10
+msgid "Locked"
+msgstr ""
+
+#: models.py:11 models.py:22
+msgid "Disabled"
+msgstr ""
+
+#: models.py:12
+msgid "Under Construction"
+msgstr ""
+
+#: models.py:13
+msgid "Destructed"
+msgstr ""
+
+#: models.py:16
+msgid "None"
+msgstr ""
+
+#: models.py:17
+msgid "Warning"
+msgstr ""
+
+#: models.py:18 models.py:20
+msgid "Hazardous"
+msgstr ""
+
+#: models.py:19
+msgid "Toxic"
+msgstr ""
+
+#: models.py:21
+msgid "Fire"
+msgstr ""
+
+#: models.py:25
+msgid "Ellipsis"
+msgstr ""
+
+#: models.py:26
+msgid "Rectangle"
+msgstr ""
+
+#: models.py:27
+msgid "Polygon"
+msgstr ""
+
+#: models.py:28
+msgid "Other"
+msgstr ""
+
+#: models.py:30
+msgid "Name"
+msgstr ""
+
+#: models.py:31
+msgid "Status"
+msgstr ""
+
+#: models.py:32
+msgid "Hazzard"
+msgstr ""
+
+#: models.py:33
+msgid "Blueprint"
+msgstr ""
+
+#: models.py:35
+msgid "Width"
+msgstr ""
+
+#: models.py:35 models.py:36 models.py:37
+msgid "m"
+msgstr ""
+
+#: models.py:36
+msgid "Height"
+msgstr ""
+
+#: models.py:37
+msgid "Length"
+msgstr ""
+
+#: models.py:38
+msgid "Plan"
+msgstr ""
+
+#: models.py:39
+msgid "Capacity"
+msgstr ""
+
+#: models.py:39
+msgid "Max crew members working inside."
+msgstr ""
+
+#: models.py:46
+msgid "Module"
+msgstr ""
+
+#: models.py:47
+msgid "Modules"
+msgstr ""

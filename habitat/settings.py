@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'habitat._common',
     'habitat.dashboard',
-    #'habitat.drag_and_drop',
+    # 'habitat.drag_and_drop',
     'habitat.building.light',
     'habitat.building.sensors',
     'habitat.building.modules',
@@ -128,22 +128,22 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 FILEBROWSER_VERSIONS_BASEDIR = '_thumbnails'
 FILEBROWSER_DIRECTORY = '_uploads/'
 FILEBROWSER_STORAGE_LOCATION = '_media'
-FILEBROWSER_MAX_UPLOAD_SIZE = 10_737_418_240 # 10 GB
+FILEBROWSER_MAX_UPLOAD_SIZE = 10_737_418_240  # 10 GB
 FILEBROWSER_NORMALIZE_FILENAME = True
 FILEBROWSER_CONVERT_FILENAME = True
 
 FILEBROWSER_EXTENSIONS = {
-    'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
-    'Document': ['.pdf','.doc','.rtf','.txt','.xls','.csv', '.docx', '.xslx', '.pptx', '.odt', '.odx'],
-    'Video': ['.mov','.wmv','.mpeg','.mpg','.avi', 'mp4'],
-    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p']
+    'Image': ['.jpg', '.jpeg', '.gif', '.png', '.tif', '.tiff'],
+    'Document': ['.pdf', '.doc', '.rtf', '.txt', '.xls', '.csv', '.docx', '.xslx', '.pptx', '.odt', '.odx'],
+    'Video': ['.mov', '.wmv', '.mpeg', '.mpg', '.avi', 'mp4'],
+    'Audio': ['.mp3', '.mp4', '.wav', '.aiff', '.midi', '.m4p']
 }
 
 FILEBROWSER_SELECT_FORMATS = {
-    'file': ['Image','Document','Video','Audio'],
+    'file': ['Image', 'Document', 'Video', 'Audio'],
     'image': ['Image'],
     'document': ['Document'],
-    'media': ['Video','Audio'],
+    'media': ['Video', 'Audio'],
 }
 
 FILEBROWSER_VERSIONS = {

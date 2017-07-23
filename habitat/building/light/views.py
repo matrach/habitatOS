@@ -6,7 +6,6 @@ class LightControlView(View):
     pass
 
 
-
 class LightControlTestAPIView(View):
 
     def get(self, *args, **kwargs):

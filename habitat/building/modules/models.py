@@ -5,14 +5,14 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Module(models.Model):
-    STATUSE_CHOICES = [
+    STATUSES_CHOICES = [
         ('nominal', _('Working Nominal')),
         ('locked', _('Locked')),
         ('disabled', _('Disabled')),
         ('under-construction', _('Under Construction')),
         ('destructed', _('Destructed'))]
 
-    HAZZARD_CHOICES = [
+    HAZARD_CHOICES = [
         ('none', _('None')),
         ('warning', _('Warning')),
         ('hazardous', _('Hazardous')),
@@ -28,8 +28,8 @@ class Module(models.Model):
         ('other', _('Other'))]
 
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
-    status = models.CharField(verbose_name=_('Status'), choices=STATUSE_CHOICES, max_length=30, db_index=True, default='nominal')
-    hazzard = models.CharField(verbose_name=_('Hazzard'), choices=HAZZARD_CHOICES, max_length=30, db_index=True, default=None)
+    status = models.CharField(verbose_name=_('Status'), choices=STATUSES_CHOICES, max_length=30, db_index=True, default='nominal')
+    hazzard = models.CharField(verbose_name=_('Hazzard'), choices=HAZARD_CHOICES, max_length=30, db_index=True, default=None)
     blueprint = models.ImageField(verbose_name=_('Blueprint'), upload_to='modules/', null=True, blank=True, default=None)
 
     width = models.DecimalField(verbose_name=_('Width'), help_text=_('m'), max_digits=4, decimal_places=2, validators=[MaxValueValidator(99), MinValueValidator(0)], null=True, blank=True, default=None)

@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-23 18:54+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: models/mood.py:9
+msgid "Very High"
+msgstr ""
+
+#: models/mood.py:10
+msgid "High"
+msgstr ""
+
+#: models/mood.py:11
+msgid "Normal"
+msgstr ""
+
+#: models/mood.py:12
+msgid "Low"
+msgstr ""
+
+#: models/mood.py:13
+msgid "Very Low"
+msgstr ""
+
+#: models/mood.py:16
+msgid "Very Good"
+msgstr ""
+
+#: models/mood.py:17
+msgid "Good"
+msgstr ""
+
+#: models/mood.py:18
+msgid "Average"
+msgstr ""
+
+#: models/mood.py:19
+msgid "Bad"
+msgstr ""
+
+#: models/mood.py:20
+msgid "Very Bad"
+msgstr ""
+
+#: models/mood.py:22 models/sleep.py:39
+msgid "Astronaut"
+msgstr ""
+
+#: models/mood.py:23 models/sleep.py:40
+msgid "Created"
+msgstr ""
+
+#: models/mood.py:24 models/sleep.py:41
+msgid "Updated"
+msgstr ""
+
+#: models/mood.py:26
+msgid "Report About Day"
+msgstr ""
+
+#: models/mood.py:27
+msgid "Stress"
+msgstr ""
+
+#: models/mood.py:28
+msgid "Mood"
+msgstr ""
+
+#: models/mood.py:29
+msgid "Day Quality"
+msgstr ""
+
+#: models/mood.py:30
+msgid "Productivity"
+msgstr ""
+
+#: models/mood.py:31
+msgid "Remarks"
+msgstr ""
+
+#: models/mood.py:38
+msgid "Mood Report"
+msgstr ""
+
+#: models/mood.py:39
+msgid "Mood Reports"
+msgstr ""
+
+#: models/sleep.py:12 models/sleep.py:112
+msgid "Sleep"
+msgstr ""
+
+#: models/sleep.py:13
+msgid "Nap"
+msgstr ""
+
+#: models/sleep.py:16
+msgid "Satisfactory"
+msgstr ""
+
+#: models/sleep.py:17
+msgid "Slightly Satisfactory"
+msgstr ""
+
+#: models/sleep.py:18
+msgid "Somewhat Satisfactory"
+msgstr ""
+
+#: models/sleep.py:19
+msgid "Very Unsatisfactory"
+msgstr ""
+
+#: models/sleep.py:22 models/sleep.py:36
+msgid "No"
+msgstr ""
+
+#: models/sleep.py:23
+msgid "Mildly"
+msgstr ""
+
+#: models/sleep.py:24
+msgid "Considerably"
+msgstr ""
+
+#: models/sleep.py:25
+msgid "Intensely"
+msgstr ""
+
+#: models/sleep.py:28
+msgid "Sufficient"
+msgstr ""
+
+#: models/sleep.py:29
+msgid "Slightly Sufficient"
+msgstr ""
+
+#: models/sleep.py:30
+msgid "Somewhat Sufficient"
+msgstr ""
+
+#: models/sleep.py:31
+msgid "Very Insufficient"
+msgstr ""
+
+#: models/sleep.py:34
+msgid "Undisclosed"
+msgstr ""
+
+#: models/sleep.py:35
+msgid "Yes"
+msgstr ""
+
+#: models/sleep.py:42
+msgid "Type"
+msgstr ""
+
+#: models/sleep.py:43
+msgid "Location"
+msgstr ""
+
+#: models/sleep.py:44
+msgid "Duration"
+msgstr ""
+
+#: models/sleep.py:47
+msgid "What was the last thing you did before going to sleep?"
+msgstr ""
+
+#: models/sleep.py:48
+msgid "Did you feel sleepy during the day?"
+msgstr ""
+
+#: models/sleep.py:49
+msgid "If yes, how much?"
+msgstr ""
+
+#: models/sleep.py:49
+msgid "Percent of wake time"
+msgstr ""
+
+#: models/sleep.py:52
+msgid "When did you go to bed?"
+msgstr ""
+
+#: models/sleep.py:53
+msgid "When did you fall asleep?"
+msgstr ""
+
+#: models/sleep.py:54
+msgid "If it took you longer than 10 min to fall asleep, what was the reason?"
+msgstr ""
+
+#: models/sleep.py:57
+msgid "Did you wake up at night? If you yes, for how long (approx.)?"
+msgstr ""
+
+#: models/sleep.py:57
+msgid "Minutes"
+msgstr ""
+
+#: models/sleep.py:58
+msgid "If you woke up during the night, why?"
+msgstr ""
+
+#: models/sleep.py:61
+msgid "When did you wake up?"
+msgstr ""
+
+#: models/sleep.py:62
+msgid "What woke you up in the morning?"
+msgstr ""
+
+#: models/sleep.py:62
+msgid "Alarm clock / I woke up on my own"
+msgstr ""
+
+#: models/sleep.py:63
+msgid "When did you get up?"
+msgstr ""
+
+#: models/sleep.py:66
+msgid "Did you use ear plugs?"
+msgstr ""
+
+#: models/sleep.py:67
+msgid "Did you use an eye mask?"
+msgstr ""
+
+#: models/sleep.py:68
+msgid "Did you use a sleep pills?"
+msgstr ""
+
+#: models/sleep.py:71
+msgid "If you remember what was your dream about?"
+msgstr ""
+
+#: models/sleep.py:72
+msgid "How would you describe the amount of sleep?"
+msgstr ""
+
+#: models/sleep.py:73
+msgid "How would you rate your overall quality of sleep?"
+msgstr ""
+
+#: models/sleep.py:87
+msgid "Sleep Log"
+msgstr ""
+
+#: models/sleep.py:88
+msgid "Sleep Logbook"
+msgstr ""
+
+#: models/sleep.py:110
+msgid "General"
+msgstr ""
+
+#: models/sleep.py:111
+msgid "Before Sleep"
+msgstr ""
+
+#: models/sleep.py:113
+msgid "After Sleep"
+msgstr ""
