@@ -94,6 +94,7 @@ class Sleep(models.Model):
         search_fields = ['dream']
         readonly_fields = ['duration']
         exclude = ['astronaut', 'created', 'updated']
+        date_hierarchy = 'wakeup_time'
         # raw_id_fields = ['astronaut']
         # autocomplete_lookup_fields = {'fk': ['astronaut']}
 

@@ -43,6 +43,7 @@ class Mood(models.Model):
         list_display = ['day', 'astronaut', 'stress', 'mood', 'day_quality', 'productivity']
         list_filter = ['astronaut', 'stress', 'mood', 'day_quality', 'productivity']
         exclude = ['astronaut', 'created', 'updated']
+        date_hierarchy = 'day'
         radio_fields = {
             'stress': admin.HORIZONTAL,
             'mood': admin.HORIZONTAL,

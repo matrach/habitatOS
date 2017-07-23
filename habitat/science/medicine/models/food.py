@@ -32,3 +32,4 @@ class Meal(models.Model):
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'food']
         list_filter = ['astronaut']
+        date_hierarchy = 'datetime'

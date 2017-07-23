@@ -36,3 +36,4 @@ class Temperature(models.Model):
 
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'temperature']
+        date_hierarchy = 'datetime'

@@ -12,13 +12,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
+	migrations.RenameField(
             model_name='module',
-            name='hazzard',
-        ),
-        migrations.AddField(
-            model_name='module',
-            name='hazard',
-            field=models.CharField(choices=[('none', 'None'), ('warning', 'Warning'), ('hazardous', 'Hazardous'), ('toxic', 'Toxic'), ('depress', 'Hazardous'), ('fire', 'Fire'), ('disabled', 'Disabled')], db_index=True, default=None, max_length=30, verbose_name='Hazard'),
+            old_name='hazzard',
+            new_name='hazard',
         ),
     ]

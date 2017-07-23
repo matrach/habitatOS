@@ -27,8 +27,8 @@ class Radiation(models.Model):
 
     class Meta:
         ordering = ['-datetime', 'location']
-        verbose_name = _('Internet Speed Measurement')
-        verbose_name_plural = _('Internet Speed')
+        verbose_name = _('Radiation Measurement')
+        verbose_name_plural = _('Radiation')
 
     class Admin(admin.ModelAdmin):
         change_list_template = 'admin/change_list_filter_sidebar.html'

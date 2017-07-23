@@ -65,6 +65,7 @@ class DiaryEntry(models.Model):
         search_fields = ['title']
         ordering = ['-modified_date']
         list_filter = ['author']
+        date_hierarchy = 'publish_date'
 
         def save_model(self, request, obj, form, change):
             obj.author = request.user

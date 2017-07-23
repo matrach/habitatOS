@@ -51,3 +51,4 @@ class BloodPressure(models.Model):
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'systolic', 'diastolic', 'heart_rate']
         list_filter = ['astronaut']
+        date_hierarchy = 'datetime'

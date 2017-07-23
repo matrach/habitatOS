@@ -27,11 +27,12 @@ class Network(models.Model):
 
     class Meta:
         ordering = ['-datetime', 'location']
-        verbose_name = _('Internet Speed Measurement')
-        verbose_name_plural = _('Internet Speed')
+        verbose_name = _('Network Performance Measurement')
+        verbose_name_plural = _('Network Performance')
 
     class Admin(admin.ModelAdmin):
         change_list_template = 'admin/change_list_filter_sidebar.html'
         list_display = ['datetime', 'location', 'value']
         list_filter = ['location']
         search_fields = ['^datetime', 'value']
+        date_hierarchy = 'datetime'

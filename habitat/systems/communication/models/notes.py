@@ -23,6 +23,7 @@ class PersonalNote(models.Model):
         list_display = ['modified_date', 'publish_date', 'author']
         search_fields = ['content']
         list_filter = ['author']
+        date_hierarchy = 'publish_date'
 
         class Media:
             js = [

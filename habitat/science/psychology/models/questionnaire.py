@@ -150,6 +150,7 @@ class Questionnaire(models.Model):
         verbose_name_plural = _('Questionnaires')
 
     class Admin(admin.ModelAdmin):
+        date_hierarchy = 'datetime'
         radio_fields = {
             'communication_frequency': admin.HORIZONTAL,
             'communication_desired': admin.HORIZONTAL,

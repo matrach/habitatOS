@@ -36,6 +36,7 @@ class Observation(models.Model):
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'experiment', 'image']
         search_fields = ['=experiment', '^datetime', 'notes']
+        date_hierarchy = 'datetime'
 
 
 class ObservationInline(admin.TabularInline):
@@ -86,3 +87,4 @@ class Experiment(models.Model):
         list_display = ['planted_date', 'plant', 'planted_date']
         list_filter = ['cultivation_method']
         search_fields = ['=experiment', '^planted_date', 'plant']
+        date_hierarchy = 'planted_date'

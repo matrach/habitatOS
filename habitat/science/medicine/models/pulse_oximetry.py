@@ -52,3 +52,4 @@ class PulsOxymetry(models.Model):
     class Admin(admin.ModelAdmin):
         list_display = ['datetime', 'astronaut', 'spo2', 'perfusion_index', 'heart_rate']
         list_filter = ['astronaut', 'spo2']
+        date_hierarchy = 'datetime'

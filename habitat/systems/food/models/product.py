@@ -100,10 +100,11 @@ class Product(models.Model):
     class Admin(admin.ModelAdmin):
         change_list_template = 'admin/change_list_filter_sidebar.html'
         formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
-        list_display = ['name', 'type', 'category', 'display_tags']
         ordering = ['-name']
-        search_fields = ['name']
+        list_display = ['name', 'type', 'category', 'display_tags']
+        list_editable = ['type', 'category']
         list_filter = ['type', 'category', 'tags']
+        search_fields = ['name']
         fieldsets = [
             (_('General'), {'fields': ['name', 'type', 'category', 'tags', 'image']}),
             (_('Measurements'), {'fields': ['measurements_physical_form', 'measurements_usage_unit', 'measurements_shopping_unit', 'measurements_volume', 'measurements_weight']}),

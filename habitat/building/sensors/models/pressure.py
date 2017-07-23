@@ -27,8 +27,8 @@ class Pressure(models.Model):
 
     class Meta:
         ordering = ['-datetime', 'location']
-        verbose_name = _('Temperature Measurement')
-        verbose_name_plural = _('Temperature')
+        verbose_name = _('Pressure Measurement')
+        verbose_name_plural = _('Pressure')
 
     class Admin(admin.ModelAdmin):
         change_list_template = 'admin/change_list_filter_sidebar.html'
