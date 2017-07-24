@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'habitat._common',
     'habitat.dashboard',
-    # 'habitat.drag_and_drop',
     'habitat.building.light',
     'habitat.building.sensors',
     'habitat.building.modules',
