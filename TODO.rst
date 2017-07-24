@@ -9,12 +9,6 @@ General
 Experiments
 ===========
 
-Group dynamics
---------------
-
-Subjective time perception
---------------------------
-
 Human factors
 -------------
 #. Stress and performance analysis

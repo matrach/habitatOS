@@ -10,27 +10,25 @@ class IndexDashboard(Dashboard):
 
         # Column 1
         self.children.append(modules.ModelList(
+            title=_('Experiments'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.experiments.*.*']))
+
+        self.children.append(modules.ModelList(
             title=_('Laboratory'),
             column=1,
             collapsible=False,
             models=[
-                'habitat.building.biolab.*',
-                'habitat.building.modules.*']))
+                'habitat.biolab.*']))
 
         self.children.append(modules.ModelList(
-            title=_('Psychology'),
+            title=_('Health'),
             column=1,
             collapsible=False,
             models=[
-                'habitat.science.education.*',
-                'habitat.science.psychology.*']))
-
-        self.children.append(modules.ModelList(
-            title=_('Medical'),
-            column=1,
-            collapsible=False,
-            models=[
-                'habitat.science.medicine.*']))
+                'habitat.health.*']))
 
         # Column 2
         self.children.append(modules.ModelList(
@@ -38,29 +36,28 @@ class IndexDashboard(Dashboard):
             column=2,
             collapsible=False,
             models=[
-                'habitat.systems.reporting.*']))
+                'habitat.reporting.*']))
 
         self.children.append(modules.ModelList(
             title=_('Communication'),
             column=2,
             collapsible=False,
             models=[
-                'habitat.systems.communication.*',
-                'habitat.systems.drag-and-drop.*']))
+                'habitat.communication.*']))
 
         self.children.append(modules.ModelList(
             title=_('Food'),
             column=2,
             collapsible=False,
             models=[
-                'habitat.systems.food.*']))
+                'habitat.food.*']))
 
         self.children.append(modules.ModelList(
             title=_('Systems'),
             column=2,
             collapsible=False,
             models=[
-                'habitat.systems.inventory.*']))
+                'habitat.inventory.*']))
 
         # Column 3
         self.children.append(modules.LinkList(
@@ -80,14 +77,15 @@ class IndexDashboard(Dashboard):
             column=3,
             collapsible=False,
             models=[
-                'habitat.building.sensors.*']))
+                'habitat.sensors.*']))
 
         self.children.append(modules.ModelList(
             title=_('Building'),
             column=3,
             collapsible=False,
             models=[
-                'habitat.building.modules.*']))
+                'habitat.building.*',
+                'habitat.light']))
 
         if context['user'].has_perm('admin.add_user'):
             self.children.append(modules.ModelList(
