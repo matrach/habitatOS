@@ -5,8 +5,14 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Unit(models.Model):
+    TYPE_CHOICES = [
+        ('shopping', _('Shopping')),
+        ('usage', _('Usage')),
+    ]
+
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, default=None)
+    type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES, default='usage')
 
     def __str__(self):
         return f'{self.name}'
@@ -21,7 +27,9 @@ class Unit(models.Model):
         verbose_name_plural = _('Units')
 
     class Admin(admin.ModelAdmin):
+        change_list_template = 'admin/change_list_filter_sidebar.html'
         # hidden = True
-        list_display = ['name', 'slug']
+        list_display = ['name', 'type']
         ordering = ['-name']
         search_fields = ['^name']
+        list_editable = ['type']

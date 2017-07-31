@@ -12,6 +12,7 @@ class DayPlan(models.Model):
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, default=None)
     diet = models.ManyToManyField(verbose_name=_('Diet'), to='food.Diet', blank=True, default=None)
     calories = models.PositiveIntegerField(verbose_name=_('Calories'), validators=[MaxValueValidator(5000), MinValueValidator(0)], null=True, blank=True, default=None)
+    tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', limit_choices_to={'type': 'plan'}, blank=True, default=None)
 
     breakfast = models.ForeignKey(verbose_name=_('Breakfast'), to='food.Meal', related_name='breakfast', null=True, blank=True, default=None)
     brunch = models.ForeignKey(verbose_name=_('Brunch'), to='food.Meal', related_name='brunch', null=True, blank=True, default=None)
@@ -32,6 +33,7 @@ class DayPlan(models.Model):
         verbose_name_plural = _('Day Plans')
 
     class Admin(admin.ModelAdmin):
+        change_list_template = 'admin/change_list_filter_sidebar.html'
         formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
         list_display = ['name', 'calories', 'display_diet']
         ordering = ['-name']

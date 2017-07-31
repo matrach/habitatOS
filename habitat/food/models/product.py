@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 from django.db import models
@@ -12,31 +13,51 @@ def upload_path(instance, filename):
     return f'products/{instance.category}/{instance.slug}.{extension}'
 
 
+class ProductUsageUnits(models.Model):
+    unit = models.ForeignKey(verbose_name=_('Unit'), to='food.Unit', limit_choices_to={'type': 'usage'}, default=None)
+    value = models.PositiveSmallIntegerField(verbose_name=_('Value'), default=None)
+
+    def __str__(self):
+        return f'{self.value} {self.unit}'
+
+
+class ProductShoppingUnits(models.Model):
+    unit = models.ForeignKey(verbose_name=_('Unit'), to='food.Unit', limit_choices_to={'type': 'shopping'}, default=None)
+    value = models.PositiveSmallIntegerField(verbose_name=_('Value'), default=None)
+
+    def __str__(self):
+        return f'{self.value} {self.unit}'
+
+
 class Product(models.Model):
-    TYPES = [
+    TYPE_CHOICES = [
         ('custom', _('Custom Made')),
         ('brand', _('Brand Product')),
         ('gourmet', _('Gourmet Food')),
         ('restaurant', _('Restaurant'))]
 
-    CATEGORIES = [
+    FORM_CHOICES = [
+        ('solid', _('Solid')),
+        ('liquid', _('Liquid'))]
+
+    CATEGORY_CHOICES = [
         ('other', _('Other')),
         ('fruits', _('Fruits')),
         ('vegetables', _('Vegetables')),
         ('meat', _('Meat'))]
 
-    PHYSICAL_FORMS = [
-        ('solid', _('Solid')),
-        ('liquid', _('Liquid'))]
-
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, db_index=True, default=None)
     image = models.ImageField(verbose_name=_('Image'), upload_to=upload_path, null=True, blank=True, default=None)
-    type = models.CharField(verbose_name=_('Type'), choices=TYPES, max_length=30, db_index=True, default=None)
-    category = models.CharField(verbose_name=_('Category'), choices=CATEGORIES, max_length=30, db_index=True, default=None)
-    tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', blank=True, default=None)
+    type = models.CharField(verbose_name=_('Type'), choices=TYPE_CHOICES, max_length=30, db_index=True, default=None)
+    # category = models.ForeignKey(verbose_name=_('Category'), to='food.ProductCategory', db_index=True, default=None)
+    category = models.CharField(verbose_name=_('Category'), choices=CATEGORY_CHOICES, max_length=30, db_index=True, default=None)
+    tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', limit_choices_to={'type': 'product'}, blank=True, default=None)
 
-    measurements_physical_form = models.CharField(verbose_name=_('Phisical Form'), choices=PHYSICAL_FORMS, max_length=20, db_index=True, blank=True, null=True, default=None)
+    modification_date = models.DateTimeField(verbose_name=_('Modification Date'), auto_now=True)
+    modification_author = models.ForeignKey(verbose_name=_('Modification Author'), to='auth.User', default=None)
+
+    measurements_physical_form = models.CharField(verbose_name=_('Phisical Form'), choices=FORM_CHOICES, max_length=20, db_index=True, blank=True, null=True, default=None)
     measurements_usage_unit = models.ForeignKey(verbose_name=_('Usage Unit'), to='food.Unit', related_name='usage_unit', blank=True, null=True, default=None)
     measurements_shopping_unit = models.ForeignKey(verbose_name=_('Shopping Unit'), to='food.Unit', related_name='shopping_unit', blank=True, null=True, default=None)
     measurements_volume = models.DecimalField(verbose_name=_('Volume'), help_text=_('ml'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
@@ -46,9 +67,9 @@ class Product(models.Model):
 
     roughage = models.DecimalField(verbose_name=_('Roughage'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
 
-    cooking_waste = models.PositiveSmallIntegerField(verbose_name=_('Cooking Waste'), validators=[MaxValueValidator(100), MinValueValidator(0)], blank=True, null=True, default=None)
-    cooking_factor = models.DecimalField(verbose_name=_('Cooking Factor'), decimal_places=2, max_digits=3, validators=[MaxValueValidator(1.0), MinValueValidator(0.0)], blank=True, null=True, default=None)
-    cooking_product = models.ForeignKey(verbose_name=_('From Product'), to='food.Product', help_text=_('Dry Product Mass = Cooked Product Mass / Cooking Factor [0.0 - 1.0]'), blank=True, null=True, default=None)
+    cooking_waste = models.DecimalField(verbose_name=_('Cooking Waste'), decimal_places=2, max_digits=3, validators=[MinValueValidator(0.0), MaxValueValidator(1.0)], blank=True, null=True, default=None)
+    cooking_factor = models.IntegerField(verbose_name=_('Cooking Factor'), blank=True, null=True, default=None)
+    cooking_product = models.ForeignKey(verbose_name=_('From Product'), to='food.Product', blank=True, null=True, default=None)
 
     proteins = models.DecimalField(verbose_name=_('Proteins'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
     proteins_animal = models.DecimalField(verbose_name=_('Animal Proteins'), help_text=_('g/100g'), decimal_places=2, max_digits=5, blank=True, null=True, default=None)
@@ -101,9 +122,8 @@ class Product(models.Model):
         change_list_template = 'admin/change_list_filter_sidebar.html'
         formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
         ordering = ['-name']
-        list_display = ['name', 'type', 'category', 'display_tags']
-        list_editable = ['type', 'category']
-        list_filter = ['type', 'category', 'tags']
+        list_display = ['name', 'type', 'category', 'modification_author', 'modification_date', 'display_tags']
+        list_filter = ['type', 'category', 'tags', 'modification_author', 'modification_date']
         search_fields = ['name']
         fieldsets = [
             (_('General'), {'fields': ['name', 'type', 'category', 'tags', 'image']}),
@@ -121,3 +141,7 @@ class Product(models.Model):
             return ", ".join([tag.name for tag in obj.tags.all()])
 
         display_tags.short_description = _('Tags')
+
+        def save_model(self, request, obj, form, change):
+            obj.modification_author = User.objects.get(id=request.user.id)
+            super().save_model(request, obj, form, change)

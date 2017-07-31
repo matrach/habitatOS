@@ -5,13 +5,13 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Diet(models.Model):
-    TYPES = [
+    TYPE_CHOICES = [
         ('basic', _('Basic')),
         ('healthy', _('Healthy')),
         ('sport', _('Sport'))]
 
     name = models.CharField(verbose_name=_('Name'), max_length=255, db_index=True, default=None)
-    type = models.CharField(verbose_name=_('Type'), choices=TYPES, max_length=30, db_index=True, null=True, blank=True, default=None)
+    type = models.CharField(verbose_name=_('Type'), choices=TYPE_CHOICES, max_length=30, db_index=True, null=True, blank=True, default=None)
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, default=None)
 
     def __str__(self):
@@ -27,6 +27,7 @@ class Diet(models.Model):
         verbose_name_plural = _('Diets')
 
     class Admin(admin.ModelAdmin):
-        list_display = ['name', 'slug']
+        change_list_template = 'admin/change_list_filter_sidebar.html'
+        list_display = ['name', 'type']
         ordering = ['-name']
         search_fields = ['^name']

@@ -29,7 +29,7 @@ class Meal(models.Model):
     difficulty = models.CharField(verbose_name=_('Difficulty'), choices=DIFFICULTIES, max_length=30, db_index=True, null=True, blank=True, default=None)
     type = models.CharField(verbose_name=_('Type'), choices=TYPES, max_length=30, db_index=True, null=True, blank=True, default=None)
     diet = models.ManyToManyField(verbose_name=_('Diet'), to='food.Diet', blank=True, default=None)
-    tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', blank=True, default=None)
+    tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', limit_choices_to={'type': 'meal'}, blank=True, default=None)
     image = models.ImageField(verbose_name=_('Image'), upload_to=upload_path, null=True, blank=True, default=None)
 
     def __str__(self):
