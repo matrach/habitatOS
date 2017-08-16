@@ -26,6 +26,7 @@ ALLOWED_HOSTS = [
     'www.habitatos.space',
     'os.astrotech.io',
     'test.habitatos.space',
+    'lunex1.habitatos.space',
 ]
 
 INSTALLED_APPS = [
