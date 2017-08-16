@@ -10,6 +10,13 @@ class IndexDashboard(Dashboard):
 
         # Column 1
         self.children.append(modules.ModelList(
+            title=_('Reporting'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.reporting.*.*']))
+
+        self.children.append(modules.ModelList(
             title=_('Experiments'),
             column=1,
             collapsible=False,
@@ -32,11 +39,11 @@ class IndexDashboard(Dashboard):
 
         # Column 2
         self.children.append(modules.ModelList(
-            title=_('Reporting'),
+            title=_('Water'),
             column=2,
             collapsible=False,
             models=[
-                'habitat.reporting.*']))
+                'habitat.water.*']))
 
         self.children.append(modules.ModelList(
             title=_('Communication'),

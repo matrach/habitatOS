@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'habitat._common',
-    'habitat.dashboard',
     'habitat.biolab',
     'habitat.building',
     'habitat.communication',
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'habitat.inventory',
     'habitat.reporting',
     'habitat.sensors',
+    'habitat.water',
 ]
 
 MIDDLEWARE = [
@@ -159,7 +159,7 @@ admin.site.index_title = _('Dashboard')
 admin.site.site_title = _('HabitatOS')
 
 GRAPPELLI_ADMIN_TITLE = _('HabitatOS')
-GRAPPELLI_INDEX_DASHBOARD = 'habitat.dashboard.IndexDashboard'
+GRAPPELLI_INDEX_DASHBOARD = 'habitat._common.dashboard.IndexDashboard'
 
 GRAPPELLI_AUTOCOMPLETE_SEARCH_FIELDS = {
     'auth': {
