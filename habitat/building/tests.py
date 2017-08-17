@@ -8,5 +8,8 @@ class BuildingTest(Test):
         '/building/module/',
         '/building/module/add/',
 
+        '/building/storage/',
+        '/building/storage/add/',
+
         '/building/lightning/test/',
     ]

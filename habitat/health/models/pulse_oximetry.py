@@ -6,7 +6,7 @@ from django.utils.timezone import now
 from django.contrib import admin
 
 
-class PulsOxymetry(models.Model):
+class PulseOxymetry(models.Model):
     astronaut = models.ForeignKey(
         verbose_name=_('Astronaut'),
         to='auth.User',
@@ -48,8 +48,3 @@ class PulsOxymetry(models.Model):
         ordering = ['-datetime']
         verbose_name = _('Pulse Oxymetry Measurement')
         verbose_name_plural = _('Pulse Oxymetry Database')
-
-    class Admin(admin.ModelAdmin):
-        list_display = ['datetime', 'astronaut', 'spo2', 'perfusion_index', 'heart_rate']
-        list_filter = ['astronaut', 'spo2']
-        date_hierarchy = 'datetime'
