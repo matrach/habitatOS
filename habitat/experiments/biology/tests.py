@@ -1,9 +1,10 @@
 from habitat.tests import Test
 
 
-class InventoryTest(Test):
+class BiologyTest(Test):
     assert_http_200 = [
-        '/inventory/',
-        '/inventory/item/',
-        '/inventory/item/add/',
+        # '/experiments/',
+
+        # '/experiments/biology/',
+        # '/experiments/biology/add/',
     ]

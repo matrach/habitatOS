@@ -1,7 +1,7 @@
 from habitat.tests import Test
 
 
-class healthTest(Test):
+class HealthTest(Test):
     assert_http_200 = [
         '/health/',
 

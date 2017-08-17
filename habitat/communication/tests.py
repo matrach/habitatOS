@@ -2,7 +2,7 @@ from .models import DiaryEntry
 from habitat.tests import Test
 
 
-class NotepadTest(Test):
+class CommunicationTest(Test):
     assert_http_200 = [
         '/communication/',
         '/communication/personalnote/',
