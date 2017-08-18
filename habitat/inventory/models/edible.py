@@ -18,6 +18,7 @@ class Edible(models.Model):
         verbose_name_plural = _('Edibles Database')
 
     class Admin(admin.ModelAdmin):
+        change_list_template = 'admin/change_list_filter_sidebar.html'
         list_display = ['code', 'product', 'quantity']
         ordering = ['code']
         search_fields = ['^code', '^product__name']

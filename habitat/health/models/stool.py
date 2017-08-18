@@ -66,14 +66,14 @@ class Stool(models.Model):
     datetime = models.DateTimeField(verbose_name=_('Datetime'), default=now)
 
     volume = models.PositiveIntegerField(verbose_name=_('Volume'), help_text=_('ml'), null=True, blank=True, default=None, validators=[MinValueValidator(0), MaxValueValidator(1700)])
-    color = models.CharField(verbose_name=_('Color'), choices=COLOR_CHOICES, max_length=30, null=True, blank=True, default=COLOR_BROWN)
-    type = models.CharField(verbose_name=_('Type'), choices=TYPE_CHOICES, max_length=30, null=True, blank=True, default=TYPE_SMOOTH)
+    color = models.CharField(verbose_name=_('Color'), choices=COLOR_CHOICES, max_length=30, default=COLOR_BROWN)
+    type = models.CharField(verbose_name=_('Type'), choices=TYPE_CHOICES, max_length=30, default=TYPE_SMOOTH)
     abnormalities = models.CharField(verbose_name=_('Abnormalities'), choices=ABNORMALITIES_CHOICES, max_length=30, null=True, blank=True)
 
     def __str__(self):
-        return f'[{self.datetime}] <{self.astronaut}> {self.volume}ml, {self.color}, {self.consistency}'
+        return f'[{self.datetime}] <{self.astronaut}> {self.volume}ml, {self.color}, {self.type}, {self.abnormalities}'
 
     class Meta:
         ordering = ['-datetime']
         verbose_name = _('Stool')
-        verbose_name_plural = _('Stool Measurements')
+        verbose_name_plural = _('Stool')

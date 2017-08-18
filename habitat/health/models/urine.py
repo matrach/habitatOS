@@ -19,13 +19,13 @@ class Urine(models.Model):
     COLOR_CHOICES = [
         (COLOR_COLORLESS, _('Colorless')),
         (COLOR_YELLOW_LIGHT, _('Light Yellow')),
-        (COLOR_YELLOW, _('yellow')),
-        (COLOR_YELLOW_AMBER, _('yellow-amber')),
-        (COLOR_YELLOW_BROWN, _('yellow-brown')),
-        (COLOR_AMBER, _('amber')),
-        (COLOR_ORANGE, _('orange')),
-        (COLOR_RED, _('red')),
-        (COLOR_GREENISH_BROWN, _('greenish-brown')),
+        (COLOR_YELLOW, _('Yellow')),
+        (COLOR_YELLOW_AMBER, _('Yellow Amber')),
+        (COLOR_YELLOW_BROWN, _('Yellow Brown')),
+        (COLOR_AMBER, _('Amber')),
+        (COLOR_ORANGE, _('Orange')),
+        (COLOR_RED, _('Red')),
+        (COLOR_GREENISH_BROWN, _('Greenish Brown')),
     ]
 
     TURBIDITY_CLEAR = 'clear'
@@ -54,4 +54,4 @@ class Urine(models.Model):
     class Meta:
         ordering = ['-datetime']
         verbose_name = _('Urine')
-        verbose_name_plural = _('Urine Measurements')
+        verbose_name_plural = _('Urine')

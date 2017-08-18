@@ -125,5 +125,5 @@ class Weight(models.Model):
 
     class Meta:
         ordering = ['-datetime']
-        verbose_name = _('Weight Measurement')
-        verbose_name_plural = _('Weight Database')
+        verbose_name = _('Weight')
+        verbose_name_plural = _('Weight')

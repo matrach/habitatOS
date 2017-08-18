@@ -12,13 +12,27 @@ class Item(models.Model):
         (TYPE_LIQUID, _('Liquid')),
     ]
 
+    identifier = models.CharField(
+        verbose_name=_('Identifier'),
+        max_length=7,
+        unique=True,
+        default=None)
+
+    quantity = models.PositiveSmallIntegerField(
+        verbose_name=_('Quantity'),
+        null=True,
+        blank=True,
+        default=1)
+
     name = models.CharField(
         verbose_name=_('Name'),
         default=None,
         max_length=255)
 
     manufacturer = models.CharField(
-        verbose_name=_('Name'),
+        verbose_name=_('Manufacturer'),
+        blank=True,
+        null=True,
         default=None,
         max_length=255)
 
@@ -27,13 +41,6 @@ class Item(models.Model):
         max_length=30,
         choices=TYPE_CHOICES,
         default=TYPE_SOLID)
-
-    code = models.CharField(
-        verbose_name=_('Code'),
-        max_length=7,
-        null=True,
-        blank=True,
-        default=None)
 
     location = models.ForeignKey(
         verbose_name=_('Location'),
@@ -67,12 +74,6 @@ class Item(models.Model):
         blank=True,
         default=None)
 
-    quantity = models.PositiveSmallIntegerField(
-        verbose_name=_('Quantity'),
-        null=True,
-        blank=True,
-        default=1)
-
     remarks = models.TextField(
         verbose_name=_('Remarks'),
         null=True,
@@ -80,14 +81,16 @@ class Item(models.Model):
         default=None)
 
     def __str__(self):
-        return f'[{self.code}] {self.name} Quantity: {self.quantity}'
+        return f'[{self.identifier}] {self.name} Quantity: {self.quantity}, Location: {self.location}'
 
     class Meta:
-        ordering = ['code']
+        ordering = ['identifier']
         verbose_name = _('Item')
         verbose_name_plural = _('Item Database')
 
     class Admin(admin.ModelAdmin):
-        list_display = ['code', 'name', 'quantity']
-        ordering = ['code']
-        search_fields = ['^code', 'name']
+        change_list_template = 'admin/change_list_filter_sidebar.html'
+        list_display = ['identifier', 'name', 'quantity', 'location']
+        list_filter = ['location']
+        ordering = ['identifier']
+        search_fields = ['^identifier', 'name']

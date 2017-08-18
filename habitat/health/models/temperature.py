@@ -31,5 +31,5 @@ class Temperature(models.Model):
 
     class Meta:
         ordering = ['-datetime']
-        verbose_name = _('Temperature Measurement')
-        verbose_name_plural = _('Temperature Database')
+        verbose_name = _('Temperature')
+        verbose_name_plural = _('Temperature')
