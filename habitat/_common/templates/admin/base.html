@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+
+{% block navigation %}
+
+     <iframe
+             src="http://lunarclock.org/service/lst-for-iframe.php?style=0&color=4"
+             height="60px"
+             width="170px"
+             frameborder="0"
+             marginwidth="0"
+             scrolling="no">
+     </iframe>
+
+    {{ block.super }}
+{% endblock %}
