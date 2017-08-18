@@ -21,12 +21,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'habitatos.herokuapp.com',
-    'habitatos.space',
-    'www.habitatos.space',
-    'os.astrotech.io',
     'test.habitatos.space',
     'lunex1.habitatos.space',
+    'icares1.habitatos.space',
 ]
 
 INSTALLED_APPS = [

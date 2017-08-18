@@ -16,5 +16,5 @@ class Storage(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = _('Module')
-        verbose_name_plural = _('Modules')
+        verbose_name = _('Storage')
+        verbose_name_plural = _('Storage')
