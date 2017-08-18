@@ -5,10 +5,14 @@ from django.utils.timezone import now
 
 
 class Temperature(models.Model):
+    UNIT_CELSIUS = 'celsius'
+    UNIT_KELVIN = 'kelvin'
+    UNIT_FAHRENHEIT = 'fahrenheit'
+
     UNIT_CHOICES = [
-        ('celsius', _('Celsius')),
-        ('kelvin', _('Kelvin')),
-        ('fahrenheit', _('Fahrenheit'))]
+        (UNIT_CELSIUS, _('Celsius')),
+        (UNIT_KELVIN, _('Kelvin')),
+        (UNIT_FAHRENHEIT, _('Fahrenheit'))]
 
     datetime = models.DateTimeField(
         verbose_name=_('Datetime'),
@@ -21,15 +25,17 @@ class Temperature(models.Model):
         blank=True,
         default=None)
 
-    value = models.PositiveSmallIntegerField(
+    value = models.DecimalField(
         verbose_name=_('Temperature'),
+        max_digits=5,
+        decimal_places=2,
         default=None)
 
     unit = models.CharField(
         verbose_name=_('Unit'),
         max_length=10,
         choices=UNIT_CHOICES,
-        default='celsius')
+        default=UNIT_CELSIUS)
 
     def __str__(self):
         return f'[{self.datetime:%Y-%m-%d %H:%M}] (location: {self.location}) {self.value} {self.unit.upper():.1}'

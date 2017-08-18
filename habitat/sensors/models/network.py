@@ -17,9 +17,11 @@ class Network(models.Model):
         blank=True,
         default=None)
 
-    value = models.PositiveSmallIntegerField(
+    value = models.DecimalField(
         verbose_name=_('Value'),
         help_text=_('Mbps'),
+        max_digits=5,
+        decimal_places=2,
         default=None)
 
     def __str__(self):

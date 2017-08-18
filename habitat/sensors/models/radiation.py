@@ -17,9 +17,11 @@ class Radiation(models.Model):
         blank=True,
         default=None)
 
-    value = models.PositiveSmallIntegerField(
+    value = models.DecimalField(
         verbose_name=_('Radiation'),
-        help_text=_('Sv - Sievert'),
+        help_text=_('Sievert'),
+        max_digits=6,
+        decimal_places=5,
         default=None)
 
     def __str__(self):

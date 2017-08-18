@@ -19,12 +19,14 @@ class Humidity(models.Model):
         blank=True,
         default=None)
 
-    value = models.PositiveSmallIntegerField(
+    value = models.DecimalField(
         verbose_name=_('Humidity'),
         help_text=_('%'),
+        max_digits=3,
+        decimal_places=1,
         validators=[
-            MaxValueValidator(100),
-            MinValueValidator(0)])
+            MinValueValidator(0),
+            MaxValueValidator(100)])
 
     def __str__(self):
         return f'[{self.datetime}] (location: {self.location}) {self.value}%'

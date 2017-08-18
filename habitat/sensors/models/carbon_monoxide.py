@@ -19,12 +19,14 @@ class CarbonMonoxide(models.Model):
         blank=True,
         default=None)
 
-    value = models.PositiveSmallIntegerField(
+    value = models.DecimalField(
         verbose_name=_('Concentration'),
         help_text=_('%'),
+        max_digits=5,
+        decimal_places=3,
         validators=[
-            MaxValueValidator(100),
-            MinValueValidator(0)])
+            MinValueValidator(0),
+            MaxValueValidator(100)])
 
     def __str__(self):
         return f'[{self.datetime}] (location: {self.location}) {self.value}%'
