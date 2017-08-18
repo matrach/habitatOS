@@ -25,14 +25,14 @@ class Disease(models.Model):
         max_length=50,
         default=None)
 
-    sympthoms = models.TextField(
+    symptoms = models.TextField(
         verbose_name=_('Sympthoms'),
         default=None,
         blank=False,
         null=False)
 
     def __str__(self):
-        return f'[{self.datetime_start:%Y-%m-%d}] {self.astronaut} ICD-10: {self.icd10}, Sympthoms: {self.sympthoms:.30}'
+        return f'[{self.datetime_start:%Y-%m-%d}] {self.astronaut} ICD-10: {self.icd10}, Sympthoms: {self.symptoms:.30}'
 
     class Meta:
         ordering = ['-datetime_start']
