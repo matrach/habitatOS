@@ -3,7 +3,6 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
-from django.contrib import admin
 
 
 class TechnicalWater(models.Model):
@@ -19,7 +18,3 @@ class TechnicalWater(models.Model):
         ordering = ['-datetime']
         verbose_name = _('Technical Water Measurement')
         verbose_name_plural = _('Technical Water Usage')
-
-    class Admin(admin.ModelAdmin):
-        list_display = ['datetime', 'astronaut', 'volume', 'usage_description']
-        date_hierarchy = 'datetime'

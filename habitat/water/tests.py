@@ -1,3 +1,16 @@
-from django.test import TestCase
+from habitat.tests import Test
 
-# Create your tests here.
+
+class WaterTest(Test):
+    assert_http_200 = [
+        '/water/',
+
+        '/water/drinkingwater/',
+        '/water/drinkingwater/add/',
+
+        '/water/greenwater/',
+        '/water/greenwater/add/',
+
+        '/water/technicalwater/',
+        '/water/technicalwater/add/',
+    ]
