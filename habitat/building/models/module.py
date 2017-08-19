@@ -1,9 +1,11 @@
-from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.validators import MinValueValidator
+from django.core.validators import MaxValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from habitat._common.models import HabitatModel
 
 
-class Module(models.Model):
+class Module(HabitatModel):
     STATUS_NOMINAL = 'nominal'
     STATUS_LOCKED = 'locked'
     STATUS_DISABLED = 'disabled'

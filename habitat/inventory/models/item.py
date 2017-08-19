@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from habitat._common.models import HabitatModel
 
 
-class Item(models.Model):
+class Item(HabitatModel):
     TYPE_SOLID = 'solid'
     TYPE_LIQUID = 'liquid'
 
@@ -87,10 +88,3 @@ class Item(models.Model):
         ordering = ['identifier']
         verbose_name = _('Item')
         verbose_name_plural = _('Item Database')
-
-    class Admin(admin.ModelAdmin):
-        change_list_template = 'admin/change_list_filter_sidebar.html'
-        list_display = ['identifier', 'name', 'quantity', 'location']
-        list_filter = ['location']
-        ordering = ['identifier']
-        search_fields = ['^identifier', 'name']

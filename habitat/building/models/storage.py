@@ -1,8 +1,9 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from habitat._common.models import HabitatModel
 
 
-class Storage(models.Model):
+class Storage(HabitatModel):
     location = models.ForeignKey(
         verbose_name=_('location'),
         to='building.Module')
