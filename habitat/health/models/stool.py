@@ -2,10 +2,11 @@ from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django.utils.timezone import now
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class Stool(models.Model):
+class Stool(HabitatModel, ReportAstronaut):
     TYPE_HARD_LUMPS = 'hard-lumps'
     TYPE_LUMPY = 'lumpy'
     TYPE_CRACKS = 'cracks'
@@ -62,18 +63,14 @@ class Stool(models.Model):
         (ABNORMALITIES_OTHERS, _('Others')),
     ]
 
-    astronaut = models.ForeignKey(verbose_name=_('Astronaut'), to='auth.User', limit_choices_to={'groups__name': 'Astronauts'})
-    datetime = models.DateTimeField(verbose_name=_('Datetime'), default=now)
-
     volume = models.PositiveIntegerField(verbose_name=_('Volume'), help_text=_('ml'), null=True, blank=True, default=None, validators=[MinValueValidator(0), MaxValueValidator(1700)])
     color = models.CharField(verbose_name=_('Color'), choices=COLOR_CHOICES, max_length=30, default=COLOR_BROWN)
     type = models.CharField(verbose_name=_('Type'), choices=TYPE_CHOICES, max_length=30, default=TYPE_SMOOTH)
     abnormalities = models.CharField(verbose_name=_('Abnormalities'), choices=ABNORMALITIES_CHOICES, max_length=30, null=True, blank=True)
 
     def __str__(self):
-        return f'[{self.datetime}] <{self.astronaut}> {self.volume}ml, {self.color}, {self.type}, {self.abnormalities}'
+        return f'[{self.datetime}] <{self.reporter}> {self.volume}ml, {self.color}, {self.type}, {self.abnormalities}'
 
     class Meta:
-        ordering = ['-datetime']
         verbose_name = _('Stool')
         verbose_name_plural = _('Stool')

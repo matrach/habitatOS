@@ -1,10 +1,10 @@
 from django.contrib import admin
+from habitat._common.admin import HabitatAdmin
 from habitat.health.models import Temperature
 
 
 @admin.register(Temperature)
-class TemperatureAdmin(admin.ModelAdmin):
+class TemperatureAdmin(HabitatAdmin):
     change_list_template = 'admin/change_list_filter_sidebar.html'
-    date_hierarchy = 'datetime'
-    list_display = ['datetime', 'astronaut', 'temperature']
-    date_hierarchy = 'datetime'
+    list_display = ['datetime', 'reporter', 'temperature']
+    list_filter = ['time', 'reporter']

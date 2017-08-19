@@ -1,10 +1,10 @@
 from django.contrib import admin
+from habitat._common.admin import HabitatAdmin
 from habitat.health.models import Stool
 
 
 @admin.register(Stool)
-class StoolAdmin(admin.ModelAdmin):
+class StoolAdmin(HabitatAdmin):
     change_list_template = 'admin/change_list_filter_sidebar.html'
-    date_hierarchy = 'datetime'
-    list_display = ['datetime', 'astronaut', 'volume', 'color', 'type', 'abnormalities']
-    list_filter = ['datetime', 'astronaut', 'color', 'type', 'abnormalities']
+    list_display = ['datetime', 'reporter', 'volume', 'color', 'type', 'abnormalities']
+    list_filter = ['time', 'reporter', 'color', 'type', 'abnormalities']

@@ -1,10 +1,10 @@
 from django.contrib import admin
+from habitat._common.admin import HabitatAdmin
 from habitat.health.models import PulseOxymetry
 
 
 @admin.register(PulseOxymetry)
-class PulseOxymetryAdmin(admin.ModelAdmin):
+class PulseOxymetryAdmin(HabitatAdmin):
     change_list_template = 'admin/change_list_filter_sidebar.html'
-    list_display = ['datetime', 'astronaut', 'spo2', 'perfusion_index', 'heart_rate']
-    list_filter = ['astronaut', 'spo2']
-    date_hierarchy = 'datetime'
+    list_display = ['datetime', 'reporter', 'spo2', 'perfusion_index', 'heart_rate']
+    list_filter = ['reporter', 'spo2']

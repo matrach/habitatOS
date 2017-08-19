@@ -2,10 +2,11 @@ from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django.utils.timezone import now
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class Urine(models.Model):
+class Urine(HabitatModel, ReportAstronaut):
     COLOR_COLORLESS = 'colorless'
     COLOR_YELLOW_LIGHT = 'yellow-light'
     COLOR_YELLOW = 'yellow'
@@ -40,18 +41,14 @@ class Urine(models.Model):
         (TURBIDITY_TURBID, _('Turbid')),
     ]
 
-    astronaut = models.ForeignKey(verbose_name=_('Astronaut'), to='auth.User', limit_choices_to={'groups__name': 'Astronauts'})
-    datetime = models.DateTimeField(verbose_name=_('Datetime'), default=now)
-
     volume = models.PositiveIntegerField(verbose_name=_('Volume'), help_text=_('ml'), default=None, validators=[MinValueValidator(0), MaxValueValidator(1700)])
     color = models.CharField(verbose_name=_('Color'), max_length=30, choices=COLOR_CHOICES, default=COLOR_YELLOW)
     turbidity = models.CharField(verbose_name=_('Turbidity'), max_length=30, choices=TURBIDITY_CHOICES, default=TURBIDITY_CLEAR)
     ph = models.DecimalField(verbose_name=_('pH'), max_digits=3, decimal_places=1, null=True, blank=True, default=None, validators=[MinValueValidator(0), MaxValueValidator(12)])
 
     def __str__(self):
-        return f'[{self.datetime}] <{self.astronaut}> {self.volume}ml, {self.color}, {self.turbidity}, {self.ph}'
+        return f'[{self.datetime}] <{self.reporter}> {self.volume}ml, {self.color}, {self.turbidity}, {self.ph}'
 
     class Meta:
-        ordering = ['-datetime']
         verbose_name = _('Urine')
         verbose_name_plural = _('Urine')

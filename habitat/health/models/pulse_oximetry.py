@@ -2,19 +2,11 @@ from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django.utils.timezone import now
-from django.contrib import admin
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class PulseOxymetry(models.Model):
-    astronaut = models.ForeignKey(
-        verbose_name=_('Astronaut'),
-        to='auth.User',
-        limit_choices_to={'groups__name': 'Astronauts'})
-
-    datetime = models.DateTimeField(
-        verbose_name=_('Datetime'),
-        default=now)
+class PulseOxymetry(HabitatModel, ReportAstronaut):
 
     spo2 = models.PositiveSmallIntegerField(
         verbose_name=_('SpO2'),
@@ -42,9 +34,8 @@ class PulseOxymetry(models.Model):
             MinValueValidator(0)])
 
     def __str__(self):
-        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.astronaut} SpO2: {self.spo2}, HR: {self.heart_rate}, PI: {self.perfusion_index}'
+        return f'[{self.datetime}] {self.reporter} SpO2: {self.spo2}, HR: {self.heart_rate}, PI: {self.perfusion_index}'
 
     class Meta:
-        ordering = ['-datetime']
         verbose_name = _('Pulse Oxymetry')
         verbose_name_plural = _('Pulse Oxymetry')

@@ -1,10 +1,10 @@
 from django.contrib import admin
+from habitat._common.admin import HabitatAdmin
 from habitat.health.models import BloodPressure
 
 
 @admin.register(BloodPressure)
-class BloodPressureAdmin(admin.ModelAdmin):
+class BloodPressureAdmin(HabitatAdmin):
     change_list_template = 'admin/change_list_filter_sidebar.html'
-    date_hierarchy = 'datetime'
-    list_display = ['datetime', 'astronaut', 'systolic', 'diastolic', 'heart_rate']
-    list_filter = ['astronaut']
+    list_display = ['datetime', 'reporter', 'systolic', 'diastolic', 'heart_rate']
+    list_filter = ['reporter']

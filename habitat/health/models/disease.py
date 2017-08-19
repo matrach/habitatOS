@@ -1,14 +1,11 @@
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
-from django.contrib import admin
+from django.utils.translation import ugettext_lazy as _
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class Disease(models.Model):
-    astronaut = models.ForeignKey(
-        verbose_name=_('Astronaut'),
-        to='auth.User',
-        limit_choices_to={'groups__name': 'Astronauts'})
+class Disease(HabitatModel, ReportAstronaut):
 
     datetime_start = models.DateTimeField(
         verbose_name=_('Start Datetime'),
@@ -32,9 +29,8 @@ class Disease(models.Model):
         null=False)
 
     def __str__(self):
-        return f'[{self.datetime_start:%Y-%m-%d}] {self.astronaut} ICD-10: {self.icd10}, Sympthoms: {self.symptoms:.30}'
+        return f'[{self.datetime_start}] {self.reporter} ICD-10: {self.icd10}, Sympthoms: {self.symptoms:.30}'
 
     class Meta:
-        ordering = ['-datetime_start']
         verbose_name = _('Disease')
         verbose_name_plural = _('Disease')
