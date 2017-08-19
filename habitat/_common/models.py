@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.utils.timezone import now
 
 
 class HabitatModel(models.Model):
@@ -22,7 +23,13 @@ class HabitatModel(models.Model):
     time = models.TimeField(
         verbose_name=_('Time'),
         help_text=_('Lunar Standard Time'),
-        default=None)
+        default=now)
+
+    def datetime(self):
+        return f'{self.date} ∇ {self.time:%H:%M}'
+
+    datetime.allow_tags = False
+    datetime.short_description = _('Datetime')
 
     class Meta:
         abstract = True

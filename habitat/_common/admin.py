@@ -20,9 +20,4 @@ for model in apps.get_models():
 
 
 class HabitatAdmin(admin.ModelAdmin):
-
-    def datetime(self, obj):
-        return f'{obj.date} ∇ {obj.time}'
-
-    datetime.allow_tags = False
-    datetime.short_description = _('Datetime')
+    pass
