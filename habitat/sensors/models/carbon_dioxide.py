@@ -3,9 +3,10 @@ from django.utils.translation import ugettext_lazy as _
 from django.core.validators import MaxValueValidator
 from django.core.validators import MinValueValidator
 from habitat._common.models import HabitatModel
+from habitat._common.models import MissionDateTime
 
 
-class CarbonDioxide(HabitatModel):
+class CarbonDioxide(HabitatModel, MissionDateTime):
 
     location = models.ForeignKey(
         verbose_name=_('Sensor Location'),

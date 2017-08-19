@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'habitat.biolab',
     'habitat.building',
     'habitat.communication',
+    'habitat.extravehicular',
     'habitat.food',
     'habitat.health',
     'habitat.inventory',

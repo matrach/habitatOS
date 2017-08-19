@@ -5,7 +5,6 @@ from habitat.reporting.models import Repair
 
 @admin.register(Repair)
 class RepairAdmin(HabitatAdmin):
-    change_list_template = 'admin/change_list_filter_sidebar.html'
     list_display = ['start', 'status', 'object', 'what', 'description', 'location']
     list_filter = ['status', 'size', 'start', 'reporter']
     search_fields = ['what', 'description', 'solution']

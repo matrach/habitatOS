@@ -1,9 +1,10 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
+from habitat._common.models import MissionDateTime
 
 
-class Network(HabitatModel):
+class Network(HabitatModel, MissionDateTime):
 
     location = models.ForeignKey(
         verbose_name=_('Sensor Location'),

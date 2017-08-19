@@ -22,4 +22,7 @@ class ReportingTest(Test):
 
         # '/reporting/time/',
         # '/reporting/time/add/',
+
+        '/reporting/waste/',
+        '/reporting/waste/add/',
     ]

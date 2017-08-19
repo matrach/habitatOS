@@ -5,10 +5,11 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAstronaut
+from habitat._common.models import MissionDate
+from habitat._common.models import ReporterAstronaut
 
 
-class Sleep(HabitatModel, ReportAstronaut):
+class Sleep(HabitatModel, MissionDate, ReporterAstronaut):
     TYPE_CHOICES = [
         ('sleep', _('Sleep')),
         ('nap', _('Nap'))]

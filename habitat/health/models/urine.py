@@ -3,10 +3,11 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAstronaut
+from habitat._common.models import MissionDateTime
+from habitat._common.models import ReporterAstronaut
 
 
-class Urine(HabitatModel, ReportAstronaut):
+class Urine(HabitatModel, MissionDateTime, ReporterAstronaut):
     COLOR_COLORLESS = 'colorless'
     COLOR_YELLOW_LIGHT = 'yellow-light'
     COLOR_YELLOW = 'yellow'

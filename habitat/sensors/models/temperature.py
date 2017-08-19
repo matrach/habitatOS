@@ -1,9 +1,10 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
+from habitat._common.models import MissionDateTime
 
 
-class Temperature(HabitatModel):
+class Temperature(HabitatModel, MissionDateTime):
     UNIT_CELSIUS = 'celsius'
     UNIT_KELVIN = 'kelvin'
     UNIT_FAHRENHEIT = 'fahrenheit'

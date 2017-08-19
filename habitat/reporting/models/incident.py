@@ -2,10 +2,11 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAnyone
+from habitat._common.models import MissionDateTime
+from habitat._common.models import ReporterAnyone
 
 
-class Incident(HabitatModel, ReportAnyone):
+class Incident(HabitatModel, MissionDateTime, ReporterAnyone):
     TYPE_BIOHAZARD = 'biohazard'
     TYPE_ENVIRONMENTAL = 'environmental'
     TYPE_SECURITY = 'security'
@@ -22,17 +23,17 @@ class Incident(HabitatModel, ReportAnyone):
     SEVERITY_INFO = 'info'
 
     SEVERITY_CHOICES = [
-        (SEVERITY_EMERGENCY, _('Emergency - ABORT the mission')),
+        (SEVERITY_EMERGENCY, _('Emergency - ABORT the simulation')),
         (SEVERITY_CRITICAL, _('Critical')),
         (SEVERITY_WARNING, _('Warning')),
         (SEVERITY_INFO, _('Informative')),
     ]
 
-    datetime_start = models.DateTimeField(
+    start = models.DateTimeField(
         verbose_name=_('Start Datetime'),
         default=now)
 
-    datetime_end = models.DateTimeField(
+    end = models.DateTimeField(
         verbose_name=_('End Datetime'),
         default=now)
 

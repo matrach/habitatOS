@@ -3,9 +3,10 @@ from django.core.validators import MaxValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
+from habitat._common.models import MissionDateTime
 
 
-class Pressure(HabitatModel):
+class Pressure(HabitatModel, MissionDateTime):
 
     location = models.ForeignKey(
         verbose_name=_('Sensor Location'),

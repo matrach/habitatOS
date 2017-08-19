@@ -1,10 +1,11 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAstronaut
+from habitat._common.models import MissionDateTime
+from habitat._common.models import ReporterAstronaut
 
 
-class Communication(HabitatModel, ReportAstronaut):
+class Communication(HabitatModel, MissionDateTime, ReporterAstronaut):
 
     communication_frequency = models.PositiveSmallIntegerField(
         verbose_name=_('How frequently do you communicate with following people?'),

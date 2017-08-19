@@ -3,10 +3,11 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAstronaut
+from habitat._common.models import MissionDateTime
+from habitat._common.models import ReporterAstronaut
 
 
-class BloodPressure(HabitatModel, ReportAstronaut):
+class BloodPressure(HabitatModel, MissionDateTime, ReporterAstronaut):
 
     systolic = models.PositiveSmallIntegerField(
         verbose_name=_('Blood Pressure Systolic'),

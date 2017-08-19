@@ -2,10 +2,11 @@ from django.db import models
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAstronaut
+from habitat._common.models import MissionDateTime
+from habitat._common.models import ReporterAstronaut
 
 
-class Disease(HabitatModel, ReportAstronaut):
+class Disease(HabitatModel, MissionDateTime, ReporterAstronaut):
 
     datetime_start = models.DateTimeField(
         verbose_name=_('Start Datetime'),

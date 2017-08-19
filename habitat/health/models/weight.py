@@ -3,10 +3,11 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAstronaut
+from habitat._common.models import MissionDateTime
+from habitat._common.models import ReporterAstronaut
 
 
-class Weight(HabitatModel, ReportAstronaut):
+class Weight(HabitatModel, MissionDateTime, ReporterAstronaut):
     weight = models.DecimalField(
         verbose_name=_('Weight'),
         help_text=_('kg'),

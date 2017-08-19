@@ -3,10 +3,11 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
 from habitat._common.models import HabitatModel
-from habitat._common.models import ReportAstronaut
+from habitat._common.models import MissionDateTime
+from habitat._common.models import ReporterAstronaut
 
 
-class Repair(HabitatModel, ReportAstronaut):
+class Repair(HabitatModel, MissionDateTime, ReporterAstronaut):
     SIZE_CHOICES = [
         ('small', _('Small')),
         ('medium', _('Medium')),

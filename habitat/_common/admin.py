@@ -19,5 +19,20 @@ for model in apps.get_models():
             pass
 
 
+class ReporterAdmin(admin.ModelAdmin):
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+
+        if request.user.has_perm('reporting.delete_mood'):
+            return queryset
+        else:
+            return queryset.filter(reporter=request.user)
+
+    def save_model(self, request, obj, form, change):
+        obj.reporter = request.user
+        super().save_model(request, obj, form, change)
+
+
 class HabitatAdmin(admin.ModelAdmin):
-    pass
+    change_list_template = 'admin/change_list_filter_sidebar.html'
+    ordering = ['-modified']

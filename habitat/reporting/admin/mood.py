@@ -5,12 +5,9 @@ from habitat.reporting.models import Mood
 
 @admin.register(Mood)
 class MoodAdmin(HabitatAdmin):
-    change_list_template = 'admin/change_list_filter_sidebar.html'
-    list_display = ['day', 'reporter', 'stress', 'mood', 'day_quality', 'productivity']
+    list_display = ['date', 'reporter', 'stress', 'mood', 'day_quality', 'productivity']
     list_filter = ['reporter', 'stress', 'mood', 'day_quality', 'productivity']
     exclude = ['reporter', 'created', 'updated']
-    date_hierarchy = 'day'
-    ordering = ['-day']
     radio_fields = {
         'stress': admin.HORIZONTAL,
         'mood': admin.HORIZONTAL,

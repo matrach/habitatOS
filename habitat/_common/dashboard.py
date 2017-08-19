@@ -24,6 +24,13 @@ class IndexDashboard(Dashboard):
                 'habitat.experiments.*.*']))
 
         self.children.append(modules.ModelList(
+            title=_('Extra-Vehicular Activity'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.extravehicular.*.*']))
+
+        self.children.append(modules.ModelList(
             title=_('Laboratory'),
             column=1,
             collapsible=False,

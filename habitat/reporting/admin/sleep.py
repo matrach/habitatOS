@@ -6,7 +6,6 @@ from habitat.reporting.models import Sleep
 
 @admin.register(Sleep)
 class SleepAdmin(HabitatAdmin):
-    change_list_template = 'admin/change_list_filter_sidebar.html'
     list_display = ['reporter', 'type', 'duration', 'location', 'quality', 'asleep_time', 'wakeup_time']
     list_filter = ['reporter', 'quality', 'sleep_amount', 'sleepy', 'type', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills']
     search_fields = ['dream']

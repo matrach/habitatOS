@@ -5,8 +5,6 @@ from habitat.reporting.models import Communication
 
 @admin.register(Communication)
 class CommunicationAdmin(HabitatAdmin):
-    date_hierarchy = 'modified'
-    ordering = ['modified']
     radio_fields = {
         'communication_frequency': admin.HORIZONTAL,
         'communication_desired': admin.HORIZONTAL,
