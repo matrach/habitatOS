@@ -1,18 +1,10 @@
-from django.contrib import admin
 from django.db import models
-from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class Questionnaire(models.Model):
-    astronaut = models.ForeignKey(
-        verbose_name=_('Astronaut'),
-        to='auth.User',
-        limit_choices_to={'groups__name': 'Astronauts'})
-
-    datetime = models.DateTimeField(
-        verbose_name=_('Datetime'),
-        default=now)
+class Communication(HabitatModel, ReportAstronaut):
 
     communication_frequency = models.PositiveSmallIntegerField(
         verbose_name=_('How frequently do you communicate with following people?'),
@@ -142,25 +134,8 @@ class Questionnaire(models.Model):
         verbose_name=_('You can add any comment or note (e.g. if something important happened, how do you feel etc.)'))
 
     def __str__(self):
-        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.astronaut}'
+        return f'[{self.modified:%Y-%m-%d %H:%M}] {self.reporter}'
 
     class Meta:
-        ordering = ['-datetime']
         verbose_name = _('Questionnaire')
-        verbose_name_plural = _('Questionnaires')
-
-    class Admin(admin.ModelAdmin):
-        date_hierarchy = 'datetime'
-        radio_fields = {
-            'communication_frequency': admin.HORIZONTAL,
-            'communication_desired': admin.HORIZONTAL,
-            'personal_preferences': admin.HORIZONTAL,
-            'work_preferences': admin.HORIZONTAL,
-            'communication_quality': admin.HORIZONTAL,
-            'know_already': admin.HORIZONTAL,
-            'know_desired': admin.HORIZONTAL,
-            'cooperation_quality': admin.HORIZONTAL,
-            'trust': admin.HORIZONTAL,
-            'team_atmosphere': admin.HORIZONTAL,
-            'team_misunderstandings': admin.HORIZONTAL,
-        }
+        verbose_name_plural = _('Communication')

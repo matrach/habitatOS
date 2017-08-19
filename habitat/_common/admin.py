@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.apps import apps
+from django.utils.translation import ugettext_lazy as _
 
 # Autodiscover and register all admin
 # Models should have Admin class inside
@@ -16,3 +17,12 @@ for model in apps.get_models():
 
         except AttributeError:
             pass
+
+
+class HabitatAdmin(admin.ModelAdmin):
+
+    def datetime(self, obj):
+        return f'{obj.date} ∇ {obj.time}'
+
+    datetime.allow_tags = False
+    datetime.short_description = _('Datetime')

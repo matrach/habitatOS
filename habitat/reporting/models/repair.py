@@ -2,10 +2,11 @@ from django import forms
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
-from django.contrib import admin
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class Repair(models.Model):
+class Repair(HabitatModel, ReportAstronaut):
     SIZE_CHOICES = [
         ('small', _('Small')),
         ('medium', _('Medium')),
@@ -15,10 +16,6 @@ class Repair(models.Model):
         ('broken', _('Broken')),
         ('fixed', _('Fixed')),
         ('destroyed', _('Permanently Destroyed'))]
-
-    reporter = models.ForeignKey(verbose_name=_('Reporter'), to='auth.User')
-    created = models.DateTimeField(verbose_name=_('Created'), auto_now_add=True)
-    updated = models.DateTimeField(verbose_name=_('Updated'), auto_now=True)
 
     size = models.CharField(verbose_name=_('Problem Size'), max_length=30, choices=SIZE_CHOICES, default=None)
     status = models.CharField(verbose_name=_('Current Status'), max_length=30, choices=STATUS_CHOICES, default=None)
@@ -45,23 +42,5 @@ class Repair(models.Model):
         return f'[{self.start:%Y-%m-%d}] ({self.status}) {self.what}'
 
     class Meta:
-        ordering = ['-created']
-        verbose_name = _('Repair')
-        verbose_name_plural = _('Repair Logbook')
-
-    class Admin(admin.ModelAdmin):
-        change_list_template = 'admin/change_list_filter_sidebar.html'
-        list_display = ['start', 'status', 'object', 'what', 'description', 'location']
-        list_filter = ['status', 'size', 'start', 'reporter']
-        search_fields = ['what', 'description', 'solution']
-        exclude = ['reporter', 'created', 'updated', 'duration']
-        date_hierarchy = 'start'
-        raw_id_fields = ['object']
-        autocomplete_lookup_fields = {'fk': ['object']}
-        radio_fields = {
-            'status': admin.HORIZONTAL,
-            'size': admin.HORIZONTAL}
-
-        def save_model(self, request, obj, form, change):
-            obj.reporter = request.user
-            super().save_model(request, obj, form, change)
+        verbose_name = _('Repair Log')
+        verbose_name_plural = _('Repair')

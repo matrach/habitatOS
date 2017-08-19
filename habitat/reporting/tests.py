@@ -5,8 +5,11 @@ class ReportingTest(Test):
     assert_http_200 = [
         '/reporting/',
 
-        # '/reporting/communication/',
-        # '/reporting/communication/add/',
+        '/reporting/communication/',
+        '/reporting/communication/add/',
+
+        '/reporting/incident/',
+        '/reporting/incident/add/',
 
         '/reporting/mood/',
         '/reporting/mood/add/',

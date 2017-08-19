@@ -1,10 +1,11 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
-from django.contrib import admin
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class Mood(models.Model):
+class Mood(HabitatModel, ReportAstronaut):
     MOOD_CHOICES = [
         ('very-high', _('Very High')),
         ('high', _('High')),
@@ -19,10 +20,6 @@ class Mood(models.Model):
         ('bad', _('Bad')),
         ('very-bad', _('Very Bad'))]
 
-    astronaut = models.ForeignKey(verbose_name=_('Astronaut'), to='auth.User', limit_choices_to={'groups__name': 'Astronauts'})
-    created = models.DateTimeField(verbose_name=_('Created'), auto_now_add=True)
-    updated = models.DateTimeField(verbose_name=_('Updated'), auto_now=True)
-
     day = models.DateField(verbose_name=_('Report About Day'), default=now)
     stress = models.CharField(verbose_name=_('Stress'), max_length=30, choices=MOOD_CHOICES, default=None)
     mood = models.CharField(verbose_name=_('Mood'), max_length=30, choices=MOOD_CHOICES, default=None)
@@ -31,33 +28,8 @@ class Mood(models.Model):
     remarks = models.TextField(verbose_name=_('Remarks'), blank=True, default=None)
 
     def __str__(self):
-        return f'[{self.day:%Y-%m-%d}] {self.astronaut}'
+        return f'[{self.day:%Y-%m-%d}] {self.reporter}'
 
     class Meta:
-        ordering = ['-day']
         verbose_name = _('Mood Report')
-        verbose_name_plural = _('Mood Reports')
-
-    class Admin(admin.ModelAdmin):
-        change_list_template = 'admin/change_list_filter_sidebar.html'
-        list_display = ['day', 'astronaut', 'stress', 'mood', 'day_quality', 'productivity']
-        list_filter = ['astronaut', 'stress', 'mood', 'day_quality', 'productivity']
-        exclude = ['astronaut', 'created', 'updated']
-        date_hierarchy = 'day'
-        radio_fields = {
-            'stress': admin.HORIZONTAL,
-            'mood': admin.HORIZONTAL,
-            'day_quality': admin.HORIZONTAL,
-            'productivity': admin.HORIZONTAL}
-
-        def get_queryset(self, request):
-            queryset = super().get_queryset(request)
-
-            if request.user.has_perm('reporting.delete_mood'):
-                return queryset
-            else:
-                return queryset.filter(astronaut=request.user)
-
-        def save_model(self, request, obj, form, change):
-            obj.astronaut = request.user
-            super().save_model(request, obj, form, change)
+        verbose_name_plural = _('Mood')

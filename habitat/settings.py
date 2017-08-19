@@ -110,8 +110,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-en_formats.DATETIME_FORMAT = 'Y-m-d H:i:s.u'
-DATETIME_INPUT_FORMATS = ['%Y-%m-%d %H:%M:%S.%f']
+
+en_formats.DATETIME_FORMAT = 'Y-m-d H:i'
+en_formats.DATE_FORMAT = 'Y-m-d'
+en_formats.TIME_FORMAT = 'H:i'
 
 
 # Static files (CSS, JavaScript, Images)

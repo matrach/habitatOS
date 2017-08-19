@@ -4,10 +4,11 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
-from django.contrib import admin
+from habitat._common.models import HabitatModel
+from habitat._common.models import ReportAstronaut
 
 
-class Sleep(models.Model):
+class Sleep(HabitatModel, ReportAstronaut):
     TYPE_CHOICES = [
         ('sleep', _('Sleep')),
         ('nap', _('Nap'))]
@@ -36,9 +37,6 @@ class Sleep(models.Model):
         (False, _('No')),
     ]
 
-    astronaut = models.ForeignKey(verbose_name=_('Astronaut'), to='auth.User', limit_choices_to={'groups__name': 'Astronauts'})
-    created = models.DateTimeField(verbose_name=_('Created'), auto_now_add=True)
-    updated = models.DateTimeField(verbose_name=_('Updated'), auto_now=True)
     type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES, default=None)
     location = models.ForeignKey(verbose_name=_('Location'), to='building.Module', limit_choices_to={'status': 'nominal'}, default=1)
     duration = models.DurationField(verbose_name=_('Duration'), null=True, blank=True, default=None)
@@ -80,47 +78,8 @@ class Sleep(models.Model):
             self.duration = self.wakeup_time - self.asleep_time
 
     def __str__(self):
-        return f'[{self.asleep_time:%Y-%m-%d %H:%M} for {self.duration}] {self.astronaut} Quality: {self.quality}, Location: {self.location}'
+        return f'[{self.asleep_time:%Y-%m-%d %H:%M} for {self.duration}] {self.reporter} Quality: {self.quality}, Location: {self.location}'
 
     class Meta:
-        ordering = ['-asleep_bedtime']
         verbose_name = _('Sleep Log')
-        verbose_name_plural = _('Sleep Logbook')
-
-    class Admin(admin.ModelAdmin):
-        change_list_template = 'admin/change_list_filter_sidebar.html'
-        list_display = ['astronaut', 'type', 'duration', 'location', 'quality', 'asleep_time', 'wakeup_time']
-        list_filter = ['astronaut', 'quality', 'sleep_amount', 'sleepy', 'type', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills']
-        search_fields = ['dream']
-        readonly_fields = ['duration']
-        exclude = ['astronaut', 'created', 'updated']
-        date_hierarchy = 'wakeup_time'
-        # raw_id_fields = ['astronaut']
-        # autocomplete_lookup_fields = {'fk': ['astronaut']}
-
-        radio_fields = {
-            'sleep_amount': admin.HORIZONTAL,
-            'quality': admin.HORIZONTAL,
-            'sleepy': admin.HORIZONTAL,
-            'type': admin.HORIZONTAL,
-            'aid_ear_plugs': admin.HORIZONTAL,
-            'aid_eye_mask': admin.HORIZONTAL,
-            'aid_pills': admin.HORIZONTAL}
-
-        fieldsets = [
-            (_('General'), {'fields': ['type', 'location', 'asleep_time', 'wakeup_time', 'sleep_amount', 'quality']}),
-            (_('Before Sleep'), {'fields': ['last_activity', 'sleepy', 'sleepy_remarks']}),
-            (_('Sleep'), {'fields': ['asleep_bedtime', 'asleep_problems', 'impediments_count', 'impediments_remarks', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills']}),
-            (_('After Sleep'), {'fields': ['wakeup_reasons', 'getup', 'dream']})]
-
-        def get_queryset(self, request):
-            queryset = super().get_queryset(request)
-
-            if request.user.has_perm('reporting.delete_mood'):
-                return queryset
-            else:
-                return queryset.filter(astronaut=request.user)
-
-        def save_model(self, request, obj, form, change):
-            obj.astronaut = request.user
-            super().save_model(request, obj, form, change)
+        verbose_name_plural = _('Sleep')
