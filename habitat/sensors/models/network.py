@@ -20,7 +20,7 @@ class Network(HabitatModel):
         default=None)
 
     def __str__(self):
-        return f'[{self.datetime}] (location: {self.location}) {self.value} Mbps'
+        return f'[{self.date} {self.time}] (location: {self.location}) {self.value} Mbps'
 
     class Meta:
         verbose_name = _('Network Performance Measurement')

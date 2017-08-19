@@ -25,7 +25,7 @@ class Pressure(HabitatModel):
             MaxValueValidator(2000)])
 
     def __str__(self):
-        return f'[{self.datetime}] (location: {self.location}) {self.value} mmHg'
+        return f'[{self.date} {self.time}] (location: {self.location}) {self.value} mmHg'
 
     class Meta:
         verbose_name = _('Pressure Measurement')

@@ -10,7 +10,7 @@ class Observation(models.Model):
     image = models.ImageField(verbose_name=_('Image'), null=True, blank=True, default=None)
 
     def __str__(self):
-        return f'[{self.datetime:%Y-%m-%d %H:%M}] {self.experiment} {self.notes:.30}'
+        return f'[{self.date} {self.time}] {self.experiment} {self.notes:.30}'
 
     class Meta:
         ordering = ['-datetime']

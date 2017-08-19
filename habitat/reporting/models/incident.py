@@ -61,7 +61,7 @@ class Incident(HabitatModel, ReportAnyone):
         default=True)
 
     def __str__(self):
-        return f'[{self.datetime}] {self.location}: {self.subject}'
+        return f'[{self.date} {self.time}] {self.location}: {self.subject}'
 
     class Meta:
         verbose_name = _('Incident')

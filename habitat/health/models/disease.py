@@ -29,7 +29,7 @@ class Disease(HabitatModel, ReportAstronaut):
         null=False)
 
     def __str__(self):
-        return f'[{self.datetime_start}] {self.reporter} ICD-10: {self.icd10}, Sympthoms: {self.symptoms:.30}'
+        return f'[{self.date} {self.time}] {self.reporter} ICD-10: {self.icd10}, Sympthoms: {self.symptoms:.30}'
 
     class Meta:
         verbose_name = _('Disease')

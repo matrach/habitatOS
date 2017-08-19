@@ -17,7 +17,7 @@ class Meteo(HabitatModel):
         default=None)
 
     def __str__(self):
-        return f'[{self.datetime}] (location: {self.location}) {self.value}'
+        return f'[{self.date} {self.time}] (location: {self.location}) {self.value}'
 
     class Meta:
         verbose_name = _('Meteo')

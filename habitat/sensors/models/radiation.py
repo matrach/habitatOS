@@ -20,7 +20,7 @@ class Radiation(HabitatModel):
         default=None)
 
     def __str__(self):
-        return f'[{self.datetime}] (location: {self.location}) {self.value}Sv'
+        return f'[{self.date} {self.time}] (location: {self.location}) {self.value}Sv'
 
     class Meta:
         verbose_name = _('Radiation Measurement')

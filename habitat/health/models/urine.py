@@ -47,7 +47,7 @@ class Urine(HabitatModel, ReportAstronaut):
     ph = models.DecimalField(verbose_name=_('pH'), max_digits=3, decimal_places=1, null=True, blank=True, default=None, validators=[MinValueValidator(0), MaxValueValidator(12)])
 
     def __str__(self):
-        return f'[{self.datetime}] <{self.reporter}> {self.volume}ml, {self.color}, {self.turbidity}, {self.ph}'
+        return f'[{self.date} {self.time}] <{self.reporter}> {self.volume}ml, {self.color}, {self.turbidity}, {self.ph}'
 
     class Meta:
         verbose_name = _('Urine')

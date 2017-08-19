@@ -33,7 +33,7 @@ class BloodPressure(HabitatModel, ReportAstronaut):
             MaxValueValidator(250)])
 
     def __str__(self):
-        return f'[{self.datetime}] {self.astronaut} BP: {self.systolic}/{self.diastolic}'
+        return f'[{self.date} {self.time}] {self.reporter} BP: {self.systolic}/{self.diastolic}'
 
     class Meta:
         verbose_name = _('Blood Pressure')

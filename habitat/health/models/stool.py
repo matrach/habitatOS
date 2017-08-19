@@ -69,7 +69,7 @@ class Stool(HabitatModel, ReportAstronaut):
     abnormalities = models.CharField(verbose_name=_('Abnormalities'), choices=ABNORMALITIES_CHOICES, max_length=30, null=True, blank=True)
 
     def __str__(self):
-        return f'[{self.datetime}] <{self.reporter}> {self.volume}ml, {self.color}, {self.type}, {self.abnormalities}'
+        return f'[{self.date} {self.time}] <{self.reporter}> {self.volume}ml, {self.color}, {self.type}, {self.abnormalities}'
 
     class Meta:
         verbose_name = _('Stool')

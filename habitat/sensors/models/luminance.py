@@ -18,7 +18,7 @@ class Luminance(HabitatModel):
         default=None)
 
     def __str__(self):
-        return f'[{self.datetime}] (location: {self.location}) {self.value} lumen'
+        return f'[{self.date} {self.time}] (location: {self.location}) {self.value} lumen'
 
     class Meta:
         verbose_name = _('Luminance Measurement')

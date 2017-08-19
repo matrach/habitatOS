@@ -19,7 +19,7 @@ class Temperature(HabitatModel, ReportAstronaut):
             MinValueValidator(30)])
 
     def __str__(self):
-        return f'[{self.datetime}] {self.reporter} Temp: {self.temperature}'
+        return f'[{self.date} {self.time}] {self.reporter} Temp: {self.temperature}'
 
     class Meta:
         verbose_name = _('Temperature')

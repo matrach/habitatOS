@@ -33,7 +33,7 @@ class Temperature(HabitatModel):
         default=UNIT_CELSIUS)
 
     def __str__(self):
-        return f'[{self.datetime}] (location: {self.location}) {self.value} {self.unit.upper():.1}'
+        return f'[{self.date} {self.time}] (location: {self.location}) {self.value} {self.unit.upper():.1}'
 
     class Meta:
         verbose_name = _('Temperature Measurement')

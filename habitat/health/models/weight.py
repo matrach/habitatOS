@@ -112,7 +112,7 @@ class Weight(HabitatModel, ReportAstronaut):
         return super().save(**kwargs)
 
     def __str__(self):
-        return f'[{self.datetime}] {self.reporter} Weight: {self.weight}kg, BMI: {self.BMI}'
+        return f'[{self.date} {self.time}] {self.reporter} Weight: {self.weight}kg, BMI: {self.BMI}'
 
     class Meta:
         verbose_name = _('Weight')

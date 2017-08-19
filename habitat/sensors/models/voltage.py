@@ -20,7 +20,7 @@ class Voltage(HabitatModel):
         default=None)
 
     def __str__(self):
-        return f'[{self.datetime:%Y-%m-%d %H:%M}] (location: {self.location}) {self.value} V'
+        return f'[{self.date} {self.time}] (location: {self.location}) {self.value} V'
 
     class Meta:
         verbose_name = _('Voltage Measurement')

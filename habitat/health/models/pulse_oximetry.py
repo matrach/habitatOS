@@ -34,7 +34,7 @@ class PulseOxymetry(HabitatModel, ReportAstronaut):
             MinValueValidator(0)])
 
     def __str__(self):
-        return f'[{self.datetime}] {self.reporter} SpO2: {self.spo2}, HR: {self.heart_rate}, PI: {self.perfusion_index}'
+        return f'[{self.date} {self.time}] {self.reporter} SpO2: {self.spo2}, HR: {self.heart_rate}, PI: {self.perfusion_index}'
 
     class Meta:
         verbose_name = _('Pulse Oxymetry')
