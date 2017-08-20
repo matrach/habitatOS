@@ -14,8 +14,8 @@ class SensorsTest(Test):
         '/sensors/humidity/',
         '/sensors/humidity/add/',
 
-        '/sensors/luminance/',
-        '/sensors/luminance/add/',
+        '/sensors/illuminance/',
+        '/sensors/illuminance/add/',
 
         '/sensors/meteo/',
         '/sensors/meteo/add/',

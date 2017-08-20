@@ -1,2 +1,2 @@
-release: python manage.py migrate  --noinput && python manage.py loaddata fixtures/*.json
+release: python manage.py migrate --noinput
 web: gunicorn habitat.wsgi
