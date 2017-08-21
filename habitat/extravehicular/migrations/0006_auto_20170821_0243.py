@@ -15,11 +15,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='activity',
             name='end',
-            field=models.TimeField(blank=True, null=True, verbose_name='End'),
+            field=models.TimeField(verbose_name='End'),
         ),
         migrations.AlterField(
             model_name='activity',
             name='start',
-            field=models.TimeField(blank=True, null=True, verbose_name='Start'),
+            field=models.TimeField(verbose_name='Start'),
         ),
     ]
