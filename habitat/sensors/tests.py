@@ -17,9 +17,6 @@ class SensorsTest(Test):
         '/sensors/illuminance/',
         '/sensors/illuminance/add/',
 
-        '/sensors/meteo/',
-        '/sensors/meteo/add/',
-
         '/sensors/network/',
         '/sensors/network/add/',
 
@@ -37,4 +34,7 @@ class SensorsTest(Test):
 
         '/sensors/voltage/',
         '/sensors/voltage/add/',
+
+        '/sensors/weather/',
+        '/sensors/weather/add/',
     ]

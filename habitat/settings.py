@@ -23,7 +23,9 @@ ALLOWED_HOSTS = [
     'localhost',
     'test.habitatos.space',
     'le-1.habitatos.space',
+    'le1.habitatos.space',
     'icares-1.habitatos.space',
+    'icares1.habitatos.space',
 ]
 
 INSTALLED_APPS = [

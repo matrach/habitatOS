@@ -36,3 +36,11 @@ class ReporterAdmin(admin.ModelAdmin):
 class HabitatAdmin(admin.ModelAdmin):
     change_list_template = 'admin/change_list_filter_sidebar.html'
     ordering = ['-modified']
+
+
+class HabitatTabularInline(admin.TabularInline):
+    pass
+
+
+class HabitatStackedInline(admin.StackedInline):
+    pass

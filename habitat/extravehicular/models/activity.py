@@ -1,38 +1,42 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
-from habitat._common.models import MissionDateTime
+from habitat._common.models import MissionDate
 
 
-class Activity(HabitatModel, MissionDateTime):
-
-    location = models.ForeignKey(
-        verbose_name=_('Location'),
-        to='extravehicular.Location',
-        null=True,
-        blank=True,
-        default=None)
+class Activity(HabitatModel, MissionDate):
 
     start = models.TimeField(
         verbose_name=_('Start'),
         blank=True,
         null=True,
-        default=True)
+        default=None)
 
     end = models.TimeField(
         verbose_name=_('End'),
         blank=True,
         null=True,
-        default=True)
+        default=None)
+
+    location = models.ForeignKey(
+        verbose_name=_('Location'),
+        to='extravehicular.Location',
+        default=None)
 
     objectives = models.TextField(
-        verbose_name=_('Contingencies'))
+        verbose_name=_('Objectives'))
 
-    participants = models.TextField(
-        verbose_name=_('Participants'))
+    tools = models.TextField(
+        verbose_name=_('Tools'),
+        null=True,
+        blank=True,
+        default=None)
 
-    contingencies = models.TextField(
-        verbose_name=_('Contingencies'))
+    contingencies = models.ManyToManyField(
+        verbose_name=_('Contingencies'),
+        to='extravehicular.Contingency',
+        blank=True,
+        default=None)
 
     def __str__(self):
         return f'[{self.date}] (location: {self.location}) {self.objectives:.30}'

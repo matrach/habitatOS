@@ -45,6 +45,10 @@ class Contingency(HabitatModel):
         null=True,
         default=None)
 
+    @staticmethod
+    def autocomplete_search_fields():
+        return ['identifier__iexact', 'name__icontains']
+
     def __str__(self):
         return f'[{self.identifier}] {self.severity} {self.name}'
 

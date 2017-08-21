@@ -4,7 +4,7 @@ from habitat._common.models import HabitatModel
 from habitat._common.models import MissionDateTime
 
 
-class Meteo(HabitatModel, MissionDateTime):
+class Weather(HabitatModel, MissionDateTime):
 
     location = models.ForeignKey(
         verbose_name=_('Sensor Location'),
@@ -21,5 +21,5 @@ class Meteo(HabitatModel, MissionDateTime):
         return f'[{self.date} {self.time}] (location: {self.location}) {self.value}'
 
     class Meta:
-        verbose_name = _('Meteo')
-        verbose_name_plural = _('Meteo Measurements')
+        verbose_name = _('Weather')
+        verbose_name_plural = _('Weather')

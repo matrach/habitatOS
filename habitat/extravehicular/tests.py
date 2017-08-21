@@ -19,4 +19,7 @@ class ExtravehucularTest(Test):
 
         '/extravehicular/report/',
         '/extravehicular/report/add/',
+
+        '/extravehicular/spacewalker/',
+        '/extravehicular/spacewalker/add/',
     ]
