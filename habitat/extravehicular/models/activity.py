@@ -7,10 +7,16 @@ from habitat._common.models import MissionDate
 class Activity(HabitatModel, MissionDate):
 
     start = models.TimeField(
-        verbose_name=_('Start'))
+        verbose_name=_('Start'),
+        blank=True,
+        null=True,
+        default=None)
 
     end = models.TimeField(
-        verbose_name=_('End'))
+        verbose_name=_('End'),
+        blank=True,
+        null=True,
+        default=None)
 
     location = models.ForeignKey(
         verbose_name=_('Location'),
