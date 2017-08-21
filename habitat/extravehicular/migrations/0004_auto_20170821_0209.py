@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
+import django.utils.timezone
 
 
 class Migration(migrations.Migration):
@@ -20,6 +21,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='report',
             name='time',
-            field=models.TimeField(help_text='Lunar Standard Time', verbose_name='Mission Time'),
+            field=models.TimeField(help_text='Lunar Standard Time', verbose_name='Mission Time', default=django.utils.timezone.now),
         ),
     ]

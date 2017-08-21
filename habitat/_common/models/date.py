@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+import django.utils.timezone
 
 
 class MissionDate(models.Model):
@@ -15,8 +16,9 @@ class MissionDate(models.Model):
 
 class MissionTime(models.Model):
     time = models.TimeField(
-            verbose_name=_('Mission Time'),
-            help_text=_('Lunar Standard Time'))
+        verbose_name=_('Mission Time'),
+        help_text=_('Lunar Standard Time'),
+        default=django.utils.timezone.now)
 
     class Meta:
         abstract = True
