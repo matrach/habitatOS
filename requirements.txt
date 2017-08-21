@@ -8,3 +8,4 @@ Pillow
 dj-database-url
 django-filebrowser
 pylibmc
+django-import-export

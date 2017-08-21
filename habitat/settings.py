@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'grappelli.dashboard',
     'grappelli',
     'filebrowser',
+    'import_export',
 
     'django.contrib.admin',
     'django.contrib.auth',
