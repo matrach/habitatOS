@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
+import django.utils.timezone
 
 
 class Migration(migrations.Migration):
@@ -78,7 +79,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='activity',
             name='start',
-            field=models.TimeField(blank=True, default=None, null=True, verbose_name='Start'),
+            field=models.TimeField(blank=True, null=True, verbose_name='Start'),
         ),
         migrations.AlterField(
             model_name='location',
@@ -98,7 +99,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='report',
             name='time',
-            field=models.TimeField(help_text='Lunar Standard Time', verbose_name='Mission Time'),
+            field=models.TimeField(help_text='Lunar Standard Time', verbose_name='Mission Time', default=django.utils.timezone.now),
         ),
         migrations.AddField(
             model_name='spacewalker',
