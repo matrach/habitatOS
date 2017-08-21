@@ -16,9 +16,4 @@ class Migration(migrations.Migration):
             model_name='activity',
             name='time',
         ),
-        migrations.AlterField(
-            model_name='activity',
-            name='end',
-            field=models.TimeField(blank=True, default=None, null=True, verbose_name='End'),
-        ),
     ]
