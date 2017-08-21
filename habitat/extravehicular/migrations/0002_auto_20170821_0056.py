@@ -34,10 +34,6 @@ class Migration(migrations.Migration):
             name='participants',
         ),
         migrations.RemoveField(
-            model_name='activity',
-            name='time',
-        ),
-        migrations.RemoveField(
             model_name='location',
             name='height',
         ),
@@ -68,18 +64,8 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='activity',
-            name='end',
-            field=models.TimeField(blank=True, default=None, null=True, verbose_name='End'),
-        ),
-        migrations.AlterField(
-            model_name='activity',
             name='objectives',
             field=models.TextField(verbose_name='Objectives'),
-        ),
-        migrations.AlterField(
-            model_name='activity',
-            name='start',
-            field=models.TimeField(blank=True, null=True, verbose_name='Start'),
         ),
         migrations.AlterField(
             model_name='location',
@@ -95,11 +81,6 @@ class Migration(migrations.Migration):
             model_name='location',
             name='longitude',
             field=models.DecimalField(blank=True, decimal_places=7, default=None, help_text='Decimal Degrees', max_digits=9, null=True, verbose_name='Longitude'),
-        ),
-        migrations.AlterField(
-            model_name='report',
-            name='time',
-            field=models.TimeField(help_text='Lunar Standard Time', verbose_name='Mission Time', default=django.utils.timezone.now),
         ),
         migrations.AddField(
             model_name='spacewalker',
