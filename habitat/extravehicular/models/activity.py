@@ -9,14 +9,12 @@ class Activity(HabitatModel, MissionDate):
     start = models.TimeField(
         verbose_name=_('Start'),
         blank=True,
-        null=True,
-        default=None)
+        null=True)
 
     end = models.TimeField(
         verbose_name=_('End'),
         blank=True,
-        null=True,
-        default=None)
+        null=True)
 
     location = models.ForeignKey(
         verbose_name=_('Location'),
