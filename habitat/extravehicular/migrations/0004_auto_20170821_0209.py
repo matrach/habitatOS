@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='activity',
-            name='start',
-            field=models.TimeField(blank=True, default=None, null=True, verbose_name='Start'),
+            model_name='report',
+            name='time',
+            field=models.TimeField(help_text='Lunar Standard Time', verbose_name='Mission Time', default=django.utils.timezone.now),
         ),
     ]
