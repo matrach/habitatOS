@@ -4,12 +4,16 @@ from habitat._common.models import HabitatModel
 
 
 class Spacewalker(HabitatModel):
-    DESIGNATION_LEADER = 'leader'
-    DESIGNATION_SUPPORT = 'support'
+    DESIGNATION_EV_LEADER = 'ev-leader'
+    DESIGNATION_EV_SUPPORT = 'ev-support'
+    DESIGNATION_HABITAT_SUPPORT = 'habitat-support'
+    DESIGNATION_ROVER_OPERATOR = 'rover-operator'
 
     DESIGNATION_CHOICES = [
-        (DESIGNATION_LEADER, _('Lead Spacewalker')),
-        (DESIGNATION_SUPPORT, _('Supporting Spacewalker')),
+        (DESIGNATION_EV_LEADER, _('Lead Spacewalker')),
+        (DESIGNATION_EV_SUPPORT, _('Supporting Spacewalker')),
+        (DESIGNATION_HABITAT_SUPPORT, _('Habitat Support')),
+        (DESIGNATION_ROVER_OPERATOR, _('Rover Operator')),
     ]
 
     activity = models.ForeignKey(
