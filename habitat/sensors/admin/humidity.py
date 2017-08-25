@@ -5,7 +5,6 @@ from habitat.sensors.models import Humidity
 
 @admin.register(Humidity)
 class HumidityAdmin(HabitatAdmin):
-    change_list_template = 'admin/change_list_filter_sidebar.html'
     list_display = ['datetime', 'location', 'value']
-    list_filter = ['time', 'location']
+    list_filter = ['created', 'location']
     search_fields = ['^date', 'value']

@@ -31,8 +31,6 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     'grappelli.dashboard',
     'grappelli',
-    'filebrowser',
-    'import_export',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,6 +50,8 @@ INSTALLED_APPS = [
     'habitat.reporting',
     'habitat.sensors',
     'habitat.water',
+
+    'import_export',
 ]
 
 MIDDLEWARE = [

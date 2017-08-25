@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.apps import apps
-from django.utils.translation import ugettext_lazy as _
+from import_export.admin import ImportExportModelAdmin
 
 # Autodiscover and register all admin
 # Models should have Admin class inside
@@ -33,7 +33,7 @@ class ReporterAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
-class HabitatAdmin(admin.ModelAdmin):
+class HabitatAdmin(ImportExportModelAdmin):
     change_list_template = 'admin/change_list_filter_sidebar.html'
     ordering = ['-modified']
 

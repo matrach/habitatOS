@@ -1,6 +1,14 @@
+import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-import django.utils.timezone
+
+
+def lunar_standard_time():
+    begin = datetime.date(1969, 7, 21)
+    today = datetime.date.today()
+    year = int((today-begin).days / 365 + 2)
+    date = today - datetime.timedelta(days=29)
+    return f'{year}-{date.month:02}-{date.day}'
 
 
 class MissionDate(models.Model):
@@ -8,7 +16,7 @@ class MissionDate(models.Model):
         verbose_name=_('Mission Date'),
         help_text=_('Lunar Standard Time'),
         max_length=15,
-        default=None)
+        default=lunar_standard_time)
 
     class Meta:
         abstract = True
@@ -18,7 +26,7 @@ class MissionTime(models.Model):
     time = models.TimeField(
         verbose_name=_('Mission Time'),
         help_text=_('Lunar Standard Time'),
-        default=django.utils.timezone.now)
+        default=None)
 
     class Meta:
         abstract = True
