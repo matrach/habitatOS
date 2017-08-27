@@ -50,7 +50,6 @@ class Product(models.Model):
     slug = models.SlugField(verbose_name=_('Slug'), editable=False, db_index=True, default=None)
     image = models.ImageField(verbose_name=_('Image'), upload_to=upload_path, null=True, blank=True, default=None)
     type = models.CharField(verbose_name=_('Type'), choices=TYPE_CHOICES, max_length=30, db_index=True, default=None)
-    # category = models.ForeignKey(verbose_name=_('Category'), to='food.ProductCategory', db_index=True, default=None)
     category = models.CharField(verbose_name=_('Category'), choices=CATEGORY_CHOICES, max_length=30, db_index=True, default=None)
     tags = models.ManyToManyField(verbose_name=_('Tags'), to='food.Tag', limit_choices_to={'type': 'product'}, blank=True, default=None)
 

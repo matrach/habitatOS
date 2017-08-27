@@ -109,7 +109,6 @@ class Weight(HabitatModel, MissionDateTime, ReporterAstronaut):
             MaxValueValidator(10)])
 
     def save(self, **kwargs):
-        # self.BMI = self.weight / (height ** 2)
         return super().save(**kwargs)
 
     def __str__(self):

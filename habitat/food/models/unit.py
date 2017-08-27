@@ -22,13 +22,10 @@ class Unit(models.Model):
         super().save(*args, **kwargs)
 
     class Meta:
-        ordering = ['-name']
         verbose_name = _('Unit')
         verbose_name_plural = _('Units')
 
     class Admin(admin.ModelAdmin):
-        change_list_template = 'admin/change_list_filter_sidebar.html'
-        # hidden = True
         list_display = ['name', 'type']
         ordering = ['-name']
         search_fields = ['^name']

@@ -82,11 +82,6 @@ class IndexDashboard(Dashboard):
                 {'title': _('Subjective Time Perception'), 'url': 'http://stpa.astrotech.io'},
                 {'title': _('Lunar Clock'), 'url': 'http://lunarclock.org/'},
                 {'title': _('Schedule'), 'url': 'http://mariusz-slonina.pl/le-1-control/'},
-                # {'title': _('Calendar'), 'url': 'javascript:alert("not yet connected")'},
-                # {'title': _('Chat'), 'url': 'javascript:alert("not yet connected")'},
-                # {'title': _('Documentation'), 'url': 'javascript:alert("not yet connected")'},
-                # {'title': _('Issue Tracker'), 'url': 'javascript:alert("not yet connected")'},
-                # {'title': _('Filebrowser'), 'url': '/filebrowser/browse/'},
             ]))
 
         self.children.append(modules.ModelList(

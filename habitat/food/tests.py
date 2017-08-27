@@ -12,8 +12,4 @@ class FoodTest(Test):
         '/food/dayplan/add/',
         '/food/product/',
         '/food/product/add/',
-        # '/food/tag/',
-        # '/food/tag/add/',
-        # '/food/unit/',
-        # '/food/unit/add/',
     ]

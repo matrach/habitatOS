@@ -20,9 +20,6 @@ class ReportingTest(Test):
         '/reporting/sleep/',
         '/reporting/sleep/add/',
 
-        # '/reporting/time/',
-        # '/reporting/time/add/',
-
         '/reporting/waste/',
         '/reporting/waste/add/',
     ]

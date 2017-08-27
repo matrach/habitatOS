@@ -28,8 +28,6 @@ class Tag(models.Model):
         verbose_name_plural = _('Tags')
 
     class Admin(admin.ModelAdmin):
-        change_list_template = 'admin/change_list_filter_sidebar.html'
-        # hidden = True
         list_display = ['name', 'type']
         ordering = ['name']
         search_fields = ['^name']

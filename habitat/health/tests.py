@@ -11,12 +11,6 @@ class HealthTest(Test):
         '/health/disease/',
         '/health/disease/add/',
 
-        # '/health/intercourse/',
-        # '/health/intercourse/add/',
-
-        # '/health/intoxication/',
-        # '/health/intoxication/add/',
-
         '/health/pulseoxymetry/',
         '/health/pulseoxymetry/add/',
 
