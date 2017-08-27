@@ -5,6 +5,12 @@ HabitatOS
 .. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
     :target: https://travis-ci.org/AstroMatt/HabitatOS
 
+
+- `HabitatOS on SonarCloud.io <https://sonarcloud.io/dashboard?id=HabitatOS>`_
+- `HabitatOS on Travis-CI.org <https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master>`_
+- `HabitatOS on GitHub.com <https://github.com/AstroMatt/HabitatOS>`_
+
+
 Requirements
 ============
 
