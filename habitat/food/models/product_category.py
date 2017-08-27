@@ -20,13 +20,11 @@ class ProductCategory(models.Model):
         super().save(*args, **kwargs)
 
     class Meta:
-        ordering = ['slug', 'name']
         verbose_name = _('Product Category')
         verbose_name_plural = _('Product Categories')
 
     class Admin(admin.ModelAdmin):
-        change_list_template = 'admin/change_list_filter_sidebar.html'
-        # hidden = True
+        ordering = ['slug', 'name']
         list_display = ['parent', 'name']
         list_display_links = ['name']
         search_fields = ['^name']
