@@ -2,6 +2,8 @@
 HabitatOS
 *********
 
+Operating System for analog extraterrestrial habitats.
+
 Contact
 =======
 
