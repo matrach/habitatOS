@@ -21,7 +21,7 @@ class Objective(HabitatModel):
         verbose_name=_('Estimated Duration'),
         blank=True,
         null=True,
-        default=True)
+        default=None)
 
     objective = models.TextField(
         verbose_name=_('Objective'))

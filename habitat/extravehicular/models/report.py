@@ -62,13 +62,13 @@ class Report(HabitatModel, MissionDateTime, ReporterAstronaut):
         verbose_name=_('Start'),
         blank=True,
         null=True,
-        default=True)
+        default=None)
 
     end = models.TimeField(
         verbose_name=_('End'),
         blank=True,
         null=True,
-        default=True)
+        default=None)
 
     primary_objectives = models.ManyToManyField(
         verbose_name=_('Primary Objectives'),

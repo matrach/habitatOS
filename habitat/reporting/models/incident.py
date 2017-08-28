@@ -59,7 +59,7 @@ class Incident(HabitatModel, MissionDateTime, ReporterAnyone):
         verbose_name=_('Description'),
         blank=True,
         null=True,
-        default=True)
+        default=None)
 
     def __str__(self):
         return f'[{self.date} {self.time}] {self.location}: {self.subject}'
