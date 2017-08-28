@@ -2,6 +2,9 @@
 HabitatOS
 *********
 
+Contact
+=======
+
 .. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
     :target: https://travis-ci.org/AstroMatt/HabitatOS
 
@@ -9,6 +12,18 @@ HabitatOS
 - `HabitatOS on SonarCloud.io <https://sonarcloud.io/dashboard?id=HabitatOS>`_
 - `HabitatOS on Travis-CI.org <https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master>`_
 - `HabitatOS on GitHub.com <https://github.com/AstroMatt/HabitatOS>`_
+
+
+**Author**
+    :name: `Matt Harasymczuk <http://astromatt.space>`_
+    :email: `HabitatOS@astrotech.io <mailto:HabtatOS@astrotech.io>`_
+    :www: `http://www.astromatt.space <http://astromatt.space>`_
+    :facebook: `https://facebook.com/astromatt.space <https://facebook.com/astromatt.space>`_
+    :linkedin: `https://linkedin.com/in/mattharasymczuk <https://linkedin.com/in/mattharasymczuk>`_
+    :slideshare: `https://www.slideshare.net/astrotech/presentations <https://www.slideshare.net/astrotech/presentations>`_
+
+
+
 
 
 Requirements
