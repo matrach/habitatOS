@@ -15,7 +15,7 @@ class Temperature(HabitatModel, MissionDateTime):
         (UNIT_FAHRENHEIT, _('Fahrenheit'))]
 
     location = models.ForeignKey(
-        verbose_name=_('Sensor Location'),
+        verbose_name=_('Location'),
         to='building.Module',
         null=True,
         blank=True,

@@ -38,7 +38,7 @@ class Incident(HabitatModel, MissionDateTime, ReporterAnyone):
         default=now)
 
     location = models.ForeignKey(
-        verbose_name=_('Sensor Location'),
+        verbose_name=_('Location'),
         to='building.Module',
         null=True,
         blank=True,
