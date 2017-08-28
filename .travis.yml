@@ -8,7 +8,6 @@ python:
 addons:
   sonarcloud:
     organization: "astromatt"
-    # token: "b94d4c705b28df74198b2207711758af44e7f346"
 
 jdk:
   - oraclejdk8
