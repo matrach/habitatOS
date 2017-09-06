@@ -4,11 +4,8 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.conf.urls.static import static
 
-from filebrowser.sites import site
-
 
 urlpatterns = [
-    url(r'^filebrowser/', include(site.urls)),
     url(r'^grappelli/', include('grappelli.urls'), name='grappelli'),
 
     url(r'^building/', include('habitat.building.urls'), name='building'),
