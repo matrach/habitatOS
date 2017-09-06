@@ -7,13 +7,13 @@ from habitat._common.models import MissionDate
 class Activity(HabitatModel, MissionDate):
 
     start = models.TimeField(
-        verbose_name=_('Start'),
+        verbose_name=_('EVA Start'),
         blank=True,
         null=True,
         default=None)
 
     end = models.TimeField(
-        verbose_name=_('End'),
+        verbose_name=_('EVA End'),
         blank=True,
         null=True,
         default=None)
@@ -26,9 +26,9 @@ class Activity(HabitatModel, MissionDate):
     objectives = models.TextField(
         verbose_name=_('Objectives'))
 
-    tools = models.TextField(
+    tools = models.ManyToManyField(
         verbose_name=_('Tools'),
-        null=True,
+        to='inventory.Item',
         blank=True,
         default=None)
 

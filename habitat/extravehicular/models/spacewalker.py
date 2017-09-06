@@ -20,15 +20,21 @@ class Spacewalker(HabitatModel):
         verbose_name=_('Activity'),
         to='extravehicular.Activity')
 
+    participant = models.ForeignKey(
+        verbose_name=_('Participant'),
+        to='auth.User',
+        limit_choices_to={'groups__name': 'Astronauts'})
+
     designation = models.CharField(
         verbose_name=_('Designation'),
         max_length=30,
         choices=DESIGNATION_CHOICES)
 
-    participant = models.ForeignKey(
-        verbose_name=_('Participant'),
-        to='auth.User',
-        limit_choices_to={'groups__name': 'Astronauts'})
+    objectives = models.TextField(
+        verbose_name=_('Objectives'),
+        blank=True,
+        null=True,
+        default=None)
 
     def __str__(self):
         return f'[{self.activity}] {self.designation} {self.participant}'

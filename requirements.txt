@@ -6,6 +6,6 @@ django-grappelli==2.10.1
 transifex-client
 Pillow
 dj-database-url
-django-filebrowser
-pylibmc
+# django-filebrowser
+# pylibmc
 django-import-export

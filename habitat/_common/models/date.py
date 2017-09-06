@@ -7,8 +7,8 @@ def lunar_standard_time():
     begin = datetime.date(1969, 7, 21)
     today = datetime.date.today()
     year = int((today-begin).days / 365 + 2)
-    date = today - datetime.timedelta(days=29)
-    return f'{year}-{date.month:02}-{date.day}'
+    date = today - datetime.timedelta(days=28)
+    return f'{year}-{date.month:02}-{date.day:02}'
 
 
 class MissionDate(models.Model):
