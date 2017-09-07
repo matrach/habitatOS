@@ -1,0 +1,26 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="602" y="-1" x="-1"/>
+ </g>
+
+ <g>
+  <title>Lunares Habitat</title>
+  <ellipse ry="80" rx="80" id="sphere" cy="188" cx="275" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect stroke="#000" id="kitchen" height="120" width="50" y="25" x="200" stroke-width="1.5" fill="#fff"/>
+  <rect stroke="#000" id="dormitory" height="120" width="50" y="25" x="250" stroke-width="1.5" fill="#fff"/>
+  <rect stroke="#000" id="operations" height="120" width="50" y="25" x="300" stroke-width="1.5" fill="#fff"/>
+  <rect stroke="#000" id="biolab" height="50" width="90" y="145" x="350" stroke-width="1.5" fill="#fff"/>
+  <rect stroke="#000" id="storage" height="50" width="120" y="145" x="80" stroke-width="1.5" fill="#fff"/>
+  <rect stroke="#000" id="analytics" height="50" width="120" y="195" x="80" stroke-width="1.5" fill="#fff"/>
+  <rect stroke="#000" id="restroom" height="50" width="60" y="195" x="440" stroke-width="1.5" fill="#fff"/>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="265" x2="300" y1="225" x1="370" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_15" y2="225" x2="440" y1="225" x1="370" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_16" y2="267" x2="260" y1="245" x1="200" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <rect stroke="#000" id="airlock" height="120" width="50" y="266" x="260" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <rect stroke="#000" id="trash" height="85" width="25" y="300" x="285" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <rect id="eva-preproom" height="25" width="60" y="195" x="140" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="toilet" height="25" width="30" y="220" x="440" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="microbio-lab" height="50" width="30" y="145" x="440" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+ </g>
+</svg>
