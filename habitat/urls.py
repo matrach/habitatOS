@@ -10,6 +10,7 @@ urlpatterns = [
 
     url(r'^building/', include('habitat.building.urls'), name='building'),
     url(r'^communication/', include('habitat.communication.urls'), name='communication'),
+    url(r'^sensor/', include('habitat.sensors.urls'), name='sensors'),
     url(r'^notification/', include('habitat.notification.urls'), name='notification'),
 
     url(r'^', admin.site.urls, name='admin'),
