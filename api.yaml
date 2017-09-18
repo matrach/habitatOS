@@ -1,0 +1,125 @@
+openapi: 3.0.0
+servers:
+  - url: 'https://virtserver.swaggerhub.com/AstroMatt/HabitatOS/1.0.0'
+info:
+  description: HabitatOS API
+  version: '0.9.0'
+  title: HabitatOS API
+  contact:
+    email: habitatos@astrotech.io
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+tags:
+  - name: sensor
+    description: Public API Calls
+paths:
+  /sensor/data/:
+    put:
+      tags:
+        - sensor
+      summary: Puts sensor measurement into HabitatOS
+      operationId: sensor-data-put
+      description: Puts sensor measurement into HabitatOS
+      parameters:
+        - in: query
+          name: device_id
+          description: Device Unique Identifier
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: type
+          required: true
+          description: Sensor Type
+          schema:
+            type: string
+        - in: query
+          name: value
+          required: true
+          description: Sensor measurement value
+          schema:
+            type: float
+        - in: query
+          name: message_id
+          required: true
+          description: Sensor measurement value
+          schema:
+            type: int
+        - in: query
+          name: units
+          required: true
+          description: "Celsius" or "Fahrenheit"
+          schema:
+            type: string
+            format: string
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/sensor/data/201'
+        '400':
+          description: bad input parameter
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/sensor/data/400'
+
+
+
+
+
+
+sensor:
+  data:
+    PUT:
+      type: object
+      required:
+        - device_id
+        - type
+        - value
+        - message_id
+        - units
+      properties:
+        device_id:
+          type: string
+          format: uuid
+          example: 3241427042-2
+        type:
+          type: string
+          example: Temperature
+        value:
+          type: float
+          format: float
+          example: 22.399999618530273
+        message_id:
+          type: int
+          format: int64
+          example: 72057594076479506
+        units:
+          type: string
+          example: Celsius
+    201:
+      type: object
+      required:
+        - code
+        - status
+        - message
+      properties:
+        code:
+          type: int
+          format: int32
+          example: 201
+        status:
+          type: string
+          format: string
+          example: Created
+        message:
+          type: string
+          format: string
+          example: ok
+
