@@ -34,7 +34,7 @@ class ReporterAdmin(admin.ModelAdmin):
 
 
 class HabitatAdmin(ImportExportModelAdmin):
-    change_list_template = 'admin/change_list_filter_sidebar.html'
+    change_list_template = 'admin/change_list_import_export.html'
     change_list_filter_template = 'admin/filter_listing.html'
     ordering = ['-modified']
 
