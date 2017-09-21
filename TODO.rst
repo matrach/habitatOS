@@ -5,6 +5,7 @@ TODO
 General
 =======
 #. DB Migration Squash
+#. Docker
 
 Experiments
 ===========
