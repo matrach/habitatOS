@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     'grappelli.dashboard',
     'grappelli',
+    'import_export',
+    'rest_framework',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,8 +52,6 @@ INSTALLED_APPS = [
     'habitat.reporting',
     'habitat.sensors',
     'habitat.water',
-
-    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -153,3 +153,9 @@ else:
             'BACKEND': 'django.core.cache.backends.dummy.DummyCache'
         }
     }
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissions',
+    ]
+}

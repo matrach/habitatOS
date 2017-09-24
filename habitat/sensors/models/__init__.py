@@ -7,6 +7,7 @@ from .network import *
 from .oxygen import *
 from .pressure import *
 from .radiation import *
+from .sensor import *
 from .temperature import *
 from .uv import *
 from .voltage import *

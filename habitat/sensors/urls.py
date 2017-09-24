@@ -1,7 +1,7 @@
 from django.conf.urls import url
-from .views import SensorView
+from habitat.sensors import views
 
 
 urlpatterns = [
-    url(r'^data/', SensorView.as_view(), name='data'),
+    url(r'z-wave/', views.UserView.as_view()),
 ]

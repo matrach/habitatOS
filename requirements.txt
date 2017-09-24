@@ -1,7 +1,7 @@
 pep8
 gunicorn
 psycopg2
-django==1.11.4
+django==1.11.5
 django-grappelli==2.10.1
 transifex-client
 Pillow
@@ -9,3 +9,7 @@ dj-database-url
 # django-filebrowser
 # pylibmc
 django-import-export
+djangorestframework
+markdown
+django-filter
+coreapi

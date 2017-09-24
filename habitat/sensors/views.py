@@ -1,18 +1,29 @@
 import json
 from django.http import JsonResponse
-from django.views.generic import View
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
+from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from habitat.sensors.models import Sensor
+from habitat.sensors.serializers import SensorSerializer
 
 
-@method_decorator(csrf_exempt, name='dispatch')
-class SensorView(View):
-    http_method_names = ['put']
+class UserView(APIView):
+    permission_classes = [IsAuthenticated]
+    queryset = Sensor.objects.all()
+    serializer_class = SensorSerializer
+    lookup_fields = ['id']
+
+    def get(self, request, *args, **kwargs):
+        sensors = [1, 2, 3]
+        return JsonResponse(status=status.HTTP_200_OK, data=sensors, safe=False)
 
     def put(self, request, *args, **kwargs):
         data = json.loads(request.body)
         print(data)
 
-        response = JsonResponse(status=201, data={'code': 201, 'status': 'Created', 'message': 'ok'})
-        response['Access-Control-Allow-Origin'] = '*'
+        if not data:
+            return JsonResponse(status=status.HTTP_400_BAD_REQUEST, data={})
+        else:
+            response = JsonResponse(status=status.HTTP_200_OK, data=data)
+
         return response
