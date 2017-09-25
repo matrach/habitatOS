@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     'grappelli.dashboard',
     'grappelli',
     'import_export',
-    'oauth2_provider',
     'rest_framework',
 
     'django.contrib.admin',
@@ -156,13 +155,12 @@ else:
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissions',
         'rest_framework.permissions.IsAuthenticated',
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
     ],
 }
 

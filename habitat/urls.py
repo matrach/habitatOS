@@ -18,10 +18,9 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [
+    url(r'^api/v1/auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/v1/', include_docs_urls(title='HabitatOS API')),
     url(r'^api/$', RedirectView.as_view(permanent=False, url='/api/v1/')),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^oauth2/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
 
 urlpatterns += [

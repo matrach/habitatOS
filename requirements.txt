@@ -14,5 +14,6 @@ markdown
 django-filter
 coreapi
 django-oauth-toolkit
+django-oauth2-provider
 requests
 requests-oauthlib
