@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'grappelli.dashboard',
     'grappelli',
     'import_export',
+    'oauth2_provider',
     'rest_framework',
 
     'django.contrib.admin',
@@ -105,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 LANGUAGE_CODE = 'en-us'
@@ -157,5 +157,18 @@ else:
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissions',
-    ]
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ],
 }
+
+OAUTH2_PROVIDER = {
+    'SCOPES': {
+        '/sensor': 'Access to sensors data',
+    },
+}
+

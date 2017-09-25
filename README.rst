@@ -125,3 +125,9 @@ Pre-Commit Hook
     python manage.py migrate
     python manage.py test --verbosity 2
 
+Development
+===========
+
+Authorization
+-------------
+- http://localhost:8000/oauth2/applications/

@@ -74,6 +74,22 @@ class IndexDashboard(Dashboard):
                 'habitat.inventory.*']))
 
         # Column 3
+        if context['user'].has_perm('admin.add_user'):
+            self.children.append(modules.ModelList(
+                title=_('Administration'),
+                column=3,
+                collapsible=True,
+                models=['django.contrib.*'],
+                css_classes=['grp-open']))
+
+            self.children.append(modules.ModelList(
+                title=_('API OAuth'),
+                column=3,
+                collapsible=True,
+                models=['oauth2_provider.models.*'],
+                css_classes=['grp-open']))
+
+
         self.children.append(modules.LinkList(
             title=_('Shortcuts'),
             collapsible=False,
@@ -98,20 +114,3 @@ class IndexDashboard(Dashboard):
             models=[
                 'habitat.building.*',
                 'habitat.light']))
-
-        if context['user'].has_perm('admin.add_user'):
-            self.children.append(modules.ModelList(
-                title=_('Administration'),
-                column=3,
-                collapsible=False,
-                models=['django.contrib.*'],
-                css_classes=['grp-closed']))
-
-        """
-        self.children.append(modules.RecentActions(
-            title=_('Recent Actions'),
-            limit=5,
-            collapsible=True,
-            column=3,
-            css_classes=['grp-closed']))
-        """

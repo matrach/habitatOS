@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import datetime
 import logging
@@ -8,7 +8,7 @@ import libopenzwave
 
 
 DATABASE = '/home/pi/lunares_hab/sensors-data.sqlite3'
-ALLOWED_MEASUREMENTS = ['Battery Level', 'Powerlevel', 'Temperature', 'Luminance', 'Relative Humidity', 'Ultraviolet'] # 'Burglar'
+ALLOWED_MEASUREMENTS = ['Battery Level', 'Powerlevel', 'Temperature', 'Luminance', 'Relative Humidity', 'Ultraviolet']  # 'Burglar'
 device = '/dev/ttyACM0'
 log = 'Info'
 sniff = 60.0

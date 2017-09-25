@@ -14,13 +14,18 @@ urlpatterns = [
     url(r'^api/v1/notification/', include('habitat.notification.urls'), name='notification'),
 ]
 
-
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+    url(r'^api/v1/', include_docs_urls(title='HabitatOS API')),
+    url(r'^api/$', RedirectView.as_view(permanent=False, url='/api/v1/')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^oauth2/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+]
+
 urlpatterns += [
     url(r'^grappelli/', include('grappelli.urls'), name='grappelli'),
-    url(r'^api/', RedirectView.as_view(permanent=False, url='/api/v1/')),
-    url(r'^api/v1/', include_docs_urls(title='HabitatOS API')),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^', admin.site.urls, name='admin'),
 ]
+

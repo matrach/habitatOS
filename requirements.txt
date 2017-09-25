@@ -13,3 +13,6 @@ djangorestframework
 markdown
 django-filter
 coreapi
+django-oauth-toolkit
+requests
+requests-oauthlib
