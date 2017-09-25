@@ -44,7 +44,7 @@ def save_to_sqlite3(args):
 
     with sqlite3.connect(DATABASE) as db:
         db.execute('INSERT INTO sensor_data VALUES (:datetime, NULL, :device, :type, :value, :unit)', {
-            'datetime': datetime.datetime.now(),
+            'datetime': datetime.datetime.now(datetime.timezone.utc),
             'type': values.get('label'),
             'value': values.get('value'),
             'unit': values.get('units'),
