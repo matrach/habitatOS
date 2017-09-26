@@ -17,3 +17,4 @@ django-oauth-toolkit
 django-oauth2-provider
 requests
 requests-oauthlib
+plotly

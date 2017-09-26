@@ -3,5 +3,6 @@ from habitat.sensors import views
 
 
 urlpatterns = [
-    url(r'z-wave/', views.SensorView.as_view()),
+    url(r'zwave/', views.ZWaveSensorAPI.as_view()),
+    url(r'chart/temperature/', views.TemperatureChartView.as_view()),
 ]

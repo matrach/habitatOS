@@ -35,20 +35,18 @@ with sqlite3.connect('../sensors-data.sqlite3') as db:
             'value': row['value'],
             'unit': row['unit']}
 
-        response = habitatos.post('/sensor/z-wave/', data=data)
+        response = habitatos.post('/sensor/zwave/', data=data)
 
         now = datetime.datetime.now(datetime.timezone.utc)
         dt = row['datetime']
 
         if response.status_code == 201:
             logging.info(f'ADD: {data}')
-
             with db:
                 db.execute(f'UPDATE sensor_data SET sync_datetime="{now}" WHERE datetime="{dt}"')
 
         elif response.status_code == 200:
             logging.warning(f'UPDATE: {data}')
-
             with db:
                 db.execute(f'UPDATE sensor_data SET sync_datetime="{now}" WHERE datetime="{dt}"')
 
