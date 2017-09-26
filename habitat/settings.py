@@ -170,3 +170,6 @@ OAUTH2_PROVIDER = {
     },
 }
 
+HABITATOS = {
+    'TIME_ZONE': 'habitat._common.utils.LunarStandardTime',
+}

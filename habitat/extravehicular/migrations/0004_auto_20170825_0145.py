@@ -16,12 +16,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='activity',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='report',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='report',

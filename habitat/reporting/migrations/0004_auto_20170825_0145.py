@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='communication',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='communication',
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='incident',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='incident',
@@ -36,12 +36,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='medical',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='mood',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='mood',
@@ -51,7 +51,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='repair',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='repair',
@@ -61,12 +61,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='sleep',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='waste',
             name='date',
-            field=models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='waste',

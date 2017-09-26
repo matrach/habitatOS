@@ -3,7 +3,12 @@
 import datetime
 import sqlite3
 import sys
+import logging
 
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime).19s] %(levelname)s %(message)s',
+)
 
 import warnings
 warnings.warn('Push package to PyPI')
@@ -23,17 +28,29 @@ with sqlite3.connect('../sensors-data.sqlite3') as db:
     sql = 'SELECT * FROM sensor_data WHERE sync_datetime IS NULL'
 
     for row in cursor.execute(sql):
-        response = habitatos.post('/sensor/z-wave/', data={
+        data = {
             'datetime': row['datetime'],
             'device': row['device'],
             'type': row['type'],
             'value': row['value'],
-            'unit': row['unit'],
-        })
+            'unit': row['unit']}
 
-        if response.status_code == 200:
-            now = datetime.datetime.now(datetime.timezone.utc)
-            dt = row['datetime']
-            print(f'UPDATE sensor_data SET sync_date="{now}" WHERE datetime="{dt}"')
-            print(response.json())
-            # db.execute(f'UPDATE sensor_data SET sync_date="{now}" WHERE datetime="{dt}"')
+        response = habitatos.post('/sensor/z-wave/', data=data)
+
+        now = datetime.datetime.now(datetime.timezone.utc)
+        dt = row['datetime']
+
+        if response.status_code == 201:
+            logging.info(f'ADD: {data}')
+
+            with db:
+                db.execute(f'UPDATE sensor_data SET sync_datetime="{now}" WHERE datetime="{dt}"')
+
+        elif response.status_code == 200:
+            logging.warning(f'UPDATE: {data}')
+
+            with db:
+                db.execute(f'UPDATE sensor_data SET sync_datetime="{now}" WHERE datetime="{dt}"')
+
+        else:
+            logging.error(f'ERROR: {data}')

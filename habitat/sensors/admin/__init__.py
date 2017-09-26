@@ -9,3 +9,4 @@ from .radiation import *
 from .temperature import *
 from .voltage import *
 from .weather import *
+from .zwave_sensor import *

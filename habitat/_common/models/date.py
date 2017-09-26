@@ -1,22 +1,15 @@
-import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
-
-def lunar_standard_time():
-    begin = datetime.date(1969, 7, 21)
-    today = datetime.date.today()
-    year = int((today-begin).days / 365 + 2)
-    date = today - datetime.timedelta(days=28)
-    return f'{year}-{date.month:02}-{date.day:02}'
+from habitat._common.utils import get_timezone
 
 
 class MissionDate(models.Model):
+
     date = models.CharField(
         verbose_name=_('Mission Date'),
         help_text=_('Lunar Standard Time'),
         max_length=15,
-        default=lunar_standard_time)
+        default=get_timezone().date)
 
     class Meta:
         abstract = True
@@ -26,7 +19,7 @@ class MissionTime(models.Model):
     time = models.TimeField(
         verbose_name=_('Mission Time'),
         help_text=_('Lunar Standard Time'),
-        default=None)
+        default=get_timezone().time)
 
     class Meta:
         abstract = True

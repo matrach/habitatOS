@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='Add Datetime')),
                 ('modified', models.DateTimeField(auto_now=True, db_index=True, verbose_name='Modified Datetime')),
-                ('date', models.CharField(default=habitat._common.models.date.lunar_standard_time, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date')),
+                ('date', models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date')),
                 ('time', models.TimeField(default=None, help_text='Lunar Standard Time', verbose_name='Mission Time')),
                 ('value', models.DecimalField(decimal_places=5, default=None, help_text='Sievert', max_digits=6, verbose_name='Radiation')),
                 ('location', models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.CASCADE, to='building.Module', verbose_name='Location')),
