@@ -54,17 +54,21 @@ class TemperatureChartView(TemplateView):
 
     def get_context_data(self, **kwargs):
         traces = [
-            self.get_trace(device='c1344062-2', color='#f00', legend='2'),
-            self.get_trace(device='c1344062-3', color='#00f', legend='3'),
-            self.get_trace(device='c1344062-4', color='#0f0', legend='hydroponics'),
-            self.get_trace(device='c1344062-5', color='#ff0', legend='4'),
+            self.get_trace(device='c1344062-2', color='#00f', legend='livingroom-tv'),
+            self.get_trace(device='c1344062-3', color='#0f0', legend='livingroom-window'),
+            self.get_trace(device='c1344062-4', color='#0ff', legend='hydroponics'),
+            self.get_trace(device='c1344062-5', color='#08f', legend='livingroom-table'),
+            self.get_trace(device='c1344062-6', color='#f00', legend='bedroom-matt'),
+            self.get_trace(device='c1344062-7', color='#f0f', legend='kitchen'),
+            self.get_trace(device='c1344062-8', color='#ff0', legend='bedroom-agata'),
+            self.get_trace(device='c1344062-9', color='#555', legend='agata'),
         ]
 
         figure = graph.Figure(
             data=graph.Data(traces),
             layout=graph.Layout(
                 title='Temperature',
-                xaxis={'title': 'Time [t]', 'showgrid': False, 'autorange': True, 'type': 'date', 'rangeslider': {}},
+                xaxis={'title': 'Time [UTC]', 'showgrid': False, 'autorange': True, 'type': 'date', 'rangeslider': {}},
                 yaxis={'title': 'Temperature [°C]'}))
 
         return {'graph': plt.plot(figure, auto_open=False, output_type='div', show_link=False)}
