@@ -12,7 +12,7 @@ logging.basicConfig(
 
 import warnings
 warnings.warn('Push package to PyPI')
-sys.path.append('../client/')
+sys.path.append('../habitatos_client/')
 from habitatos_client import HabitatOSBasicAuth as HabitatOS
 
 
