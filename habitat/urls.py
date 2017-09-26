@@ -8,10 +8,10 @@ from rest_framework.documentation import include_docs_urls
 
 
 urlpatterns = [
-    url(r'^api/v1/sensor/', include('habitat.sensors.urls'), name='sensors'),
-    url(r'^api/v1/building/', include('habitat.building.urls'), name='building'),
-    url(r'^api/v1/communication/', include('habitat.communication.urls'), name='communication'),
-    url(r'^api/v1/notification/', include('habitat.notification.urls'), name='notification'),
+    url(r'^api/v1/sensor/', include('habitat.sensors.urls', namespace='sensor')),
+    url(r'^api/v1/building/', include('habitat.building.urls', namespace='building')),
+    url(r'^api/v1/communication/', include('habitat.communication.urls', namespace='communication')),
+    url(r'^api/v1/notification/', include('habitat.notification.urls', namespace='notification')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
