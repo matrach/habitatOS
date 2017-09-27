@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 19:25+0000\n"
+"POT-Creation-Date: 2017-09-27 15:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
@@ -20,167 +20,231 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: habitat/building/sensors/models/carbon_dioxide.py:12
-#: habitat/building/sensors/models/carbon_monoxide.py:12
-#: habitat/building/sensors/models/humidity.py:12
-#: habitat/building/sensors/models/internet.py:10
-#: habitat/building/sensors/models/luminance.py:10
-#: habitat/building/sensors/models/oxygen.py:12
-#: habitat/building/sensors/models/pressure.py:10
-#: habitat/building/sensors/models/radiation.py:10
-#: habitat/building/sensors/models/temperature.py:14
-#: habitat/building/sensors/models/voltage.py:10
-msgid "Datetime"
-msgstr "Data i czas"
-
-#: habitat/building/sensors/models/carbon_dioxide.py:16
-#: habitat/building/sensors/models/carbon_monoxide.py:16
-#: habitat/building/sensors/models/humidity.py:16
-#: habitat/building/sensors/models/internet.py:14
-#: habitat/building/sensors/models/luminance.py:14
-#: habitat/building/sensors/models/oxygen.py:16
-#: habitat/building/sensors/models/pressure.py:14
-#: habitat/building/sensors/models/radiation.py:14
-#: habitat/building/sensors/models/temperature.py:18
-#: habitat/building/sensors/models/voltage.py:14
-msgid "Sensor Location"
+#: .\models\carbon_dioxide.py:12 .\models\carbon_monoxide.py:12
+#: .\models\humidity.py:12 .\models\illuminance.py:10 .\models\network.py:10
+#: .\models\oxygen.py:12 .\models\pressure.py:12 .\models\radiation.py:10
+#: .\models\temperature.py:18 .\models\voltage.py:10 .\models\weather.py:10
+msgid "Location"
 msgstr ""
 
-#: habitat/building/sensors/models/carbon_dioxide.py:23
-#: habitat/building/sensors/models/carbon_monoxide.py:23
-#: habitat/building/sensors/models/oxygen.py:23
+#: .\models\carbon_dioxide.py:19 .\models\carbon_monoxide.py:19
+#: .\models\oxygen.py:19
 msgid "Concentration"
 msgstr ""
 
-#: habitat/building/sensors/models/carbon_dioxide.py:24
-#: habitat/building/sensors/models/carbon_monoxide.py:24
-#: habitat/building/sensors/models/humidity.py:24
-#: habitat/building/sensors/models/oxygen.py:24
+#: .\models\carbon_dioxide.py:20 .\models\carbon_monoxide.py:20
+#: .\models\humidity.py:20 .\models\oxygen.py:20 .\models\zwave_sensor.py:78
 msgid "%"
 msgstr "%"
 
-#: habitat/building/sensors/models/carbon_dioxide.py:34
+#: .\models\carbon_dioxide.py:31
 msgid "Carbon Dioxide Concentration Measurement"
 msgstr ""
 
-#: habitat/building/sensors/models/carbon_dioxide.py:35
+#: .\models\carbon_dioxide.py:32
 msgid "Carbon Dioxide"
 msgstr ""
 
-#: habitat/building/sensors/models/carbon_monoxide.py:34
+#: .\models\carbon_monoxide.py:31
 msgid "Carbon Monoxide Concentration Measurement"
 msgstr ""
 
-#: habitat/building/sensors/models/carbon_monoxide.py:35
+#: .\models\carbon_monoxide.py:32
 msgid "Carbon Monoxide"
 msgstr ""
 
-#: habitat/building/sensors/models/humidity.py:23
-#: habitat/building/sensors/models/humidity.py:35
+#: .\models\humidity.py:19 .\models\humidity.py:32
 msgid "Humidity"
 msgstr "Wilgotność"
 
-#: habitat/building/sensors/models/humidity.py:34
-msgid "Humitdity Measurement"
+#: .\models\humidity.py:31
+#, fuzzy
+#| msgid "Humitdity Measurement"
+msgid "Humidity Measurement"
 msgstr "Pomiar wilgotności powietrza"
 
-#: habitat/building/sensors/models/internet.py:21
-#: habitat/building/sensors/models/voltage.py:21
+#: .\models\illuminance.py:17 .\models\illuminance.py:26
+#, fuzzy
+#| msgid "Luminance"
+msgid "Illuminance"
+msgstr "Natężenie światła"
+
+#: .\models\illuminance.py:18 .\models\zwave_sensor.py:79
+msgid "Lux"
+msgstr ""
+
+#: .\models\illuminance.py:25
+#, fuzzy
+#| msgid "Luminance Measurement"
+msgid "Illuminance Measurement"
+msgstr "Pomiar natężenia światła"
+
+#: .\models\network.py:17 .\models\voltage.py:17 .\models\weather.py:17
+#: .\models\zwave_sensor.py:88
 msgid "Value"
 msgstr ""
 
-#: habitat/building/sensors/models/internet.py:22
+#: .\models\network.py:18
 msgid "Mbps"
 msgstr ""
 
-#: habitat/building/sensors/models/internet.py:30
-#: habitat/building/sensors/models/radiation.py:30
+#: .\models\network.py:27
 #, fuzzy
-#| msgid "Temperature Measurement"
-msgid "Internet Speed Measurement"
-msgstr "Pomiar temperatury"
-
-#: habitat/building/sensors/models/internet.py:31
-#: habitat/building/sensors/models/radiation.py:31
-msgid "Internet Speed"
-msgstr ""
-
-#: habitat/building/sensors/models/luminance.py:21
-#: habitat/building/sensors/models/luminance.py:31
-msgid "Luminance"
-msgstr "Natężenie światła"
-
-#: habitat/building/sensors/models/luminance.py:22
-msgid "lumen"
-msgstr "lumenów"
-
-#: habitat/building/sensors/models/luminance.py:30
-msgid "Luminance Measurement"
+#| msgid "Luminance Measurement"
+msgid "Network Performance Measurement"
 msgstr "Pomiar natężenia światła"
 
-#: habitat/building/sensors/models/oxygen.py:34
+#: .\models\network.py:28
+msgid "Network Performance"
+msgstr ""
+
+#: .\models\oxygen.py:31
 #, fuzzy
 #| msgid "Temperature Measurement"
 msgid "Oxygen Concentration Measurement"
 msgstr "Pomiar temperatury"
 
-#: habitat/building/sensors/models/oxygen.py:35
+#: .\models\oxygen.py:32
 msgid "Oxygen"
 msgstr ""
 
-#: habitat/building/sensors/models/pressure.py:21
+#: .\models\pressure.py:19 .\models\pressure.py:33
 msgid "Pressure"
 msgstr ""
 
-#: habitat/building/sensors/models/pressure.py:22
-msgid "mmHg"
+#: .\models\pressure.py:20
+msgid "hPa"
 msgstr ""
 
-#: habitat/building/sensors/models/pressure.py:30
-#: habitat/building/sensors/models/temperature.py:39
-msgid "Temperature Measurement"
+#: .\models\pressure.py:32
+#, fuzzy
+#| msgid "Temperature Measurement"
+msgid "Pressure Measurement"
 msgstr "Pomiar temperatury"
 
-#: habitat/building/sensors/models/pressure.py:31
-#: habitat/building/sensors/models/temperature.py:25
-#: habitat/building/sensors/models/temperature.py:40
-msgid "Temperature"
-msgstr "Temperatura"
-
-#: habitat/building/sensors/models/radiation.py:21
+#: .\models\radiation.py:17 .\models\radiation.py:28
 msgid "Radiation"
 msgstr ""
 
-#: habitat/building/sensors/models/radiation.py:22
-msgid "Sv - Sievert"
+#: .\models\radiation.py:18
+msgid "Sievert"
 msgstr ""
 
-#: habitat/building/sensors/models/temperature.py:9
+#: .\models\radiation.py:27
+#, fuzzy
+#| msgid "Humitdity Measurement"
+msgid "Radiation Measurement"
+msgstr "Pomiar wilgotności powietrza"
+
+#: .\models\temperature.py:13 .\models\zwave_sensor.py:81
 msgid "Celsius"
 msgstr "Celsiusz"
 
-#: habitat/building/sensors/models/temperature.py:10
+#: .\models\temperature.py:14 .\models\zwave_sensor.py:82
 msgid "Kelvin"
 msgstr "Kelvin"
 
-#: habitat/building/sensors/models/temperature.py:11
+#: .\models\temperature.py:15 .\models\zwave_sensor.py:83
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: habitat/building/sensors/models/temperature.py:29
+#: .\models\temperature.py:25 .\models\temperature.py:41
+#: .\models\zwave_sensor.py:61
+msgid "Temperature"
+msgstr "Temperatura"
+
+#: .\models\temperature.py:31 .\models\zwave_sensor.py:89
 msgid "Unit"
 msgstr "Jednostka"
 
-#: habitat/building/sensors/models/voltage.py:22
-msgid "V"
+#: .\models\temperature.py:40
+msgid "Temperature Measurement"
+msgstr "Pomiar temperatury"
+
+#: .\models\voltage.py:18
+msgid "Volts"
 msgstr ""
 
-#: habitat/building/sensors/models/voltage.py:30
+#: .\models\voltage.py:27
 #, fuzzy
 #| msgid "Luminance Measurement"
 msgid "Voltage Measurement"
 msgstr "Pomiar natężenia światła"
 
-#: habitat/building/sensors/models/voltage.py:31
+#: .\models\voltage.py:28
 msgid "Voltage"
 msgstr ""
+
+#: .\models\weather.py:24 .\models\weather.py:25
+msgid "Weather"
+msgstr ""
+
+#: .\models\zwave_sensor.py:59
+msgid "Battery Level"
+msgstr ""
+
+#: .\models\zwave_sensor.py:60
+msgid "Power Level"
+msgstr ""
+
+#: .\models\zwave_sensor.py:62
+msgid "Luminance"
+msgstr "Natężenie światła"
+
+#: .\models\zwave_sensor.py:63
+#, fuzzy
+#| msgid "Humidity"
+msgid "Relative Humidity"
+msgstr "Wilgotność"
+
+#: .\models\zwave_sensor.py:64
+msgid "Ultraviolet"
+msgstr ""
+
+#: .\models\zwave_sensor.py:65
+msgid "Burglar"
+msgstr ""
+
+#: .\models\zwave_sensor.py:77
+msgid "n/a"
+msgstr ""
+
+#: .\models\zwave_sensor.py:80
+msgid "dB"
+msgstr ""
+
+#: .\models\zwave_sensor.py:85
+msgid "Datetime"
+msgstr "Data i czas"
+
+#: .\models\zwave_sensor.py:86
+msgid "Device"
+msgstr ""
+
+#: .\models\zwave_sensor.py:87
+msgid "Type"
+msgstr ""
+
+#: .\models\zwave_sensor.py:95
+#, fuzzy
+#| msgid "Luminance Measurement"
+msgid "ZWave Sensor Measurement"
+msgstr "Pomiar natężenia światła"
+
+#: .\models\zwave_sensor.py:96
+msgid "Zwave Sensors"
+msgstr ""
+
+#: .\templates\sensors\change_list_charts.html:5
+#, fuzzy
+#| msgid "Temperature"
+msgid "Temperaure Chart"
+msgstr "Temperatura"
+
+#, fuzzy
+#~| msgid "Temperature Measurement"
+#~ msgid "Internet Speed Measurement"
+#~ msgstr "Pomiar temperatury"
+
+#~ msgid "lumen"
+#~ msgstr "lumenów"

@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 19:25+0000\n"
+"POT-Creation-Date: 2017-09-27 15:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Matt Harasymczuk <transifex.com@haras.pl>, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/astrotech/teams/75015/pl/)\n"
@@ -20,95 +20,90 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: habitat/systems/communication/models/diary.py:10
+#: .\models\diary.py:10
 msgid "Entry"
 msgstr "Wpis"
 
-#: habitat/systems/communication/models/diary.py:11
+#: .\models\diary.py:11
 msgid "Image"
 msgstr "Obraz"
 
-#: habitat/systems/communication/models/diary.py:12
+#: .\models\diary.py:12
 msgid "Caption"
 msgstr "Podpis"
 
-#: habitat/systems/communication/models/diary.py:19
+#: .\models\diary.py:19
 msgid "Figure"
 msgstr "Rycina"
 
-#: habitat/systems/communication/models/diary.py:20
+#: .\models\diary.py:20
 msgid "Figures"
 msgstr "Ryciny"
 
-#: habitat/systems/communication/models/diary.py:33
+#: .\models\diary.py:33
 msgid "Draft"
 msgstr "Szkic"
 
-#: habitat/systems/communication/models/diary.py:34
+#: .\models\diary.py:34
 msgid "Published"
 msgstr "Opublikowano"
 
-#: habitat/systems/communication/models/diary.py:35
+#: .\models\diary.py:35
 msgid "Scheduled"
 msgstr ""
 
-#: habitat/systems/communication/models/diary.py:37
+#: .\models\diary.py:37
 msgid "Status"
 msgstr "Status"
 
-#: habitat/systems/communication/models/diary.py:38
-#: habitat/systems/communication/models/notes.py:8
+#: .\models\diary.py:38 .\models\notes.py:8
 msgid "Created date"
 msgstr "Data utworzenia"
 
-#: habitat/systems/communication/models/diary.py:39
-#: habitat/systems/communication/models/notes.py:9
+#: .\models\diary.py:39 .\models\notes.py:9
 msgid "Modified date"
 msgstr "Data modyfikacji"
 
-#: habitat/systems/communication/models/diary.py:40
-#: habitat/systems/communication/models/notes.py:10
+#: .\models\diary.py:40 .\models\notes.py:10
 msgid "Publish Date"
 msgstr "Data publikacji"
 
-#: habitat/systems/communication/models/diary.py:41
-#: habitat/systems/communication/models/notes.py:11
+#: .\models\diary.py:41 .\models\notes.py:11
 msgid "Author"
 msgstr "Autor"
 
-#: habitat/systems/communication/models/diary.py:42
+#: .\models\diary.py:42
 msgid "Title"
 msgstr "Tytuł"
 
-#: habitat/systems/communication/models/diary.py:43
+#: .\models\diary.py:43
 msgid "Slug"
 msgstr "Slug"
 
-#: habitat/systems/communication/models/diary.py:44
-#: habitat/systems/communication/models/notes.py:12
+#: .\models\diary.py:44 .\models\notes.py:12
 msgid "Content"
 msgstr "Treść"
 
-#: habitat/systems/communication/models/diary.py:45
+#: .\models\diary.py:45
 msgid "Tags"
 msgstr "Tagi"
 
-#: habitat/systems/communication/models/diary.py:45
+#: .\models\diary.py:45
 msgid "Comma separated tags"
 msgstr "Tagi rozdzielone przecinkami"
 
-#: habitat/systems/communication/models/diary.py:59
+#: .\models\diary.py:59
 msgid "Diary Entry"
 msgstr "Wpis w dzienniku"
 
-#: habitat/systems/communication/models/diary.py:60
+#: .\models\diary.py:60
 msgid "Diary Entries"
 msgstr "Dziennik wpisów"
 
-#: habitat/systems/communication/models/notes.py:19
+#: .\models\notes.py:19
 msgid "Personal Note"
 msgstr "Notatka"
 
-#: habitat/systems/communication/models/notes.py:20
+#: .\models\notes.py:20
 msgid "Personal Notes"
 msgstr "Notes"

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'habitat.inventory',
     'habitat.reporting',
     'habitat.sensors',
+    'habitat.timezone',
     'habitat.water',
 ]
 
@@ -199,5 +200,5 @@ OAUTH2_PROVIDER = {
 }
 
 HABITATOS = {
-    'TIME_ZONE': 'habitat._common.utils.LunarStandardTime',
+    'TIME_ZONE': 'habitat.timezone.LunarStandardTime',
 }

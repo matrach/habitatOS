@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='drinkingwater',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='drinkingwater',
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='greenwater',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='greenwater',
@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='technicalwater',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='technicalwater',

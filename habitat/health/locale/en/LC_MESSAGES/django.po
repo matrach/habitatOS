@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 19:25+0000\n"
+"POT-Creation-Date: 2017-09-27 15:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,179 +17,284 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: habitat/science/medicine/models/blood_pressure.py:11
-#: habitat/science/medicine/models/disease.py:9
-#: habitat/science/medicine/models/food.py:10
-#: habitat/science/medicine/models/pulse_oximetry.py:11
-#: habitat/science/medicine/models/temperature.py:11
-#: habitat/science/medicine/models/weight.py:11
-msgid "Astronaut"
-msgstr ""
-
-#: habitat/science/medicine/models/blood_pressure.py:16
-#: habitat/science/medicine/models/food.py:15
-#: habitat/science/medicine/models/pulse_oximetry.py:16
-#: habitat/science/medicine/models/temperature.py:16
-#: habitat/science/medicine/models/weight.py:16
-msgid "Datetime"
-msgstr ""
-
-#: habitat/science/medicine/models/blood_pressure.py:20
+#: .\models\blood_pressure.py:13
 msgid "Blood Pressure Systolic"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:21
-#: habitat/science/medicine/models/blood_pressure.py:29
+#: .\models\blood_pressure.py:14 .\models\blood_pressure.py:22
 msgid "mmHg"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:28
+#: .\models\blood_pressure.py:21
 msgid "Blood Pressure Diastolic"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:36
-#: habitat/science/medicine/models/pulse_oximetry.py:37
+#: .\models\blood_pressure.py:29 .\models\pulse_oximetry.py:30
 msgid "Heart Rate"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:37
-#: habitat/science/medicine/models/pulse_oximetry.py:38
+#: .\models\blood_pressure.py:30 .\models\pulse_oximetry.py:31
 msgid "bpm"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:48
-msgid "Blood Pressure Measurement"
+#: .\models\blood_pressure.py:40 .\models\blood_pressure.py:41
+msgid "Blood Pressure"
 msgstr ""
 
-#: habitat/science/medicine/models/blood_pressure.py:49
-msgid "Blood Pressure Database"
-msgstr ""
-
-#: habitat/science/medicine/models/disease.py:14
+#: .\models\disease.py:12
 msgid "Start Datetime"
 msgstr ""
 
-#: habitat/science/medicine/models/disease.py:18
+#: .\models\disease.py:16
 msgid "End Datetime"
 msgstr ""
 
-#: habitat/science/medicine/models/disease.py:24
+#: .\models\disease.py:22
 msgid "ICD-10"
 msgstr ""
 
-#: habitat/science/medicine/models/disease.py:29
+#: .\models\disease.py:27
 msgid "Sympthoms"
 msgstr ""
 
-#: habitat/science/medicine/models/disease.py:39
-msgid "Disease Log"
+#: .\models\disease.py:36 .\models\disease.py:37
+msgid "Disease"
 msgstr ""
 
-#: habitat/science/medicine/models/disease.py:40
-msgid "Disease Logbook"
-msgstr ""
-
-#: habitat/science/medicine/models/food.py:19
-msgid "Food"
-msgstr ""
-
-#: habitat/science/medicine/models/food.py:29
-msgid "Food Intake"
-msgstr ""
-
-#: habitat/science/medicine/models/food.py:30
-msgid "Food Logbook"
-msgstr ""
-
-#: habitat/science/medicine/models/pulse_oximetry.py:20
+#: .\models\pulse_oximetry.py:13
 msgid "SpO2"
 msgstr ""
 
-#: habitat/science/medicine/models/pulse_oximetry.py:21
-#: habitat/science/medicine/models/weight.py:42
-#: habitat/science/medicine/models/weight.py:54
+#: .\models\pulse_oximetry.py:14 .\models\weight.py:34 .\models\weight.py:46
 msgid "%"
 msgstr ""
 
-#: habitat/science/medicine/models/pulse_oximetry.py:28
+#: .\models\pulse_oximetry.py:21
 msgid "Blood Perfusion Index"
 msgstr ""
 
-#: habitat/science/medicine/models/pulse_oximetry.py:49
-msgid "Pulse Oxymetry Measurement"
+#: .\models\pulse_oximetry.py:41 .\models\pulse_oximetry.py:42
+msgid "Pulse Oxymetry"
 msgstr ""
 
-#: habitat/science/medicine/models/pulse_oximetry.py:50
-msgid "Pulse Oxymetry Database"
+#: .\models\stool.py:20
+msgid "Separate hard lumps, like nuts (hard to pass)"
 msgstr ""
 
-#: habitat/science/medicine/models/temperature.py:20
+#: .\models\stool.py:21
+msgid "Sausage-shaped but lumpy"
+msgstr ""
+
+#: .\models\stool.py:22
+msgid "Like a sausage but with cracks on the surface"
+msgstr ""
+
+#: .\models\stool.py:23
+msgid "Like a sausage or snake, smooth and soft"
+msgstr ""
+
+#: .\models\stool.py:24
+msgid "Soft blobs with clear-cut edges"
+msgstr ""
+
+#: .\models\stool.py:25
+msgid "Fluffy pieces with ragged edges, a mushy stool"
+msgstr ""
+
+#: .\models\stool.py:26
+msgid "Watery, no solid pieces. Entirely Liquid"
+msgstr ""
+
+#: .\models\stool.py:42
+msgid "Brown"
+msgstr ""
+
+#: .\models\stool.py:43 .\models\urine.py:24
+msgid "Yellow"
+msgstr ""
+
+#: .\models\stool.py:44
+msgid "Gray"
+msgstr ""
+
+#: .\models\stool.py:45
+msgid "Pale"
+msgstr ""
+
+#: .\models\stool.py:46
+msgid "Black"
+msgstr ""
+
+#: .\models\stool.py:47 .\models\urine.py:29
+msgid "Red"
+msgstr ""
+
+#: .\models\stool.py:48
+msgid "Blue"
+msgstr ""
+
+#: .\models\stool.py:49
+msgid "Silver"
+msgstr ""
+
+#: .\models\stool.py:50
+msgid "Green"
+msgstr ""
+
+#: .\models\stool.py:51
+msgid "Violet"
+msgstr ""
+
+#: .\models\stool.py:52
+msgid "Purple"
+msgstr ""
+
+#: .\models\stool.py:61
+msgid "Undigested food remnants"
+msgstr ""
+
+#: .\models\stool.py:62
+msgid "Diarrhea"
+msgstr ""
+
+#: .\models\stool.py:63
+msgid "Constipation"
+msgstr ""
+
+#: .\models\stool.py:64
+msgid "Others"
+msgstr ""
+
+#: .\models\stool.py:67 .\models\urine.py:45
+msgid "Volume"
+msgstr ""
+
+#: .\models\stool.py:67 .\models\urine.py:45
+msgid "ml"
+msgstr ""
+
+#: .\models\stool.py:68 .\models\urine.py:46
+msgid "Color"
+msgstr ""
+
+#: .\models\stool.py:69
+msgid "Type"
+msgstr ""
+
+#: .\models\stool.py:70
+msgid "Abnormalities"
+msgstr ""
+
+#: .\models\stool.py:76 .\models\stool.py:77
+msgid "Stool"
+msgstr ""
+
+#: .\models\temperature.py:13 .\models\temperature.py:26
+#: .\models\temperature.py:27
 msgid "Temperature"
 msgstr ""
 
-#: habitat/science/medicine/models/temperature.py:21
+#: .\models\temperature.py:14
 msgid "Celsius"
 msgstr ""
 
-#: habitat/science/medicine/models/temperature.py:34
-msgid "Temperature Measurement"
+#: .\models\urine.py:22
+msgid "Colorless"
 msgstr ""
 
-#: habitat/science/medicine/models/temperature.py:35
-msgid "Temperature Database"
+#: .\models\urine.py:23
+msgid "Light Yellow"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:20
+#: .\models\urine.py:25
+msgid "Yellow Amber"
+msgstr ""
+
+#: .\models\urine.py:26
+msgid "Yellow Brown"
+msgstr ""
+
+#: .\models\urine.py:27
+msgid "Amber"
+msgstr ""
+
+#: .\models\urine.py:28
+msgid "Orange"
+msgstr ""
+
+#: .\models\urine.py:30
+msgid "Greenish Brown"
+msgstr ""
+
+#: .\models\urine.py:39
+msgid "Clear"
+msgstr ""
+
+#: .\models\urine.py:40
+msgid "Slightly"
+msgstr ""
+
+#: .\models\urine.py:41
+msgid "Cloudy"
+msgstr ""
+
+#: .\models\urine.py:42
+msgid "Turbid"
+msgstr ""
+
+#: .\models\urine.py:47
+msgid "Turbidity"
+msgstr ""
+
+#: .\models\urine.py:48
+msgid "pH"
+msgstr ""
+
+#: .\models\urine.py:54 .\models\urine.py:55
+msgid "Urine"
+msgstr ""
+
+#: .\models\weight.py:12 .\models\weight.py:118 .\models\weight.py:119
 msgid "Weight"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:21
-#: habitat/science/medicine/models/weight.py:66
-#: habitat/science/medicine/models/weight.py:78
-#: habitat/science/medicine/models/weight.py:100
+#: .\models\weight.py:13 .\models\weight.py:58 .\models\weight.py:70
+#: .\models\weight.py:92
 msgid "kg"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:30
+#: .\models\weight.py:22
 msgid "BMI"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:41
+#: .\models\weight.py:33
 msgid "Body Fat"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:53
+#: .\models\weight.py:45
 msgid "Lean Body Mass"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:65
+#: .\models\weight.py:57
 msgid "Body Water"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:77
+#: .\models\weight.py:69
 msgid "Muscle Mass"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:89
+#: .\models\weight.py:81
 msgid "Daily Caloric Intake"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:90
+#: .\models\weight.py:82
 msgid "kcal"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:99
+#: .\models\weight.py:91
 msgid "Bone Mass"
 msgstr ""
 
-#: habitat/science/medicine/models/weight.py:111
+#: .\models\weight.py:103
 msgid "Visceral Fat"
-msgstr ""
-
-#: habitat/science/medicine/models/weight.py:128
-msgid "Weight Measurement"
-msgstr ""
-
-#: habitat/science/medicine/models/weight.py:129
-msgid "Weight Database"
 msgstr ""

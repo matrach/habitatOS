@@ -131,3 +131,9 @@ Development
 Authorization
 -------------
 - http://localhost:8000/oauth2/applications/
+- http://localhost:8000/oauth2/token/
+
+
+Timezone
+--------
+- http://localhost:8000/api/v1/timezone/lunar-standard-time/

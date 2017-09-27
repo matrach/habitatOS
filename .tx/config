@@ -1,55 +1,55 @@
 [main]
 host = https://www.transifex.com
 
-[habitatos.main]
-file_filter = habitat/locale/<lang>/LC_MESSAGES/django.po
-source_file = habitat/locale/en/LC_MESSAGES/django.po
+[habitat._common]
+file_filter = habitat/_common/locale/<lang>/LC_MESSAGES/django.po
+source_file = habitat/_common/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.biolab]
+[habitat.biolab]
 file_filter = habitat/biolab/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/biolab/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.building]
+[habitat.building]
 file_filter = habitat/building/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/building/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.communication]
+[habitat.communication]
 file_filter = habitat/communication/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/communication/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.food]
+[habitat.food]
 file_filter = habitat/food/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/food/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.health]
+[habitat.health]
 file_filter = habitat/health/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/health/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.inventory]
+[habitat.inventory]
 file_filter = habitat/inventory/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/inventory/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.reporting]
+[habitat.reporting]
 file_filter = habitat/reporting/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/reporting/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
 
-[habitatos.sensors]
+[habitat.sensors]
 file_filter = habitat/sensors/locale/<lang>/LC_MESSAGES/django.po
 source_file = habitat/sensors/locale/en/LC_MESSAGES/django.po
 source_lang = en

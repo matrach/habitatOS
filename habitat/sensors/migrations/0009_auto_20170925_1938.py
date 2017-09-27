@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created', models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='Add Datetime')),
                 ('modified', models.DateTimeField(auto_now=True, db_index=True, verbose_name='Modified Datetime')),
-                ('date', models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date')),
+                ('date', models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date')),
                 ('time', models.TimeField(default=None, help_text='Lunar Standard Time', verbose_name='Mission Time')),
                 ('datetime', models.DateTimeField(db_index=True, editable=False, verbose_name='Datetime')),
                 ('device', models.CharField(db_index=True, max_length=30, verbose_name='Device')),

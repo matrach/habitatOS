@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 19:25+0000\n"
+"POT-Creation-Date: 2017-09-27 15:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,40 +17,90 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: habitat/systems/inventory/models/edible.py:7
-#: habitat/systems/inventory/models/item.py:13
+#: .\models\edible.py:8
 msgid "Code"
 msgstr ""
 
-#: habitat/systems/inventory/models/edible.py:8
+#: .\models\edible.py:9
 msgid "Product"
 msgstr ""
 
-#: habitat/systems/inventory/models/edible.py:9
-#: habitat/systems/inventory/models/item.py:18
+#: .\models\edible.py:10 .\models\item.py:23
 msgid "Quantity"
 msgstr ""
 
-#: habitat/systems/inventory/models/edible.py:10
+#: .\models\edible.py:11
 msgid "Best before"
 msgstr ""
 
-#: habitat/systems/inventory/models/edible.py:17
+#: .\models\edible.py:18
 msgid "Edible"
 msgstr ""
 
-#: habitat/systems/inventory/models/edible.py:18
+#: .\models\edible.py:19
 msgid "Edibles Database"
 msgstr ""
 
-#: habitat/systems/inventory/models/item.py:8
+#: .\models\item.py:12
+msgid "Solid"
+msgstr ""
+
+#: .\models\item.py:13
+msgid "Liquid"
+msgstr ""
+
+#: .\models\item.py:17
+msgid "Identifier"
+msgstr ""
+
+#: .\models\item.py:29
 msgid "Name"
 msgstr ""
 
-#: habitat/systems/inventory/models/item.py:26
+#: .\models\item.py:34
+msgid "Manufacturer"
+msgstr ""
+
+#: .\models\item.py:41
+msgid "Type"
+msgstr ""
+
+#: .\models\item.py:47
+msgid "Location"
+msgstr ""
+
+#: .\models\item.py:51
+msgid "Volume"
+msgstr ""
+
+#: .\models\item.py:52
+msgid "liters"
+msgstr ""
+
+#: .\models\item.py:58
+msgid "Height"
+msgstr ""
+
+#: .\models\item.py:59 .\models\item.py:66 .\models\item.py:73
+msgid "meters"
+msgstr ""
+
+#: .\models\item.py:65
+msgid "Width"
+msgstr ""
+
+#: .\models\item.py:72
+msgid "Length"
+msgstr ""
+
+#: .\models\item.py:79
+msgid "Remarks"
+msgstr ""
+
+#: .\models\item.py:89
 msgid "Item"
 msgstr ""
 
-#: habitat/systems/inventory/models/item.py:27
+#: .\models\item.py:90
 msgid "Item Database"
 msgstr ""

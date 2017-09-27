@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='carbondioxide',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='carbondioxide',
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='carbonmonoxide',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='carbonmonoxide',
@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='humidity',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='humidity',
@@ -46,7 +46,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='illuminance',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='illuminance',
@@ -56,7 +56,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='network',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='network',
@@ -66,7 +66,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='oxygen',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='oxygen',
@@ -76,7 +76,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='pressure',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='pressure',
@@ -86,7 +86,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='radiation',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='radiation',
@@ -96,7 +96,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='temperature',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='temperature',
@@ -106,7 +106,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='voltage',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='voltage',
@@ -116,7 +116,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='weather',
             name='date',
-            field=models.CharField(default=habitat._common.utils.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
+            field=models.CharField(default=habitat.timezone.LunarStandardTime.date, help_text='Lunar Standard Time', max_length=15, verbose_name='Mission Date'),
         ),
         migrations.AlterField(
             model_name='weather',

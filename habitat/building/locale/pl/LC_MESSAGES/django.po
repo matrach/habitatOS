@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-23 18:53+0200\n"
+"POT-Creation-Date: 2017-09-27 15:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,110 +20,118 @@ msgstr ""
 "%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: models.py:9
+#: .\models\module.py:16
 msgid "Working Nominal"
 msgstr ""
 
-#: models.py:10
+#: .\models\module.py:17
 msgid "Locked"
 msgstr ""
 
-#: models.py:11 models.py:22
+#: .\models\module.py:18 .\models\module.py:38
 msgid "Disabled"
 msgstr ""
 
-#: models.py:12
+#: .\models\module.py:19
 msgid "Under Construction"
 msgstr ""
 
-#: models.py:13
+#: .\models\module.py:20
 msgid "Destructed"
 msgstr ""
 
-#: models.py:16
+#: .\models\module.py:32
 msgid "None"
 msgstr ""
 
-#: models.py:17
+#: .\models\module.py:33
 msgid "Warning"
 msgstr ""
 
-#: models.py:18 models.py:20
+#: .\models\module.py:34 .\models\module.py:36
 msgid "Hazardous"
 msgstr ""
 
-#: models.py:19
+#: .\models\module.py:35
 msgid "Toxic"
 msgstr ""
 
-#: models.py:21
+#: .\models\module.py:37
 msgid "Fire"
 msgstr ""
 
-#: models.py:25
+#: .\models\module.py:47
 msgid "Ellipsis"
 msgstr ""
 
-#: models.py:26
+#: .\models\module.py:48
 msgid "Rectangle"
 msgstr ""
 
-#: models.py:27
+#: .\models\module.py:49
 msgid "Polygon"
 msgstr ""
 
-#: models.py:28
+#: .\models\module.py:50
 msgid "Other"
 msgstr ""
 
-#: models.py:30
+#: .\models\module.py:53 .\models\storage.py:12
 msgid "Name"
 msgstr ""
 
-#: models.py:31
+#: .\models\module.py:54
 msgid "Status"
 msgstr ""
 
-#: models.py:32
-msgid "Hazzard"
+#: .\models\module.py:55
+msgid "Hazard"
 msgstr ""
 
-#: models.py:33
+#: .\models\module.py:56
 msgid "Blueprint"
 msgstr ""
 
-#: models.py:35
+#: .\models\module.py:58
 msgid "Width"
 msgstr ""
 
-#: models.py:35 models.py:36 models.py:37
+#: .\models\module.py:58 .\models\module.py:59 .\models\module.py:60
 msgid "m"
 msgstr ""
 
-#: models.py:36
+#: .\models\module.py:59
 msgid "Height"
 msgstr ""
 
-#: models.py:37
+#: .\models\module.py:60
 msgid "Length"
 msgstr ""
 
-#: models.py:38
+#: .\models\module.py:61
 msgid "Plan"
 msgstr ""
 
-#: models.py:39
+#: .\models\module.py:62
 msgid "Capacity"
 msgstr ""
 
-#: models.py:39
+#: .\models\module.py:62
 msgid "Max crew members working inside."
 msgstr ""
 
-#: models.py:46
+#: .\models\module.py:69
 msgid "Module"
 msgstr ""
 
-#: models.py:47
+#: .\models\module.py:70
 msgid "Modules"
+msgstr ""
+
+#: .\models\storage.py:8
+msgid "location"
+msgstr ""
+
+#: .\models\storage.py:20 .\models\storage.py:21
+msgid "Storage"
 msgstr ""

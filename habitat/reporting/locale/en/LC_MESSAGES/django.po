@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-23 18:54+0200\n"
+"POT-Creation-Date: 2017-09-27 15:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,262 +17,637 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: models/mood.py:9
-msgid "Very High"
-msgstr ""
-
-#: models/mood.py:10
-msgid "High"
-msgstr ""
-
-#: models/mood.py:11
-msgid "Normal"
-msgstr ""
-
-#: models/mood.py:12
-msgid "Low"
-msgstr ""
-
-#: models/mood.py:13
-msgid "Very Low"
-msgstr ""
-
-#: models/mood.py:16
-msgid "Very Good"
-msgstr ""
-
-#: models/mood.py:17
-msgid "Good"
-msgstr ""
-
-#: models/mood.py:18
-msgid "Average"
-msgstr ""
-
-#: models/mood.py:19
-msgid "Bad"
-msgstr ""
-
-#: models/mood.py:20
-msgid "Very Bad"
-msgstr ""
-
-#: models/mood.py:22 models/sleep.py:39
-msgid "Astronaut"
-msgstr ""
-
-#: models/mood.py:23 models/sleep.py:40
-msgid "Created"
-msgstr ""
-
-#: models/mood.py:24 models/sleep.py:41
-msgid "Updated"
-msgstr ""
-
-#: models/mood.py:26
-msgid "Report About Day"
-msgstr ""
-
-#: models/mood.py:27
-msgid "Stress"
-msgstr ""
-
-#: models/mood.py:28
-msgid "Mood"
-msgstr ""
-
-#: models/mood.py:29
-msgid "Day Quality"
-msgstr ""
-
-#: models/mood.py:30
-msgid "Productivity"
-msgstr ""
-
-#: models/mood.py:31
-msgid "Remarks"
-msgstr ""
-
-#: models/mood.py:38
-msgid "Mood Report"
-msgstr ""
-
-#: models/mood.py:39
-msgid "Mood Reports"
-msgstr ""
-
-#: models/sleep.py:12 models/sleep.py:112
-msgid "Sleep"
-msgstr ""
-
-#: models/sleep.py:13
-msgid "Nap"
-msgstr ""
-
-#: models/sleep.py:16
-msgid "Satisfactory"
-msgstr ""
-
-#: models/sleep.py:17
-msgid "Slightly Satisfactory"
-msgstr ""
-
-#: models/sleep.py:18
-msgid "Somewhat Satisfactory"
-msgstr ""
-
-#: models/sleep.py:19
-msgid "Very Unsatisfactory"
-msgstr ""
-
-#: models/sleep.py:22 models/sleep.py:36
-msgid "No"
-msgstr ""
-
-#: models/sleep.py:23
-msgid "Mildly"
-msgstr ""
-
-#: models/sleep.py:24
-msgid "Considerably"
-msgstr ""
-
-#: models/sleep.py:25
-msgid "Intensely"
-msgstr ""
-
-#: models/sleep.py:28
-msgid "Sufficient"
-msgstr ""
-
-#: models/sleep.py:29
-msgid "Slightly Sufficient"
-msgstr ""
-
-#: models/sleep.py:30
-msgid "Somewhat Sufficient"
-msgstr ""
-
-#: models/sleep.py:31
-msgid "Very Insufficient"
-msgstr ""
-
-#: models/sleep.py:34
-msgid "Undisclosed"
-msgstr ""
-
-#: models/sleep.py:35
-msgid "Yes"
-msgstr ""
-
-#: models/sleep.py:42
-msgid "Type"
-msgstr ""
-
-#: models/sleep.py:43
-msgid "Location"
-msgstr ""
-
-#: models/sleep.py:44
-msgid "Duration"
-msgstr ""
-
-#: models/sleep.py:47
-msgid "What was the last thing you did before going to sleep?"
-msgstr ""
-
-#: models/sleep.py:48
-msgid "Did you feel sleepy during the day?"
-msgstr ""
-
-#: models/sleep.py:49
-msgid "If yes, how much?"
-msgstr ""
-
-#: models/sleep.py:49
-msgid "Percent of wake time"
-msgstr ""
-
-#: models/sleep.py:52
-msgid "When did you go to bed?"
-msgstr ""
-
-#: models/sleep.py:53
-msgid "When did you fall asleep?"
-msgstr ""
-
-#: models/sleep.py:54
-msgid "If it took you longer than 10 min to fall asleep, what was the reason?"
-msgstr ""
-
-#: models/sleep.py:57
-msgid "Did you wake up at night? If you yes, for how long (approx.)?"
-msgstr ""
-
-#: models/sleep.py:57
-msgid "Minutes"
-msgstr ""
-
-#: models/sleep.py:58
-msgid "If you woke up during the night, why?"
-msgstr ""
-
-#: models/sleep.py:61
-msgid "When did you wake up?"
-msgstr ""
-
-#: models/sleep.py:62
-msgid "What woke you up in the morning?"
-msgstr ""
-
-#: models/sleep.py:62
-msgid "Alarm clock / I woke up on my own"
-msgstr ""
-
-#: models/sleep.py:63
-msgid "When did you get up?"
-msgstr ""
-
-#: models/sleep.py:66
-msgid "Did you use ear plugs?"
-msgstr ""
-
-#: models/sleep.py:67
-msgid "Did you use an eye mask?"
-msgstr ""
-
-#: models/sleep.py:68
-msgid "Did you use a sleep pills?"
-msgstr ""
-
-#: models/sleep.py:71
-msgid "If you remember what was your dream about?"
-msgstr ""
-
-#: models/sleep.py:72
-msgid "How would you describe the amount of sleep?"
-msgstr ""
-
-#: models/sleep.py:73
-msgid "How would you rate your overall quality of sleep?"
-msgstr ""
-
-#: models/sleep.py:87
-msgid "Sleep Log"
-msgstr ""
-
-#: models/sleep.py:88
-msgid "Sleep Logbook"
-msgstr ""
-
-#: models/sleep.py:110
+#: .\admin\sleep.py:27
 msgid "General"
 msgstr ""
 
-#: models/sleep.py:111
+#: .\admin\sleep.py:28
 msgid "Before Sleep"
 msgstr ""
 
-#: models/sleep.py:113
+#: .\admin\sleep.py:29 .\models\sleep.py:14 .\models\sleep.py:86
+msgid "Sleep"
+msgstr ""
+
+#: .\admin\sleep.py:30
 msgid "After Sleep"
+msgstr ""
+
+#: .\models\communication.py:11
+msgid "How frequently do you communicate with following people?"
+msgstr ""
+
+#: .\models\communication.py:13 .\models\communication.py:24
+msgid "almost never"
+msgstr ""
+
+#: .\models\communication.py:14 .\models\communication.py:25
+msgid "rarely"
+msgstr ""
+
+#: .\models\communication.py:15 .\models\communication.py:26
+msgid "sometimes"
+msgstr ""
+
+#: .\models\communication.py:16 .\models\communication.py:27
+#: .\models\communication.py:70 .\models\communication.py:81
+msgid "moderately"
+msgstr ""
+
+#: .\models\communication.py:17 .\models\communication.py:28
+msgid "rather often"
+msgstr ""
+
+#: .\models\communication.py:18 .\models\communication.py:29
+msgid "very often"
+msgstr ""
+
+#: .\models\communication.py:19 .\models\communication.py:30
+msgid "almost all the time"
+msgstr ""
+
+#: .\models\communication.py:22
+msgid "How often do you want to communicate with following people?"
+msgstr ""
+
+#: .\models\communication.py:33
+msgid ""
+"Personal preferences: Please, evaluate the following people according to "
+"your preference to interact with them in your free time."
+msgstr ""
+
+#: .\models\communication.py:35 .\models\communication.py:46
+msgid "I would rather avoid him/her"
+msgstr ""
+
+#: .\models\communication.py:41 .\models\communication.py:52
+msgid "I would love to with with him/her all the time"
+msgstr ""
+
+#: .\models\communication.py:44
+msgid ""
+"Work preferences: Please, evaluate the following people according to your "
+"preference to work with them."
+msgstr ""
+
+#: .\models\communication.py:55
+msgid ""
+"Evaluate the quality of communication with following people (taking into "
+"account its relevance, content, timeliness, etc.)."
+msgstr ""
+
+#: .\models\communication.py:57
+msgid "should always be better"
+msgstr ""
+
+#: .\models\communication.py:58
+msgid "should often be better"
+msgstr ""
+
+#: .\models\communication.py:59
+msgid "should sometimes be better"
+msgstr ""
+
+#: .\models\communication.py:60 .\models\communication.py:93
+msgid "sufficient"
+msgstr ""
+
+#: .\models\communication.py:61
+msgid "sometimes above average"
+msgstr ""
+
+#: .\models\communication.py:62
+msgid "often above average"
+msgstr ""
+
+#: .\models\communication.py:63
+msgid "always above average"
+msgstr ""
+
+#: .\models\communication.py:66
+msgid "How well do you know the following people?"
+msgstr ""
+
+#: .\models\communication.py:68 .\models\communication.py:79
+msgid "not at all"
+msgstr ""
+
+#: .\models\communication.py:69 .\models\communication.py:80
+msgid "not much"
+msgstr ""
+
+#: .\models\communication.py:71 .\models\communication.py:82
+msgid "quite well"
+msgstr ""
+
+#: .\models\communication.py:72 .\models\communication.py:83
+msgid "well"
+msgstr ""
+
+#: .\models\communication.py:73 .\models\communication.py:84
+msgid "very well"
+msgstr ""
+
+#: .\models\communication.py:74 .\models\communication.py:85
+msgid "perfectly well"
+msgstr ""
+
+#: .\models\communication.py:77
+msgid "How well do you want to know the following people?"
+msgstr ""
+
+#: .\models\communication.py:88
+msgid "Evaluate the quality of cooperation with the following people?"
+msgstr ""
+
+#: .\models\communication.py:90
+msgid "totally insufficient"
+msgstr ""
+
+#: .\models\communication.py:91
+msgid "often insufficient"
+msgstr ""
+
+#: .\models\communication.py:92
+msgid "sometimes insufficient"
+msgstr ""
+
+#: .\models\communication.py:94
+msgid "rather high"
+msgstr ""
+
+#: .\models\communication.py:95
+msgid "high"
+msgstr ""
+
+#: .\models\communication.py:96
+msgid "excellent"
+msgstr ""
+
+#: .\models\communication.py:99
+msgid "How much do you trust the following people?"
+msgstr ""
+
+#: .\models\communication.py:101
+msgid "Totally"
+msgstr ""
+
+#: .\models\communication.py:102
+msgid "Very much"
+msgstr ""
+
+#: .\models\communication.py:103
+msgid "A lot"
+msgstr ""
+
+#: .\models\communication.py:104
+msgid "Partly"
+msgstr ""
+
+#: .\models\communication.py:105
+msgid "A little"
+msgstr ""
+
+#: .\models\communication.py:106
+msgid "Not much"
+msgstr ""
+
+#: .\models\communication.py:107
+msgid "Not at all"
+msgstr ""
+
+#: .\models\communication.py:110
+msgid "How is the atmosphere within the team?"
+msgstr ""
+
+#: .\models\communication.py:112
+msgid "Terrible"
+msgstr ""
+
+#: .\models\communication.py:118
+msgid "Amazing"
+msgstr ""
+
+#: .\models\communication.py:121
+msgid "Have there been any misunderstandings in the team?"
+msgstr ""
+
+#: .\models\communication.py:123
+msgid "Never"
+msgstr ""
+
+#: .\models\communication.py:129
+msgid "Constantly"
+msgstr ""
+
+#: .\models\communication.py:132
+msgid ""
+"If applicable, name the source(s) for the discomfort you are experience (e."
+"g. noise, smell, food, sleeping problems, interpersonal conflict, etc.)"
+msgstr ""
+
+#: .\models\communication.py:135
+msgid ""
+"You can add any comment or note (e.g. if something important happened, how "
+"do you feel etc.)"
+msgstr ""
+
+#: .\models\communication.py:141
+msgid "Questionnaire"
+msgstr ""
+
+#: .\models\communication.py:142
+msgid "Communication"
+msgstr ""
+
+#: .\models\incident.py:15 .\models\waste.py:16
+msgid "Biohazard"
+msgstr ""
+
+#: .\models\incident.py:16
+msgid "Environmental"
+msgstr ""
+
+#: .\models\incident.py:17
+msgid "Security"
+msgstr ""
+
+#: .\models\incident.py:26
+msgid "Emergency - ABORT the simulation"
+msgstr ""
+
+#: .\models\incident.py:27
+msgid "Critical"
+msgstr ""
+
+#: .\models\incident.py:28
+msgid "Warning"
+msgstr ""
+
+#: .\models\incident.py:29
+msgid "Informative"
+msgstr ""
+
+#: .\models\incident.py:33
+msgid "Start Datetime"
+msgstr ""
+
+#: .\models\incident.py:37
+msgid "End Datetime"
+msgstr ""
+
+#: .\models\incident.py:41 .\models\repair.py:24 .\models\sleep.py:42
+msgid "Location"
+msgstr ""
+
+#: .\models\incident.py:48
+msgid "Severity"
+msgstr ""
+
+#: .\models\incident.py:54
+msgid "Subject"
+msgstr ""
+
+#: .\models\incident.py:59 .\models\repair.py:32
+msgid "Description"
+msgstr ""
+
+#: .\models\incident.py:68 .\models\incident.py:69
+msgid "Incident"
+msgstr ""
+
+#: .\models\medical.py:10 .\models\medical.py:46 .\models\mood.py:27
+msgid "Remarks"
+msgstr ""
+
+#: .\models\medical.py:16
+msgid "Medical Condition"
+msgstr ""
+
+#: .\models\medical.py:22
+msgid "Food"
+msgstr ""
+
+#: .\models\medical.py:28
+msgid "EVA"
+msgstr ""
+
+#: .\models\medical.py:34
+msgid "Medical Experiment"
+msgstr ""
+
+#: .\models\medical.py:40
+msgid "Mood and Morale"
+msgstr ""
+
+#: .\models\medical.py:55
+msgid "Medical Report"
+msgstr ""
+
+#: .\models\medical.py:56 .\models\waste.py:18
+msgid "Medical"
+msgstr ""
+
+#: .\models\mood.py:10
+msgid "Very High"
+msgstr ""
+
+#: .\models\mood.py:11
+msgid "High"
+msgstr ""
+
+#: .\models\mood.py:12
+msgid "Normal"
+msgstr ""
+
+#: .\models\mood.py:13
+msgid "Low"
+msgstr ""
+
+#: .\models\mood.py:14
+msgid "Very Low"
+msgstr ""
+
+#: .\models\mood.py:17
+msgid "Very Good"
+msgstr ""
+
+#: .\models\mood.py:18
+msgid "Good"
+msgstr ""
+
+#: .\models\mood.py:19
+msgid "Average"
+msgstr ""
+
+#: .\models\mood.py:20
+msgid "Bad"
+msgstr ""
+
+#: .\models\mood.py:21
+msgid "Very Bad"
+msgstr ""
+
+#: .\models\mood.py:23
+msgid "Stress"
+msgstr ""
+
+#: .\models\mood.py:24 .\models\mood.py:34
+msgid "Mood"
+msgstr ""
+
+#: .\models\mood.py:25
+msgid "Day Quality"
+msgstr ""
+
+#: .\models\mood.py:26
+msgid "Productivity"
+msgstr ""
+
+#: .\models\mood.py:33
+msgid "Mood Report"
+msgstr ""
+
+#: .\models\repair.py:12
+msgid "Small"
+msgstr ""
+
+#: .\models\repair.py:13
+msgid "Medium"
+msgstr ""
+
+#: .\models\repair.py:14
+msgid "Huge"
+msgstr ""
+
+#: .\models\repair.py:17
+msgid "Broken"
+msgstr ""
+
+#: .\models\repair.py:18
+msgid "Fixed"
+msgstr ""
+
+#: .\models\repair.py:19
+msgid "Permanently Destroyed"
+msgstr ""
+
+#: .\models\repair.py:21
+msgid "Problem Size"
+msgstr ""
+
+#: .\models\repair.py:22
+msgid "Current Status"
+msgstr ""
+
+#: .\models\repair.py:25
+msgid "Object"
+msgstr ""
+
+#: .\models\repair.py:25
+msgid "Leave empty, if object is not on the list"
+msgstr ""
+
+#: .\models\repair.py:26
+msgid "What"
+msgstr ""
+
+#: .\models\repair.py:28
+msgid "Start"
+msgstr ""
+
+#: .\models\repair.py:29
+msgid "End"
+msgstr ""
+
+#: .\models\repair.py:29
+msgid "Leave empty if problem persists."
+msgstr ""
+
+#: .\models\repair.py:30 .\models\sleep.py:43
+msgid "Duration"
+msgstr ""
+
+#: .\models\repair.py:33
+msgid "Solution"
+msgstr ""
+
+#: .\models\repair.py:46
+msgid "Repair Log"
+msgstr ""
+
+#: .\models\repair.py:47
+msgid "Repair"
+msgstr ""
+
+#: .\models\sleep.py:15
+msgid "Nap"
+msgstr ""
+
+#: .\models\sleep.py:18
+msgid "Satisfactory"
+msgstr ""
+
+#: .\models\sleep.py:19
+msgid "Slightly Satisfactory"
+msgstr ""
+
+#: .\models\sleep.py:20
+msgid "Somewhat Satisfactory"
+msgstr ""
+
+#: .\models\sleep.py:21
+msgid "Very Unsatisfactory"
+msgstr ""
+
+#: .\models\sleep.py:24 .\models\sleep.py:38
+msgid "No"
+msgstr ""
+
+#: .\models\sleep.py:25
+msgid "Mildly"
+msgstr ""
+
+#: .\models\sleep.py:26
+msgid "Considerably"
+msgstr ""
+
+#: .\models\sleep.py:27
+msgid "Intensely"
+msgstr ""
+
+#: .\models\sleep.py:30
+msgid "Sufficient"
+msgstr ""
+
+#: .\models\sleep.py:31
+msgid "Slightly Sufficient"
+msgstr ""
+
+#: .\models\sleep.py:32
+msgid "Somewhat Sufficient"
+msgstr ""
+
+#: .\models\sleep.py:33
+msgid "Very Insufficient"
+msgstr ""
+
+#: .\models\sleep.py:36
+msgid "Undisclosed"
+msgstr ""
+
+#: .\models\sleep.py:37
+msgid "Yes"
+msgstr ""
+
+#: .\models\sleep.py:41
+msgid "Type"
+msgstr ""
+
+#: .\models\sleep.py:46
+msgid "What was the last thing you did before going to sleep?"
+msgstr ""
+
+#: .\models\sleep.py:47
+msgid "Did you feel sleepy during the day?"
+msgstr ""
+
+#: .\models\sleep.py:48
+msgid "If yes, how much?"
+msgstr ""
+
+#: .\models\sleep.py:48
+msgid "Percent of wake time"
+msgstr ""
+
+#: .\models\sleep.py:51
+msgid "When did you go to bed?"
+msgstr ""
+
+#: .\models\sleep.py:52
+msgid "When did you fall asleep?"
+msgstr ""
+
+#: .\models\sleep.py:53
+msgid "If it took you longer than 10 min to fall asleep, what was the reason?"
+msgstr ""
+
+#: .\models\sleep.py:56
+msgid "Did you wake up at night? If you yes, for how long (approx.)?"
+msgstr ""
+
+#: .\models\sleep.py:56
+msgid "Minutes"
+msgstr ""
+
+#: .\models\sleep.py:57
+msgid "If you woke up during the night, why?"
+msgstr ""
+
+#: .\models\sleep.py:60
+msgid "When did you wake up?"
+msgstr ""
+
+#: .\models\sleep.py:61
+msgid "What woke you up in the morning?"
+msgstr ""
+
+#: .\models\sleep.py:61
+msgid "Alarm clock / I woke up on my own"
+msgstr ""
+
+#: .\models\sleep.py:62
+msgid "When did you get up?"
+msgstr ""
+
+#: .\models\sleep.py:65
+msgid "Did you use ear plugs?"
+msgstr ""
+
+#: .\models\sleep.py:66
+msgid "Did you use an eye mask?"
+msgstr ""
+
+#: .\models\sleep.py:67
+msgid "Did you use a sleep pills?"
+msgstr ""
+
+#: .\models\sleep.py:70
+msgid "If you remember what was your dream about?"
+msgstr ""
+
+#: .\models\sleep.py:71
+msgid "How would you describe the amount of sleep?"
+msgstr ""
+
+#: .\models\sleep.py:72
+msgid "How would you rate your overall quality of sleep?"
+msgstr ""
+
+#: .\models\sleep.py:85
+msgid "Sleep Log"
+msgstr ""
+
+#: .\models\time.py:5
+msgid "Education"
+msgstr ""
+
+#: .\models\waste.py:15
+msgid "Regular"
+msgstr ""
+
+#: .\models\waste.py:17
+msgid "Chemical"
+msgstr ""
+
+#: .\models\waste.py:22 .\models\waste.py:37 .\models\waste.py:38
+msgid "Waste"
+msgstr ""
+
+#: .\models\waste.py:28
+msgid "Weight"
+msgstr ""
+
+#: .\models\waste.py:29
+msgid "kg"
 msgstr ""
