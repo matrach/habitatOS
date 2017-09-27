@@ -85,7 +85,7 @@ class ZWaveSensor(HabitatModel, MissionDateTime):
     datetime = models.DateTimeField(verbose_name=_('Datetime'), db_index=True, editable=False)
     device = models.CharField(verbose_name=_('Device'), max_length=30, db_index=True)
     type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES)
-    value = models.DecimalField(verbose_name=_('Value'), max_digits=5, decimal_places=2, default=None)
+    value = models.DecimalField(verbose_name=_('Value'), max_digits=7, decimal_places=2, default=None)
     unit = models.CharField(verbose_name=_('Unit'), max_length=15, choices=UNIT_CHOICES, null=True, blank=True, default=None)
 
     def __str__(self):
