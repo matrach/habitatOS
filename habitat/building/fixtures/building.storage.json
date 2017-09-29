@@ -5,7 +5,7 @@
   "fields": {
     "created": "2017-09-29T09:43:05.644Z",
     "modified": "2017-09-29T09:43:05.644Z",
-    "location": 1,
+    "location": 7,
     "name": "Rack 1"
   }
 },
@@ -15,7 +15,7 @@
   "fields": {
     "created": "2017-09-29T09:43:19.500Z",
     "modified": "2017-09-29T09:43:19.500Z",
-    "location": 2,
+    "location": 3,
     "name": "Food Storage"
   }
 },
@@ -25,7 +25,7 @@
   "fields": {
     "created": "2017-09-29T09:43:32.555Z",
     "modified": "2017-09-29T09:43:32.555Z",
-    "location": 3,
+    "location": 2,
     "name": "Chemical Waste Storage"
   }
 }

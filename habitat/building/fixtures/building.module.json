@@ -49,5 +49,90 @@
       "plan": "rectangle",
       "capacity": 6
     }
+  },
+  {
+    "model": "building.module",
+    "pk": 4,
+    "fields": {
+      "created": "2017-08-18T18:59:21Z",
+      "modified": "2017-08-18T18:59:21Z",
+      "name": "Analytic Lab",
+      "status": "nominal",
+      "hazard": "none",
+      "blueprint": "",
+      "width": "2.50",
+      "height": "2.50",
+      "length": "6.00",
+      "plan": "rectangle",
+      "capacity": 6
+    }
+  },
+  {
+    "model": "building.module",
+    "pk": 5,
+    "fields": {
+      "created": "2017-08-18T18:59:21Z",
+      "modified": "2017-08-18T18:59:21Z",
+      "name": "Atrium",
+      "status": "nominal",
+      "hazard": "none",
+      "blueprint": "",
+      "width": null,
+      "height": null,
+      "length": null,
+      "plan": "polygon",
+      "capacity": 6
+    }
+  },
+  {
+    "model": "building.module",
+    "pk": 6,
+    "fields": {
+      "created": "2017-08-18T18:59:21Z",
+      "modified": "2017-08-18T18:59:21Z",
+      "name": "Airlock",
+      "status": "nominal",
+      "hazard": "none",
+      "blueprint": "",
+      "width": null,
+      "height": null,
+      "length": null,
+      "plan": "other",
+      "capacity": 6
+    }
+  },
+  {
+    "model": "building.module",
+    "pk": 7,
+    "fields": {
+      "created": "2017-08-18T18:59:21Z",
+      "modified": "2017-08-18T18:59:21Z",
+      "name": "Storage",
+      "status": "nominal",
+      "hazard": "none",
+      "blueprint": "",
+      "width": "2.50",
+      "height": "2.50",
+      "length": "6.00",
+      "plan": "rectangle",
+      "capacity": 6
+    }
+  },
+  {
+    "model": "building.module",
+    "pk": 8,
+    "fields": {
+      "created": "2017-08-18T18:59:21Z",
+      "modified": "2017-08-18T18:59:21Z",
+      "name": "Operations",
+      "status": "nominal",
+      "hazard": "none",
+      "blueprint": "",
+      "width": "2.50",
+      "height": "2.50",
+      "length": "6.00",
+      "plan": "rectangle",
+      "capacity": 6
+    }
   }
 ]

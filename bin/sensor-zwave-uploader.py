@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
 import datetime
+import logging
 import sqlite3
 import sys
-import logging
 import warnings
-from habitatos_client import HabitatOSBasicAuth as HabitatOS
 
+from habitatos_sdk import HabitatOSBasicAuth as HabitatOS
 
 warnings.warn('Push package to PyPI')
 sys.path.append('..')

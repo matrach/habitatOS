@@ -7,25 +7,13 @@ Operating System for analog extraterrestrial habitats.
 Contact
 =======
 
-.. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
-    :target: https://travis-ci.org/AstroMatt/HabitatOS
-
-
-- `HabitatOS on SonarCloud.io <https://sonarcloud.io/dashboard?id=HabitatOS>`_
-- `HabitatOS on Travis-CI.org <https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master>`_
-- `HabitatOS on GitHub.com <https://github.com/AstroMatt/HabitatOS>`_
-
-
 **Author**
     :name: `Matt Harasymczuk <http://astromatt.space>`_
     :email: `HabitatOS@astrotech.io <mailto:HabtatOS@astrotech.io>`_
     :www: `http://www.astromatt.space <http://astromatt.space>`_
     :facebook: `https://facebook.com/astromatt.space <https://facebook.com/astromatt.space>`_
     :linkedin: `https://linkedin.com/in/mattharasymczuk <https://linkedin.com/in/mattharasymczuk>`_
-    :slideshare: `https://www.slideshare.net/astrotech/presentations <https://www.slideshare.net/astrotech/presentations>`_
-
-
-
+    :slideshare: `https://www.slideshare.net/astromatt/presentations <https://www.slideshare.net/astromatt/presentations>`_
 
 
 Requirements
@@ -58,7 +46,7 @@ Setup environment and install dependencies:
 
 .. code-block:: console
 
-    $ python3 -m venv .virtualenv
+    $ python -m venv .virtualenv
     $ source .virtualenv/bin/activate
     $ pip install -r requirements.txt
 
@@ -98,7 +86,7 @@ In order to Memcache as a cache:
 
     $ brew install memcached
     $ brew install libmemcached
-    $ pip install pylibmc
+    $ python -m pip install pylibmc
     $ memcached -d -s /tmp/memcached.sock
 
 Database
@@ -106,14 +94,27 @@ Database
 
 .. code-block:: console
 
+    # linux (Debian/Ubuntu based)
+    $ apt-get install postgresql
+
+    # macOS
     $ brew install postgresql
 
-Contributing
-============
+
+Development
+===========
+
+CI/CD
+-----
+.. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
+    :target: https://travis-ci.org/AstroMatt/HabitatOS
+
+- `HabitatOS on SonarCloud.io <https://sonarcloud.io/dashboard?id=HabitatOS>`_
+- `HabitatOS on Travis-CI.org <https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master>`_
+- `HabitatOS on GitHub.com <https://github.com/AstroMatt/HabitatOS>`_
 
 Pre-Commit Hook
 ---------------
-
 .. code-block:: bash
 
     #!/bin/sh
@@ -124,9 +125,6 @@ Pre-Commit Hook
     python manage.py makemigrations
     python manage.py migrate
     python manage.py test --verbosity 2
-
-Development
-===========
 
 Authorization
 -------------

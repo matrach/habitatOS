@@ -22,7 +22,7 @@ install:
 script:
   - pep8 habitat
   - pep8 bin
-  - pep8 habitat_client --ignore=E402
+  - pep8 habitatos_client --ignore=E402
   - python manage.py check
   - python manage.py migrate
   - python manage.py test --verbosity 2
