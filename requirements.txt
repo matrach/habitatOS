@@ -6,12 +6,13 @@ transifex-client
 ## HabitatOS.server
 django==1.11.5
 django-grappelli==2.10.1
+django-devutils
+django-import-export
+django-rest-swagger
+djangorestframework
 gunicorn
 psycopg2
 dj-database-url
 Pillow
-# pylibmc
-django-import-export
-django-rest-swagger
-djangorestframework
 plotly
+# pylibmc

@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'import_export',
     'rest_framework',
     'rest_framework_swagger',
+    'devutils',
 
     'django.contrib.admin',
     'django.contrib.auth',
