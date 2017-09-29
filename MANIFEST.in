@@ -1,0 +1,11 @@
+include requirements.txt
+include README.md
+include LICENSE
+
+global-exclude __pycache__
+global-exclude *.pyc
+global-exclude *.pyo
+
+recursive-include rest_framework_swagger/bin *
+recursive-include rest_framework_swagger/client *
+recursive-include rest_framework_swagger/habitat *

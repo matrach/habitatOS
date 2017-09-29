@@ -104,6 +104,10 @@ Database
 Development
 ===========
 
+API Documentation
+-----------------
+- http://localhost:8000/api/
+
 CI/CD
 -----
 .. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master

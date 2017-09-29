@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    window.onbeforeunload = function () {
+        // Prevent caching of this page.
+    }
+    </script>
+
+
+    <script>
+        // | - Bitwise OR - Returns a one in each bit position for which the corresponding bits of either or both operands are ones.
+        TIMESTAMP_NOW = 1506515436;
+        ADJUSTMENT = 1520674461;
+        TIMESTAMP_FIRST_STEP = 14159025;
+        SECONDS_LENGTH = 0.9843529666671;
+        SECOND = 1000;
+        MINUTE = 60;
+        HOUR = 60 * MINUTE;
+        DAY = 24 * HOUR;
+        MONTH = 30 * DAY;
+        YEAR = 12 * MONTH;
+
+
+        function LST(timeShift) {
+            var now = new Date();
+            var s = (now / SECOND + ADJUSTMENT - TIMESTAMP_NOW) / SECONDS_LENGTH - timeShift;
+
+            year = (s / YEAR) | 0;
+            s -= YEAR * (timeShift > 0 ? year : year++);
+
+            D = (s / MONTH) | 0;
+            s -= MONTH * (timeShift > 0 ? D : D++);
+            month = hexToDecimal(D);
+
+            C = (s / DAY) | 0;
+            s -= DAY * (timeShift > 0 ? C : C++);
+            day = hexToDecimal(C);
+
+            H = (s / HOUR) | 0;
+            s -= HOUR * H;
+            hour = hexToDecimal(H);
+
+            M = (s / MINUTE) | 0;
+            s -= MINUTE * M;
+            minute = hexToDecimal(M);
+
+            second = hexToDecimal((s / 1) | 0);
+
+            return {
+                "year": year,
+                "month": month,
+                "day": day,
+                "hour": hour,
+                "minute": minute,
+                "second": second,
+                "date": `${year}-${month}-${day}`,
+                "time": `${hour}:${minute}:${second}`,
+                "datetime": `${year}-${month}-${day}&nbsp;&nabla;&nbsp;${hour}:${minute}:${second}`,
+                "name": getMonthName(D),
+                "separator": '&nabla;'
+            }
+        }
+
+        function hexToDecimal(n) {
+            return (n < 0xA ? '0' + n : n);
+        }
+
+        function getMonthName(n) {
+            switch (n) {
+                case 1:
+                    return ('Armstrong');
+                case 2:
+                    return ('Aldrin');
+                case 3:
+                    return ('Conrad');
+                case 4:
+                    return ('Bean');
+                case 5:
+                    return ('Shepard');
+                case 6:
+                    return ('Mitchell');
+                case 7:
+                    return ('Scott');
+                case 8:
+                    return ('Irwin');
+                case 9:
+                    return ('Young');
+                case 10:
+                    return ('Duke');
+                case 11:
+                    return ('Cernan');
+                case 12:
+                    return ('Schmitt');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<script>
+    function DisplayLST(){
+        document.getElementById('displayLST').innerHTML = LST(0).datetime;
+        setTimeout("DisplayLST()", 1000);
+    }
+    window.onload = DisplayLST;
+</script>
+<div id="displayLST"></div>
+</body>
+</html>

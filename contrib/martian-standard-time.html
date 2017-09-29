@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+Mars Sol Date: <span id="msd"></span>
+<br />
+Coordinated Mars Time: <span id="mtc"></span>
+
+
+<h2>Mars Sol Date.</h2>
+<p>The equivalent of the Julian Date for Mars is the Mars Sol Date.</p>
+<p>At midnight on the 6th January 2000 (&Delta;t<sub>J2000</sub> = 4.5) it was midnight at the Martian prime meridian, so our starting point for Mars Sol Date is &Delta;t<sub>J2000</sub> &minus; 4.5.</p>
+<p>The length of a Martian day and Earth (Julian) day differ by a ratio of 1.027491252 so we divide by that.</p>
+<p>By convention, to keep the MSD positive going back to midday December 29th 1873, we add 44,796.</p>
+<p>There is a slight adjustment as the midnights weren't perfectly aligned. Allison, M., and M. McEwen 2000 has &minus;0.00072 but the Mars24 site gives a more up-to-date &minus;0.00096.</p>
+<p>MSD = ([(&Delta;t<sub>J2000</sub> &minus; 4.5) / 1.027491252] &plus; 44,796.0 &minus; 0.00096)</p>
+
+
+<h2>Coordinated Mars Time</h2>
+<p>MTC is like UTC but for Mars. Because it is just a mean time, it can be calculated directly from the Mars Sol Date as follows:</p>
+<p>MTC = (24 h &times; MSD) mod 24</p>
+
+
+<h2>Credits</h2>
+<p>Based on http://jtauber.github.io/mars-clock/</p>
+<p>Formulae from Allison, M., and M. McEwen 2000. <a href="http://pubs.giss.nasa.gov/abs/al05000n.html">A post-Pathfinder evaluation of aerocentric solar coordinates with improved timing recipes for Mars seasonal/diurnal climate studies.</a> <i>Planet. Space Sci.</i> <b>48</b>, 215-235. and <a href="http://www.giss.nasa.gov/tools/mars24/help/algorithm.html">Mars24 Algorithm and Worked Examples</a></p>
+</body>
+
+<script>
+    function h_to_hms(h) {
+        var x = h * 3600;
+        var hh = Math.floor(x / 3600);
+        if (hh < 10) hh = "0" + hh;
+        var y = x % 3600;
+        var mm = Math.floor(y / 60);
+        if (mm < 10) mm = "0" + mm;
+        var ss = Math.round(y % 60);
+        if (ss < 10) ss = "0" + ss;
+        return hh + ":" + mm + ":" + ss;
+    }
+
+    function add_commas(n) {
+        n += "";
+        var x = n.split(".");
+        var x1 = x[0];
+        var x2 = x.length > 1 ? "." + x[1] : "";
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, "$1" + "," + "$2");
+        }
+        return x1 + x2;
+    }
+
+    function update() {
+        // Difference between TAI and UTC. This value should be
+        // updated each time the IERS announces a leap second.
+        const tai_offset = 37;
+
+        let now = new Date().getTime();
+        let jd_ut = 2440587.5 + (now / 8.64E7);
+        let jd_tt = jd_ut + (tai_offset + 32.184) / 86400;
+        let j2000 = jd_tt - 2451545.0;
+        let msd = (((j2000 - 4.5) / 1.027491252) + 44796.0 - 0.00096);
+        let mtc = (24 * msd) % 24;
+
+        document.getElementById('msd').innerHTML = add_commas(msd.toFixed(5));
+        document.getElementById('mtc').innerHTML = h_to_hms(mtc);
+    }
+
+    update();
+    setInterval(update, 10);
+</script>
+
+</html>

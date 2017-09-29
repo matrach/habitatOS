@@ -92,7 +92,7 @@ class ZWaveSensor(HabitatModel, MissionDateTime):
         return f'[{self.date} {self.time}] (device: {self.device}) {self.type}: {self.value} {self.unit}'
 
     class Meta:
-        verbose_name = _('ZWave Sensor Measurement')
+        verbose_name = _('Data')
         verbose_name_plural = _('Zwave Sensors')
 
     @staticmethod

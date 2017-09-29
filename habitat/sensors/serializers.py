@@ -3,5 +3,7 @@ from habitat.sensors.models import ZWaveSensor
 
 
 class ZWaveSensorSerializer(serializers.HyperlinkedModelSerializer):
+
     class Meta:
         model = ZWaveSensor
+        fields = '__all__'

@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'grappelli',
     'import_export',
     'rest_framework',
+    'rest_framework_swagger',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -88,7 +89,7 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'tmp', 'HabitatOS-database.sqlite3'),
     }
 }
 
@@ -192,12 +193,12 @@ REST_FRAMEWORK = {
     ],
 }
 
-OAUTH2_PROVIDER = {
-    'SCOPES': {
-        '/sensor': 'Access to sensors data',
-    },
+SWAGGER_SETTINGS = {
+    'DOC_EXPANSION': 'list',
+    'OPERATIONS_SORTER': 'alpha',
+    'api_version': '1.0',
 }
 
 HABITATOS = {
-    'TIME_ZONE': 'habitat.timezone.LunarStandardTime',
+    'TIME_ZONE': 'habitat.timezone.MartianStandardTime',
 }

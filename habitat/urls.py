@@ -4,7 +4,8 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
-from rest_framework.documentation import include_docs_urls
+from rest_framework.schemas import get_schema_view
+from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
 
 
 urlpatterns = [
@@ -20,7 +21,7 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [
     url(r'^api/v1/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/v1/', include_docs_urls(title='HabitatOS API')),
+    url(r'^api/v1/', get_schema_view(title='HabitatOS API v1', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer])),
     url(r'^api/$', RedirectView.as_view(permanent=False, url='/api/v1/')),
 ]
 

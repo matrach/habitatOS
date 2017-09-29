@@ -1,8 +1,15 @@
 import datetime
+from django.utils.translation import ugettext_lazy as _
 
 
 class LunarStandardTime:
     NAME = 'Lunar Standard Time'
+    DATE_VERBOSE_NAME = _('Lunar Date')
+    DATE_HELP_TEXT = _('example: 50-09-12')
+    TIME_VERBOSE_NAME = _('Coordinated Lunar Time')
+    TIME_HELP_TEXT = _('example: 16:04:57')
+    DATETIME_VERBOSE_NAME = _('Lunar Standard Time')
+    DATETIME_HELP_TEXT = _('example: 50-09-03 ∇ 09:51:25')
 
     MINUTE = 60
     HOUR = 60 * MINUTE

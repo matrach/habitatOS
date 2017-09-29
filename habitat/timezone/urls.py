@@ -4,4 +4,5 @@ from habitat.timezone import views
 
 urlpatterns = [
     url(r'lunar-standard-time/', views.LunarStandardTimeAPI.as_view(), name='lunar-standard-time'),
+    url(r'martian-standard-time/', views.MartianStandardTimeAPI.as_view(), name='martian-standard-time'),
 ]
