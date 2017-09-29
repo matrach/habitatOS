@@ -3,8 +3,8 @@ from habitat.tests import Test
 
 class BuildingTest(Test):
     fixtures = [
-        'module.json',
-        'storage.json',
+        'building.module.json',
+        'building.storage.json',
     ]
 
     assert_http_200 = [

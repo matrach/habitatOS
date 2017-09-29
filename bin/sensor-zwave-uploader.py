@@ -4,17 +4,17 @@ import datetime
 import sqlite3
 import sys
 import logging
+import warnings
+from habitatos_client import HabitatOSBasicAuth as HabitatOS
+
+
+warnings.warn('Push package to PyPI')
+sys.path.append('..')
+
 
 logging.basicConfig(
     level=logging.INFO,
-    format='[%(asctime).19s] %(levelname)s %(message)s',
-)
-
-import warnings
-warnings.warn('Push package to PyPI')
-sys.path.append('..')
-from habitatos_client import HabitatOSBasicAuth as HabitatOS
-
+    format='[%(asctime).19s] %(levelname)s %(message)s')
 
 habitatos = HabitatOS(
     url='http://localhost:8000',

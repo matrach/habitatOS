@@ -9,3 +9,4 @@ class ModuleAdmin(HabitatAdmin):
     list_filter = ['status', 'hazard', 'plan', 'capacity']
     list_editable = ['status', 'hazard']
     search_fields = ['name']
+    ordering = ['name']

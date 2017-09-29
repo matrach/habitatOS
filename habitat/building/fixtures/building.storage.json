@@ -1,1 +1,32 @@
-[]
+[
+{
+  "model": "building.storage",
+  "pk": 1,
+  "fields": {
+    "created": "2017-09-29T09:43:05.644Z",
+    "modified": "2017-09-29T09:43:05.644Z",
+    "location": 1,
+    "name": "Rack 1"
+  }
+},
+{
+  "model": "building.storage",
+  "pk": 2,
+  "fields": {
+    "created": "2017-09-29T09:43:19.500Z",
+    "modified": "2017-09-29T09:43:19.500Z",
+    "location": 2,
+    "name": "Food Storage"
+  }
+},
+{
+  "model": "building.storage",
+  "pk": 3,
+  "fields": {
+    "created": "2017-09-29T09:43:32.555Z",
+    "modified": "2017-09-29T09:43:32.555Z",
+    "location": 3,
+    "name": "Chemical Waste Storage"
+  }
+}
+]

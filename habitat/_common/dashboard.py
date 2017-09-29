@@ -1,4 +1,3 @@
-from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 from grappelli.dashboard import Dashboard
 from grappelli.dashboard import modules
@@ -88,7 +87,6 @@ class IndexDashboard(Dashboard):
                 collapsible=True,
                 models=['oauth2_provider.models.*'],
                 css_classes=['grp-open']))
-
 
         self.children.append(modules.LinkList(
             title=_('Shortcuts'),

@@ -28,4 +28,3 @@ urlpatterns += [
     url(r'^grappelli/', include('grappelli.urls'), name='grappelli'),
     url(r'^', admin.site.urls, name='admin'),
 ]
-

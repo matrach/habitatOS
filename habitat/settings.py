@@ -21,10 +21,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
+    'habitatos.space',
     'test.habitatos.space',
-    'le-1.habitatos.space',
-    'le1.habitatos.space',
-    'icares-1.habitatos.space',
+    'lunex1.habitatos.space',
     'icares1.habitatos.space',
 ]
 
@@ -162,10 +161,10 @@ if os.path.exists('/tmp/memcached.sock'):
                 'tcp_keepalive': True,
 
                 # Timeout settings
-                'connect_timeout': 2000, # ms
-                'send_timeout': 750 * 1000, # us
-                'receive_timeout': 750 * 1000, # us
-                '_poll_timeout': 2000, # ms
+                'connect_timeout': 2000,  # ms
+                'send_timeout': 750*1000,  # us
+                'receive_timeout': 750*1000,  # us
+                '_poll_timeout': 2000,  # ms
 
                 # Better failover
                 'ketama': True,

@@ -16,6 +16,5 @@ class Storage(HabitatModel):
         return f'{self.location} -> {self.name}'
 
     class Meta:
-        ordering = ['name']
         verbose_name = _('Storage')
         verbose_name_plural = _('Storage')

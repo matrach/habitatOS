@@ -36,4 +36,3 @@ class HabitatOSOAuth2:
 
     def post(self, path='/', data={}, headers={}):
         return self._request('POST', path=path, data=data, headers={})
-

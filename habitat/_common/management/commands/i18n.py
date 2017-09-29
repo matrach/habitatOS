@@ -5,6 +5,7 @@ from django.core.management import call_command
 
 
 PROJECT_NAME = settings.ROOT_URLCONF.split('.')[0]
+TRANSIFEX_USERNAME = 'astrotech'
 
 
 class Command(base.BaseCommand):
@@ -20,10 +21,10 @@ class Command(base.BaseCommand):
                 locale = os.path.join(path, 'locale')
 
                 if os.path.isdir(locale):
-                    #call_command('')
+                    # call_command('')
                     self.stdout.write(f'cd {path} && django-admin makemessages -l pl -l en && cd -')
 
         self.stdout.write('tx push -s')
-        self.stdout.write(f'open https://www.transifex.com/astrotech/{PROJECT_NAME}/translate/#pl')
+        self.stdout.write(f'open https://www.transifex.com/{TRANSIFEX_USERNAME}/{PROJECT_NAME}/translate/#pl')
         self.stdout.write('tx pull')
         self.stdout.write('python manage.py compilemessages')

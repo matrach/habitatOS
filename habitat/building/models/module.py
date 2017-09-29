@@ -65,6 +65,5 @@ class Module(HabitatModel):
         return f'{self.name}'
 
     class Meta:
-        ordering = ['name']
         verbose_name = _('Module')
         verbose_name_plural = _('Modules')

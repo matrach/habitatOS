@@ -5,6 +5,7 @@ from habitat.building.models import Storage
 
 @admin.register(Storage)
 class StorageAdmin(HabitatAdmin):
-    list_display = ['location']
+    list_display = ['location', 'name']
     list_filter = ['location']
     search_fields = ['name']
+    ordering = ['name']
