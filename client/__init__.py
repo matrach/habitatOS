@@ -3,22 +3,20 @@ import http.client
 import logging
 
 
-OAUTH2_CLIENT_ID = 'EWpl5dLj4rpRFQZR6EUB9pdjdoKVOlaTHBP5SJ72'
-OAUTH2_CLIENT_SECRET = 'mQVgEwTVMDa8xBgjtBsdaWcUzfDniV3hc36sX2p4hGTYOGkm6wbWTiZjfCUn7w0kmj9CHigewc60WkjPLgU4CSXPfwXpypAFIkx6CKlEzOATL3MnNtao6RXIsRjo9rjR'
-
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-log = logging.getLogger('habitatos_client')
+log = logging.getLogger('habitatos-client')
 
 
 class HabitatOSAbstractBaseClass:
 
-    def __init__(self, url, username, password, debug=False):
+    def __init__(self, url, username, password, config=None, debug=False):
         self.url = url
         self.username = username
         self.password = password
         self.debug = debug
         self._connection = None
         self._auth = None
+        self.config = config
 
     def _authenticate(self):
         raise NotImplementedError

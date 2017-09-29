@@ -3,23 +3,14 @@
 import datetime
 import logging
 import sqlite3
-import sys
-import warnings
-
-from habitatos_sdk import HabitatOSBasicAuth as HabitatOS
-
-warnings.warn('Push package to PyPI')
-sys.path.append('..')
+from HabitatOS.client import HabitatOSBasicAuth
 
 
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime).19s] %(levelname)s %(message)s')
 
-habitatos = HabitatOS(
-    url='http://localhost:8000',
-    username='_api.sensors.zwave',
-    password='HabitatOS_API123')
+habitatos = HabitatOSBasicAuth(config='config.json')
 
 
 with sqlite3.connect('../sensors-data.sqlite3') as db:
