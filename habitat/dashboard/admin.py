@@ -3,7 +3,7 @@ from grappelli.dashboard import Dashboard
 from grappelli.dashboard import modules
 
 
-class IndexDashboard(Dashboard):
+class AdminDashboard(Dashboard):
 
     def init_with_context(self, context):
 

@@ -33,7 +33,6 @@ class UserView(views.APIView):
         return JsonResponse(status=status.HTTP_200_OK, data=sensors, safe=False)
 
 
-
 class ZWaveSensorAPI(views.APIView):
     required_scopes = ['/sensor']
 

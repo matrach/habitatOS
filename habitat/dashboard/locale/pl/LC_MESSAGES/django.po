@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-27 15:40+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: .\dashboard.py:13
+msgid "Reporting"
+msgstr ""
+
+#: .\dashboard.py:20
+msgid "Experiments"
+msgstr ""
+
+#: .\dashboard.py:27
+msgid "Extra-Vehicular Activity"
+msgstr ""
+
+#: .\dashboard.py:34
+msgid "Laboratory"
+msgstr ""
+
+#: .\dashboard.py:41
+msgid "Health"
+msgstr ""
+
+#: .\dashboard.py:49
+msgid "Water"
+msgstr ""
+
+#: .\dashboard.py:56
+msgid "Communication"
+msgstr ""
+
+#: .\dashboard.py:63
+msgid "Food"
+msgstr ""
+
+#: .\dashboard.py:70
+msgid "Systems"
+msgstr ""
+
+#: .\dashboard.py:79
+msgid "Administration"
+msgstr ""
+
+#: .\dashboard.py:86
+msgid "API OAuth"
+msgstr ""
+
+#: .\dashboard.py:94
+msgid "Shortcuts"
+msgstr ""
+
+#: .\dashboard.py:98
+msgid "Subjective Time Perception"
+msgstr ""
+
+#: .\dashboard.py:99
+msgid "Lunar Clock"
+msgstr ""
+
+#: .\dashboard.py:100
+msgid "Schedule"
+msgstr ""
+
+#: .\dashboard.py:104
+msgid "Sensors"
+msgstr ""
+
+#: .\dashboard.py:111
+msgid "Building"
+msgstr ""
+
+#: .\models\base.py:7
+msgid "Add Datetime"
+msgstr ""
+
+#: .\models\base.py:12
+msgid "Modified Datetime"
+msgstr ""
+
+#: .\models\date.py:12
+msgid "Mission Date"
+msgstr ""
+
+#: .\models\date.py:23
+msgid "Mission Time"
+msgstr ""
+
+#: .\models\date.py:37
+msgid "Datetime"
+msgstr ""
+
+#: .\models\user.py:7 .\models\user.py:18
+msgid "Astronaut"
+msgstr ""
+
+#: .\templates\admin\change_list_import_export.html:8
+msgid "Export"
+msgstr ""
+
+#: .\templates\admin\change_list_import_export.html:9
+msgid "Import"
+msgstr ""

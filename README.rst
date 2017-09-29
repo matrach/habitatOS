@@ -139,3 +139,4 @@ Authorization
 Timezone
 --------
 - http://localhost:8000/api/v1/timezone/lunar-standard-time/
+- http://localhost:8000/api/v1/timezone/martian-standard-time/

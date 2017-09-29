@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class GreenhouseConfig(AppConfig):
+class BiolabConfig(AppConfig):
     name = 'biolab'

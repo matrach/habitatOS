@@ -11,6 +11,7 @@ from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
 urlpatterns = [
     url(r'^api/v1/building/', include('habitat.building.urls', namespace='building')),
     url(r'^api/v1/communication/', include('habitat.communication.urls', namespace='communication')),
+    url(r'^api/v1/dashboard/', include('habitat.dashboard.urls', namespace='dashboard')),
     url(r'^api/v1/notification/', include('habitat.notification.urls', namespace='notification')),
     url(r'^api/v1/sensor/', include('habitat.sensors.urls', namespace='sensor')),
     url(r'^api/v1/timezone/', include('habitat.timezone.urls', namespace='timezone')),

@@ -19,12 +19,11 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - pep8 habitat
   - pep8 bin
   - pep8 client --ignore=E402
+  - pep8 habitat
   - python manage.py check
-  - python manage.py migrate
-  - python manage.py test --verbosity 2
+  - python manage.py test habitat.tests --verbosity=2
 
 after_success:
   - sonar-scanner --debug

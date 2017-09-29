@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'habitat.biolab',
     'habitat.building',
     'habitat.communication',
+    'habitat.dashboard',
     'habitat.extravehicular',
     'habitat.food',
     'habitat.health',
@@ -133,7 +134,7 @@ admin.site.index_title = _('Dashboard')
 admin.site.site_title = _('HabitatOS')
 
 GRAPPELLI_ADMIN_TITLE = _('HabitatOS')
-GRAPPELLI_INDEX_DASHBOARD = 'habitat._common.dashboard.IndexDashboard'
+GRAPPELLI_INDEX_DASHBOARD = 'habitat.dashboard.admin.AdminDashboard'
 GRAPPELLI_AUTOCOMPLETE_SEARCH_FIELDS = {
     'auth': {
         'user': ['username__icontains']
