@@ -21,6 +21,8 @@ class MartianStandardTime:
 
     MILISECOND = 1000
 
+    # Near Coincident Earth and Mars Times
+    # An easy-to-remember benchmark for calibrating clocks is a date and time at which the "standard time" for both Mars and Earth was almost the same. When the time on Earth was 00:00:00 on Jan. 6, 2000 (UTC), it was just 21 Mars-seconds away from also being mean midnight at the Mars prime meridian.
     # The equivalent of the Julian Date for Mars is the Mars Sol Date.
     # At midnight on the 6th January 2000 (ΔtJ2000 = 4.5) it was midnight at the Martian prime meridian, so our starting point for Mars Sol Date is ΔtJ2000 − 4.5.
     J2000_MIDNIGHT_SYNCHRONIZATION = 4.5
