@@ -6,6 +6,7 @@ General
 =======
 #. DB Migration Squash
 #. Docker
+#. Add select_related() and/or prefetch_related()  # probably should use select_related()
 
 Experiments
 ===========
