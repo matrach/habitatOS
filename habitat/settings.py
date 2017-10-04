@@ -27,6 +27,10 @@ ALLOWED_HOSTS = [
     'icares1.habitatos.space',
 ]
 
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+
 INSTALLED_APPS = [
     'grappelli.dashboard',
     'grappelli',
@@ -125,6 +129,7 @@ en_formats.TIME_FORMAT = 'H:i'
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '_static')
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
