@@ -13,10 +13,10 @@ class AdminDashboard(Dashboard):
             column=1,
             collapsible=False,
             models=[
+                'habitat.reporting.models.daily.Daily',
                 'habitat.reporting.models.repair.Repair',
                 'habitat.reporting.models.incident.Incident',
                 'habitat.reporting.models.waste.Waste',
-                'habitat.reporting.models.daily.Daily',
                 'habitat.water.models.drinking.Drinking',
                 'habitat.water.models.green.Green',
                 'habitat.water.models.technical.Technical',
@@ -69,4 +69,3 @@ class AdminDashboard(Dashboard):
                 collapsible=True,
                 models=['django.contrib.*'],
                 css_classes=['grp-closed']))
-

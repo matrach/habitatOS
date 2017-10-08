@@ -7,3 +7,8 @@ from habitat.reporting.models import Daily
 class DailyAdmin(HabitatAdmin):
     list_display = ['date', 'reporter']
     list_filter = ['reporter', 'created']
+    exclude = ['reporter', 'time']
+
+    def save_model(self, request, obj, form, change):
+        obj.reporter = request.user
+        super().save_model(request, obj, form, change)
