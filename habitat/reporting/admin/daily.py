@@ -5,5 +5,5 @@ from habitat.reporting.models import Daily
 
 @admin.register(Daily)
 class DailyAdmin(HabitatAdmin):
-    list_display = ['date', 'astronaut']
-    list_filter = ['astronaut', 'created']
+    list_display = ['date', 'reporter']
+    list_filter = ['reporter', 'created']

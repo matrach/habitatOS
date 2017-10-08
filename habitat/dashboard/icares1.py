@@ -16,6 +16,7 @@ class AdminDashboard(Dashboard):
                 'habitat.reporting.models.repair.Repair',
                 'habitat.reporting.models.incident.Incident',
                 'habitat.reporting.models.waste.Waste',
+                'habitat.reporting.models.daily.Daily',
                 'habitat.extravehicular.models.activity.Activity']))
 
 
