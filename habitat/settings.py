@@ -140,7 +140,7 @@ admin.site.index_title = _('Dashboard')
 admin.site.site_title = _('HabitatOS')
 
 GRAPPELLI_ADMIN_TITLE = _('HabitatOS')
-GRAPPELLI_INDEX_DASHBOARD = 'habitat.dashboard.admin.AdminDashboard'
+GRAPPELLI_INDEX_DASHBOARD = 'habitat.dashboard.icares1.AdminDashboard'
 GRAPPELLI_AUTOCOMPLETE_SEARCH_FIELDS = {
     'auth': {
         'user': ['username__icontains']

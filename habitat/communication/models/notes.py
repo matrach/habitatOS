@@ -2,9 +2,10 @@ from django.contrib import admin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
+from habitat._common.models import HabitatModel
 
 
-class PersonalNote(models.Model):
+class PersonalNote(HabitatModel):
     created_date = models.DateTimeField(verbose_name=_('Created date'), auto_now_add=True)
     modified_date = models.DateTimeField(verbose_name=_('Modified date'), auto_now=True)
     publish_date = models.DateTimeField(verbose_name=_('Publish Date'), default=timezone.now)
