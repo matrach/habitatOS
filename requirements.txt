@@ -4,7 +4,7 @@ transifex-client
 
 
 ## HabitatOS.server
-django==1.11.5
+django==1.11.6
 django-grappelli==2.10.1
 django-devutils
 django-import-export

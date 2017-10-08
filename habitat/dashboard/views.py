@@ -13,3 +13,7 @@ class MissionClockView(TemplateView):
             'time': timezone.time,
             'timezone': timezone.NAME,
         }
+
+
+class MissionScheduleView(TemplateView):
+    template_name = 'dashboard/mission-schedule.html'

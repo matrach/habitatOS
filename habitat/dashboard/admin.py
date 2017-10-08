@@ -93,9 +93,8 @@ class AdminDashboard(Dashboard):
             collapsible=False,
             column=3,
             children=[
-                {'title': _('Subjective Time Perception'), 'url': 'http://stpa.astrotech.io'},
-                {'title': _('Lunar Clock'), 'url': 'http://lunarclock.org/'},
-                {'title': _('Schedule'), 'url': 'http://mariusz-slonina.pl/le-1-control/'},
+                {'title': _('Subjective Time Perception'), 'url': 'http://time.astrotech.io'},
+                {'title': _('Martian Clock Clock'), 'url': 'http://icares1.habitatos.space/api/v1/dashboard/schedule/'},
             ]))
 
         self.children.append(modules.ModelList(
