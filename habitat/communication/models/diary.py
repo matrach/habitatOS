@@ -54,7 +54,7 @@ class DiaryEntry(HabitatModel, MissionDateTime):
 
     class Meta:
         verbose_name = _('Diary Entry')
-        verbose_name_plural = _('Diary Entries')
+        verbose_name_plural = _('Personal Diary')
 
     class Admin(admin.ModelAdmin):
         inlines = [FigureInline]

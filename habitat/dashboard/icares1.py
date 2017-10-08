@@ -17,6 +17,10 @@ class AdminDashboard(Dashboard):
                 'habitat.reporting.models.incident.Incident',
                 'habitat.reporting.models.waste.Waste',
                 'habitat.reporting.models.daily.Daily',
+                'habitat.water.models.drinking.Drinking',
+                'habitat.water.models.green.Green',
+                'habitat.water.models.technical.Technical',
+                'habitat.communication.models.diary.DiaryEntry',
                 'habitat.extravehicular.models.activity.Activity']))
 
         self.children.append(modules.ModelList(
@@ -39,19 +43,23 @@ class AdminDashboard(Dashboard):
                 'habitat.health.models.weight.Weight']))
 
         # Column 2
-        self.children.append(modules.ModelList(
-            title=_('Water'),
-            column=2,
+
+        self.children.append(modules.LinkList(
+            title=_('Shortcuts'),
             collapsible=False,
-            models=[
-                'habitat.water.*']))
+            column=2,
+            children=[
+                {'title': _('Schedule'), 'url': '/api/v1/dashboard/schedule/'},
+                {'title': _('Subjective Time Perception'), 'url': 'http://time.astrotech.io'},
+                # {'title': _('Martian Clock Clock'), 'url': '/api/v1/dashboard/clock/'},
+            ]))
 
         self.children.append(modules.ModelList(
-            title=_('Communication'),
+            title=_('Sensors'),
             column=2,
             collapsible=False,
             models=[
-                'habitat.communication.models.diary.DiaryEntry']))
+                'habitat.sensors.models.zwave_sensor.ZWaveSensor']))
 
         # Column 3
         if context['user'].has_perm('admin.add_user'):
@@ -62,19 +70,3 @@ class AdminDashboard(Dashboard):
                 models=['django.contrib.*'],
                 css_classes=['grp-closed']))
 
-        self.children.append(modules.LinkList(
-            title=_('Shortcuts'),
-            collapsible=False,
-            column=3,
-            children=[
-                {'title': _('Schedule'), 'url': '/api/v1/dashboard/schedule/'},
-                {'title': _('Subjective Time Perception'), 'url': 'http://time.astrotech.io'},
-                # {'title': _('Martian Clock Clock'), 'url': '/api/v1/dashboard/clock/'},
-            ]))
-
-        self.children.append(modules.ModelList(
-            title=_('Sensors'),
-            column=3,
-            collapsible=False,
-            models=[
-                'habitat.sensors.models.zwave_sensor.ZWaveSensor']))
