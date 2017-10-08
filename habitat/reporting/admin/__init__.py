@@ -1,4 +1,5 @@
 from .communication import *
+from .daily import *
 from .incident import *
 from .medical import *
 from .mood import *
