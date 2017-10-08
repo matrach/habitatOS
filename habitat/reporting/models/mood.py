@@ -24,13 +24,13 @@ class Mood(HabitatModel, MissionDateTime, ReporterAstronaut):
     stress_remarks = models.TextField(verbose_name=_('Stress Remarks'), null=True, blank=True,default=None)
 
     mood = models.CharField(verbose_name=_('Mood'), max_length=30, choices=MOOD_CHOICES, default=None)
-    mood_remarks = models.TextField(verbose_name=_('Mood Remarks'), null=True, blank=True,default=None)
+    mood_remarks = models.TextField(verbose_name=_('Mood Remarks'), null=True, blank=True, default=None)
 
     day_quality = models.CharField(verbose_name=_('Day Quality'), max_length=30, choices=QUALITY_CHOICES, default=None)
-    day_quality_remarks = models.TextField(verbose_name=_('Day Quality Remarks'), null=True, blank=True,default=None)
+    day_quality_remarks = models.TextField(verbose_name=_('Day Quality Remarks'), null=True, blank=True, default=None)
 
     productivity = models.CharField(verbose_name=_('Productivity'), max_length=30, choices=MOOD_CHOICES, default=None)
-    productivity_remarks = models.TextField(verbose_name=_('Productivity Remarks'), null=True, blank=True,default=None)
+    productivity_remarks = models.TextField(verbose_name=_('Productivity Remarks'), null=True, blank=True, default=None)
 
     def __str__(self):
         return f'[{self.date}] {self.reporter}'

@@ -19,7 +19,6 @@ class AdminDashboard(Dashboard):
                 'habitat.reporting.models.daily.Daily',
                 'habitat.extravehicular.models.activity.Activity']))
 
-
         self.children.append(modules.ModelList(
             title=_('Questionaries'),
             column=1,
@@ -54,7 +53,6 @@ class AdminDashboard(Dashboard):
             models=[
                 'habitat.communication.models.diary.DiaryEntry']))
 
-
         # Column 3
         self.children.append(modules.LinkList(
             title=_('Shortcuts'),
@@ -80,4 +78,3 @@ class AdminDashboard(Dashboard):
             collapsible=False,
             models=[
                 'habitat.sensors.models.zwave_sensor.ZWaveSensor']))
-
