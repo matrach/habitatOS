@@ -135,8 +135,8 @@ class Communication(HabitatModel, MissionDateTime, ReporterAstronaut):
         verbose_name=_('You can add any comment or note (e.g. if something important happened, how do you feel etc.)'))
 
     def __str__(self):
-        return f'[{self.modified:%Y-%m-%d %H:%M}] {self.reporter}'
+        return f'[{self.date}] {self.reporter}'
 
     class Meta:
-        verbose_name = _('Questionnaire')
-        verbose_name_plural = _('Communication')
+        verbose_name = _('Psychological')
+        verbose_name_plural = _('Psychological')

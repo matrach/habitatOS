@@ -54,6 +54,14 @@ class AdminDashboard(Dashboard):
                 'habitat.communication.models.diary.DiaryEntry']))
 
         # Column 3
+        if context['user'].has_perm('admin.add_user'):
+            self.children.append(modules.ModelList(
+                title=_('Administration'),
+                column=3,
+                collapsible=True,
+                models=['django.contrib.*'],
+                css_classes=['grp-closed']))
+
         self.children.append(modules.LinkList(
             title=_('Shortcuts'),
             collapsible=False,
@@ -63,14 +71,6 @@ class AdminDashboard(Dashboard):
                 {'title': _('Subjective Time Perception'), 'url': 'http://time.astrotech.io'},
                 # {'title': _('Martian Clock Clock'), 'url': '/api/v1/dashboard/clock/'},
             ]))
-
-        if context['user'].has_perm('admin.add_user'):
-            self.children.append(modules.ModelList(
-                title=_('Administration'),
-                column=3,
-                collapsible=True,
-                models=['django.contrib.*'],
-                css_classes=['grp-open']))
 
         self.children.append(modules.ModelList(
             title=_('Sensors'),

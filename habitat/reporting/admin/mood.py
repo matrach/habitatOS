@@ -5,14 +5,9 @@ from habitat.reporting.models import Mood
 
 @admin.register(Mood)
 class MoodAdmin(HabitatAdmin):
-    list_display = ['date', 'reporter', 'stress', 'mood', 'day_quality', 'productivity']
-    list_filter = ['reporter', 'stress', 'mood', 'day_quality', 'productivity']
+    list_display = ['date', 'reporter']
+    list_filter = ['modified', 'reporter']
     exclude = ['reporter', 'created', 'updated']
-    radio_fields = {
-        'stress': admin.HORIZONTAL,
-        'mood': admin.HORIZONTAL,
-        'day_quality': admin.HORIZONTAL,
-        'productivity': admin.HORIZONTAL}
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)

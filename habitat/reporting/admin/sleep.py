@@ -32,7 +32,7 @@ class SleepAdmin(HabitatAdmin):
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
 
-        if request.user.has_perm('reporting.delete_mood'):
+        if request.user.has_perm('reporting.delete_sleep'):
             return queryset
         else:
             return queryset.filter(reporter=request.user)
