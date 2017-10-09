@@ -38,12 +38,12 @@ class MartianStandardTime:
     J2000_MIDNIGHT_ADJUSTMENT = 0.00096
 
     @classmethod
-    def get_time_dict(cls):
+    def get_time_dict(cls, from_datetime=datetime.datetime.now()):
         # Difference between TAI and UTC. This value should be
         # updated each time the IERS announces a leap second.
         tai_offset = 37
 
-        miliseconds = datetime.datetime.now().timestamp() * cls.MILISECOND
+        miliseconds = from_datetime.timestamp() * cls.MILISECOND
 
         jd_ut = 2440587.5 + (miliseconds / 8.64E7)
         jd_tt = jd_ut + (tai_offset + 32.184) / 86400

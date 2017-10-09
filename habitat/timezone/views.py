@@ -1,3 +1,5 @@
+import datetime
+
 from django.http import JsonResponse
 from django.views import generic
 from django.utils.timezone import now
@@ -28,9 +30,21 @@ class MartianStandardTimeAPI(views.APIView):
 class MartianStandardTimeConverterView(generic.TemplateView):
     template_name = 'timezone/martian-standard-time-converter.html'
 
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, *args, **kwargs):
+        if not self.request.GET:
+            return {
+                'utc': now(),
+                'mst': MartianStandardTime()
+            }
 
-        return {
-            'utc': now(),
-            'mst': MartianStandardTime()
-        }
+        if self.request.GET.get('utc-date'):
+            date = self.request.GET['utc-date']
+            time = self.request.GET['utc-time']
+            utc = datetime.datetime.strptime(f'{date} {time}', '%Y-%m-%d %H:%M')
+            mst = MartianStandardTime().get_time_dict(from_datetime=utc)
+
+            return {
+                'result': True,
+                'utc': utc,
+                'mst': mst,
+            }

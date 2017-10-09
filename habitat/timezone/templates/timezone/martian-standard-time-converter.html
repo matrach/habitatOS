@@ -1,20 +1,33 @@
-
+<!--
+<h2>Martian Standard Time to Earth UTC time</h2>
 <form method="GET" action="#">
     <p>
-        <label for="martian-standard-time">Martian Standard Time to Earth UTC time</label>
-        <input id="martian-standard-time" name="martian-standard-time" type="text" value="{{ mst.date }}">
+        <label for="mst">MST: </label>
+        <input id="mst" name="martian-standard-time" type="text" value="{{ mst.date }}">
+    </p>
+
+    <button type="submit">Convert</button>
+</form>
+-->
+
+<h2>Earth UTC time to Martian Standard Time</h2>
+<form method="GET" action="{% url 'timezone:martian-standard-time-converter' %}">
+    <p>
+        <label for="utc-date">UTC Date: </label>
+        <input id="utc-date" name="utc-date" type="date" value="{{ utc|date:'Y-m-d' }}">
+        <br />
+        <label for="utc-time">UTC Time:</label>
+        <input id="utc-time" name="utc-time" type="time" value="{{ utc|date:'H:i' }}">
     </p>
 
     <button type="submit">Convert</button>
 </form>
 
+{% if result %}
+<h2>Converted time</h2>
+<table>
+    <tr><th>Date:</th><td>{{ mst.date }}</td></tr>
+    <tr><th>Time:</th><td>{{ mst.time }}</td></tr>
+</table>
 
-<form method="GET" action="#">
-    <p>
-        <p>Earth UTC time to Martian Standard Time</p>
-        <input name="utc-date" type="date-utc" value="{{ utc|date:'Y-m-d' }} {{ utc|date:'H:i' }}">
-        <input name="utc-time" type="time-utc" value="{{ utc|date:'Y-m-d' }} {{ utc|date:'H:i' }}">
-    </p>
-
-    <button type="submit">Convert</button>
-</form>
+{% endif %}

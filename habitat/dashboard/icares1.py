@@ -56,8 +56,8 @@ class AdminDashboard(Dashboard):
             column=2,
             children=[
                 {'title': _('Schedule'), 'url': '/api/v1/dashboard/schedule/'},
+                {'title': _('Martian Clock Converter'), 'url': '/api/v1/timezone/martian-standard-time/converter/'},
                 {'title': _('Subjective Time Perception'), 'url': 'http://time.astrotech.io'},
-                # {'title': _('Martian Clock Clock'), 'url': '/api/v1/dashboard/clock/'},
             ]))
 
         self.children.append(modules.ModelList(
