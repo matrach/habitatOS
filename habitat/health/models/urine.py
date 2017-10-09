@@ -42,7 +42,7 @@ class Urine(HabitatModel, MissionDateTime, ReporterAstronaut):
         (TURBIDITY_TURBID, _('Turbid')),
     ]
 
-    volume = models.PositiveIntegerField(verbose_name=_('Volume'), help_text=_('ml'), default=None, validators=[MinValueValidator(0), MaxValueValidator(1700)])
+    volume = models.PositiveIntegerField(verbose_name=_('Volume'), help_text=_('ml'), default=None, validators=[MinValueValidator(0), MaxValueValidator(5000)])
     color = models.CharField(verbose_name=_('Color'), max_length=30, choices=COLOR_CHOICES, default=COLOR_YELLOW)
     turbidity = models.CharField(verbose_name=_('Turbidity'), max_length=30, choices=TURBIDITY_CHOICES, default=TURBIDITY_CLEAR)
     ph = models.DecimalField(verbose_name=_('pH'), max_digits=3, decimal_places=1, null=True, blank=True, default=None, validators=[MinValueValidator(0), MaxValueValidator(12)])
