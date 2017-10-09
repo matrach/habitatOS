@@ -13,7 +13,7 @@ class TechnicalWater(HabitatModel, MissionDateTime, ReporterAstronaut):
     usage_description = models.TextField(verbose_name=_('Usage Description'), null=True, blank=True, default=None)
 
     def __str__(self):
-        return f'[{self.modified:%Y-%m-%d %H:%M}] {self.reporter} {self.volume}l'
+        return f'[{self.date} {self.time}] {self.reporter} {self.volume}l'
 
     class Meta:
         verbose_name = _('Technical Water Usage')

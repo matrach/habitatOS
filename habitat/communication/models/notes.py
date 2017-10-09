@@ -13,7 +13,7 @@ class PersonalNote(HabitatModel):
     content = models.TextField(verbose_name=_('Content'))
 
     def __str__(self):
-        return f'[{self.modified_date:%Y-%m-%d %H:%M}] {self.author} {self.content:.30}'
+        return f'[{self.date} {self.time}] {self.author} {self.content:.30}'
 
     class Meta:
         ordering = ['-modified_date']

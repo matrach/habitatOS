@@ -46,7 +46,7 @@ class DiaryEntry(HabitatModel, MissionDateTime):
         return reverse('communication:diary', args=[self.slug])
 
     def __str__(self):
-        return f'[{self.modified}] ({self.status}) {self.author}: {self.title}'
+        return f'[{self.date} {self.time}] ({self.status}) {self.author}: {self.title}'
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
