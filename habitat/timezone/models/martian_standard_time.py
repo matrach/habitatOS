@@ -13,11 +13,11 @@ Formulae from Allison, M., and M. McEwen 2000. <a href="http://pubs.giss.nasa.go
 class MartianStandardTime:
     NAME = 'Martian Standard Time'
     DATE_VERBOSE_NAME = _('Mars Sol Date')
-    DATE_HELP_TEXT = _('example: 51099.420109')
+    DATE_HELP_TEXT = _('example: 51099.420109, <a href="/api/v1/timezone/martian-standard-time/converter/" target="_blank">use converter</a> to calculate from Earth time')
     TIME_VERBOSE_NAME = _('Coordinated Mars Time')
-    TIME_HELP_TEXT = _('example: 16:04:57')
+    TIME_HELP_TEXT = _('example: 16:04:57, <a href="/api/v1/timezone/martian-standard-time/converter/" target="_blank">use converter</a> to calculate from Earth time')
     DATETIME_VERBOSE_NAME = _('Mars Standard Time')
-    DATETIME_HELP_TEXT = _('example: 51099.420109 16:04:57')
+    DATETIME_HELP_TEXT = _('example: 51099.420109 16:04:57, <a href="/api/v1/timezone/martian-standard-time/converter/" target="_blank">use converter</a> to calculate from Earth time')
 
     MILISECOND = 1000
 

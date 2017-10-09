@@ -21,7 +21,7 @@ class MissionDate(models.Model):
 class MissionTime(models.Model):
     time = models.TimeField(
         verbose_name=_(timezone.TIME_VERBOSE_NAME),
-        help_text=_(timezone.DATE_HELP_TEXT),
+        help_text=_(timezone.TIME_HELP_TEXT),
         default=timezone.time)
 
     class Meta:
