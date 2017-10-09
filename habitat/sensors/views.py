@@ -3,7 +3,6 @@ from django.http import JsonResponse
 from django.views.generic import TemplateView
 from rest_framework import status
 from rest_framework import views
-from rest_framework import viewsets
 import plotly.offline as plt
 import plotly.graph_objs as graph
 from habitat.sensors.models import ZWaveSensor
@@ -27,8 +26,7 @@ class UserView(views.APIView):
             dict(device='c1344062-6', color='#f00', legend='dormitory'),
             dict(device='c1344062-7', color='#f0f', legend='storage'),
             dict(device='c1344062-8', color='#ff0', legend='kitchen'),
-            dict(device='c1344062-9', color='#555', legend='biolab'),
-        ]
+            dict(device='c1344062-9', color='#555', legend='biolab')]
 
         return JsonResponse(status=status.HTTP_200_OK, data=sensors, safe=False)
 
@@ -48,8 +46,7 @@ class ZWaveSensorAPI(views.APIView):
             dict(device='c1344062-6', color='#f00', legend='dormitory'),
             dict(device='c1344062-7', color='#f0f', legend='storage'),
             dict(device='c1344062-8', color='#ff0', legend='kitchen'),
-            dict(device='c1344062-9', color='#555', legend='biolab'),
-        ]
+            dict(device='c1344062-9', color='#555', legend='biolab')]
 
         return JsonResponse(status=status.HTTP_200_OK, data=sensors, safe=False)
 
@@ -118,7 +115,7 @@ class ChartView(TemplateView):
             dict(device='c1344062-6', color='#f00', legend='dormitory'),
             dict(device='c1344062-7', color='#f0f', legend='storage'),
             dict(device='c1344062-8', color='#ff0', legend='kitchen'),
-            dict(device='c1344062-9', color='#555', legend='biolab'),]
+            dict(device='c1344062-9', color='#555', legend='biolab')]
 
     def get_context_data(self):
         figure = graph.Figure(
