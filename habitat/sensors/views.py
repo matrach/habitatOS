@@ -20,14 +20,14 @@ class UserView(views.APIView):
         List of all available sensors configuration
         """
         sensors = [
-            dict(device='c1344062-2', color='#00f', legend='livingroom-outside'),
-            dict(device='c1344062-3', color='#0f0', legend='livingroom-window'),
-            dict(device='c1344062-4', color='#0ff', legend='hydroponics-bottom'),
-            dict(device='c1344062-5', color='#08f', legend='livingroom-table'),
-            dict(device='c1344062-6', color='#f00', legend='bedroom-bed'),
-            dict(device='c1344062-7', color='#f0f', legend='kitchen'),
-            dict(device='c1344062-8', color='#ff0', legend='bedroom-floor'),
-            dict(device='c1344062-9', color='#555', legend='hydroponics-top'),
+            dict(device='c1344062-2', color='#00f', legend='atrium'),
+            dict(device='c1344062-3', color='#0f0', legend='analytic-lab'),
+            dict(device='c1344062-4', color='#0ff', legend='operations'),
+            dict(device='c1344062-5', color='#08f', legend='toilet'),
+            dict(device='c1344062-6', color='#f00', legend='dormitory'),
+            dict(device='c1344062-7', color='#f0f', legend='storage'),
+            dict(device='c1344062-8', color='#ff0', legend='kitchen'),
+            dict(device='c1344062-9', color='#555', legend='biolab'),
         ]
 
         return JsonResponse(status=status.HTTP_200_OK, data=sensors, safe=False)
@@ -41,14 +41,14 @@ class ZWaveSensorAPI(views.APIView):
         List of all available sensors configuration
         """
         sensors = [
-            dict(device='c1344062-2', color='#00f', legend='livingroom-outside'),
-            dict(device='c1344062-3', color='#0f0', legend='livingroom-window'),
-            dict(device='c1344062-4', color='#0ff', legend='hydroponics-bottom'),
-            dict(device='c1344062-5', color='#08f', legend='livingroom-table'),
-            dict(device='c1344062-6', color='#f00', legend='bedroom-bed'),
-            dict(device='c1344062-7', color='#f0f', legend='kitchen'),
-            dict(device='c1344062-8', color='#ff0', legend='bedroom-floor'),
-            dict(device='c1344062-9', color='#555', legend='hydroponics-top'),
+            dict(device='c1344062-2', color='#00f', legend='atrium'),
+            dict(device='c1344062-3', color='#0f0', legend='analytic-lab'),
+            dict(device='c1344062-4', color='#0ff', legend='operations'),
+            dict(device='c1344062-5', color='#08f', legend='toilet'),
+            dict(device='c1344062-6', color='#f00', legend='dormitory'),
+            dict(device='c1344062-7', color='#f0f', legend='storage'),
+            dict(device='c1344062-8', color='#ff0', legend='kitchen'),
+            dict(device='c1344062-9', color='#555', legend='biolab'),
         ]
 
         return JsonResponse(status=status.HTTP_200_OK, data=sensors, safe=False)
@@ -111,14 +111,14 @@ class ChartView(TemplateView):
 
     def get_taces(self):
         return [
-            self.get_trace(device='c1344062-2', color='#00f', legend='hydroponics-outside'),
-            self.get_trace(device='c1344062-3', color='#0f0', legend='livingroom-window'),
-            self.get_trace(device='c1344062-4', color='#0ff', legend='hydroponics-bottom'),
-            self.get_trace(device='c1344062-5', color='#08f', legend='livingroom-table'),
-            self.get_trace(device='c1344062-6', color='#f00', legend='bedroom-bed'),
-            self.get_trace(device='c1344062-7', color='#f0f', legend='kitchen'),
-            self.get_trace(device='c1344062-8', color='#ff0', legend='bedroom-floor'),
-            self.get_trace(device='c1344062-9', color='#555', legend='hydroponics-top')]
+            dict(device='c1344062-2', color='#00f', legend='atrium'),
+            dict(device='c1344062-3', color='#0f0', legend='analytic-lab'),
+            dict(device='c1344062-4', color='#0ff', legend='operations'),
+            dict(device='c1344062-5', color='#08f', legend='toilet'),
+            dict(device='c1344062-6', color='#f00', legend='dormitory'),
+            dict(device='c1344062-7', color='#f0f', legend='storage'),
+            dict(device='c1344062-8', color='#ff0', legend='kitchen'),
+            dict(device='c1344062-9', color='#555', legend='biolab'),]
 
     def get_context_data(self):
         figure = graph.Figure(
