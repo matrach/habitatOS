@@ -36,7 +36,7 @@ class AdminDashboard(Dashboard):
             models=[
                 'habitat.water.models.technical.TechnicalWater',
                 'habitat.water.models.drinking.DrinkingWater',
-                'habitat.water.models.green.GreenWater',]))
+                'habitat.water.models.green.GreenWater']))
 
         self.children.append(modules.ModelList(
             title=_('Health'),
