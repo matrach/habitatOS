@@ -6,14 +6,26 @@ from habitat._common.models import MissionDate
 
 class Activity(HabitatModel, MissionDate):
 
-    start = models.TimeField(
+    airlock_enter = models.TimeField(
+        verbose_name=_('Airlock Enter'),
+        blank=True,
+        null=True,
+        default=None)
+
+    eva_start = models.TimeField(
         verbose_name=_('EVA Start'),
         blank=True,
         null=True,
         default=None)
 
-    end = models.TimeField(
+    eva_end = models.TimeField(
         verbose_name=_('EVA End'),
+        blank=True,
+        null=True,
+        default=None)
+
+    airlock_exit = models.TimeField(
+        verbose_name=_('Airlock Exit'),
         blank=True,
         null=True,
         default=None)
@@ -21,6 +33,7 @@ class Activity(HabitatModel, MissionDate):
     location = models.ForeignKey(
         verbose_name=_('Location'),
         to='extravehicular.Location',
+        help_text=_('Where the EVA took place'),
         default=None)
 
     objectives = models.TextField(
@@ -36,6 +49,12 @@ class Activity(HabitatModel, MissionDate):
         verbose_name=_('Contingencies'),
         to='extravehicular.Contingency',
         blank=True,
+        default=None)
+
+    remarks = models.TextField(
+        verbose_name=_('Remarks'),
+        blank=True,
+        null=True,
         default=None)
 
     def __str__(self):

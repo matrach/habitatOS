@@ -30,8 +30,14 @@ class Spacewalker(HabitatModel):
         max_length=30,
         choices=DESIGNATION_CHOICES)
 
-    objectives = models.TextField(
-        verbose_name=_('Objectives'),
+    medicals_before = models.TextField(
+        verbose_name=_('Medicals Before EVA'),
+        blank=True,
+        null=True,
+        default=None)
+
+    medicals_after = models.TextField(
+        verbose_name=_('Medicals After EVA'),
         blank=True,
         null=True,
         default=None)

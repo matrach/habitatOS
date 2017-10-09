@@ -12,7 +12,7 @@ class SpacewalkerInline(HabitatTabularInline):
 
 @admin.register(Activity)
 class ActivityAdmin(HabitatAdmin):
-    list_display = ['date', 'start', 'end', 'location']
+    list_display = ['date', 'location', 'airlock_enter', 'eva_start', 'eva_end', 'airlock_exit']
     list_filter = ['location']
     inlines = [SpacewalkerInline]
     raw_id_fields = ['contingencies', 'tools']
