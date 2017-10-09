@@ -1,0 +1,19 @@
+
+<form method="GET" action="#">
+    <p>
+        <label for="martian-standard-time">Martian Standard Time to Earth UTC time</label>
+        <input id="martian-standard-time" name="martian-standard-time" type="text" value="{{ mst.date }}">
+    </p>
+
+    <button type="submit">Convert</button>
+</form>
+
+
+<form method="GET" action="#">
+    <p>
+        <label for="earth-datetime">Earth UTC time to Martian Standard Time</label>
+        <input id="earth-datetime" name="earth-datetime" type="datetime-utc" value="{{ utc|date:'Y-m-d' }} {{ utc|date:'H:i' }}">
+    </p>
+
+    <button type="submit">Convert</button>
+</form>

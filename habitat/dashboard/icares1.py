@@ -17,9 +17,6 @@ class AdminDashboard(Dashboard):
                 'habitat.reporting.models.repair.Repair',
                 'habitat.reporting.models.incident.Incident',
                 'habitat.reporting.models.waste.Waste',
-                'habitat.water.models.drinking.Drinking',
-                'habitat.water.models.green.Green',
-                'habitat.water.models.technical.Technical',
                 'habitat.communication.models.diary.DiaryEntry',
                 'habitat.extravehicular.models.activity.Activity']))
 
@@ -31,6 +28,15 @@ class AdminDashboard(Dashboard):
                 'habitat.reporting.models.mood.Mood',
                 'habitat.reporting.models.sociodynamics.SociodynamicReport',
                 'habitat.reporting.models.sleep.Sleep']))
+
+        self.children.append(modules.ModelList(
+            title=_('Water'),
+            column=1,
+            collapsible=False,
+            models=[
+                'habitat.water.models.technical.TechnicalWater',
+                'habitat.water.models.drinking.DrinkingWater',
+                'habitat.water.models.green.GreenWater',]))
 
         self.children.append(modules.ModelList(
             title=_('Health'),
