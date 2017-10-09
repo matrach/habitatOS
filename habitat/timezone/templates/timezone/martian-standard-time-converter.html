@@ -11,8 +11,9 @@
 
 <form method="GET" action="#">
     <p>
-        <label for="earth-datetime">Earth UTC time to Martian Standard Time</label>
-        <input id="earth-datetime" name="earth-datetime" type="datetime-utc" value="{{ utc|date:'Y-m-d' }} {{ utc|date:'H:i' }}">
+        <p>Earth UTC time to Martian Standard Time</p>
+        <input name="utc-date" type="date-utc" value="{{ utc|date:'Y-m-d' }} {{ utc|date:'H:i' }}">
+        <input name="utc-time" type="time-utc" value="{{ utc|date:'Y-m-d' }} {{ utc|date:'H:i' }}">
     </p>
 
     <button type="submit">Convert</button>
