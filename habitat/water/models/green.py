@@ -9,7 +9,7 @@ from habitat._common.models import ReporterAstronaut
 
 class GreenWater(HabitatModel, MissionDateTime, ReporterAstronaut):
     location = models.ForeignKey(verbose_name=_('Usage Location'), to='building.Module', null=True, blank=True, default=None)
-    volume = models.DecimalField(verbose_name=_('Volume'), help_text=_('liters'), max_digits=3, decimal_places=2, default=None, validators=[MinValueValidator(0), MaxValueValidator(9.99)])
+    volume = models.DecimalField(verbose_name=_('Volume'), help_text=_('liters'), max_digits=5, decimal_places=2, default=None, validators=[MinValueValidator(0), MaxValueValidator(9.99)])
     usage_description = models.TextField(verbose_name=_('Usage Description'), null=True, blank=True, default=None)
 
     def __str__(self):
