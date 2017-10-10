@@ -5,6 +5,6 @@ from habitat.sensors.models import Voltage
 
 @admin.register(Voltage)
 class VoltageAdmin(HabitatAdmin):
-    list_display = ['datetime', 'location', 'value']
+    list_display = ['date', 'time', 'location', 'value']
     list_filter = ['created', 'location']
     search_fields = ['^date', 'value']

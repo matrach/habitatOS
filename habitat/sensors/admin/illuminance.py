@@ -5,6 +5,6 @@ from habitat.sensors.models import Illuminance
 
 @admin.register(Illuminance)
 class IlluminanceAdmin(HabitatAdmin):
-    list_display = ['datetime', 'location', 'value']
+    list_display = ['date', 'time', 'location', 'value']
     list_filter = ['created', 'location']
     search_fields = ['^date', 'value']
