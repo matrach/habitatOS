@@ -58,13 +58,17 @@ class MartianStandardTime:
         minutes = math.floor(y / 60)
         seconds = round(y % 60)
 
+        # By convention during Lunares martian missions we skip decimal part of date (which is time)
+        date = int(date)
+
         return {
-            'date': f'{date:f}',
+            'date': f'{date:,d}',
             'time': f'{hours:02d}:{minutes:02d}:{seconds:02d}',
             'datetime': f'{date:f} {hours:02d}:{minutes:02d}:{seconds:02d}',
             'hour': f'{hours:02d}',
             'minute': f'{minutes:02d}',
             'second': f'{seconds:02d}',
+            'full_date': f'{date:f}',
         }
 
     @classmethod
