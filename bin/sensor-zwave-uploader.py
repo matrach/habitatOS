@@ -10,10 +10,10 @@ logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime).19s] %(levelname)s %(message)s')
 
-habitatos = HabitatOSBasicAuth(config='config.json')
+habitatos = HabitatOSBasicAuth(config='../tmp/client-config.json')
 
 
-with sqlite3.connect('../sensors-data.sqlite3') as db:
+with sqlite3.connect('../tmp/sensors-data.sqlite3') as db:
     db.row_factory = sqlite3.Row
     cursor = db.cursor()
     sql = 'SELECT * FROM sensor_data WHERE sync_datetime IS NULL'

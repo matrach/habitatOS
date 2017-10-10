@@ -1,7 +1,7 @@
 {
   "url": "http://localhost:8000",
   "username": "_api.sensors.zwave",
-  "password": "HabitatOS_API123",
-  "oauth2_client_id": "EWpl5dLj4rpRFQZR6EUB9pdjdoKVOlaTHBP5SJ72",
-  "oauth2_client_key": "mQVgEwTVMDa8xBgjtBsdaWcUzfDniV3hc36sX2p4hGTYOGkm6wbWTiZjfCUn7w0kmj9CHigewc60WkjPLgU4CSXPfwXpypAFIkx6CKlEzOATL3MnNtao6RXIsRjo9rjR"
+  "password": "",
+  "oauth2_client_id": "",
+  "oauth2_client_key": ""
 }
