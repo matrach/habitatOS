@@ -101,13 +101,13 @@ class ZWaveSensor(HabitatModel, MissionDateTime):
         dt = clean_datetime(datetime)
 
         # TODO: Change it to more generic solution
-        mst = MartianStandardTime().get_time_dict(from_datetime=clean_datetime(datetime))
+        mst = MartianStandardTime().get_time_dict(from_datetime=dt)
 
         return ZWaveSensor.objects.update_or_create(
             datetime=dt,
-            date=mst['date'],
-            time=mst['time'],
             defaults={
+                'date': mst['date'],
+                'time': mst['time'],
                 'device': clean_device(device),
                 'type': clean_type(type),
                 'value': clean_value(value),
