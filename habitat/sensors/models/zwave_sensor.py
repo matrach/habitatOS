@@ -5,7 +5,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
 from habitat._common.models import MissionDateTime
-from habitat.timezone import get_timezone
+from habitat.timezone.models import MartianStandardTime
 
 
 log = logging.getLogger('habitat.sensor')
