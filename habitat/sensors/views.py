@@ -108,14 +108,14 @@ class ChartView(TemplateView):
 
     def get_taces(self):
         return [
-            dict(device='c1344062-2', color='#00f', legend='atrium'),
-            dict(device='c1344062-3', color='#0f0', legend='analytic-lab'),
-            dict(device='c1344062-4', color='#0ff', legend='operations'),
-            dict(device='c1344062-5', color='#08f', legend='toilet'),
-            dict(device='c1344062-6', color='#f00', legend='dormitory'),
-            dict(device='c1344062-7', color='#f0f', legend='storage'),
-            dict(device='c1344062-8', color='#ff0', legend='kitchen'),
-            dict(device='c1344062-9', color='#555', legend='biolab')]
+            self.get_trace(device='c1344062-2', color='#00f', legend='atrium'),
+            self.get_trace(device='c1344062-3', color='#0f0', legend='analytic-lab'),
+            self.get_trace(device='c1344062-4', color='#0ff', legend='operations'),
+            self.get_trace(device='c1344062-5', color='#08f', legend='toilet'),
+            self.get_trace(device='c1344062-6', color='#f00', legend='dormitory'),
+            self.get_trace(device='c1344062-7', color='#f0f', legend='storage'),
+            self.get_trace(device='c1344062-8', color='#ff0', legend='kitchen'),
+            self.get_trace(device='c1344062-9', color='#555', legend='biolab')]
 
     def get_context_data(self):
         figure = graph.Figure(
