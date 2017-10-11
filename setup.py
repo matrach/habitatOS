@@ -7,7 +7,7 @@ from os import path
 assert sys.version_info >= (3, 6), "Python 3.6+ required."
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 with open(path.join(BASE_DIR, 'README.rst'), encoding='utf-8') as file:
@@ -20,7 +20,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='1.0.0',
+    version='0.9.0',
 
     description='Analog space habitat operating system.',
     long_description=long_description,
@@ -82,7 +82,7 @@ setup(
     # installed, specify them here.  If using Python 2.6 or less, then these
     # have to be included in MANIFEST.in as well.
     package_data={
-        # 'sample': ['package_data.dat'],
+        # 'sample': ['__init__.py'],
     },
 
     # Although 'package_data' is the preferred approach, in some case you may

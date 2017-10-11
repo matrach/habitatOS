@@ -1,6 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
-from HabitatOS.client import HabitatOSAbstractBaseClass
+from . import HabitatOSAbstractBaseClass
 
 
 class HabitatOSBasicAuth(HabitatOSAbstractBaseClass):
