@@ -5,6 +5,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from habitat._common.models import HabitatModel
 from habitat._common.models import MissionDateTime
+from habitat.timezone import get_timezone
 
 
 log = logging.getLogger('habitat.sensor')
@@ -97,8 +98,15 @@ class ZWaveSensor(HabitatModel, MissionDateTime):
 
     @staticmethod
     def add(datetime, device, type, value, unit):
+        dt = clean_datetime(datetime)
+
+        # TODO: Change it to more generic solution
+        mst = MartianStandardTime().get_time_dict(from_datetime=clean_datetime(datetime))
+
         return ZWaveSensor.objects.update_or_create(
-            datetime=clean_datetime(datetime),
+            datetime=dt,
+            date=mst['date'],
+            time=mst['time'],
             defaults={
                 'device': clean_device(device),
                 'type': clean_type(type),
