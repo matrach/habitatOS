@@ -41,6 +41,7 @@ class Sleep(HabitatModel, MissionDate, ReporterAstronaut):
     type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES, default=None)
     location = models.ForeignKey(verbose_name=_('Location'), to='building.Module', limit_choices_to={'status': 'nominal'}, default=1)
     duration = models.DurationField(verbose_name=_('Duration'), null=True, blank=True, default=None)
+    sleep_quality = models.ManyToManyField(verbose_name=_('Quality'), to='reporting.SleepQuality', related_name='sleep_quality', blank=True, default=None)
 
     # Before sleep
     last_activity = models.CharField(verbose_name=_('What was the last thing you did before going to sleep?'), max_length=255, null=True, blank=True, default=None)
