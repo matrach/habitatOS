@@ -7,7 +7,8 @@
 
 
 <style>
-    #datetime { top: 0; margin: 1em;  }
+    #datetime { top: 0; margin: 1em; font-size: 1.5em; }
+    #msd, #mtc { font-weight: bold; }
     #schedule { margin: auto; border: 0; width: 99%; height: 103vh; }
 </style>
 
@@ -62,7 +63,7 @@
         let msd = (((j2000 - 4.5) / 1.027491252) + 44796.0 - 0.00096);
         let mtc = (24 * msd) % 24;
 
-        document.getElementById('msd').innerHTML = add_commas(msd.toFixed(5));
+        document.getElementById('msd').innerHTML = add_commas(Math.floor(msd));
         document.getElementById('mtc').innerHTML = h_to_hms(mtc);
     }
 
