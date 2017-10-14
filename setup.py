@@ -15,7 +15,7 @@ with open(path.join(BASE_DIR, 'README.rst'), encoding='utf-8') as file:
 
 
 setup(
-    name='HabitatOS',
+    name='habitatOS',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
@@ -26,11 +26,11 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/astromatt/HabitatOS',
+    url='https://github.com/astromatt/habitatOS',
 
     # Author details
     author='Matt Harasymczuk',
-    author_email='HabitatOS@astrotech.io',
+    author_email='habitatOS@astrotech.io',
 
     # Choose your license
     license='MIT',
@@ -95,7 +95,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
         'console_scripts': [
-            'habitatOS=HabitatOS:manage',
+            'habitatOS=habitatOS:manage',
         ],
     },
 )
