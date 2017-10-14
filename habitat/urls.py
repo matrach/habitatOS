@@ -30,3 +30,11 @@ urlpatterns += [
     url(r'^grappelli/', include('grappelli.urls'), name='grappelli'),
     url(r'^', admin.site.urls, name='admin'),
 ]
+
+from habitat.dashboard.views import MissionScheduleView
+from habitat.timezone.views import MartianStandardTimeConverterView
+
+urlpatterns += [
+    url(r'^today', MissionScheduleView.as_view()),
+    url(r'^time', MartianStandardTimeConverterView.as_view()),
+]
