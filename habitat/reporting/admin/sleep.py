@@ -13,8 +13,8 @@ class SleepAdmin(HabitatAdmin):
     list_filter = ['reporter', 'type', 'quality', 'sleep_amount', 'sleepy', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills']
     search_fields = ['dream']
     readonly_fields = ['duration']
-    exclude = ['reporter', 'created', 'updated']
-    ordering = ['-asleep_bedtime']
+    exclude = ['reporter', 'created', 'modified']
+    ordering = ['-modified']
     formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
 
     radio_fields = {

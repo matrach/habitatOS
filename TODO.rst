@@ -104,6 +104,7 @@ Bugs
 
 Features
 ========
+#. What reports I need to fill today?
 #. /food/ - module
 #. Astronaut select as radio?!
 #. /extravehicular/activity/add/ - Spacewalker objectives as inline
