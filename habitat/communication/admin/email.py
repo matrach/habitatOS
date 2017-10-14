@@ -13,7 +13,7 @@ from habitat.communication.models import Attachment
 class InboxFilter(admin.SimpleListFilter):
     # Human-readable title which will be displayed in the
     # right admin sidebar just above the filter options.
-    title = _('Filter Emails')
+    title = _('Show')
 
     # Parameter for the filter that will be used in the URL query.
     parameter_name = 'inbox'
@@ -42,7 +42,7 @@ class EmailAdmin(HabitatAdmin):
     list_display = ['date', 'time', 'sender', 'subject']
     list_filter = [InboxFilter, 'to']
     list_display_links = ['subject']
-    search_fields = ['^sender', 'subject']
+    search_fields = ['sender__username', 'subject', 'body']
     ordering = ['-modified']
     exclude = ['sender', 'date', 'time']
     raw_id_fields = ['to']
