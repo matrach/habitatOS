@@ -10,11 +10,10 @@ from habitat.reporting.models import Sleep
 @admin.register(Sleep)
 class SleepAdmin(HabitatAdmin):
     list_display = ['reporter', 'type', 'duration', 'location', 'quality', 'asleep_time', 'wakeup_time']
-    list_filter = ['reporter', 'quality', 'sleep_amount', 'sleepy', 'type', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills']
+    list_filter = ['reporter', 'type', 'quality', 'sleep_amount', 'sleepy', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills']
     search_fields = ['dream']
     readonly_fields = ['duration']
     exclude = ['reporter', 'created', 'updated']
-    date_hierarchy = 'wakeup_time'
     ordering = ['-asleep_bedtime']
     formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
 
