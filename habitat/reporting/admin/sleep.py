@@ -30,7 +30,7 @@ class SleepAdmin(HabitatAdmin):
 
     fieldsets = [
         (_('General'), {'fields': ['type', 'location', 'asleep_time', 'wakeup_time', 'sleep_amount', 'quality', 'sleep_events', 'sleep_interrupted']}),
-        (_('Interruptions'), {'fields': ['sleep_interruptions', 'impediments_count', 'impediments_remarks',], 'classes': ['sleep-interruptions']}),
+        (_('Interruptions'), {'fields': ['sleep_interruptions', 'impediments_count', 'impediments_remarks'], 'classes': ['sleep-interruptions']}),
         (_('Before Sleep'), {'fields': ['last_activity', 'sleepy', 'sleepy_remarks'], 'classes': ['sleep-report']}),
         (_('Sleep'), {'fields': ['asleep_bedtime', 'asleep_problems', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills'], 'classes': ['sleep-report']}),
         (_('After Sleep'), {'fields': ['wakeup_reasons', 'getup', 'dream'], 'classes': ['sleep-report']}),
