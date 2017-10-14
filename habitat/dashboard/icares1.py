@@ -29,6 +29,13 @@ class AdminDashboard(Dashboard):
 
         # Column 2
         self.children.append(modules.ModelList(
+            title=_('Communication'),
+            column=2,
+            collapsible=False,
+            models=[
+                'habitat.communication.models.email.Email']))
+
+        self.children.append(modules.ModelList(
             title=_('Reporting - Visible to anyone'),
             column=2,
             collapsible=False,

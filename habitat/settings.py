@@ -1,4 +1,5 @@
 import os
+from datetime import timedelta
 from django.conf.locale.en import formats as en_formats
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
@@ -206,6 +207,8 @@ SWAGGER_SETTINGS = {
     'api_version': '1.0',
 }
 
+
 HABITATOS = {
     'TIME_ZONE': 'habitat.timezone.MartianStandardTime',
+    'DELAY': timedelta(minutes=2),
 }

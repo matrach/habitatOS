@@ -15,7 +15,7 @@ class ReporterAstronaut(models.Model):
 
 class ReporterAnyone(models.Model):
     reporter = models.ForeignKey(
-        verbose_name=_('Astronaut'),
+        verbose_name=_('Reporter'),
         db_index=True,
         to='auth.User')
 
