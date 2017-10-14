@@ -5,7 +5,11 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
 from rest_framework.schemas import get_schema_view
-from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
+from rest_framework_swagger.renderers import SwaggerUIRenderer
+from rest_framework_swagger.renderers import OpenAPIRenderer
+
+from habitat.dashboard.views import MissionScheduleView
+from habitat.timezone.views import MartianStandardTimeConverterView
 
 
 urlpatterns = [
@@ -30,9 +34,6 @@ urlpatterns += [
     url(r'^grappelli/', include('grappelli.urls'), name='grappelli'),
     url(r'^', admin.site.urls, name='admin'),
 ]
-
-from habitat.dashboard.views import MissionScheduleView
-from habitat.timezone.views import MartianStandardTimeConverterView
 
 urlpatterns += [
     url(r'^today', MissionScheduleView.as_view()),
