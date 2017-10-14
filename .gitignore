@@ -51,3 +51,4 @@ virtualenv/
 # Skip files and directories
 tmp/
 _database/
+*.html.py

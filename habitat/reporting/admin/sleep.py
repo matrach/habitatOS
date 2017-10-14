@@ -18,6 +18,7 @@ class SleepAdmin(HabitatAdmin):
     formfield_overrides = {models.ManyToManyField: {'widget': CheckboxSelectMultiple}}
 
     radio_fields = {
+        'sleep_interrupted': admin.HORIZONTAL,
         'sleep_amount': admin.HORIZONTAL,
         'quality': admin.HORIZONTAL,
         'sleepy': admin.HORIZONTAL,
@@ -28,9 +29,10 @@ class SleepAdmin(HabitatAdmin):
     }
 
     fieldsets = [
-        (_('General'), {'fields': ['type', 'location', 'asleep_time', 'wakeup_time', 'sleep_amount', 'quality', 'sleep_quality']}),
+        (_('General'), {'fields': ['type', 'location', 'asleep_time', 'wakeup_time', 'sleep_amount', 'quality', 'sleep_events', 'sleep_interrupted']}),
+        (_('Interruptions'), {'fields': ['sleep_interruptions', 'impediments_count', 'impediments_remarks',], 'classes': ['sleep-interruptions']}),
         (_('Before Sleep'), {'fields': ['last_activity', 'sleepy', 'sleepy_remarks'], 'classes': ['sleep-report']}),
-        (_('Sleep'), {'fields': ['asleep_bedtime', 'asleep_problems', 'impediments_count', 'impediments_remarks', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills'], 'classes': ['sleep-report']}),
+        (_('Sleep'), {'fields': ['asleep_bedtime', 'asleep_problems', 'aid_ear_plugs', 'aid_eye_mask', 'aid_pills'], 'classes': ['sleep-report']}),
         (_('After Sleep'), {'fields': ['wakeup_reasons', 'getup', 'dream'], 'classes': ['sleep-report']}),
     ]
 
@@ -47,4 +49,7 @@ class SleepAdmin(HabitatAdmin):
         super().save_model(request, obj, form, change)
 
     class Media:
-        js = ['reporting/js/sleep.js']
+        js = [
+            'reporting/js/sleep-or-nap.js',
+            'reporting/js/sleep-interruptions.js',
+        ]

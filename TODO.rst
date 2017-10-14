@@ -56,6 +56,7 @@ Utils
 
 Bugs
 ====
+#. /reporting/sleep/add/ - Split quality field into Interruptions, and Dream
 #. /extravehicular/activity/add/ - Make EVA report for other day than current
 #. /reporting/incident/add/ - Earth datetime in the model
 #. /reporting/incident/add/ - add images to the incident

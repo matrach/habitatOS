@@ -4,8 +4,8 @@ from .incident import *
 from .medical import *
 from .mood import *
 from .repair import *
-from .sleep import *
 from .sleep_quality import *
+from .sleep import *
 from .sociodynamics import *
 from .time import *
 from .waste import *

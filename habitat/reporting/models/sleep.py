@@ -7,12 +7,22 @@ from django.utils.timezone import now
 from habitat._common.models import HabitatModel
 from habitat._common.models import MissionDate
 from habitat._common.models import ReporterAstronaut
+from habitat.reporting.models import SleepQuality
 
 
 class Sleep(HabitatModel, MissionDate, ReporterAstronaut):
     TYPE_CHOICES = [
         ('sleep', _('Sleep')),
         ('nap', _('Nap'))]
+
+    SLEEP_INTERRUPTED_YES = True
+    SLEEP_INTERRUPTED_NO = False
+    SLEEP_INTERRUPTED_UNKNOWN = None
+    SLEEP_INTERRUPTED_CHOICES = [
+        (SLEEP_INTERRUPTED_UNKNOWN, _('Undisclosed')),
+        (SLEEP_INTERRUPTED_YES, _('Yes')),
+        (SLEEP_INTERRUPTED_NO, _('No')),
+    ]
 
     QUALITY_CHOICES = [
         ('satisfactory', _('Satisfactory')),
@@ -41,7 +51,10 @@ class Sleep(HabitatModel, MissionDate, ReporterAstronaut):
     type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES, default=None)
     location = models.ForeignKey(verbose_name=_('Location'), to='building.Module', limit_choices_to={'status': 'nominal'}, default=1)
     duration = models.DurationField(verbose_name=_('Duration'), null=True, blank=True, default=None)
-    sleep_quality = models.ManyToManyField(verbose_name=_('Quality'), to='reporting.SleepQuality', related_name='sleep_quality', blank=True, default=None)
+
+    sleep_events = models.ManyToManyField(verbose_name=_('Sleep Events'), to='reporting.SleepQuality', limit_choices_to={'type': SleepQuality.TYPE_EVENT}, related_name='sleep_events', blank=True, default=None)
+    sleep_interrupted = models.NullBooleanField(verbose_name=_('Was your sleep interrupted?'), choices=SLEEP_INTERRUPTED_CHOICES, default=SLEEP_INTERRUPTED_UNKNOWN)
+    sleep_interruptions = models.ManyToManyField(verbose_name=_('Interruptions'), to='reporting.SleepQuality', limit_choices_to={'type': SleepQuality.TYPE_INTERRUPTION}, related_name='sleep_interruptions', blank=True, default=None)
 
     # Before sleep
     last_activity = models.CharField(verbose_name=_('What was the last thing you did before going to sleep?'), max_length=255, null=True, blank=True, default=None)

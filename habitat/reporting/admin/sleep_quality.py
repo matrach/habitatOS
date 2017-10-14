@@ -5,4 +5,8 @@ from habitat.reporting.models import SleepQuality
 
 @admin.register(SleepQuality)
 class SleepQualityAdmin(HabitatAdmin):
-    list_display = ['name']
+    list_display_links = ['name']
+    list_display = ['type', 'name']
+    list_filter = ['type']
+    list_editable = ['type']
+    ordering = ['type', 'name']

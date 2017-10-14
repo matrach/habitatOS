@@ -16,7 +16,15 @@ class SleepQuality(HabitatModel):
     9 - Un-interrupted sleep with colorful dreams and detectable smells
     10 - Un-interrupted sleep with colorful dreams and detectable smells, flavours and tactile impressions  (like reality)
     """
-    name = models.CharField(verbose_name=_('Name'), max_length=255, blank=None, null=None, default=None)
+    TYPE_EVENT = 'event'
+    TYPE_INTERRUPTION = 'interruption'
+    TYPE_CHOICES = [
+        (TYPE_EVENT, _('Un-interruptive Sleep Event')),
+        (TYPE_INTERRUPTION, _('Sleep Interruption')),
+    ]
+
+    name = models.CharField(verbose_name=_('Name'), max_length=255)
+    type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES, default=TYPE_EVENT)
 
     def __str__(self):
         return f'{self.name}'
