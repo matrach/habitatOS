@@ -1,0 +1,14 @@
+.grp-readonly {
+    width: 90%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+#id_body,
+.body .grp-readonly {
+    height: 30em;
+}
+
+.file {
+    width: 90%;
+}

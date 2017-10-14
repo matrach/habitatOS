@@ -1,5 +1,3 @@
-from datetime import datetime
-from datetime import timezone
 from django.conf import settings
 from django.contrib import admin
 from django.utils.timezone import now
@@ -35,17 +33,17 @@ class InboxFilter(admin.SimpleListFilter):
 class AttachmentInline(HabitatTabularInline):
     model = Attachment
     extra = 3
+    readonly_fields = []
 
-
-class AttachmentReadOnlyInline(AttachmentInline):
-    can_delete = False
-    readonly_fields = ['file']
-    max_num = 0
-    min_num = 0
-    extra = 0
-
-    def has_add_permission(self, request):
-        return False
+    def get_readonly_fields(self, request, obj=None):
+        if obj:
+            self.can_delete = False
+            self.max_num = 0
+            self.min_num = 0
+            self.extra = 0
+            return self.readonly_fields + ['file']
+        else:
+            return self.readonly_fields
 
 
 @admin.register(Email)
@@ -63,17 +61,12 @@ class EmailAdmin(HabitatAdmin):
     inlines = [AttachmentInline]
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
-        self.inlines = [AttachmentReadOnlyInline]
         extra_context = extra_context or {}
         extra_context['readonly'] = True
         extra_context['show_save_and_add_another'] = False
         extra_context['show_save_and_continue'] = False
         extra_context['show_save'] = False
         extra_context['show_delete_link'] = False
-        self.Media.js += [
-            'communication/js/email-reply-button.js',
-            'communication/js/email-hide-save.js',
-        ]
         return super().change_view(request, object_id, form_url, extra_context)
 
     def get_readonly_fields(self, request, obj=None):
@@ -91,14 +84,20 @@ class EmailAdmin(HabitatAdmin):
         delay = now() - settings.HABITATOS['DELAY']
         received = queryset.filter(to=request.user, modified__lt=delay)
         sent = queryset.filter(sender=request.user)
-        return sent | received
+        result = sent | received
+        return result.distinct()
 
     def save_model(self, request, obj, form, change):
-        obj.sender = request.user
+        if not change:
+            obj.sender = request.user
         return super().save_model(request, obj, form, change)
 
     class Media:
-        js = []
+        js = [
+            'communication/js/email-reply-button.js',
+            'communication/js/email-hide-save.js',
+        ]
         css = {'all': [
             'communication/css/hide-id-field.css',
+            'communication/css/resize-fields.css',
         ]}
