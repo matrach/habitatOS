@@ -210,5 +210,5 @@ SWAGGER_SETTINGS = {
 
 HABITATOS = {
     'TIME_ZONE': 'habitat.timezone.MartianStandardTime',
-    'DELAY': timedelta(minutes=2),
+    'DELAY': timedelta(minutes=20),
 }
