@@ -1,5 +1,5 @@
 *********
-HabitatOS
+habitatOS
 *********
 
 Operating System for analog extraterrestrial habitats.
@@ -9,11 +9,18 @@ Contact
 
 **Author**
     :name: `Matt Harasymczuk <http://astromatt.space>`_
-    :email: `HabitatOS@astrotech.io <mailto:HabtatOS@astrotech.io>`_
+    :email: `habitatOS@astrotech.io <mailto:habtatOS@astrotech.io>`_
     :www: `http://www.astromatt.space <http://astromatt.space>`_
     :facebook: `https://facebook.com/astromatt.space <https://facebook.com/astromatt.space>`_
     :linkedin: `https://linkedin.com/in/mattharasymczuk <https://linkedin.com/in/mattharasymczuk>`_
     :slideshare: `https://www.slideshare.net/astromatt/presentations <https://www.slideshare.net/astromatt/presentations>`_
+
+About the Lunares project
+-------------------------
+
+- http://lunares.space
+- https://www.facebook.com/lunares.space/
+- https://www.slideshare.net/astromatt/bioastronautics
 
 
 Requirements
