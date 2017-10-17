@@ -16,12 +16,12 @@ cache:
     - '$HOME/.sonar/cache'
 
 install:
-  - pip install -r requirements.txt
+  - python -m pip install -r requirements.txt
 
 script:
-  - pep8 bin
-  - pep8 client --ignore=E402
-  - pep8 habitat
+  - python -m pycodestyle bin
+  - python -m pycodestyle client --ignore=E402
+  - python -m pycodestyle habitat
   - python manage.py check
   - python manage.py test habitat.tests --verbosity=2
 

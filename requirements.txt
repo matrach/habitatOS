@@ -1,5 +1,5 @@
 ## development and tests
-pep8
+pycodestyle
 transifex-client
 
 
