@@ -9,6 +9,7 @@ django-grappelli==2.10.1
 django-devutils
 django-import-export
 django-rest-swagger
+django-storages
 djangorestframework
 gunicorn
 psycopg2

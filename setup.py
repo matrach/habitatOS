@@ -61,7 +61,7 @@ setup(
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    packages=find_packages(exclude=['docs', 'contrib', 'tmp']),
+    packages=find_packages(exclude=['docs', 'experiments', 'tmp']),
 
     # If there are data files included in your packages that need to be
     # installed, specify them here.

@@ -22,6 +22,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
+    'os.astrotech.io',
     'habitatos.space',
     'test.habitatos.space',
     'lunex1.habitatos.space',
