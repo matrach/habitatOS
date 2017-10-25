@@ -213,3 +213,5 @@ HABITATOS = {
     'TIME_ZONE': 'habitat.timezone.MartianStandardTime',
     'DELAY': timedelta(minutes=20),
 }
+
+GOOGLE_ANALYTICS_CODE = 'UA-108357706-1'
