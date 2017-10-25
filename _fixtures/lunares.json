@@ -1,0 +1,422 @@
+[
+{
+  "model": "building.module",
+  "pk": 1,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Dormitory",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": "2.50",
+    "height": "2.50",
+    "length": "6.00",
+    "plan": "rectangle",
+    "capacity": 6
+  }
+},
+{
+  "model": "building.module",
+  "pk": 2,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Biolab",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": "2.50",
+    "height": "2.50",
+    "length": "6.00",
+    "plan": "rectangle",
+    "capacity": 6
+  }
+},
+{
+  "model": "building.module",
+  "pk": 3,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Kitchen",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": "2.50",
+    "height": "2.50",
+    "length": "6.00",
+    "plan": "rectangle",
+    "capacity": 6
+  }
+},
+{
+  "model": "building.module",
+  "pk": 4,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Analytic Lab",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": "2.50",
+    "height": "2.50",
+    "length": "6.00",
+    "plan": "rectangle",
+    "capacity": 6
+  }
+},
+{
+  "model": "building.module",
+  "pk": 5,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Atrium",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": null,
+    "height": null,
+    "length": null,
+    "plan": "polygon",
+    "capacity": 6
+  }
+},
+{
+  "model": "building.module",
+  "pk": 6,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Airlock",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": null,
+    "height": null,
+    "length": null,
+    "plan": "other",
+    "capacity": 6
+  }
+},
+{
+  "model": "building.module",
+  "pk": 7,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Storage",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": "2.50",
+    "height": "2.50",
+    "length": "6.00",
+    "plan": "rectangle",
+    "capacity": 6
+  }
+},
+{
+  "model": "building.module",
+  "pk": 8,
+  "fields": {
+    "created": "2017-08-18T18:59:21Z",
+    "modified": "2017-08-18T18:59:21Z",
+    "name": "Operations",
+    "status": "nominal",
+    "hazard": "none",
+    "blueprint": "",
+    "width": "2.50",
+    "height": "2.50",
+    "length": "6.00",
+    "plan": "rectangle",
+    "capacity": 6
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Astronauts",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Mission Control",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "Medical Doctors",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 4,
+  "fields": {
+    "name": "Psychologists",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 5,
+  "fields": {
+    "name": "Primary Investigators",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 6,
+  "fields": {
+    "name": "OS Administrators",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$2ctdZIhYAIeb$x3xoPbOmkiGyt7gB3JnjsU8R/QZtFOeuY2EfXG36Rvc=",
+    "last_login": "2017-09-29T12:41:25.977Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Matt",
+    "last_name": "Harasymczuk",
+    "email": "HabitatOS@astrotech.io",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-03-26T10:26:34Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$rgDGgSwGRxcZ$mkM1wNG/GDQSBzdagvkKqvl3UzrqH4GYxVzPUXYYeY0=",
+    "last_login": "2017-07-17T14:49:35Z",
+    "is_superuser": false,
+    "username": "astronaut1",
+    "first_name": "\u0418\u0432\u0430\u043d",
+    "last_name": "\u0418\u0432\u0430\u043d\u043e\u0432\u0438\u0447",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-05-20T21:08:21Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$JqtLVxmJcRLm$NoxOvgANvP+h5XFBrKZM4Awq6OuLQmUk5ou/Oio3p44=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "astronaut2",
+    "first_name": "Jos\u00e9",
+    "last_name": "Jim\u00e9nez",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-07-16T11:18:11Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$lRvIipwfNjYQ$6qSOM4mCUp3WXbmtGXkb+xw2wf07Fi+8ZsfYLeGohoI=",
+    "last_login": "2017-07-17T15:23:00Z",
+    "is_superuser": false,
+    "username": "astronaut3",
+    "first_name": "Max",
+    "last_name": "Peck",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-07-16T11:20:28Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$oftMHoQUbXkh$A9+Sxfgj8zlzOFDxCBEqPUbpx/xxAVHVvJ6HjDYMUNg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "astronaut4",
+    "first_name": "Mark",
+    "last_name": "Watney",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-20T00:08:26Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$gAsnyrtev0I5$YGiX45TMrDZLEOdjxXcJQ2pohFKwhOHfVUN5Gjdpc6Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "astronaut5",
+    "first_name": "Matt",
+    "last_name": "Kowalski",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-20T00:08:58Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$BlFblvXy0UMy$u1Z5Iw9bYGkakD6pWL3om9b8qOH92E1MWwpiEAfZHKo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "astronaut6",
+    "first_name": "Harry",
+    "last_name": "Stamper",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-20T00:09:28Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$UfkPBt5a2P32$DSb7c8DPN71GuxDMerLc4xqaHJRHHJVE5IeO7JIOFrc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "medical-doctor",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-20T00:10:56Z",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$8STIiWxqAiEI$yi2IQVrBq0bCQWZzA6HhZl4IGjdDwA35oME342w94TA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "psychologist",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-20T00:11:23Z",
+    "groups": [
+      4
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$BRrZZgEw7LCq$s1LUR7F9vRsoGo2SqUcpVhCRf9ZfpkLoVCHzFfKo3Ao=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "MCC",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-20T00:15:58Z",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$w7czuhgjyNdn$dZ4aZP0JW0TgN0dm435lDWLm/HNIw8AOYtZB0uZZZZI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "primary-investigator",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-20T00:16:32Z",
+    "groups": [
+      5
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$CLwK7JCs46AJ$ho8hviSaGJNW5jjnskhWWwMdQ1nNu95J7wO29xaGhso=",
+    "last_login": "2017-09-25T10:50:00Z",
+    "is_superuser": false,
+    "username": "_api.sensors.zwave",
+    "first_name": "Matt",
+    "last_name": "Harasymczuk",
+    "email": "HabitatOS@astrotech.io",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2017-09-25T08:49:26Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

@@ -97,7 +97,7 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'tmp', 'habitatOS.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, '_database', 'habitatOS.sqlite3'),
     }
 }
 

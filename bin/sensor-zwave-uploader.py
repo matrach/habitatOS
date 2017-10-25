@@ -6,14 +6,18 @@ import sqlite3
 from HabitatOS.client import HabitatOSBasicAuth
 
 
+CONFIG = '../_config/client-config-production.json'
+DATABASE = '../_database/sensors-data.sqlite3'
+
+
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime).19s] %(levelname)s %(message)s')
 
-habitatOS = HabitatOSBasicAuth(config='../tmp/client-config.json')
+habitatOS = HabitatOSBasicAuth(config=CONFIG)
 
 
-with sqlite3.connect('../tmp/sensors-data.sqlite3') as db:
+with sqlite3.connect(DATABASE) as db:
     db.row_factory = sqlite3.Row
     cursor = db.cursor()
     sql = 'SELECT * FROM sensor_data WHERE sync_datetime IS NULL'
