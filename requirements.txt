@@ -3,7 +3,7 @@ pycodestyle
 transifex-client
 
 
-## HabitatOS.server
+## habitatOS.server
 django==1.11.6
 django-grappelli==2.10.1
 django-devutils
@@ -17,3 +17,8 @@ dj-database-url
 Pillow
 plotly
 # pylibmc
+
+
+## habitatOS client
+requests
+requests_oauthlib

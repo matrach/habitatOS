@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime).19s] %(levelname)s %(message)s')
 
-habitatos = HabitatOSBasicAuth(config='../tmp/client-config.json')
+habitatOS = HabitatOSBasicAuth(config='../tmp/client-config.json')
 
 
 with sqlite3.connect('../tmp/sensors-data.sqlite3') as db:
@@ -26,7 +26,7 @@ with sqlite3.connect('../tmp/sensors-data.sqlite3') as db:
             'value': row['value'],
             'unit': row['unit']}
 
-        response = habitatos.post('/sensor/zwave/', data=data)
+        response = habitatOS.post('/sensor/zwave/', data=data)
 
         now = datetime.datetime.now(datetime.timezone.utc)
         dt = row['datetime']

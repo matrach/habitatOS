@@ -129,6 +129,48 @@ API Documentation
 -----------------
 - http://localhost:8000/api/
 
+Client
+------
+#. Go to http://localhost:8000/auth/user/ and add user
+#. Remember to add permission to the user
+#. Create ``config.json`` with the following content:
+
+.. code-block:: json
+
+    {
+        "url": "http://test.habitatos.space",
+        "username": "myuser",
+        "password": "mypassword"
+    }
+
+#. Create python script with following content:
+
+.. code-block:: python
+
+    import datetime
+    from HabitatOS.client import HabitatOSBasicAuth
+
+
+    habitatOS = HabitatOSBasicAuth(config='config.json')
+
+    response = habitatOS.post('/sensor/zwave/', data={
+        'datetime': datetime.datetime.now(datetime.timezone.utc),
+        'device': 'c1344062-2',
+        'type': 'Temperature',
+        'value': 21.5,
+        'unit': 'Celsius',
+     })
+
+    if response.status_code == 200:
+        print('updated')
+
+    elif response.status_code == 201:
+        print('created')
+
+    else:
+        print('error')
+
+
 CI/CD
 -----
 .. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
