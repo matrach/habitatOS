@@ -6,7 +6,7 @@ import sqlite3
 from HabitatOS.client import HabitatOSBasicAuth
 
 
-CONFIG = '../_config/client-config-production.json'
+CONFIG = '../_config/heroku.json'
 DATABASE = '../_database/sensors-data.sqlite3'
 
 

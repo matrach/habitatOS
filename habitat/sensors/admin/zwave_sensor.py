@@ -9,3 +9,11 @@ class ZWaveSensorAdmin(HabitatAdmin):
     list_display = ['date', 'time', 'type', 'device', 'value', 'unit']
     list_filter = ['created', 'type', 'unit', 'device']
     search_fields = ['^date', 'device']
+
+    def get_list_display(self, request):
+        list_display = self.list_display
+
+        if request.user.is_superuser:
+            list_display = ['datetime'] + list_display
+
+        return list_display

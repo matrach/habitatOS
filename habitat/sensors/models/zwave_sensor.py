@@ -83,8 +83,28 @@ class ZWaveSensor(HabitatModel, MissionDateTime):
         (UNIT_KELVIN, _('Kelvin')),
         (UNIT_FAHRENHEIT, _('Fahrenheit'))]
 
+    DEVICE_ATRIUM = 'c1344062-2'
+    DEVICE_ANALYTIC_LAB = 'c1344062-3'
+    DEVICE_OPERATIONS = 'c1344062-4'
+    DEVICE_TOILET = 'c1344062-5'
+    DEVICE_DORMITORY = 'c1344062-6'
+    DEVICE_STORAGE = 'c1344062-7'
+    DEVICE_KITCHEN = 'c1344062-8'
+    DEVICE_BIOLAB = 'c1344062-9'
+
+    DEVICE_CHOICES = [
+        (DEVICE_ATRIUM, _('Atrium')),
+        (DEVICE_ANALYTIC_LAB, _('Analytic Lab')),
+        (DEVICE_OPERATIONS, _('Operations')),
+        (DEVICE_TOILET, _('Toilet')),
+        (DEVICE_DORMITORY, _('Dormitory')),
+        (DEVICE_STORAGE, _('Storage')),
+        (DEVICE_KITCHEN, _('Kitchen')),
+        (DEVICE_BIOLAB, _('Biolab')),
+    ]
+
     datetime = models.DateTimeField(verbose_name=_('Datetime'), db_index=True, editable=False)
-    device = models.CharField(verbose_name=_('Device'), max_length=30, db_index=True)
+    device = models.CharField(verbose_name=_('Device'), max_length=30, choices=DEVICE_CHOICES, db_index=True)
     type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES)
     value = models.DecimalField(verbose_name=_('Value'), max_digits=7, decimal_places=2, default=None)
     unit = models.CharField(verbose_name=_('Unit'), max_length=15, choices=UNIT_CHOICES, null=True, blank=True, default=None)
