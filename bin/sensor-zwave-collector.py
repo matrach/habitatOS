@@ -33,7 +33,7 @@ with sqlite3.connect(DATABASE) as db:
         value VARCHAR(255),
         unit VARCHAR(255));""")
     db.execute('CREATE UNIQUE INDEX IF NOT EXISTS sensor_data_datetime_index ON sensor_data (datetime);')
-    db.execute('CREATE UNIQUE INDEX IF NOT EXISTS sensor_data_sync_datetime_index ON sensor_data (sync_datetime);')
+    db.execute('CREATE INDEX IF NOT EXISTS sensor_data_sync_datetime_index ON sensor_data (sync_datetime);')
 
 
 def save_to_sqlite3(args):

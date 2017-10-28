@@ -103,7 +103,7 @@ class ZWaveSensor(HabitatModel, MissionDateTime):
         (DEVICE_BIOLAB, _('Biolab')),
     ]
 
-    datetime = models.DateTimeField(verbose_name=_('Datetime'), db_index=True, editable=False)
+    datetime = models.DateTimeField(verbose_name=_('Datetime [UTC]'), db_index=True, editable=False)
     device = models.CharField(verbose_name=_('Device'), max_length=30, choices=DEVICE_CHOICES, db_index=True)
     type = models.CharField(verbose_name=_('Type'), max_length=30, choices=TYPE_CHOICES)
     value = models.DecimalField(verbose_name=_('Value'), max_digits=7, decimal_places=2, default=None)

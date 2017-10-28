@@ -47,3 +47,5 @@ with sqlite3.connect(DATABASE) as db:
 
         else:
             logging.error(f'ERROR: {data}')
+            with db:
+                db.execute(f'UPDATE sensor_data SET sync_datetime="0000-00-00 00:00:00.00000+00:00" WHERE datetime="{dt}"')
