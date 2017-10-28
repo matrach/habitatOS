@@ -22,3 +22,8 @@ plotly
 ## habitatOS client
 requests
 requests_oauthlib
+
+
+## Z-Wave sensors
+# python-openzwave
+

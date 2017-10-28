@@ -141,6 +141,7 @@ admin.site.site_header = _('HabitatOS')
 admin.site.index_title = _('Dashboard')
 admin.site.site_title = _('HabitatOS')
 
+GRAPPELLI_SWITCH_USER = True
 GRAPPELLI_ADMIN_TITLE = _('HabitatOS')
 GRAPPELLI_INDEX_DASHBOARD = 'habitat.dashboard.icares1.AdminDashboard'
 GRAPPELLI_AUTOCOMPLETE_SEARCH_FIELDS = {
