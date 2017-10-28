@@ -4,12 +4,12 @@ from django.utils.translation import ugettext_lazy as _
 
 class HabitatModel(models.Model):
     created = models.DateTimeField(
-        verbose_name=_('Add Datetime'),
+        verbose_name=_('Add Datetime [UTC]'),
         db_index=True,
         auto_now_add=True)
 
     modified = models.DateTimeField(
-        verbose_name=_('Modified Datetime'),
+        verbose_name=_('Modified Datetime [UTC]'),
         db_index=True,
         auto_now=True)
 
