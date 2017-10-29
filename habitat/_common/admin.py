@@ -38,6 +38,12 @@ class HabitatAdmin(ImportExportModelAdmin):
     change_list_filter_template = 'admin/filter_listing.html'
     ordering = ['-modified']
 
+    def get_change_list_template(self, request):
+        if request.user.is_superuser:
+            return 'admin/change_list_import_export.html'
+        else:
+            return 'admin/change_list.html'
+
     def get_list_display(self, request):
         list_display = super().get_list_display(request)
 
