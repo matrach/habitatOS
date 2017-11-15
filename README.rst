@@ -148,7 +148,7 @@ Client
 .. code-block:: python
 
     import datetime
-    from HabitatOS.client import HabitatOSBasicAuth
+    from habitatOS.client import HabitatOSBasicAuth
 
 
     habitatOS = HabitatOSBasicAuth(config='config.json')
@@ -176,9 +176,9 @@ CI/CD
 .. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
     :target: https://travis-ci.org/AstroMatt/HabitatOS
 
-- `HabitatOS on SonarCloud.io <https://sonarcloud.io/dashboard?id=HabitatOS>`_
-- `HabitatOS on Travis-CI.org <https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master>`_
-- `HabitatOS on GitHub.com <https://github.com/AstroMatt/HabitatOS>`_
+- `habitatOS on SonarCloud.io <https://sonarcloud.io/dashboard?id=HabitatOS>`_
+- `habitatOS on Travis-CI.org <https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master>`_
+- `habitatOS on GitHub.com <https://github.com/AstroMatt/HabitatOS>`_
 
 Pre-Commit Hook
 ---------------
