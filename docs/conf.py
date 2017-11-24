@@ -6,7 +6,7 @@ project = 'habitatOS'
 project_slug = 'habitatOS'
 description = 'Operating System for analog extraterrestrial habitats.'
 author = 'Matt Harasymczuk'
-copyright = f'2017-{datetime.date.today():%Y}, Matt Harasymczuk <matt@habitatos.space>'
+copyright = '2017-{year}, Matt Harasymczuk <matt@habitatos.space>'.format(year=datetime.date.today().year)
 
 extensions = [
     'sphinx.ext.autodoc',
