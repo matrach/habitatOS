@@ -8,8 +8,8 @@ Operating System for analog extraterrestrial habitats.
 
 .. image:: https://img.shields.io/pypi/pyversions/habitatOS.svg?style=flat-square
 
-.. image:: https://img.shields.io/travis/AstroMatt/HabitatOS/master.svg?style=flat-square&label=Continuous%20Integration
-   :target: http://travis-ci.org/AstroMatt/HabitatOS
+.. image:: https://img.shields.io/travis/AstroMatt/habitatOS/master.svg?style=flat-square&label=Continuous%20Integration
+   :target: http://travis-ci.org/AstroMatt/habitatOS
 
 .. image:: https://img.shields.io/pypi/v/habitatOS.svg?style=flat-square
    :target: https://pypi.org/project/habitatOS
@@ -173,12 +173,14 @@ Client
 
 CI/CD
 -----
-.. image:: https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master
-    :target: https://travis-ci.org/AstroMatt/HabitatOS
+.. image:: https://travis-ci.org/AstroMatt/habitatOS.svg?branch=master
+    :target: https://travis-ci.org/AstroMatt/habitatOS
 
-- `habitatOS on SonarCloud.io <https://sonarcloud.io/dashboard?id=HabitatOS>`_
-- `habitatOS on Travis-CI.org <https://travis-ci.org/AstroMatt/HabitatOS.svg?branch=master>`_
-- `habitatOS on GitHub.com <https://github.com/AstroMatt/HabitatOS>`_
+:Author: Matt Harasymczuk <matt@habitatos.space>
+:Adress: http://test.habitatos.space/
+:Source Code: https://github.com/AstroMatt/habitatOS
+:CI/CD: https://travis-ci.org/AstroMatt/habitatOS.svg?branch=master
+:Code Quality: https://sonarcloud.io/dashboard?id=habitatOS
 
 Pre-Commit Hook
 ---------------

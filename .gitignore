@@ -1,8 +1,14 @@
-# Byte-compiled
+## Private
+_config/
+_database/
+
+## Compiled
 __pycache__/
 *.pyc
+~$*
+*.spec
 
-# Distribution / packaging
+## Distribution / packaging
 build/
 dist/
 downloads/
@@ -13,43 +19,15 @@ sdist/
 *.egg-info/
 *.egg
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-.hypothesis/
-.sonar
-.scannerwork
-
-# Translations
-#*.mo
-*.pot
-
-# Django stuff:
+## Django
 *.log
-local_settings.py
-*.sqlite
 *.sqlite3
 _static
 _media
 
-# Sphinx documentation
+## Sphinx documentation
 docs/_build/
+_docs/
 
-# virtualenv
-venv/
-virtualenv/
-
-# IDE
+## IDE
 .idea
-
-# Skip files and directories
-tmp/
-_database/
-_config/
-*.html.py

@@ -6,7 +6,6 @@ transifex-client
 ## habitatOS.server
 django==1.11.6
 django-grappelli==2.10.1
-django-devutils
 django-import-export
 django-rest-swagger
 django-storages
@@ -27,3 +26,8 @@ requests_oauthlib
 ## Z-Wave sensors
 # python-openzwave
 
+
+## Documentation
+Sphinx==1.6.5
+sphinxcontrib-bibtex==0.3.6
+sphinx_rtd_theme

@@ -27,6 +27,7 @@ ALLOWED_HOSTS = [
     'test.habitatos.space',
     'lunex1.habitatos.space',
     'icares1.habitatos.space',
+    'lunares.habitatos.space',
 ]
 
 INTERNAL_IPS = [
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'import_export',
     'rest_framework',
     'rest_framework_swagger',
-    'devutils',
 
     'django.contrib.admin',
     'django.contrib.auth',
