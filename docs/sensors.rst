@@ -5,9 +5,28 @@ Sensory
 :Wykres temperatury: http://icares1.habitatos.space/api/v1/sensor/chart/temperature/
 :Wykres wilgotności: http://icares1.habitatos.space/api/v1/sensor/chart/relative-humidity/
 
+Instalacja skryptów na urządzeniu
+---------------------------------
+.. code-block: console
 
-Rozwiązywanie problemów - Brak aktualizacji temperatury
--------------------------------------------------------
+        $ PYTHON_VERSION=3.6.3
+
+        $ apt-get install sqlite3 libsqlite3-dev libssl-dev vim
+        $ cd /usr/src
+        $ curl https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz -o python.tgz
+        $ tar zxf python.tgz
+        $ cd python-*
+        $ ./configure
+        $ make -j 4
+        $ sudo make install
+
+
+
+Rozwiązywanie problemów
+-----------------------
+
+Brak aktualizacji temperatury
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Jeżeli na stronie http://icares1.habitatos.space/sensors/zwavesensor/ nie pojawiają się nowe dane, to przyczyną może być:
 
 - brak prądu, lub wyłączone urządzenie *Raspberry PI* (192.168.255.11)
