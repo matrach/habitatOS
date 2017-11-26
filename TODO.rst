@@ -4,7 +4,8 @@ TODO
 
 General
 =======
-#. DB Migration Squash
+#. Show more details in User listing in ``/user/auth/``
+#. Drop grappelli as a dependency and use Django 2.0 autocomplete feature
 #. Docker
 #. Add select_related() and/or prefetch_related()  # probably should use select_related()
 
