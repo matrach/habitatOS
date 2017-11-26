@@ -7,15 +7,24 @@ import sqlite3
 import serial
 
 
-DATABASE = '/home/pi/database/sensor-data.sqlite3'
-ALLOWED_PARAMETERS = ['air_temperature', 'air_humidity', 'water_temperature', 'luminosity', 'power_k1', 'power_k2', 'power_k3', 'power_k4']
-DEVICE = '/dev/ttyACM0'
-
-
 logging.basicConfig(
     format='[%(asctime).19s] %(levelname)s %(message)s',
     level=logging.INFO
 )
+
+
+DATABASE = '/home/pi/database/sensor-data.sqlite3'
+DEVICE = '/dev/ttyACM0'
+MEASUREMENTS = {
+    'air_temperature': 'C',
+    'air_humidity': '%',
+    'water_temperature': 'C',
+    'luminosity': 'lux',
+    'power_k1': 'on/off',
+    'power_k2': 'on/off',
+    'power_k3': 'on/off',
+    'power_k4': 'on/off',
+}
 
 
 with sqlite3.connect(DATABASE) as db:
@@ -24,7 +33,7 @@ with sqlite3.connect(DATABASE) as db:
         sync_datetime DATETIME DEFAULT NULL,
         device VARCHAR(255),
         parameter VARCHAR(255),
-        value VARCHAR(255),
+        value REAL,
         unit VARCHAR(255));""")
     db.execute('CREATE UNIQUE INDEX IF NOT EXISTS sensor_data_datetime_index ON sensor_data (datetime);')
     db.execute('CREATE INDEX IF NOT EXISTS sensor_data_sync_datetime_index ON sensor_data (sync_datetime);')
@@ -32,16 +41,14 @@ with sqlite3.connect(DATABASE) as db:
 
 def save_to_sqlite3(data):
     for parameter, value in data.items():
-
-        if not parameter or parameter not in ALLOWED_PARAMETERS:
-            continue
+        unit = MEASUREMENTS.get(parameter, None)
 
         with sqlite3.connect(DATABASE) as db:
             db.execute('INSERT INTO sensor_data VALUES (:datetime, NULL, :device, :parameter, :value, :unit)', {
                 'datetime': datetime.datetime.now(datetime.timezone.utc),
                 'parameter': parameter,
-                'value': value,
-                'unit': '',
+                'value': float(value),
+                'unit': unit,
                 'device': 'hydroponics',
             })
 
@@ -56,4 +63,3 @@ if __name__ == '__main__':
                 logging.info(data)
             except json.decoder.JSONDecodeError:
                 logging.error(line)
-
