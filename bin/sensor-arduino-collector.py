@@ -53,7 +53,7 @@ if __name__ == '__main__':
             try:
                 data = json.loads(line)
                 save_to_sqlite3(data)
-                logging.info(line)
+                logging.info(data)
             except json.decoder.JSONDecodeError:
                 logging.error(line)
 
