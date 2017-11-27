@@ -16,7 +16,7 @@ dj-database-url
 Pillow
 plotly
 # pylibmc
-
+superset
 
 ## habitatOS client
 requests
