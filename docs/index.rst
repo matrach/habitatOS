@@ -15,3 +15,5 @@ habitatOS
     :caption: Table of contents:
 
     sensors.rst
+    superset.rst
+
