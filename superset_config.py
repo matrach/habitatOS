@@ -21,7 +21,7 @@ SECRET_KEY = '\2\1thisismyscretkey\1\2\e\y\y\h'
 # superset metadata (slices, connections, tables, dashboards, ...).
 # Note that the connection information to connect to the datasources
 #you want to explore are managed directly in the web UI
-SQLALCHEMY_DATABASE_URI = os.environ('HEROKU_POSTGRESQL_GREEN_URL')
+SQLALCHEMY_DATABASE_URI = os.environ.get('HEROKU_POSTGRESQL_GREEN_URL', None)
 
 # Flask-WTF flag for CSRF
 WTF_CSRF_ENABLED = True
