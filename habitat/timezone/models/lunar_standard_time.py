@@ -41,10 +41,12 @@ class LunarStandardTime:
         return cls.MONTH_NAMES[number]
 
     @classmethod
-    def get_time_dict(cls, time_shift=0):
-
-        now = datetime.datetime.now().timestamp()
-        s = (now + cls.ADJUSTMENT - cls.TIMESTAMP_NOW) / cls.SECONDS_LENGTH - time_shift
+    def get_time_dict(cls, time_shift=0, from_datetime=None):
+        if not from_datetime:
+            from_datetime = datetime.datetime.now()
+        
+        miliseconds = from_datetime.timestamp()
+        s = (miliseconds + cls.ADJUSTMENT - cls.TIMESTAMP_NOW) / cls.SECONDS_LENGTH - time_shift
 
         year = int(s / cls.YEAR) | 0
         s -= cls.YEAR * year
