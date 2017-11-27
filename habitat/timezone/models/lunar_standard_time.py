@@ -44,7 +44,7 @@ class LunarStandardTime:
     def get_time_dict(cls, time_shift=0, from_datetime=None):
         if not from_datetime:
             from_datetime = datetime.datetime.now()
-        
+
         miliseconds = from_datetime.timestamp()
         s = (miliseconds + cls.ADJUSTMENT - cls.TIMESTAMP_NOW) / cls.SECONDS_LENGTH - time_shift
 
